@@ -1,0 +1,18 @@
+
+Changes from 0.21 to 0.22
+-------------------------
+
+* A new root certificate for "Russia" (Russian DataGrid CA) has replaced
+  the one that was valid till July 18th, 2004. The old MD5 fingerprint was
+  AE:3D:F5:F2:DD:CF:B0:10:99:7A:6D:74:3C:FB:4A:22, the new one, valid till
+  July 19th, 2009 is: A4:56:E2:01:E6:DB:86:F6:FC:5B:E5:6C:9D:A5:E1:06.
+  The new root cert was received in an S/MIME signed message by ___
+  _________, signed with a personal cert issued by the old root.
+  The old root cert has been withdrawn from the package entirely.
+* The BEGrid signing_policy is not resistant against the OpenSSL 0.9.6 to
+  0.9.7 namechange in the emailAddress DN component.
+
+Changes from 0.20 to 0.21
+-------------------------
+
+* Added the IUCC and BEGrid root certs

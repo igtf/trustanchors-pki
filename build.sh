@@ -61,7 +61,7 @@ do
 
 	( cd $ca ;
 	tar -zchvf $rpmtop/SOURCES/$ca-$version.tar.gz ${hash}* ;
-	mv ca_$ca.spec $rpmtop/SPECS/
+	mv -f ca_$ca.spec $rpmtop/SPECS/
 
 	rpmbuild -ba $rpmtop/SPECS/ca_$ca.spec
 	echo Build RPM and tar for version $version of CA $ca and copied it here.
