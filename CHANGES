@@ -2,6 +2,7 @@
 Changes from 0.23 to 0.24
 -------------------------
 
+* Added the SEE-GRID CA with hash 468d15b3 and alias: SEE-GRID
 * Added the Estonian Grid CA, with hash 566bf40f and 
   alias: EstonianGrid
 * Added the updated LIP CA (called "LIPCA") with hash 11b4a5a2, which 
