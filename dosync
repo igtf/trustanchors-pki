@@ -105,6 +105,8 @@ rpmbuild -ba eugridpma.spec
 cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$1*.src.rpm $PREP/
 cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$1*.noarch.rpm $PREP/
 
+cp -p accredited.in $PREP/accredited/
+
 cp -pr accredited worthless others CHANGES $PREP/
 
 if [ $dummy -eq 0 ]; then
