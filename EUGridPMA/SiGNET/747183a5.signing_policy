@@ -2,3 +2,8 @@
 access_id_CA  X509   '/C=SI/O=SiGNET/CN=SiGNET CA/emailAddress=signet-ca@ijs.si'
 pos_rights    globus CA:sign
 cond_subjects globus '"/C=SI/O=SiGNET/*"'
+
+# EACL SiGNET CA
+access_id_CA  X509   '/C=SI/O=SiGNET/CN=SiGNET CA/Email=signet-ca@ijs.si'
+pos_rights    globus CA:sign
+cond_subjects globus '"/C=SI/O=SiGNET/*"'
