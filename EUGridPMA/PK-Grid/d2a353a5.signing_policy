@@ -12,7 +12,7 @@
 #--------------|---------------|-----------------------------------------
 # EACL entry #1|
                                                                                                                                                              
- access_id_CA      X509          'C=PK/O=NCP/CN=ncp.edu.pk'
+ access_id_CA      X509          '/C=PK/O=NCP/CN=ncp.edu.pk'
 
  pos_rights        globus        CA:sign
 
