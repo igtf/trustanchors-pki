@@ -7,10 +7,12 @@ esac
 version=$1
 
 PREP=${TMP:-/tmp}/eugridpma.$$
-DIST=/global/ices/www/site/eugridpma/distribution/$1
+DIST=webegp@www.eugridpma.org:/project/srv/www/site/eugridpma/html/distribution/$1
 RSYNC="rsync -rav -e ssh"
 
 mkdir $PREP
+mkdir $PREP/$version
+PREP=$PREP/$version
 
 echo "This is version $1" > $PREP/version.txt
 
@@ -67,9 +69,11 @@ EOF
 rpmtop=`awk '/^%_topdir/ { t=$NF } END {print t}' $HOME/.rpmmacros`
 rpmbuild -ba eugridpma.spec
 
-cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$1-*.src.rpm $PREP/
-cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$1-*.noarch.rpm $PREP/
+cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$1*.src.rpm $PREP/
+cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$1*.noarch.rpm $PREP/
 
 ( cd $PREP ; yum-arch . )
 
-( cd $PREP ; echo $RSYNC . $PREP/ )
+cp -pr accredited worthless others $PREP/
+
+( cd $PREP ; $RSYNC $PREP $DIST/ )
