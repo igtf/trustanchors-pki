@@ -1,4 +1,11 @@
 
+Changes from 0.22 to 0.23
+-------------------------
+
+* Added the root certificate for the PK-Grid CA, with MD5 fingerprint
+  24:A0:A7:DD:46:1B:EB:AE:7F:33:CA:5F:FA:D7:37:F8
+
+
 Changes from 0.21 to 0.22
 -------------------------
 
