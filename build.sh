@@ -1,5 +1,13 @@
 # /bin/sh
-
+frelease=1
+while :; do
+  case "$1" in
+  -v | --version ) fversion=$2 ; shift 2 ;;
+  -r | --release ) frelease=$2 ; shift 2 ;;
+  -- ) shift ; break ;;
+  * ) break ;;
+  esac
+done
 
 if [ ! -f template.spec ] ; then
 	echo "Cannot find specfile template, sorry" >&2
@@ -7,12 +15,12 @@ if [ ! -f template.spec ] ; then
 fi
 
 case $# in
-0 )	echo "Usage: $0 <version>" >&2 ; exit 1 ;;
+0 )	echo "Usage: $0 [-v forced-version] [-r release] directories" >&2 ; exit 1 ;;
 esac
 
 for ca in "$@"
 do
-	release=1
+	release=$frelease
 	ca=`echo $ca | sed -e 's/\/*$//'`
 
 	if [ ! -d $ca ]; then
@@ -30,10 +38,14 @@ do
 	s=`expr 365 \* 86400`
 	openssl x509 -noout -checkend $s -in $ca/$hash.0 || echo -e "***\nWARNING $ca will expire within 1 yr\n***" >&2
 
-	if [ -f $ca/CVS/Tag ]; then
+	if [ x"$fversion" = x"" ]; then
+	  if [ -f $ca/CVS/Tag ]; then
 		version=`sed -e 's/^.//' < $ca/CVS/Tag`
-	else
+	  else
 		version=unknown
+	  fi
+	else
+	  version=$fversion
 	fi
 
 	if [ -f $ca/status ]; then

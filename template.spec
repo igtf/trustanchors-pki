@@ -25,6 +25,10 @@ Summary: Configuration files for Certification Authority (%{CA_ALIAS}) with hash
 URL: %(tar xOfz %{SOURCE0} %{CA_HASH}.url)
 %endif
 
+%if %(tar tfz %{SOURCE0} %{CA_HASH}.requires > /dev/null 2>&1 && echo 1 || echo 0)
+Requires: %(tar xOfz %{SOURCE0} %{CA_HASH}.requires |sed -e 's/%VERSION%/'%{version}'/g' ) 
+%endif
+
 %prep
 %setup -c -n %{name}
 

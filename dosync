@@ -8,7 +8,7 @@ esac
 DIST=/global/ices/www/site/eugridpma/distribution/$1
 
 mkdir $DIST
-rsync -rav accredited worthless others accredited.in $DIST/
+rsync -rav accredited worthless others accredited.in CHANGES $DIST/
 
 echo "This is version $1" > $DIST/version.txt
 
@@ -54,4 +54,10 @@ Examples of "other" CAs include the Fermilab KerberosCA root.
 
 EOF
 
-
+( cd .. ; tar zcvf $DIST/eugridpma-carep-$1.tar.gz \
+	--exclude "carep/accredited" \
+	--exclude "carep/others" \
+	--exclude "carep/worthless" \
+	--exclude "CVS" \
+	carep
+)
