@@ -4,6 +4,12 @@
 * updated DutchGrid CA cert from web site: extended lifetime to 2021 and
   changed digest algorithm from MD5 to SHA1
 * added a tar-ball distribution with a configure scrfipt for convenience
+* Removed DOESG-Root from the accredited CA list, as per request of of
+  the CA on January 28, 2005. There are no certs left issued by this CA.
+* Added Grid-FR CA by CNRS, and extended the signing_policy file of the
+  associated CNRS-Projets CA.
+* A new root certificate for the CyGrid CA (and a new subject name). The
+  old CyGrid CA has been moved to "-old". Both are in the accredited list.
 
 
 Changes from 0.25 to 0.26
