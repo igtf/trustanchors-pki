@@ -1,0 +1,49 @@
+Certificate Revocation List (CRL):
+        Version 1 (0x0)
+        Signature Algorithm: md5WithRSAEncryption
+        Issuer: /O=DutchGrid/OU=Certificate Authorities/CN=DutchDemo worthless CA
+        Last Update: Jun  4 13:42:47 2004 GMT
+        Next Update: Jul 24 13:42:47 2004 GMT
+Revoked Certificates:
+    Serial Number: 01
+        Revocation Date: Feb 18 09:08:33 2002 GMT
+    Serial Number: 02
+        Revocation Date: Feb 18 09:09:40 2002 GMT
+    Serial Number: 05
+        Revocation Date: Dec  9 17:18:20 2002 GMT
+    Serial Number: 08
+        Revocation Date: Feb 23 14:07:14 2002 GMT
+    Serial Number: 0A
+        Revocation Date: Feb 27 15:19:31 2002 GMT
+    Serial Number: 1E
+        Revocation Date: Aug 13 14:45:17 2002 GMT
+    Serial Number: 26
+        Revocation Date: Nov  6 14:36:12 2002 GMT
+    Serial Number: 2E
+        Revocation Date: Feb 24 12:56:33 2003 GMT
+    Serial Number: 37
+        Revocation Date: May 18 17:43:58 2003 GMT
+    Serial Number: 55
+        Revocation Date: May  4 10:12:36 2004 GMT
+    Signature Algorithm: md5WithRSAEncryption
+        4b:dc:a0:51:84:4b:0c:9f:e7:42:c1:91:49:12:14:1c:e9:14:
+        db:f2:e9:8a:2a:af:ef:51:c1:da:45:2c:a0:62:63:43:2f:16:
+        8d:87:7d:35:c2:60:e2:9d:ed:ab:fe:4f:17:d7:e0:fb:5f:6c:
+        59:0a:b7:bf:7c:f5:5e:7f:1c:97:c3:6c:c7:fd:05:c0:ca:8a:
+        23:c8:26:bf:64:2f:cc:74:c9:15:bd:15:0b:87:90:02:44:14:
+        f3:f9:5f:10:c5:74:d5:96:a3:26:cf:5a:c3:fa:16:21:e5:9d:
+        63:2d:52:65:bd:f8:b6:9d:f6:42:ce:72:e1:b1:b8:58:6b:04:
+        d6:07
+-----BEGIN X509 CRL-----
+MIIB6DCCAVEwDQYJKoZIhvcNAQEEBQAwVzESMBAGA1UEChMJRHV0Y2hHcmlkMSAw
+HgYDVQQLExdDZXJ0aWZpY2F0ZSBBdXRob3JpdGllczEfMB0GA1UEAxMWRHV0Y2hE
+ZW1vIHdvcnRobGVzcyBDQRcNMDQwNjA0MTM0MjQ3WhcNMDQwNzI0MTM0MjQ3WjCB
+yDASAgEBFw0wMjAyMTgwOTA4MzNaMBICAQIXDTAyMDIxODA5MDk0MFowEgIBBRcN
+MDIxMjA5MTcxODIwWjASAgEIFw0wMjAyMjMxNDA3MTRaMBICAQoXDTAyMDIyNzE1
+MTkzMVowEgIBHhcNMDIwODEzMTQ0NTE3WjASAgEmFw0wMjExMDYxNDM2MTJaMBIC
+AS4XDTAzMDIyNDEyNTYzM1owEgIBNxcNMDMwNTE4MTc0MzU4WjASAgFVFw0wNDA1
+MDQxMDEyMzZaMA0GCSqGSIb3DQEBBAUAA4GBAEvcoFGESwyf50LBkUkSFBzpFNvy
+6Yoqr+9RwdpFLKBiY0MvFo2HfTXCYOKd7av+TxfX4PtfbFkKt7989V5/HJfDbMf9
+BcDKiiPIJr9kL8x0yRW9FQuHkAJEFPP5XxDFdNWWoybPWsP6FiHlnWMtUmW9+Lad
+9kLOcuGxuFhrBNYH
+-----END X509 CRL-----
