@@ -19,7 +19,7 @@ do
 	fi
 
 	if [ -f $ca/CVS/Tag ]; then
-		version=`sed -e 's/^N//' < $ca/CVS/Tag`
+		version=`sed -e 's/^.//' < $ca/CVS/Tag`
 	else
 		version=unknown
 	fi
@@ -42,6 +42,7 @@ do
 	t*	) prefix=test ;;
 	v*	) version=`echo $version | sed -e 's/^v//;s/_/\./g'` ; prefix=accredited ;;
 	u*	) version=`echo $version | sed -e 's/^u//;s/_/\./g'` ; prefix=worthless ;;
+	o*	) version=`echo $version | sed -e 's/^o//;s/_/\./g'` ; prefix=others ;;
 	esac
 
 	echo "CA $prefix $ca: building version $version release $release for hash $hash"
