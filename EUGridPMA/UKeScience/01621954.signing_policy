@@ -12,3 +12,7 @@
  access_id_CA      X509         '/C=UK/O=eScience/OU=Authority/CN=CA/Email=ca-operator@grid-support.ac.uk'
  pos_rights        globus        CA:sign
  cond_subjects     globus     '/C=UK/O=eScience/*'
+ #
+ access_id_CA      X509         '/C=UK/O=eScience/OU=Authority/CN=CA/emailAddress=ca-operator@grid-support.ac.uk'
+ pos_rights        globus        CA:sign
+ cond_subjects     globus     '/C=UK/O=eScience/*'

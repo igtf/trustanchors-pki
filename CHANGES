@@ -1,3 +1,14 @@
+
+* added additional entryo to UKeScience signing policy file to accomodate
+  openssl 0.9.7c rendering of emailAddress component in the subject DN
+
+
+Changes from 0.25 to 0.26
+-------------------------
+
+* Added KFKI-RMKI-CA for Hungary 
+* removed Spain-old
+
 Changes from 0.24 to 0.25
 -------------------------
 

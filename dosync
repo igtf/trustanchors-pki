@@ -7,11 +7,14 @@ esac
 version=$1
 
 PREP=${TMP:-/tmp}/eugridpma.$$
-DIST=webegp@www.eugridpma.org:/project/srv/www/site/eugridpma/html/distribution/$1
+DIST=webegp@www.eugridpma.org:/project/srv/www/site/eugridpma/html/distribution/
 RSYNC="rsync -rav -e ssh"
 
 mkdir $PREP
 mkdir $PREP/$version
+mkdir $PREP/$version/worthless
+mkdir $PREP/$version/others
+mkdir $PREP/$version/accredited
 PREP=$PREP/$version
 
 echo "This is version $1" > $PREP/version.txt
@@ -72,8 +75,7 @@ rpmbuild -ba eugridpma.spec
 cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$1*.src.rpm $PREP/
 cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$1*.noarch.rpm $PREP/
 
+cp -pr accredited worthless others CHANGES $PREP/
+
 ( cd $PREP ; yum-arch . )
-
-cp -pr accredited worthless others $PREP/
-
-( cd $PREP ; $RSYNC $PREP $DIST/ )
+( cd $PREP ; $RSYNC $PREP $DIST )
