@@ -1,6 +1,5 @@
 # /bin/sh
 
-release=1
 
 if [ ! -f template.spec ] ; then
 	echo "Cannot find specfile template, sorry" >&2
@@ -13,6 +12,8 @@ esac
 
 for ca in "$@"
 do
+	release=1
+
 	if [ ! -d $ca ]; then
 		echo "$ca is not a directory, skipped" >&2
 		continue
@@ -43,7 +44,11 @@ do
 	fi
 
 	case "$version" in
-	v*	) version=`echo $version | sed -e 's/^v//;s/_/\./g'` ;;
+	v*r*	)	fversion=`echo $version | sed -e 's/^v//;s/_/\./g'` 
+			version=`echo $fversion | sed -e 's/r.*//'` 
+			release=`echo $fversion | sed -e 's/.*r//'` 
+			;;
+	v*	)	version=`echo $version | sed -e 's/^v//;s/_/\./g'`  ;;
 	esac
 
 	echo "CA $prefix $ca: building version $version release $release for hash $hash"
