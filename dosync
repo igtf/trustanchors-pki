@@ -4,15 +4,17 @@ case "$#" in
 1 )	;;
 * )	echo "Usage: $0 version" >&2 ;exit 1 ;;
 esac
+version=$1
 
+PREP=${TMP:-/tmp}/eugridpma.$$
 DIST=/global/ices/www/site/eugridpma/distribution/$1
+RSYNC="rsync -rav -e ssh"
 
-mkdir $DIST
-rsync -rav accredited worthless others accredited.in CHANGES $DIST/
+mkdir $PREP
 
-echo "This is version $1" > $DIST/version.txt
+echo "This is version $1" > $PREP/version.txt
 
-cat <<EOF > $DIST/worthless/README.txt
+cat <<EOF > $PREP/worthless/README.txt
 
 Version $1 WORTHLESS root certificates
 
@@ -42,7 +44,7 @@ Globus Certificate Service
 EOF
 
 
-cat <<EOF > $DIST/others/README.txt
+cat <<EOF > $PREP/others/README.txt
 
 Version $1 other root certificates
 
@@ -54,10 +56,20 @@ Examples of "other" CAs include the Fermilab KerberosCA root.
 
 EOF
 
-( cd .. ; tar zcvf $DIST/eugridpma-carep-$1.tar.gz \
+( cd .. ; tar zcvf $PREP/eugridpma-carep-$1.tar.gz \
 	--exclude "carep/accredited" \
 	--exclude "carep/others" \
 	--exclude "carep/worthless" \
 	--exclude "CVS" \
 	carep
 )
+
+rpmtop=`awk '/^%_topdir/ { t=$NF } END {print t}' $HOME/.rpmmacros`
+rpmbuild -ba eugridpma.spec
+
+cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$1-*.src.rpm $PREP/
+cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$1-*.noarch.rpm $PREP/
+
+( cd $PREP ; yum-arch . )
+
+( cd $PREP ; echo $RSYNC . $PREP/ )
