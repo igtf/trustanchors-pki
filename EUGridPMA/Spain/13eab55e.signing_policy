@@ -1,0 +1,4 @@
+# EACL entry
+access_id_CA  X509   '/C=ES/O=DATAGRID-ES/CN=DATAGRID-ES CA'
+pos_rights    globus CA:sign
+cond_subjects globus '"/C=ES/O=DATAGRID-ES/*"'

@@ -1,3 +1,9 @@
+Changes from 0.24 to 0.25
+-------------------------
+
+* Added the new Spain CA with hash 13eab55e and alias: Spain
+* Rename the Spain CA to Spain-old (expires on 2004-11-12)
+
 
 Changes from 0.23 to 0.24
 -------------------------
