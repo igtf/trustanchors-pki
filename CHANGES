@@ -1,3 +1,16 @@
+Changes from 0.27 to 0.28
+-------------------------
+(6 April 2005)
+
+* Added the root certs for the newly accredited CAs "AustrianGrid" and
+  "NIIF/Hungarnet"
+* updated signing policy file of SiGNET CA to handle new emailAddress
+  DN component name
+* added "BalticGrid CA" in the "worthless" section, for experimentation
+  by AndersW
+* UKeScience CA changed to SHA1 digest for the root certificate
+* new CRL and CA URLs for both CyGrid CAs
+
 Changes from 0.26 to 0.27 
 -------------------------
 (22 February 2005)
