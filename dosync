@@ -46,9 +46,9 @@ cat <<EOF > $DIST/others/README.txt
 
 Version $1 other root certificates
 
-This area contains non-accredited root certificates. Do not rely on 
-these certificates in a real environment - you install them entirely 
-at your own risk!
+This area contains non-accredited root certificates -- you install 
+them entirely at your own risk! But they could be quite good as well,
+but just not fitting the current set of guidelines.
 
 Examples of "other" CAs include the Fermilab KerberosCA root.
 

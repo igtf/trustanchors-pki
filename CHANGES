@@ -1,5 +1,12 @@
+
+Changes from 0.23 to 0.24
+-------------------------
+
 * Added the Estonian Grid CA, with hash 566bf40f and 
   alias: EstonianGrid
+* Added the updated LIP CA (called "LIPCA") with hash 11b4a5a2, which 
+  will supercede the old one with hash 41380387. The "LIP" one
+  will remain in the repository will the end of 2005.
 
 Changes from 0.22 to 0.23
 -------------------------
