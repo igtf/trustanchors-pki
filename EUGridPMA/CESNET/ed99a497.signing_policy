@@ -1,0 +1,4 @@
+# EACL Czech Republic CA : CESNET CA
+access_id_CA	X509		'/C=CZ/O=CESNET/CN=CESNET CA'
+pos_rights		globus	CA:sign
+cond_subjects	globus	'"/C=CZ/O=CESNET/*","/O=CESNET/*"'

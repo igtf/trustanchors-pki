@@ -1,0 +1,4 @@
+# Signing policy file for CERN CA
+access_id_CA            X509    '/C=CH/O=CERN/OU=GRID/CN=CERN CA'
+pos_rights              globus  CA:sign
+cond_subjects           globus  '"/C=CH/O=CERN/OU=GRID/*"'

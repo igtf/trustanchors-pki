@@ -1,0 +1,4 @@
+# EACL Spanish CA :DATAGRID-ES
+access_id_CA  	X509		'/C=ES/O=DATAGRID-ES/CN=DATAGRID-ES Certification Authority'
+pos_rights    	globus	CA:sign
+cond_subjects 	globus	'"/C=ES/O=DATAGRID-ES/*"'

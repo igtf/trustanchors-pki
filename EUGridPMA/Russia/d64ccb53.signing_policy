@@ -1,0 +1,4 @@
+# EACL Russia CA : Russian DataGRID CA
+access_id_CA      X509         '/C=RU/O=DataGrid/CN=Russian DataGrid CA'
+pos_rights        globus        CA:sign
+cond_subjects     globus       '"/C=RU/O=DataGrid/*"'

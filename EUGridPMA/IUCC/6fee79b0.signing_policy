@@ -1,0 +1,3 @@
+access_id_CA      X509         '/O=IUCC/CN=IUCC/C=IL'
+pos_rights        IUCC        CA:sign
+cond_subjects     IUCC       '"/O=IUCC/C=IL/*"'

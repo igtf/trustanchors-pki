@@ -1,0 +1,4 @@
+# EACL French CA, DataGrid level: Datagrid-fr
+access_id_CA      X509          '/C=FR/O=CNRS/CN=Datagrid-fr'
+pos_rights        globus        CA:sign
+cond_subjects     globus        '"/*"'
