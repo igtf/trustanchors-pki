@@ -1,4 +1,5 @@
 # EACL for DutchDemo CA (not trustworthy, non accredited!)
+#
  access_id_CA   X509    '/O=DutchGrid/OU=Certificate Authorities/CN=DutchDemo worthless CA'
  pos_rights     globus  CA:sign
  cond_subjects  globus  '"/O=DutchGrid/OU=Certificate Authorities/CN=DutchDemo worthless CA" "/O=dutchgrid/O=users/*" "/O=dutchgrid/O=hosts/*" '
