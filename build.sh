@@ -18,16 +18,17 @@ do
 		continue
 	fi
 
+	hash=`ls -1 $ca/*.0 2>/dev/null | sed -e 's/.*\///;s/\.0$//'`
+
+	if [ x"$hash" = x"" ]; then
+		echo "No valid CA cert found for $ca" >&2
+		continue
+	fi
+
 	if [ -f $ca/CVS/Tag ]; then
 		version=`sed -e 's/^.//' < $ca/CVS/Tag`
 	else
 		version=unknown
-	fi
-
-	if [ -f $ca/hash ]; then
-		hash=`cat $ca/hash`
-	else
-		hash=`ls -1 $ca/*.0 2>/dev/null | sed -e 's/.*\///;s/\.0$//'`
 	fi
 
 	if [ -f $ca/status ]; then
