@@ -11,10 +11,6 @@ case $# in
 0 )	echo "Usage: $0 <version>" >&2 ; exit 1 ;;
 esac
 
-[ -d RPMS ] || mkdir RPMS
-[ -d SRPMS ] || mkdir SRPMS
-[ -d tgz ] || mkdir tgz
-
 for ca in "$@"
 do
 	if [ ! -d $ca ]; then
@@ -39,7 +35,16 @@ do
 		continue
 	fi
 
-	echo "CA $ca: building version $version release $release for hash $hash"
+	prefix=unknown_ca
+
+	case "$version" in
+	unknown	) prefix=unknown ;;
+	t*	) prefix=test ;;
+	v*	) version=`echo $version | sed -e 's/^v//;s/_/\./g'` ; prefix=accredited ;;
+	u*	) version=`echo $version | sed -e 's/^u//;s/_/\./g'` ; prefix=worthless ;;
+	esac
+
+	echo "CA $prefix $ca: building version $version release $release for hash $hash"
 
 	rpmtop=`awk '/^%_topdir/ { t=$NF } END {print t}' $HOME/.rpmmacros`
 	echo RPMDIR $rpmtop
@@ -56,12 +61,16 @@ do
 
 	)
 
-	cp -p $rpmtop/RPMS/noarch/ca_$ca-$version-$release.noarch.rpm ./RPMS
-	cp -p $rpmtop/SRPMS/ca_$ca-$version-$release.src.rpm ./SRPMS
-	cp -p $rpmtop/SOURCES/$ca-$version.tar.gz ./tgz
+	[ -d RPMS.$prefix ] || mkdir RPMS.$prefix
+	[ -d SRPMS.$prefix ] || mkdir SRPMS.$prefix
+	[ -d tgz.$prefix ] || mkdir tgz.$prefix
 
-	ls -l RPMS/ca_$ca-$version-$release.noarch.rpm
-	ls -l SRPMS/ca_$ca-$version-$release.src.rpm
-	ls -l tgz/$ca-$version.tar.gz
+	cp -p $rpmtop/RPMS/noarch/ca_$ca-$version-$release.noarch.rpm ./RPMS.$prefix
+	cp -p $rpmtop/SRPMS/ca_$ca-$version-$release.src.rpm ./SRPMS.$prefix
+	cp -p $rpmtop/SOURCES/$ca-$version.tar.gz ./tgz.$prefix
+
+	ls -l RPMS.$prefix/ca_$ca-$version-$release.noarch.rpm
+	ls -l SRPMS.$prefix/ca_$ca-$version-$release.src.rpm
+	ls -l tgz.$prefix/$ca-$version.tar.gz
 
 done
