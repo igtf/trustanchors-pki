@@ -30,6 +30,12 @@ do
 		hash=`ls -1 $ca/*.0 2>/dev/null | sed -e 's/.*\///;s/\.0$//'`
 	fi
 
+	if [ -f $ca/status ]; then
+		prefix=`cat $ca/status`
+	else
+		prefix=accredited
+	fi
+
 	if [ x"$hash" = x"" ] ; then
 		echo "$ca is not a CA dir" >&2
 		continue
@@ -38,11 +44,7 @@ do
 	prefix=unknown_ca
 
 	case "$version" in
-	unknown	) prefix=unknown ;;
-	t*	) prefix=test ;;
 	v*	) version=`echo $version | sed -e 's/^v//;s/_/\./g'` ; prefix=accredited ;;
-	u*	) version=`echo $version | sed -e 's/^u//;s/_/\./g'` ; prefix=worthless ;;
-	o*	) version=`echo $version | sed -e 's/^o//;s/_/\./g'` ; prefix=others ;;
 	esac
 
 	echo "CA $prefix $ca: building version $version release $release for hash $hash"
