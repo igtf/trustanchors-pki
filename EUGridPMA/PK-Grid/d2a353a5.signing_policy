@@ -12,8 +12,9 @@
 #--------------|---------------|-----------------------------------------
 # EACL entry #1|
                                                                                                                                                              
- access_id_CA      X509             '/CN=ncp.edu.pk/C=PK/O=NCP'
+ access_id_CA      X509          'C=PK/O=NCP/CN=ncp.edu.pk'
+
  pos_rights        globus        CA:sign
+
  cond_subjects     globus       '"/C=PK/*"'
 # end of EACL
-
