@@ -1,6 +1,6 @@
 Summary:   EUGridPMA meta-rpm
 Name:      eugridpma
-Version:   0.22
+Version:   0.23
 Release:   1
 URL:       http://eugridpma.org/
 BuildRoot: %{_tmppath}/%{name}-buildroot
