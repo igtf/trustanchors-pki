@@ -41,10 +41,8 @@ do
 		continue
 	fi
 
-	prefix=unknown_ca
-
 	case "$version" in
-	v*	) version=`echo $version | sed -e 's/^v//;s/_/\./g'` ; prefix=accredited ;;
+	v*	) version=`echo $version | sed -e 's/^v//;s/_/\./g'` ;;
 	esac
 
 	echo "CA $prefix $ca: building version $version release $release for hash $hash"
@@ -57,23 +55,24 @@ do
 
 	( cd $ca ;
 	tar -zchvf $rpmtop/SOURCES/$ca-$version.tar.gz ${hash}* ;
-	cp -p ca_$ca.spec $rpmtop/SPECS/
+	mv ca_$ca.spec $rpmtop/SPECS/
 
 	rpmbuild -ba $rpmtop/SPECS/ca_$ca.spec
 	echo Build RPM and tar for version $version of CA $ca and copied it here.
 
 	)
 
-	[ -d RPMS.$prefix ] || mkdir RPMS.$prefix
-	[ -d SRPMS.$prefix ] || mkdir SRPMS.$prefix
-	[ -d tgz.$prefix ] || mkdir tgz.$prefix
+	[ -d $prefix ] || mkdir $prefix
+	[ -d $prefix/RPMS ] || mkdir $prefix/RPMS
+	[ -d $prefix/SRPMS ] || mkdir $prefix/SRPMS
+	[ -d $prefix/tgz ] || mkdir $prefix/tgz
 
-	cp -p $rpmtop/RPMS/noarch/ca_$ca-$version-$release.noarch.rpm ./RPMS.$prefix
-	cp -p $rpmtop/SRPMS/ca_$ca-$version-$release.src.rpm ./SRPMS.$prefix
-	cp -p $rpmtop/SOURCES/$ca-$version.tar.gz ./tgz.$prefix
+	cp -p $rpmtop/RPMS/noarch/ca_$ca-$version-$release.noarch.rpm ./$prefix/RPMS/
+	cp -p $rpmtop/SRPMS/ca_$ca-$version-$release.src.rpm ./$prefix/SRPMS/
+	cp -p $rpmtop/SOURCES/$ca-$version.tar.gz ./$prefix/tgz/
 
-	ls -l RPMS.$prefix/ca_$ca-$version-$release.noarch.rpm
-	ls -l SRPMS.$prefix/ca_$ca-$version-$release.src.rpm
-	ls -l tgz.$prefix/$ca-$version.tar.gz
+	ls -l $prefix/RPMS/ca_$ca-$version-$release.noarch.rpm
+	ls -l $prefix/SRPMS/ca_$ca-$version-$release.src.rpm
+	ls -l $prefix/tgz/$ca-$version.tar.gz
 
 done

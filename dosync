@@ -5,5 +5,6 @@ case "$#" in
 * )	echo "Usage: $0 version" >&2 ;exit 1 ;;
 esac
 
-rsync -rav RPMS.* SRPMS.* tgz.* accredited.in /global/ices/www/site/eugridpma/distribution/$1/
+mkdir /global/ices/www/site/eugridpma/distribution/$1
+rsync -rav accredited worthless others accredited.in /global/ices/www/site/eugridpma/distribution/$1/
 echo "This is version $1" > /global/ices/www/site/eugridpma/distribution/$1/version.txt
