@@ -1,6 +1,8 @@
 
-* added additional entryo to UKeScience signing policy file to accomodate
+* added additional entry to UKeScience signing policy file to accomodate
   openssl 0.9.7c rendering of emailAddress component in the subject DN
+* updated DutchGrid CA cert from web site: extended lifetime to 2021 and
+  changed digest algorithm from MD5 to SHA1
 
 
 Changes from 0.25 to 0.26

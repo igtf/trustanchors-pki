@@ -2,11 +2,11 @@ Certificate:
     Data:
         Version: 3 (0x2)
         Serial Number: 0 (0x0)
-        Signature Algorithm: md5WithRSAEncryption
+        Signature Algorithm: sha1WithRSAEncryption
         Issuer: C=NL, O=NIKHEF, CN=NIKHEF medium-security certification auth
         Validity
-            Not Before: Sep 21 09:36:14 2001 GMT
-            Not After : Feb  9 09:36:14 2006 GMT
+            Not Before: Sep 21 00:00:00 2001 GMT
+            Not After : Feb  9 00:00:00 2021 GMT
         Subject: C=NL, O=NIKHEF, CN=NIKHEF medium-security certification auth
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
@@ -32,46 +32,46 @@ Certificate:
                     22:f5
                 Exponent: 65537 (0x10001)
         X509v3 extensions:
-            X509v3 Basic Constraints: 
+            X509v3 Basic Constraints: critical
                 CA:TRUE
-            X509v3 Key Usage: 
+            X509v3 Key Usage: critical
                 Digital Signature, Certificate Sign, CRL Sign
             X509v3 Subject Alternative Name: 
-                email:ca@nikhef.nl
+                email:ca@dutchgrid.nl
             X509v3 Subject Key Identifier: 
                 5B:05:3A:99:C6:D5:22:BD:FD:94:80:FC:11:A8:D0:F1:71:D6:4B:A4
             X509v3 CRL Distribution Points: 
-                URI:http://certificate.nikhef.nl/medium/cacrl.pem
+                URI:http://ca.dutchgrid.nl/medium/cacrl.pem
 
             Netscape Cert Type: 
                 SSL CA, S/MIME CA, Object Signing CA
             Netscape CA Revocation Url: 
-                http://certificate.nikhef.nl/medium/cacrl.pem
+                http://ca.dutchgrid.nl/medium/cacrl.pem
             Netscape CA Policy Url: 
-                http://certificate.nikhef.nl/medium/policy/
+                http://ca.dutchgrid.nl/medium/policy/
             Netscape Comment: 
-                DutchGrid and NIKHEF medium-security Certification Authority; policies at http://certificate.nikhef.nl/medium/policy/
-    Signature Algorithm: md5WithRSAEncryption
-        77:6e:8b:5a:3e:0c:41:d5:d6:1e:b8:eb:99:76:85:79:d0:47:
-        ee:5e:86:23:5e:28:8c:c1:74:6c:ad:78:e1:d2:7e:81:60:85:
-        a2:25:11:e3:09:ee:f8:44:eb:b8:5d:fa:6f:23:5a:3b:d9:4f:
-        7b:f5:a3:d7:d8:3b:2f:50:3b:96:23:bd:b7:81:50:16:14:f7:
-        e0:bf:97:d2:d2:77:1f:59:c4:ed:55:84:4e:2c:28:41:1f:37:
-        f6:fe:dc:29:f2:48:df:f1:9d:33:f1:e6:13:fd:d6:06:3c:54:
-        87:6f:9d:65:db:0a:47:68:43:43:ee:63:f0:e9:47:b7:fd:66:
-        86:32:25:db:24:cd:e0:5b:30:79:d3:ae:f6:aa:7e:20:95:46:
-        d4:95:7f:66:e4:29:bc:49:94:d2:7f:a4:13:86:f7:59:b9:fc:
-        7f:9d:49:1b:19:88:c6:d2:e9:a4:d7:31:52:32:0f:8f:0f:e3:
-        60:00:1e:f5:48:91:d0:2c:1e:54:01:34:f4:80:e6:af:30:ef:
-        40:41:c2:14:2d:30:e9:9f:22:90:01:41:8e:15:6a:6e:4e:b0:
-        49:db:94:2a:0f:61:bc:0f:5a:98:ca:7e:e9:6f:f2:03:87:66:
-        55:d0:ec:0d:fb:47:32:6a:57:ab:d9:00:23:79:f3:ab:3e:72:
-        06:c9:9c:1d
+                DutchGrid and NIKHEF medium-security Certification Authority; policies at http://ca.dutchgrid.nl/medium/policy/
+    Signature Algorithm: sha1WithRSAEncryption
+        7d:3e:11:47:f3:ba:6f:d8:39:98:29:4c:fb:2f:ef:5e:8d:30:
+        67:6d:3f:a2:0b:4f:7a:16:b5:b5:36:a8:61:ef:ac:0c:41:32:
+        de:ee:2a:2c:1d:53:2e:d8:81:0a:22:ba:ac:72:d9:2c:67:dd:
+        70:ed:b5:d1:15:06:2a:3e:8a:01:61:9d:5b:5b:b7:a7:e3:df:
+        dd:5f:be:d8:36:27:41:14:b9:95:07:be:a6:98:fd:45:b4:78:
+        97:86:4a:f1:10:2a:e4:b5:88:a9:84:d3:e0:85:cf:80:86:f5:
+        42:f0:17:40:0d:41:58:2b:8a:0d:60:7f:50:ea:2f:4d:ff:e3:
+        59:d3:bb:ab:c2:9f:99:2c:0a:51:b7:65:5a:d8:5e:e3:f1:ba:
+        59:62:f9:c4:3c:54:36:c4:68:4a:00:48:6d:91:58:4d:1b:f3:
+        4c:a3:6e:da:dc:a9:36:dc:06:34:dc:79:c5:cb:b4:88:0b:ae:
+        b3:6b:3c:06:13:6c:ce:30:41:42:16:57:9e:fe:49:df:86:32:
+        a9:63:25:33:c7:84:39:45:0d:71:c2:a0:28:66:1d:35:09:85:
+        2b:2f:b2:37:b6:2f:74:32:39:55:05:f6:67:33:02:2b:3a:71:
+        b7:ed:b2:19:97:81:4a:69:37:b4:74:0d:11:3b:fb:c4:54:bb:
+        11:bb:9a:fc
 -----BEGIN CERTIFICATE-----
-MIIEzDCCA7SgAwIBAgIBADANBgkqhkiG9w0BAQQFADBSMQswCQYDVQQGEwJOTDEP
+MIIEvDCCA6SgAwIBAgIBADANBgkqhkiG9w0BAQUFADBSMQswCQYDVQQGEwJOTDEP
 MA0GA1UEChMGTklLSEVGMTIwMAYDVQQDEylOSUtIRUYgbWVkaXVtLXNlY3VyaXR5
-IGNlcnRpZmljYXRpb24gYXV0aDAeFw0wMTA5MjEwOTM2MTRaFw0wNjAyMDkwOTM2
-MTRaMFIxCzAJBgNVBAYTAk5MMQ8wDQYDVQQKEwZOSUtIRUYxMjAwBgNVBAMTKU5J
+IGNlcnRpZmljYXRpb24gYXV0aDAeFw0wMTA5MjEwMDAwMDBaFw0yMTAyMDkwMDAw
+MDBaMFIxCzAJBgNVBAYTAk5MMQ8wDQYDVQQKEwZOSUtIRUYxMjAwBgNVBAMTKU5J
 S0hFRiBtZWRpdW0tc2VjdXJpdHkgY2VydGlmaWNhdGlvbiBhdXRoMIIBIjANBgkq
 hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo9zA5ZEydcswKgBd4ZwPea5DRDC+5H3U
 6nZt+5vd4aG2H3tdNS11+9v065QLdCmO17+Wi5M+2iRPXLMvvKPvNMXZ/05R6pe8
@@ -79,19 +79,19 @@ xGo/6zDWyZZYH+W85eyR5HT76t/YMQsVUtTbLC/qZFs1iTXeEs0gfKYcSS0KnrHn
 ipNPzCWjCVlaHsGyJdrUycGPocllMM6as3mUyMvIgroDl27TQ6YQQuqg8yoBWANg
 KlIesRBVqzjVk9H6niqfIEdC4+vQiSNZuzMISGLTX2h4zXPe6C7MbQqLw3BJ9DDU
 DXzl0GXmhsVN5i8nMs1I4XHOMO7CmAqe1Q8SCpqd5AOLuj5lInMi9QIDAQABo4IB
-qzCCAacwDAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCAYYwFwYDVR0RBBAwDoEMY2FA
-bmlraGVmLm5sMB0GA1UdDgQWBBRbBTqZxtUivf2UgPwRqNDxcdZLpDA+BgNVHR8E
-NzA1MDOgMaAvhi1odHRwOi8vY2VydGlmaWNhdGUubmlraGVmLm5sL21lZGl1bS9j
-YWNybC5wZW0wEQYJYIZIAYb4QgEBBAQDAgAHMDwGCWCGSAGG+EIBBAQvFi1odHRw
-Oi8vY2VydGlmaWNhdGUubmlraGVmLm5sL21lZGl1bS9jYWNybC5wZW0wOgYJYIZI
-AYb4QgEIBC0WK2h0dHA6Ly9jZXJ0aWZpY2F0ZS5uaWtoZWYubmwvbWVkaXVtL3Bv
-bGljeS8wgYQGCWCGSAGG+EIBDQR3FnVEdXRjaEdyaWQgYW5kIE5JS0hFRiBtZWRp
-dW0tc2VjdXJpdHkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHk7IHBvbGljaWVzIGF0
-IGh0dHA6Ly9jZXJ0aWZpY2F0ZS5uaWtoZWYubmwvbWVkaXVtL3BvbGljeS8wDQYJ
-KoZIhvcNAQEEBQADggEBAHdui1o+DEHV1h6465l2hXnQR+5ehiNeKIzBdGyteOHS
-foFghaIlEeMJ7vhE67hd+m8jWjvZT3v1o9fYOy9QO5YjvbeBUBYU9+C/l9LSdx9Z
-xO1VhE4sKEEfN/b+3CnySN/xnTPx5hP91gY8VIdvnWXbCkdoQ0PuY/DpR7f9ZoYy
-JdskzeBbMHnTrvaqfiCVRtSVf2bkKbxJlNJ/pBOG91m5/H+dSRsZiMbS6aTXMVIy
-D48P42AAHvVIkdAsHlQBNPSA5q8w70BBwhQtMOmfIpABQY4Vam5OsEnblCoPYbwP
-WpjKfulv8gOHZlXQ7A37RzJqV6vZACN586s+cgbJnB0=
+mzCCAZcwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAYYwGgYDVR0RBBMw
+EYEPY2FAZHV0Y2hncmlkLm5sMB0GA1UdDgQWBBRbBTqZxtUivf2UgPwRqNDxcdZL
+pDA4BgNVHR8EMTAvMC2gK6AphidodHRwOi8vY2EuZHV0Y2hncmlkLm5sL21lZGl1
+bS9jYWNybC5wZW0wEQYJYIZIAYb4QgEBBAQDAgAHMDYGCWCGSAGG+EIBBAQpFido
+dHRwOi8vY2EuZHV0Y2hncmlkLm5sL21lZGl1bS9jYWNybC5wZW0wNAYJYIZIAYb4
+QgEIBCcWJWh0dHA6Ly9jYS5kdXRjaGdyaWQubmwvbWVkaXVtL3BvbGljeS8wfgYJ
+YIZIAYb4QgENBHEWb0R1dGNoR3JpZCBhbmQgTklLSEVGIG1lZGl1bS1zZWN1cml0
+eSBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTsgcG9saWNpZXMgYXQgaHR0cDovL2Nh
+LmR1dGNoZ3JpZC5ubC9tZWRpdW0vcG9saWN5LzANBgkqhkiG9w0BAQUFAAOCAQEA
+fT4RR/O6b9g5mClM+y/vXo0wZ20/ogtPeha1tTaoYe+sDEEy3u4qLB1TLtiBCiK6
+rHLZLGfdcO210RUGKj6KAWGdW1u3p+Pf3V++2DYnQRS5lQe+ppj9RbR4l4ZK8RAq
+5LWIqYTT4IXPgIb1QvAXQA1BWCuKDWB/UOovTf/jWdO7q8KfmSwKUbdlWthe4/G6
+WWL5xDxUNsRoSgBIbZFYTRvzTKNu2typNtwGNNx5xcu0iAuus2s8BhNszjBBQhZX
+nv5J34YyqWMlM8eEOUUNccKgKGYdNQmFKy+yN7YvdDI5VQX2ZzMCKzpxt+2yGZeB
+Smk3tHQNETv7xFS7Ebua/A==
 -----END CERTIFICATE-----
