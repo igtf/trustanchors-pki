@@ -2,7 +2,7 @@
 
 for i in "$@" 
 do
-  caname=`echo $i |sed -e 's/.*\/ca_//;s/-.*$//'`
+  caname=`echo $i |sed -e 's/.*\/ca_//;s/-[^-]*-[^-]*\.noarch\.rpm$//'`
 
   if [ -d $caname ] ; then
     echo $caname already done
