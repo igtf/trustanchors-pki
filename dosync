@@ -1,8 +1,18 @@
 #! /bin/sh
+dummy=0
+
+while :; do
+  case "$1" in
+  -n ) dummy=1 ; shift ;;
+  -- ) shift ; break ;;
+  -* ) echo "Unknown option $1" ; exit 1 ;;
+  * ) break ;;
+  esac
+done
 
 case "$#" in
 1 )	;;
-* )	echo "Usage: $0 version" >&2 ;exit 1 ;;
+* )	echo "Usage: $0 [-n] version" >&2 ;exit 1 ;;
 esac
 version=$1
 
@@ -69,13 +79,33 @@ EOF
 	carep
 )
 
+# build the tarball for distribution
+TEMPDIR=`mktemp -d /tmp/eugridpma-dist-XXXXXX`
+TARDIR=$TEMPDIR/eugridpma-distribution-$1
+mkdir $TARDIR
+for i in `cat accredited.in`
+do
+  cp -pr $i $TARDIR/
+done
+cp -pr dist-configure $TARDIR/configure
+( cd $TEMPDIR ; tar zcvf \
+	$PREP/eugridpma-dist-$1.tar.gz \
+	--exclude "CVS" \
+	. 
+)
+rm -fr $TEMPDIR
+
+# build the policy RPMs
 rpmtop=`awk '/^%_topdir/ { t=$NF } END {print t}' $HOME/.rpmmacros`
 rpmbuild -ba eugridpma.spec
 
+# copt distribution stuff to the area
 cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$1*.src.rpm $PREP/
 cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$1*.noarch.rpm $PREP/
 
 cp -pr accredited worthless others CHANGES $PREP/
 
-( cd $PREP ; yum-arch . )
-( cd $PREP ; $RSYNC $PREP $DIST )
+if [ $dummy -eq 0 ]; then
+	( cd $PREP ; yum-arch . )
+	( cd $PREP ; $RSYNC $PREP $DIST )
+fi

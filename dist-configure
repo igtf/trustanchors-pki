@@ -1,0 +1,70 @@
+#! /bin/sh
+#
+#
+INSTALL=install
+PREFIX=/etc/grid-security/certificates
+MKDIR=mkdir
+SED=sed
+
+while :
+do
+  case "$1" in
+  --prefix=* ) 
+	PREFIX=`echo $1 | sed -e 's/--prefix=//'`
+	shift 
+	break
+	;;
+  --with-mkdir=* ) 
+	MKDIR=`echo $1 | sed -e 's/--with-mkdir=//'`
+	shift 
+	break
+	;;
+  --with-install=* ) 
+	INSTALL=`echo $1 | sed -e 's/--with-install=//'`
+	shift 
+	break
+	;;
+  -- ) shift ; break ;;
+  -* ) echo "Unknown argument to $0" ; exit 1 ;;
+  * ) break ;;
+  esac
+done
+
+case "$#" in
+0 )	;;
+* )	cat <<EOF
+Usage: $0 
+    [--prefix=path]          Installation path
+                             default: /etc/grid-security/certificates
+    [--with-mkdir=path]      name of mkdir program supporting -p
+                             default: mkdir
+    [--with-install=path]    name of the BSD install programme
+                             default: install
+EOF
+	exit 0
+;;
+esac
+
+# create the makefile
+
+cat > Makefile <<EOFA
+# generated automatically by configure
+# $@
+#
+prefix=$PREFIX
+install=$INSTALL
+mkdir=$MKDIR
+
+all: compile
+
+compile:;
+	@echo "Ready to install in \$(prefix)."
+
+install:;
+	\$(mkdir) -p \$(prefix)
+	\$(install) \
+		*/????????.0 \
+		*/????????.crl_url \
+		*/????????.signing_policy \
+		\$(prefix)/
+EOFA
