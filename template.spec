@@ -17,6 +17,7 @@ BuildArch: noarch
 %define GSI_CA_NAME  %(tar xOfz %{SOURCE0} %{CA_HASH}.0 | openssl x509 -noout -subject |sed 's#^.*/CN=##')
 %define CA_LDAP      %(tar  tfz %{SOURCE0} %{CA_HASH}.ldap          > /dev/null 2>&1 && echo 1 || echo 0)
 %define CA_LOCAL     %(tar  tfz %{SOURCE0} %{CA_HASH}.grid-security > /dev/null 2>&1 && echo 1 || echo 0)
+%define CA_CRL      %(tar  tfz %{SOURCE0} %{CA_HASH}.crl_url          > /dev/null 2>&1 && echo 1 || echo 0)
 
 Summary: Configuration files for Certification Authority (%{CA_ALIAS}) with hash %{CA_HASH}
 
@@ -65,7 +66,10 @@ mkdir -p $RPM_BUILD_ROOT/etc/grid-security/certificates
 %endif
 
 cp -pv %{CA_HASH}.0 %{CA_HASH}.signing_policy $RPM_BUILD_ROOT/etc/grid-security/certificates/
+
+%if %{CA_CRL}
 cp -pv %{CA_HASH}.crl_url                     $RPM_BUILD_ROOT/etc/grid-security/certificates/
+%endif
 
 %if %{CA_LOCAL}
 %post local
@@ -89,7 +93,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root)
 /etc/grid-security/certificates/%{CA_HASH}.0
 /etc/grid-security/certificates/%{CA_HASH}.signing_policy
+%if %{CA_CRL}
 /etc/grid-security/certificates/%{CA_HASH}.crl_url
+%endif
 %if %{CA_LDAP}
 /etc/grid-security/certificates/%{CA_HASH}.ldap
 %endif
