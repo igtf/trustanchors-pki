@@ -1,0 +1,4 @@
+# EACL Baltic Grid Certification Authority
+access_id_CA  X509   '/O=BalticGrid/CN=Baltic Grid Certification Authority'
+pos_rights    globus CA:sign
+cond_subjects globus '"/O=BalticGrid/*"'
