@@ -1,7 +1,7 @@
 Summary:   EUGridPMA meta-rpm
 Name:      ca_policy_eugridpma
-Version:   0.24
-Release:   1.rc1
+Version:   0.25
+Release:   1
 URL:       http://eugridpma.org/
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License: unknown
