@@ -1,0 +1,34 @@
+Certificate Revocation List (CRL):
+        Version 1 (0x0)
+        Signature Algorithm: md5WithRSAEncryption
+        Issuer: /C=NL/O=NIKHEF/CN=NIKHEF medium-security certification auth
+        Last Update: Jun 24 15:08:14 2004 GMT
+        Next Update: Jul 24 15:08:14 2004 GMT
+No Revoked Certificates.
+    Signature Algorithm: md5WithRSAEncryption
+        79:09:66:b2:81:30:aa:d8:4e:ab:be:d9:b7:49:58:dc:d8:8f:
+        2c:d7:62:43:c5:9b:f4:74:64:03:28:d6:f6:10:2b:b7:af:20:
+        08:54:b6:bc:b9:57:8b:6f:a1:3d:ba:97:70:9f:08:86:7b:ec:
+        8c:d9:1f:ae:63:c5:7c:8b:9b:ad:e9:ab:42:d6:5b:35:74:66:
+        26:d4:70:64:2f:00:ef:70:c5:be:54:43:90:9e:c0:76:25:5f:
+        81:1a:45:9c:23:d0:5a:bb:c0:32:f2:de:44:01:f7:8e:c9:e6:
+        98:d7:98:12:61:49:6e:f6:f3:b9:ce:c2:73:6d:38:8f:10:e4:
+        66:af:5e:c8:8c:6d:b8:f7:83:78:d9:39:81:48:56:44:41:9f:
+        dc:e6:35:38:82:2d:45:cf:4f:d0:ad:33:13:4d:3f:97:1b:df:
+        de:ef:19:17:ae:e7:b8:51:10:50:c7:15:dc:b9:4c:f9:b4:76:
+        f4:50:4c:d7:c1:e8:25:e1:a7:4c:56:e8:01:a6:fe:0f:57:da:
+        8b:91:37:71:b3:c3:72:fb:2b:57:70:36:54:03:5a:10:55:cb:
+        fe:35:57:23:7a:50:ea:58:ff:28:4d:a8:7c:91:41:79:6a:6a:
+        7f:36:9a:77:6c:19:27:9d:c2:08:f9:85:d0:40:ef:be:af:24:
+        4c:f1:7f:2f
+-----BEGIN X509 CRL-----
+MIIBmDCBgTANBgkqhkiG9w0BAQQFADBSMQswCQYDVQQGEwJOTDEPMA0GA1UEChMG
+TklLSEVGMTIwMAYDVQQDEylOSUtIRUYgbWVkaXVtLXNlY3VyaXR5IGNlcnRpZmlj
+YXRpb24gYXV0aBcNMDQwNjI0MTUwODE0WhcNMDQwNzI0MTUwODE0WjANBgkqhkiG
+9w0BAQQFAAOCAQEAeQlmsoEwqthOq77Zt0lY3NiPLNdiQ8Wb9HRkAyjW9hArt68g
+CFS2vLlXi2+hPbqXcJ8IhnvsjNkfrmPFfIubremrQtZbNXRmJtRwZC8A73DFvlRD
+kJ7AdiVfgRpFnCPQWrvAMvLeRAH3jsnmmNeYEmFJbvbzuc7Cc204jxDkZq9eyIxt
+uPeDeNk5gUhWREGf3OY1OIItRc9P0K0zE00/lxvf3u8ZF67nuFEQUMcV3LlM+bR2
+9FBM18HoJeGnTFboAab+D1fai5E3cbPDcvsrV3A2VANaEFXL/jVXI3pQ6lj/KE2o
+fJFBeWpqfzaad2wZJ53CCPmF0EDvvq8kTPF/Lw==
+-----END X509 CRL-----

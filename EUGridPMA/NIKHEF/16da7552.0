@@ -1,0 +1,97 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 0 (0x0)
+        Signature Algorithm: md5WithRSAEncryption
+        Issuer: C=NL, O=NIKHEF, CN=NIKHEF medium-security certification auth
+        Validity
+            Not Before: Sep 21 09:36:14 2001 GMT
+            Not After : Feb  9 09:36:14 2006 GMT
+        Subject: C=NL, O=NIKHEF, CN=NIKHEF medium-security certification auth
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:a3:dc:c0:e5:91:32:75:cb:30:2a:00:5d:e1:9c:
+                    0f:79:ae:43:44:30:be:e4:7d:d4:ea:76:6d:fb:9b:
+                    dd:e1:a1:b6:1f:7b:5d:35:2d:75:fb:db:f4:eb:94:
+                    0b:74:29:8e:d7:bf:96:8b:93:3e:da:24:4f:5c:b3:
+                    2f:bc:a3:ef:34:c5:d9:ff:4e:51:ea:97:bc:c4:6a:
+                    3f:eb:30:d6:c9:96:58:1f:e5:bc:e5:ec:91:e4:74:
+                    fb:ea:df:d8:31:0b:15:52:d4:db:2c:2f:ea:64:5b:
+                    35:89:35:de:12:cd:20:7c:a6:1c:49:2d:0a:9e:b1:
+                    e7:8a:93:4f:cc:25:a3:09:59:5a:1e:c1:b2:25:da:
+                    d4:c9:c1:8f:a1:c9:65:30:ce:9a:b3:79:94:c8:cb:
+                    c8:82:ba:03:97:6e:d3:43:a6:10:42:ea:a0:f3:2a:
+                    01:58:03:60:2a:52:1e:b1:10:55:ab:38:d5:93:d1:
+                    fa:9e:2a:9f:20:47:42:e3:eb:d0:89:23:59:bb:33:
+                    08:48:62:d3:5f:68:78:cd:73:de:e8:2e:cc:6d:0a:
+                    8b:c3:70:49:f4:30:d4:0d:7c:e5:d0:65:e6:86:c5:
+                    4d:e6:2f:27:32:cd:48:e1:71:ce:30:ee:c2:98:0a:
+                    9e:d5:0f:12:0a:9a:9d:e4:03:8b:ba:3e:65:22:73:
+                    22:f5
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:TRUE
+            X509v3 Key Usage: 
+                Digital Signature, Certificate Sign, CRL Sign
+            X509v3 Subject Alternative Name: 
+                email:ca@nikhef.nl
+            X509v3 Subject Key Identifier: 
+                5B:05:3A:99:C6:D5:22:BD:FD:94:80:FC:11:A8:D0:F1:71:D6:4B:A4
+            X509v3 CRL Distribution Points: 
+                URI:http://certificate.nikhef.nl/medium/cacrl.pem
+
+            Netscape Cert Type: 
+                SSL CA, S/MIME CA, Object Signing CA
+            Netscape CA Revocation Url: 
+                http://certificate.nikhef.nl/medium/cacrl.pem
+            Netscape CA Policy Url: 
+                http://certificate.nikhef.nl/medium/policy/
+            Netscape Comment: 
+                DutchGrid and NIKHEF medium-security Certification Authority; policies at http://certificate.nikhef.nl/medium/policy/
+    Signature Algorithm: md5WithRSAEncryption
+        77:6e:8b:5a:3e:0c:41:d5:d6:1e:b8:eb:99:76:85:79:d0:47:
+        ee:5e:86:23:5e:28:8c:c1:74:6c:ad:78:e1:d2:7e:81:60:85:
+        a2:25:11:e3:09:ee:f8:44:eb:b8:5d:fa:6f:23:5a:3b:d9:4f:
+        7b:f5:a3:d7:d8:3b:2f:50:3b:96:23:bd:b7:81:50:16:14:f7:
+        e0:bf:97:d2:d2:77:1f:59:c4:ed:55:84:4e:2c:28:41:1f:37:
+        f6:fe:dc:29:f2:48:df:f1:9d:33:f1:e6:13:fd:d6:06:3c:54:
+        87:6f:9d:65:db:0a:47:68:43:43:ee:63:f0:e9:47:b7:fd:66:
+        86:32:25:db:24:cd:e0:5b:30:79:d3:ae:f6:aa:7e:20:95:46:
+        d4:95:7f:66:e4:29:bc:49:94:d2:7f:a4:13:86:f7:59:b9:fc:
+        7f:9d:49:1b:19:88:c6:d2:e9:a4:d7:31:52:32:0f:8f:0f:e3:
+        60:00:1e:f5:48:91:d0:2c:1e:54:01:34:f4:80:e6:af:30:ef:
+        40:41:c2:14:2d:30:e9:9f:22:90:01:41:8e:15:6a:6e:4e:b0:
+        49:db:94:2a:0f:61:bc:0f:5a:98:ca:7e:e9:6f:f2:03:87:66:
+        55:d0:ec:0d:fb:47:32:6a:57:ab:d9:00:23:79:f3:ab:3e:72:
+        06:c9:9c:1d
+-----BEGIN CERTIFICATE-----
+MIIEzDCCA7SgAwIBAgIBADANBgkqhkiG9w0BAQQFADBSMQswCQYDVQQGEwJOTDEP
+MA0GA1UEChMGTklLSEVGMTIwMAYDVQQDEylOSUtIRUYgbWVkaXVtLXNlY3VyaXR5
+IGNlcnRpZmljYXRpb24gYXV0aDAeFw0wMTA5MjEwOTM2MTRaFw0wNjAyMDkwOTM2
+MTRaMFIxCzAJBgNVBAYTAk5MMQ8wDQYDVQQKEwZOSUtIRUYxMjAwBgNVBAMTKU5J
+S0hFRiBtZWRpdW0tc2VjdXJpdHkgY2VydGlmaWNhdGlvbiBhdXRoMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo9zA5ZEydcswKgBd4ZwPea5DRDC+5H3U
+6nZt+5vd4aG2H3tdNS11+9v065QLdCmO17+Wi5M+2iRPXLMvvKPvNMXZ/05R6pe8
+xGo/6zDWyZZYH+W85eyR5HT76t/YMQsVUtTbLC/qZFs1iTXeEs0gfKYcSS0KnrHn
+ipNPzCWjCVlaHsGyJdrUycGPocllMM6as3mUyMvIgroDl27TQ6YQQuqg8yoBWANg
+KlIesRBVqzjVk9H6niqfIEdC4+vQiSNZuzMISGLTX2h4zXPe6C7MbQqLw3BJ9DDU
+DXzl0GXmhsVN5i8nMs1I4XHOMO7CmAqe1Q8SCpqd5AOLuj5lInMi9QIDAQABo4IB
+qzCCAacwDAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCAYYwFwYDVR0RBBAwDoEMY2FA
+bmlraGVmLm5sMB0GA1UdDgQWBBRbBTqZxtUivf2UgPwRqNDxcdZLpDA+BgNVHR8E
+NzA1MDOgMaAvhi1odHRwOi8vY2VydGlmaWNhdGUubmlraGVmLm5sL21lZGl1bS9j
+YWNybC5wZW0wEQYJYIZIAYb4QgEBBAQDAgAHMDwGCWCGSAGG+EIBBAQvFi1odHRw
+Oi8vY2VydGlmaWNhdGUubmlraGVmLm5sL21lZGl1bS9jYWNybC5wZW0wOgYJYIZI
+AYb4QgEIBC0WK2h0dHA6Ly9jZXJ0aWZpY2F0ZS5uaWtoZWYubmwvbWVkaXVtL3Bv
+bGljeS8wgYQGCWCGSAGG+EIBDQR3FnVEdXRjaEdyaWQgYW5kIE5JS0hFRiBtZWRp
+dW0tc2VjdXJpdHkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHk7IHBvbGljaWVzIGF0
+IGh0dHA6Ly9jZXJ0aWZpY2F0ZS5uaWtoZWYubmwvbWVkaXVtL3BvbGljeS8wDQYJ
+KoZIhvcNAQEEBQADggEBAHdui1o+DEHV1h6465l2hXnQR+5ehiNeKIzBdGyteOHS
+foFghaIlEeMJ7vhE67hd+m8jWjvZT3v1o9fYOy9QO5YjvbeBUBYU9+C/l9LSdx9Z
+xO1VhE4sKEEfN/b+3CnySN/xnTPx5hP91gY8VIdvnWXbCkdoQ0PuY/DpR7f9ZoYy
+JdskzeBbMHnTrvaqfiCVRtSVf2bkKbxJlNJ/pBOG91m5/H+dSRsZiMbS6aTXMVIy
+D48P42AAHvVIkdAsHlQBNPSA5q8w70BBwhQtMOmfIpABQY4Vam5OsEnblCoPYbwP
+WpjKfulv8gOHZlXQ7A37RzJqV6vZACN586s+cgbJnB0=
+-----END CERTIFICATE-----
