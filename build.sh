@@ -13,6 +13,7 @@ esac
 for ca in "$@"
 do
 	release=1
+	ca=`echo $ca | sed -e 's/\/*$//'`
 
 	if [ ! -d $ca ]; then
 		echo "$ca is not a directory, skipped" >&2
@@ -25,6 +26,9 @@ do
 		echo "No valid CA cert found for $ca" >&2
 		continue
 	fi
+
+	s=`expr 365 \* 86400`
+	openssl x509 -noout -checkend $s -in $ca/$hash.0 || echo -e "***\nWARNING $ca will expire within 1 yr\n***" >&2
 
 	if [ -f $ca/CVS/Tag ]; then
 		version=`sed -e 's/^.//' < $ca/CVS/Tag`
