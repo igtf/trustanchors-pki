@@ -5,6 +5,53 @@ case "$#" in
 * )	echo "Usage: $0 version" >&2 ;exit 1 ;;
 esac
 
-mkdir /global/ices/www/site/eugridpma/distribution/$1
-rsync -rav accredited worthless others accredited.in /global/ices/www/site/eugridpma/distribution/$1/
-echo "This is version $1" > /global/ices/www/site/eugridpma/distribution/$1/version.txt
+DIST=/global/ices/www/site/eugridpma/distribution/$1
+
+mkdir $DIST
+rsync -rav accredited worthless others accredited.in $DIST/
+
+echo "This is version $1" > $DIST/version.txt
+
+cat <<EOF > $DIST/worthless/README.txt
+
+Version $1 WORTHLESS root certificates
+
+This area contains explicitly "worthless" root certificates. Do
+not rely on these certificates in a real environment - you install
+them entirely at your own risk!
+
+Examples of worthless CAs include the "tutorial" on-line exercise
+CA, and the Globus Certificate Service.
+Especially the Globus Certificate Service is governed by this
+disclaimer from the Globus web site:
+
+"
+The Globus Certificate Service is a service that issues low-quality
+certificates to users who require certificates to use the Globus
+Toolkit(C) and do not have other means of acquiring certificates.  The
+Globus Certificate Service is not a true CA (for example, it does not
+revoke or reissue certificates) and certificates from the Globus
+Certificate Service are intended solely for experimentation and
+testing.  Care should be taken when using certificates issued by it,
+particularly on production resources.
+
+We strongly encourage users to use more secure alternatives to the
+Globus Certificate Service
+"
+
+EOF
+
+
+cat <<EOF > $DIST/others/README.txt
+
+Version $1 other root certificates
+
+This area contains non-accredited root certificates. Do not rely on 
+these certificates in a real environment - you install them entirely 
+at your own risk!
+
+Examples of "other" CAs include the Fermilab KerberosCA root.
+
+EOF
+
+
