@@ -19,6 +19,7 @@ version=$1
 PREP=${TMP:-/tmp}/eugridpma.$$
 DIST=webegp@www.eugridpma.org:/project/srv/www/site/eugridpma/html/distribution/
 RSYNC="rsync -rav -e ssh"
+TARDISTNAME=eugridpma-policy-accredited-bundle-$1
 
 mkdir $PREP
 mkdir $PREP/$version
@@ -81,15 +82,16 @@ EOF
 
 # build the tarball for distribution
 TEMPDIR=`mktemp -d /tmp/eugridpma-dist-XXXXXX`
-TARDIR=$TEMPDIR/eugridpma-distribution-$1
+TARDIR=$TEMPDIR/$TARDISTNAME
 mkdir $TARDIR
 for i in `cat accredited.in`
 do
   cp -pr $i $TARDIR/
 done
 cp -pr dist-configure $TARDIR/configure
+cp -pr accredited.in $TARDIR/
 ( cd $TEMPDIR ; tar zcvf \
-	$PREP/eugridpma-dist-$1.tar.gz \
+	$PREP/accredited/$TARDISTNAME.tar.gz \
 	--exclude "CVS" \
 	. 
 )

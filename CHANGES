@@ -3,6 +3,7 @@
   openssl 0.9.7c rendering of emailAddress component in the subject DN
 * updated DutchGrid CA cert from web site: extended lifetime to 2021 and
   changed digest algorithm from MD5 to SHA1
+* added a tar-ball distribution with a configure scrfipt for convenience
 
 
 Changes from 0.25 to 0.26
