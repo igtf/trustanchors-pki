@@ -2,5 +2,5 @@
 # hash: 225860ae
 access_id_CA            X509            '/O=dutchgrid/OU=Certificate Authorities/CN=EDG Tutorial Worthless Certification Authority'
 pos_rights              globus  CA:sign
-cond_subjects           globus  '"/O=dutchgrid/OU=Certificate Authorities/CN=EDG Tutorial Worthless Certification Authority" "/O=edgtutorial/*"'
+cond_subjects           globus  '"/O=dutchgrid/OU=Certificate Authorities/CN=EDG Tutorial Worthless Certification Authority" "/O=edgtutorial/*" "/O=dutchgrid/*"'
 
