@@ -106,8 +106,10 @@ cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$1*.src.rpm $PREP/
 cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$1*.noarch.rpm $PREP/
 
 cp -p accredited.in $PREP/accredited/
+cp -p CHANGES $PREP/
 
-cp -pr accredited worthless others CHANGES $PREP/
+# now copy the RPMs
+cp -pr ../build/accredited ../build/worthless ../build/others $PREP/
 
 if [ $dummy -eq 0 ]; then
 	( cd $PREP ; yum-arch . )

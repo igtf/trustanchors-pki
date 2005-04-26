@@ -13,7 +13,8 @@ Group: Globus/Security
 BuildRoot: %{_tmppath}/%{name}-root
 BuildArch: noarch
 
-%define CA_HASH      %(tar xOfz %{SOURCE0} '*.0' | openssl x509 -noout -hash)
+#%define CA_HASH      %(tar xOfz %{SOURCE0} '*.0' | openssl x509 -noout -hash)
+%define CA_HASH      @HASH@
 %define GSI_CA_NAME  %(tar xOfz %{SOURCE0} %{CA_HASH}.0 | openssl x509 -noout -subject |sed 's#^.*/CN=##')
 %define CA_LDAP      %(tar  tfz %{SOURCE0} %{CA_HASH}.ldap          > /dev/null 2>&1 && echo 1 || echo 0)
 %define CA_LOCAL     %(tar  tfz %{SOURCE0} %{CA_HASH}.grid-security > /dev/null 2>&1 && echo 1 || echo 0)
