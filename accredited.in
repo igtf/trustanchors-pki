@@ -1,36 +1,36 @@
-ASGCCA
-AustrianGrid
-ArmeSFo
-BEGrid
-CERN
-CESNET
-CNRS
-CNRS-DataGrid
-CNRS-Grid-FR
-CNRS-Projets
-CyGrid
-CyGrid-old
-DOEGrids
-ESnet
-EstonianGrid
-FNAL
-GermanGrid
-Grid-Ireland
-GridCanada
-HellasGrid
-INFN
-IUCC
-LIP
-LIPCA
-NIKHEF
-NIIF
-NorduGrid
-PK-Grid
-PolishGrid
-RMKI
-Russia
-SEE-GRID
-SiGNET
-SlovakGrid
-Spain
-UKeScience
+ASGCCA			classic
+AustrianGrid		classic
+ArmeSFo			classic
+BEGrid			classic
+CERN			classic
+CESNET			classic
+CNRS			classic
+CNRS-DataGrid		classic
+CNRS-Grid-FR		classic
+CNRS-Projets		classic
+CyGrid			classic
+CyGrid-old		classic
+DOEGrids		classic
+ESnet			classic
+EstonianGrid		classic
+FNAL			classic
+GermanGrid		classic
+Grid-Ireland		classic
+GridCanada		classic
+HellasGrid		classic
+INFN			classic
+IUCC			classic
+LIP			classic
+LIPCA			classic
+NIKHEF			classic
+NIIF			classic
+NorduGrid		classic
+PK-Grid			classic
+PolishGrid		classic
+RMKI			classic
+Russia			classic
+SEE-GRID		classic
+SiGNET			classic
+SlovakGrid		classic
+Spain			classic
+UKeScience		classic

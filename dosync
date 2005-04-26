@@ -1,9 +1,13 @@
 #! /bin/sh
 dummy=0
+release=1
+BUILDROOT=../build
 
 while :; do
   case "$1" in
   -n ) dummy=1 ; shift ;;
+  -r | --release ) release=$2 ; shift 2 ;;
+  -b | --buildroot ) BUILDROOT=$2 ; shift 2 ;;
   -- ) shift ; break ;;
   -* ) echo "Unknown option $1" ; exit 1 ;;
   * ) break ;;
@@ -19,7 +23,7 @@ version=$1
 PREP=${TMP:-/tmp}/eugridpma.$$
 DIST=webegp@www.eugridpma.org:/project/srv/www/site/eugridpma/html/distribution/
 RSYNC="rsync -rav -e ssh"
-TARDISTNAME=eugridpma-policy-accredited-bundle-$1
+TARDISTNAME=eugridpma-policy-accredited-bundle-$version
 
 mkdir $PREP
 mkdir $PREP/$version
@@ -28,11 +32,11 @@ mkdir $PREP/$version/others
 mkdir $PREP/$version/accredited
 PREP=$PREP/$version
 
-echo "This is version $1" > $PREP/version.txt
+echo "This is version $version" > $PREP/version.txt
 
 cat <<EOF > $PREP/worthless/README.txt
 
-Version $1 WORTHLESS root certificates
+Version $version WORTHLESS root certificates
 
 This area contains explicitly "worthless" root certificates. Do
 not rely on these certificates in a real environment - you install
@@ -62,7 +66,7 @@ EOF
 
 cat <<EOF > $PREP/others/README.txt
 
-Version $1 other root certificates
+Version $version other root certificates
 
 This area contains non-accredited root certificates -- you install 
 them entirely at your own risk! But they could be quite good as well,
@@ -72,7 +76,7 @@ Examples of "other" CAs include the Fermilab KerberosCA root.
 
 EOF
 
-( cd .. ; tar zcvf $PREP/eugridpma-carep-$1.tar.gz \
+( cd .. ; tar zcvf $PREP/eugridpma-carep-$version.tar.gz \
 	--exclude "carep/accredited" \
 	--exclude "carep/others" \
 	--exclude "carep/worthless" \
@@ -84,12 +88,23 @@ EOF
 TEMPDIR=`mktemp -d /tmp/eugridpma-dist-XXXXXX`
 TARDIR=$TEMPDIR/$TARDISTNAME
 mkdir $TARDIR
-for i in `cat accredited.in`
+for i in `awk '{print $1}' accredited.in`
 do
-  cp -pr $i $TARDIR/
+  # find the CA data to go with this (depends on .alias file)
+  # and effectively expand the CVS structure
+  for aliasfile in `find . -type f -a -name "*.alias"` 
+  do
+    s=`cat $aliasfile`
+    if [ x"$s" = x"$i" ]; then
+      f=`basename $aliasfile .alias`
+      dir=`dirname $aliasfile`
+      mkdir $TARDIR/$s
+      cp -p $dir/$f.* $TARDIR/$s/
+    fi
+  done
 done
-cp -pr dist-configure $TARDIR/configure
-cp -pr accredited.in $TARDIR/
+cp -p dist-configure $TARDIR/configure
+cp -p accredited.in $TARDIR/
 ( cd $TEMPDIR ; tar zcvf \
 	$PREP/accredited/$TARDISTNAME.tar.gz \
 	--exclude "CVS" \
@@ -99,17 +114,22 @@ rm -fr $TEMPDIR
 
 # build the policy RPMs
 rpmtop=`awk '/^%_topdir/ { t=$NF } END {print t}' $HOME/.rpmmacros`
-rpmbuild -ba eugridpma.spec
 
-# copt distribution stuff to the area
-cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$1*.src.rpm $PREP/
-cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$1*.noarch.rpm $PREP/
+sed -e '
+        s/@VERSION@/'$version'/g;
+        s/@RELEASE@/'$release'/g' \
+                < eugridpma.spec > /tmp/eugridpma$$.spec
+rpmbuild -ba /tmp/eugridpma$$.spec
+
+# copy distribution stuff to the area
+cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$version-$release.src.rpm $PREP/
+cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$version-$release.noarch.rpm $PREP/
 
 cp -p accredited.in $PREP/accredited/
 cp -p CHANGES $PREP/
 
-# now copy the RPMs
-cp -pr ../build/accredited ../build/worthless ../build/others $PREP/
+# now copy the RPMs &c
+cp -pr $BUILDROOT/* $PREP/
 
 if [ $dummy -eq 0 ]; then
 	( cd $PREP ; yum-arch . )

@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $Id$
+# $Id: build.sh,v 1.12 2005/04/26 16:56:17 pmacvsdg Exp $
 
 help() {
  echo "Usage: $0 [-f] [-v forced-version] [-r release] [-b buildroot]" >&2 
@@ -52,8 +52,7 @@ mkdir -p $BUILDROOT
 #
 
 isaccredited() {
-  rc=`egrep -c ^$1\$ accredited.in`
-  echo $rc;
+  awk 'BEGIN {s=0} $1 == '$1' { s=1 } END {print s}' accredited.in
 }
 
 for cadir in `find . -type d`
