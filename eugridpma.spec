@@ -37,19 +37,19 @@ accredited by the EUGridPMA under the "classic" profile.
 Please refer to the EUGridPMA web site for authentication profiles
 and minimum requirements
 
-%package sips
-Summary: EUGridPMA policy RPM requiring only sips profile accredited CAs
-Group: Security/Certificates
-Provides: ca_policy_eugridpma-classic-%{version}
-Requires: %(awk '$2 == "sips" { printf "ca_%s = %s, ",$1,"%{version}" } ' accredited.in )
-
-%description sips
-This is the policy meta-package that implies trust on EUGridPMA accredited 
-CAs according to the site-integrated proxy servers only.
-Install this package if you are willing to trust CAs that are 
-accredited by the EUGridPMA under the "sips" profile.
-Please refer to the EUGridPMA web site for authentication profiles
-and minimum requirements
+#%package sips
+#Summary: EUGridPMA policy RPM requiring only sips profile accredited CAs
+#Group: Security/Certificates
+#Provides: ca_policy_eugridpma-classic-%{version}
+#Requires: %(awk '$2 == "sips" { printf "ca_%s = %s, ",$1,"%{version}" } ' accredited.in )
+#
+#%description sips
+#This is the policy meta-package that implies trust on EUGridPMA accredited 
+#CAs according to the site-integrated proxy servers only.
+#Install this package if you are willing to trust CAs that are 
+#accredited by the EUGridPMA under the "sips" profile.
+#Please refer to the EUGridPMA web site for authentication profiles
+#and minimum requirements
 
 %files
 %defattr(-,root,root)
@@ -57,5 +57,5 @@ and minimum requirements
 %files classic
 %defattr(-,root,root)
 
-%files sips
-%defattr(-,root,root)
+#%files sips
+#%defattr(-,root,root)

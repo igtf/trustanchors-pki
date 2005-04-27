@@ -112,19 +112,6 @@ cp -p accredited.in $TARDIR/
 )
 rm -fr $TEMPDIR
 
-# build the policy RPMs
-rpmtop=`awk '/^%_topdir/ { t=$NF } END {print t}' $HOME/.rpmmacros`
-
-sed -e '
-        s/@VERSION@/'$version'/g;
-        s/@RELEASE@/'$release'/g' \
-                < eugridpma.spec > /tmp/eugridpma$$.spec
-rpmbuild -ba /tmp/eugridpma$$.spec
-
-# copy distribution stuff to the area
-cp -p $rpmtop/SRPMS/ca_policy_eugridpma-$version-$release.src.rpm $PREP/
-cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma-$version-$release.noarch.rpm $PREP/
-
 cp -p accredited.in $PREP/accredited/
 cp -p CHANGES $PREP/
 

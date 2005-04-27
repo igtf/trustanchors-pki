@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $Id: build.sh,v 1.13 2005/04/26 20:51:42 pmacvsdg Exp $
+# $Id: build.sh,v 1.14 2005/04/27 14:58:30 pmacvsdg Exp $
 
 help() {
  echo "Usage: $0 [-f] [-v forced-version] [-r release] [-b buildroot]" >&2 
@@ -54,8 +54,14 @@ mkdir -p $BUILDROOT
 #
 
 isaccredited() {
-  awk 'BEGIN {s=0} $1 == '$1' { s=1 } END {print s}' accredited.in
+  awk 'BEGIN {s=0} $1 == "'$1'" { s=1 } END {print s}'  accredited.in
 }
+
+rpmtop=`awk '/^%_topdir/ { t=$NF } END {print t}' $HOME/.rpmmacros`
+echo RPMDIR $rpmtop
+DATE=`date '+%a %b %m %Y'`
+
+# build each individual CA package
 
 for cadir in $cadirs
 do
@@ -111,10 +117,6 @@ do
 
 	echo "CA $prefix $ca: building version $version release $release for hash $hash"
 
-	rpmtop=`awk '/^%_topdir/ { t=$NF } END {print t}' $HOME/.rpmmacros`
-	echo RPMDIR $rpmtop
-	DATE=`date '+%a %b %m %Y'`
-
 	sed -e '
 		s/@VERSION@/'$version'/g;
 		s/@HASH@/'$hash'/g;
@@ -147,3 +149,15 @@ do
 
   done
 done
+
+# build policy meta-RPMs as final step (moved here from dosync)
+sed -e '
+        s/@VERSION@/'$version'/g;
+        s/@RELEASE@/'$release'/g' \
+                < eugridpma.spec > /tmp/eugridpma$$.spec
+rpmbuild -ba /tmp/eugridpma$$.spec                                                                     
+                                                                                                       
+# copy distribution stuff to the area                                                                  
+cp -p $rpmtop/SRPMS/ca_policy_eugridpma*-$version-$release.src.rpm $BUILDROOT/                               
+cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma*-$version-$release.noarch.rpm $BUILDROOT/                      
+
