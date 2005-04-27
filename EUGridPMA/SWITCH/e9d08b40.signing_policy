@@ -1,7 +1,10 @@
 # EACL for SWITCH HIERARCHY -- SwissSign SILVER
-# $Id$
+# $Id: e9d08b40.signing_policy,v 1.1 2005/04/27 08:06:43 pmacvsdg Exp $
 #
  access_id_CA   X509    '/CN=SwissSign Silver CA/emailAddress=silver@swisssign.com/O=SwissSign/C=CH'
  pos_rights     globus  CA:sign
  cond_subjects  globus  '"/CN=SwissSign Silver CA/emailAddress=silver@swisssign.com/O=SwissSign/C=CH"'
 
+ access_id_CA   X509    '/CN=SwissSign Silver CA/Email=silver@swisssign.com/O=SwissSign/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/CN=SwissSign Silver CA/Email=silver@swisssign.com/O=SwissSign/C=CH"'

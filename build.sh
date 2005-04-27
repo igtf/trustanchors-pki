@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $Id: build.sh,v 1.12 2005/04/26 16:56:17 pmacvsdg Exp $
+# $Id: build.sh,v 1.13 2005/04/26 20:51:42 pmacvsdg Exp $
 
 help() {
  echo "Usage: $0 [-f] [-v forced-version] [-r release] [-b buildroot]" >&2 
@@ -9,6 +9,7 @@ help() {
 
 frelease=1
 force=0
+ignore=0
 BUILDROOT=../build
 while :; do
   case "$1" in
@@ -17,6 +18,7 @@ while :; do
   -r | --release ) frelease=$2 ; shift 2 ;;
   -h | --help ) help ;;
   -f | --force ) force=1 ; shift 1 ;;
+  --ignore ) ignore=1 ; shift 1 ;;
   -- ) shift ; break ;;
   * ) break ;;
   esac
@@ -28,11 +30,11 @@ if [ ! -f template.spec ] ; then
 fi
 
 case $# in
-0 )	;;
-* )	help;;
+0 )	cadirs=`find . -type d` ;;
+* )	cadirs="$@" ;;
 esac
 
-if [ -d $BUILDROOT ]; then
+if [ -d $BUILDROOT -a $ignore -ne 1 ]; then
   echo "Warning: buildroot $BUILDROOT already exists. Remove first..." >&2
   if [ $force -eq 1 ]; then
     echo "Removing it for you (--force specified). OK? (or press ^C" >&2
@@ -55,7 +57,7 @@ isaccredited() {
   awk 'BEGIN {s=0} $1 == '$1' { s=1 } END {print s}' accredited.in
 }
 
-for cadir in `find . -type d`
+for cadir in $cadirs
 do
   [ `expr match "$cadir" ".*CVS.*"` -ne 0 ] && continue
 
@@ -74,7 +76,7 @@ do
 	fi
 
 	s=`expr 365 \* 86400`
-	openssl x509 -noout -checkend $s -in $ca/$cafile.0 || \
+	openssl x509 -noout -checkend $s -in $cadir/$cafile.0 || \
 		echo -e "***\nWARNING $ca will expire within 1 yr\n***" >&2
 
 	if [ x"$fversion" = x"" ]; then
@@ -119,7 +121,7 @@ do
 		s/@RELEASE@/'$release'/g;
 		s/@ALIAS@/'$ca'/g;
 		s/@DATE@/'"$DATE"'/g' \
-			< template.spec > $ca/ca_$ca.spec
+			< template.spec > $cadir/ca_$ca.spec
 
 	( cd $cadir ;
 	tar -zchvf $rpmtop/SOURCES/$ca-$version.tar.gz ${hash}* ;

@@ -5,7 +5,7 @@ Release:   @RELEASE@
 URL:       http://www.eugridpma.org/
 BuildRoot: %{_tmppath}/%{name}-buildroot
 License:   Freely distributable under license by the individual CAs
-Group:	system/certificates
+Group:	Security/Certificates
 Provides: ca_policy_eugridpma-%{version}
 BuildArch: noarch
 Requires: %(awk '{ printf "ca_%s = %s, ",$1,"%{version}" } ' accredited.in )
@@ -25,7 +25,7 @@ and minimum requirements
 
 %package classic
 Summary: EUGridPMA policy RPM requiring only classic profile accredited CAs
-Group: System/Certificates
+Group: Security/Certificates
 Provides: ca_policy_eugridpma-classic-%{version}
 Requires: %(awk '$2 == "classic" { printf "ca_%s = %s, ",$1,"%{version}" } ' accredited.in )
 
@@ -39,7 +39,7 @@ and minimum requirements
 
 %package sips
 Summary: EUGridPMA policy RPM requiring only sips profile accredited CAs
-Group: System/Certificates
+Group: Security/Certificates
 Provides: ca_policy_eugridpma-classic-%{version}
 Requires: %(awk '$2 == "sips" { printf "ca_%s = %s, ",$1,"%{version}" } ' accredited.in )
 

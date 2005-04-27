@@ -8,7 +8,7 @@ Release: @RELEASE@
 Source: %{CA_ALIAS}-%{version}.tar.gz
 License: GPL
 Prefix: %{globus_location} /etc
-Group: Globus/Security
+Group: Security/Certificates
 #BuildRequires: openssl
 BuildRoot: %{_tmppath}/%{name}-root
 BuildArch: noarch
@@ -20,7 +20,7 @@ BuildArch: noarch
 %define CA_LOCAL     %(tar  tfz %{SOURCE0} %{CA_HASH}.grid-security > /dev/null 2>&1 && echo 1 || echo 0)
 %define CA_CRL      %(tar  tfz %{SOURCE0} %{CA_HASH}.crl_url          > /dev/null 2>&1 && echo 1 || echo 0)
 
-Summary: Configuration files for Certification Authority (%{CA_ALIAS}) with hash %{CA_HASH}
+Summary: Trust anchors for Certification Authority %{CA_ALIAS}
 
 %if %(tar tfz %{SOURCE0} %{CA_HASH}.url > /dev/null 2>&1 && echo 1 || echo 0)
 URL: %(tar xOfz %{SOURCE0} %{CA_HASH}.url)
@@ -41,7 +41,7 @@ of this package corresponding to different CA's can be installed.
 %if %{CA_LOCAL}
 %package local
 Summary: Configuration files for grid-cert-request with %{CA_ALIAS} certification authority with hash %{CA_HASH}
-Group: Globus/Security
+Group: Security/Certificates
 
 %description local
 Configuration files for trusted certification authority %{CA_ALIAS} with hash %{CA_HASH}.

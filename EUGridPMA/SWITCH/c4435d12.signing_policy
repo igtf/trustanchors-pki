@@ -1,5 +1,5 @@
 # EACL for SWITCH HIERARCHY -- SwissSign SWITCH CA
-# $Id$
+# $Id: c4435d12.signing_policy,v 1.1 2005/04/27 08:06:43 pmacvsdg Exp $
 #
 # WARNING: this entry is so long that separate EACL sections must
 # be used to describe the namespace
@@ -59,6 +59,71 @@
  cond_subjects  globus  '"/C=CH/O=Universitaet Luzern/*"' 
 #
  access_id_CA   X509    '/CN=SWITCH CA/emailAddress=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Universitaet Zuerich/*"' 
+#
+# -------------------------------------------------------------------------
+# The following entries are legacy for OpenSSL < 0.9.6, which has a
+# different string rendering of the emailAddress DN component
+# the text below SHOULD be an exact copy of the strings above, except
+# for this change
+#
+
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH"'
+
+# EACLs for specific institutions follow
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Berner Fachhochschule - Haute ecole specialisee bernoise/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=ETH Swiss Federal Institute of Technology Zurich/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Fachhochschule Aargau Nordwestschweiz/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Fachhochschule beider Basel/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Kantonale Technikerinnen- und Techniker-Schule fuer Informatik/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=PSI - Paul Scherrer Institut/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Universitaet Bern/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Universite de Fribourg - Universitaet Freiburg/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Universite de Geneve/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Universite de Lausanne/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=Universitaet Luzern/*"' 
+#
+ access_id_CA   X509    '/CN=SWITCH CA/Email=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
  pos_rights     globus  CA:sign
  cond_subjects  globus  '"/C=CH/O=Universitaet Zuerich/*"' 
 #
