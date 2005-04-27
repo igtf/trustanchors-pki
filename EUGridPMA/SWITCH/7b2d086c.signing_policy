@@ -1,0 +1,7 @@
+# EACL for SWITCH HIERARCHY -- SwissSign Root
+# $Id$
+#
+ access_id_CA   X509    '/C=CH/O=SwissSign/CN=SwissSign CA (RSA IK May 6 1999 18:00:58)/emailAddress=ca@SwissSign.com'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CH/O=SwissSign/CN=SwissSign CA (RSA IK May 6 1999 18:00:58)/emailAddress=ca@SwissSign.com"'
+

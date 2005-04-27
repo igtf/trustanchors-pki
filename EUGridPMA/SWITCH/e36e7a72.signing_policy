@@ -1,0 +1,7 @@
+# EACL for SWITCH HIERARCHY -- SwissSign BRONZE
+# $Id$
+#
+ access_id_CA   X509    '/CN=SwissSign Bronze CA/emailAddress=bronze@swisssign.com/O=SwissSign/C=CH'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/CN=SwissSign Bronze CA/emailAddress=bronze@swisssign.com/O=SwissSign/C=CH"'
+
