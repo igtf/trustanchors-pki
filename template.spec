@@ -34,9 +34,11 @@ Requires: %(tar xOfz %{SOURCE0} %{CA_HASH}.requires | sed -e 's/^/ca_/' -e 's/$/
 %setup -c -n %{name}
 
 %description
-This package contains information about the %{CA_ALIAS} Certification Authority with the
-hash value %{CA_HASH} and the common name: %{GSI_CA_NAME}. Several instances
-of this package corresponding to different CA's can be installed.
+This package contains information about the %{CA_ALIAS} 
+Certification Authority with the hash value %{CA_HASH} and the common 
+name: %{GSI_CA_NAME}. 
+Several instances of this package, corresponding to different CA's, can 
+be installed simultaneously on the same system.
 
 %if %{CA_LOCAL}
 %package local
@@ -115,5 +117,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %changelog
 * @DATE@ David Groep <davidg@nikhef.nl>
-- Created first RPM for @ALIAS@
+- RPM spec template generated automatically
 

@@ -3,7 +3,13 @@ Changes from 0.28 to 0.29
 (27 April 2005)
 
 * New root certificate for the NIIF/Hungarnet CA, following the TACAR update 
-* Modified layout of the tar distribution 
+* New root cert (with the same keypair) for the HellasGrid CA, following 
+  their root cert lifetime decrease as registered with TACAR
+* Preliminary inclusion of the SWITCH CA certificates. Note that the
+  ordering of the components in the end-entity DN will currently prevent
+  the end-entity certs to be validated (this is being addressed by SwissSign)
+* Modified layout of the tar distribution, in preparation for support of
+  multiple authentication profiles
 
 Changes from 0.27 to 0.28
 -------------------------
