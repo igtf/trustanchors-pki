@@ -1,3 +1,10 @@
-access_id_CA      X509         '/O=IUCC/CN=IUCC/C=IL'
+#
+# $Id$
+#
+access_id_CA      X509        '/C=IL/O=IUCC/CN=IUCC/emailAddress=ca@mail.iucc.ac.il'
 pos_rights        IUCC        CA:sign
-cond_subjects     IUCC       '"/O=IUCC/C=IL/*"'
+cond_subjects     IUCC        '"/C=IL/O=IUCC/*"'
+
+access_id_CA      X509        '/C=IL/O=IUCC/CN=IUCC/Email=ca@mail.iucc.ac.il'
+pos_rights        IUCC        CA:sign
+cond_subjects     IUCC        '"/C=IL/O=IUCC/*"'
