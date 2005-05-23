@@ -1,3 +1,10 @@
+Changes from 0.29 to 0.30
+-------------------------
+()
+
+* new namespace allocation for the IUCC CA: "/C=IL/O=IUCC/*"
+
+
 Changes from 0.28 to 0.29
 -------------------------
 (27 April 2005)
