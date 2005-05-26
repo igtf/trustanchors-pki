@@ -3,6 +3,7 @@ Changes from 0.29 to 0.30
 ()
 
 * new namespace allocation for the IUCC CA: "/C=IL/O=IUCC/*"
+* Added IHEP CA for China
 
 
 Changes from 0.28 to 0.29
