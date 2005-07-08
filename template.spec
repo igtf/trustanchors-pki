@@ -19,6 +19,8 @@ BuildArch: noarch
 %define CA_LDAP      %(tar  tfz %{SOURCE0} %{CA_HASH}.ldap          > /dev/null 2>&1 && echo 1 || echo 0)
 %define CA_LOCAL     %(tar  tfz %{SOURCE0} %{CA_HASH}.grid-security > /dev/null 2>&1 && echo 1 || echo 0)
 %define CA_CRL      %(tar  tfz %{SOURCE0} %{CA_HASH}.crl_url          > /dev/null 2>&1 && echo 1 || echo 0)
+%define HAS_CA_EMAIL      %(tar  tfz %{SOURCE0} %{CA_HASH}.email >/dev/null 2>&1 && echo 1 || echo 0)
+%define CA_EMAIL  %(tar xOfz %{SOURCE0} %{CA_HASH}.email )
 
 Summary: Trust anchors for Certification Authority %{CA_ALIAS}
 
@@ -38,7 +40,11 @@ This package contains information about the %{CA_ALIAS}
 Certification Authority with the hash value %{CA_HASH} and the common 
 name: %{GSI_CA_NAME}. 
 Several instances of this package, corresponding to different CA's, can 
-be installed simultaneously on the same system.
+be installed simultaneously on the same system. 
+%if %{HAS_CA_EMAIL}
+In case of concerns, the authority can be contacted by electronic
+mail at the address <%{CA_EMAIL}>.
+%endif
 
 %if %{CA_LOCAL}
 %package local
