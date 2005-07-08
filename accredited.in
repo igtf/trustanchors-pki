@@ -11,10 +11,12 @@ CNRS-Grid-FR		classic
 CNRS-Projets		classic
 CyGrid			classic
 CyGrid-old		classic
+DFN-GridGermany-Root	classic
+DFN-GridGermany-Server	classic
+DFN-GridGermany-User	classic
 DOEGrids		classic
 ESnet			classic
 EstonianGrid		classic
-FNAL			classic
 GermanGrid		classic
 Grid-Ireland		classic
 GridCanada		classic
