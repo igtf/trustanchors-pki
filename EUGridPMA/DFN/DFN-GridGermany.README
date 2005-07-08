@@ -1,0 +1,49 @@
+
+
+1149214e 00000001_dfn-grid-pki-root-g1-cert.pem
+fe102e03 06ECC02E_dfn-grid-pki-server-ca-g1.1-cert.pem
+34f8e29c 06ECC095_dfn-grid-pki-user-ca-g1.1-cert.pem
+
+
+EE certs all start with the DN prefix 'C=DE/O=GridGermany'.
+
+---------------------
+/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein PCA Grid - G01
+
+URL:
+URI:http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/html/cacert.html
+
+DER cert:
+URI:http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/certs/root-ca-cert.crt
+URI:http://cdp2.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/certs/root-ca-cert.crt
+
+CDP:
+URI:http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/crls/root-ca-crl.crl
+URI:http://cdp2.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/crls/root-ca-crl.crl
+---------------------
+/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein Server CA Grid - G01
+
+URL:
+URI:http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/data/html/cacert.html
+
+DER cert:
+URI:http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/data/certs/ca-server-cert.crt
+URI:http://cdp2.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/data/certs/ca-server-cert.crt
+
+CDP:
+URI:http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/data/crls/ca-server-crl.crl URI:http://cdp2.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/data/crls/ca-server-crl.crl
+
+---------------------
+/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein User CA Grid - G01
+
+URL:
+URI:http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/html/cacert.html
+
+DER cert:
+URI:http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/certs/ca-user-cert.crt
+URI:http://cdp2.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/certs/ca-user-cert.crt
+
+CDP:
+URI:http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/crls/ca-user-crl.crl URI:http://cdp2.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/crls/ca-user-crl.crl
+---------------------
+

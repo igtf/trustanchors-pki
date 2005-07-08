@@ -1,0 +1,7 @@
+# EACL DFN-GridGermany-Server
+# $Id$
+# The DFN-GridGermany-Server CA signs end-entity certificates
+#
+access_id_CA  X509   '/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein Server CA Grid - G01'
+pos_rights    globus CA:sign
+cond_subjects globus '"/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein Server CA Grid - G01" "/C=DE/O=GridGermany/*"'
