@@ -1,10 +1,10 @@
 #
-# $Id$
+# $Id: 6fee79b0.signing_policy,v 1.2 2005/05/20 16:12:09 pmacvsdg Exp $
 #
 access_id_CA      X509        '/C=IL/O=IUCC/CN=IUCC/emailAddress=ca@mail.iucc.ac.il'
-pos_rights        IUCC        CA:sign
-cond_subjects     IUCC        '"/C=IL/O=IUCC/*"'
+pos_rights        globus      CA:sign
+cond_subjects     globus      '"/C=IL/O=IUCC/*"'
 
 access_id_CA      X509        '/C=IL/O=IUCC/CN=IUCC/Email=ca@mail.iucc.ac.il'
-pos_rights        IUCC        CA:sign
-cond_subjects     IUCC        '"/C=IL/O=IUCC/*"'
+pos_rights        globus      CA:sign
+cond_subjects     globus      '"/C=IL/O=IUCC/*"'
