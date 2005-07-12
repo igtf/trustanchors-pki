@@ -114,7 +114,7 @@ rm -fr $TEMPDIR
 
 cp -p accredited.in $PREP/accredited/
 cp -p CHANGES $PREP/
-cp -p GPG-KEY-EUGridPMA-RPM-2 $PREP/
+cp -p GPG-KEY-EUGridPMA-RPM-3 $PREP/
 
 # now copy the RPMs &c
 cp -pr $BUILDROOT/* $PREP/
