@@ -1,6 +1,6 @@
 # /bin/sh
 #
-# $Id: build.sh,v 1.14 2005/04/27 14:58:30 pmacvsdg Exp $
+# $Id: build.sh,v 1.15 2005/04/27 16:56:54 pmacvsdg Exp $
 
 help() {
  echo "Usage: $0 [-f] [-v forced-version] [-r release] [-b buildroot]" >&2 
@@ -10,9 +10,11 @@ help() {
 frelease=1
 force=0
 ignore=0
+sign=1
 BUILDROOT=../build
 while :; do
   case "$1" in
+  --nosign ) sign=0 ; shift ;;
   -v | --version ) fversion=$2 ; shift 2 ;;
   -b | --buildroot ) BUILDROOT=$2 ; shift 2 ;;
   -r | --release ) frelease=$2 ; shift 2 ;;
@@ -161,3 +163,8 @@ rpmbuild -ba /tmp/eugridpma$$.spec
 cp -p $rpmtop/SRPMS/ca_policy_eugridpma*-$version-$release.src.rpm $BUILDROOT/                               
 cp -p $rpmtop/RPMS/noarch/ca_policy_eugridpma*-$version-$release.noarch.rpm $BUILDROOT/                      
 
+if [ $sign -eq 1 ]; then
+  ( cd $BUILDROOT ;
+    find . -name \*.rpm -print | xargs rpm --resign 
+  )
+fi
