@@ -119,7 +119,7 @@ You can install the trust anchors in the following ways:
 * use a RPM package manament system like "yum" to install the 
   meta-RPM "ca_policy_eugridpma-$version.noarch.rpm"
 * install all authorities with the accredited tarball bundle
-  "eugridpma-policy-accredited-bundle-0.30.tar.gz", using the 
+  "eugridpma-policy-accredited-bundle-$version.tar.gz", using the 
   "./configure && make && make install" mechanism.
 
 Please make sure you validate the correctness of the trust anchors with the
