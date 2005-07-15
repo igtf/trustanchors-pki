@@ -32,7 +32,8 @@ mkdir $PREP/$version
 mkdir $PREP/$version/worthless
 mkdir $PREP/$version/others
 mkdir $PREP/$version/accredited
-mkdir $PREP/$version/unknown
+mkdir $PREP/$version/discontinued
+
 PREP=$PREP/$version
 
 echo "This is version $version" > $PREP/version.txt
@@ -79,9 +80,9 @@ Examples of "other" CAs include the Fermilab KerberosCA root.
 
 EOF
 
-cat <<EOF > $PREP/unknown/README.txt
+cat <<EOF > $PREP/discontinued/README.txt
 
-Version $version unknown root certificates
+Version $version discontinued root certificates
 
 This area contains non-accredited root certificates! Do not install
 these unless you have yourself vetted these certificates and
@@ -95,18 +96,18 @@ EOF
 cat <<EOF > $PREP/README.txt
 
 EUGridPMA Distribution of Authority Root Certificates
------------------------------------------------------
+------------------------------------------------------------------------------
 
-This is version $version of the EUGridPMA distribution, built $HUMANDATE.
+This is version $version of the distribution, built on $HUMANDATE.
 
 The distribution contains root certificates and related meta-information: 
-Certificate Revocation List (CRL) locations, contact information, and signing 
+Certificate Revocation List (CRL) locations, contact information, and signing
 policies. This distribution is subject to the EUGridPMA Charter and the
 appropriate guidelines documents. 
 
-The EUGridPMA itself does not provide identity assertions but instead asserts 
-that - within the scope of its charter - the certificates issued by the
-Accredited Authorities meet or exceed the relevant guidelines.
+The EUGridPMA itself does not provide identity assertions but instead 
+asserts that - within the scope of its charter - the certificates issued by
+the Accredited Authorities meet or exceed the relevant guidelines.
 
 PLEASE NOTE that this assertion extends only to accredited authorities,
 i.e., those authorities of which the trust anchor is contained in the
@@ -124,12 +125,16 @@ You can install the trust anchors in the following ways:
 Please make sure you validate the correctness of the trust anchors with the
 TERENA Academic CA Repository (https://www.tacar.org/) where possible.
 
-This distribution contains, for your convenience, also selected other
-CAs in the "worthless/", "unknown/" and "other/" directories. These are NOT
+This distribution contains, for your convenience, also selected other CAs 
+in the "worthless/", "discontinued/" and "other/" directories. These are NOT 
 part of the accredited trust fabric and you install these at your own risk.
 
 Comments and suggestions for improvement of this distribution are welcome;
-please send them to <info@eugridpma.org>.
+please send them to <info@eugridpma.org>. For more information, see
+the web site:
+
+	http://www.eugridpma.org/
+
 
 EOF
 
