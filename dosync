@@ -117,10 +117,11 @@ You can install the trust anchors in the following ways:
 * install all RPM or tar-ball packages from the "accredited/RPMS/" resp.
   "accredited/tgz/" directories manually
 * use a RPM package manament system like "yum" to install the 
-  meta-RPM "ca_policy_eugridpma-$version.noarch.rpm"
+  meta-RPM "ca_policy_eugridpma-$version-$release.noarch.rpm"
 * install all authorities with the accredited tarball bundle
   "eugridpma-policy-accredited-bundle-$version.tar.gz", using the 
   "./configure && make && make install" mechanism.
+  This tarball can be found in the "accredited/" directory.
 
 Please make sure you validate the correctness of the trust anchors with the
 TERENA Academic CA Repository (https://www.tacar.org/) where possible.
