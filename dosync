@@ -189,5 +189,6 @@ chown -R `id -un`:`id -gn` $PREP
 
 if [ $dummy -eq 0 ]; then
 	( cd $PREP ; yum-arch . )
+	mkaptdist $PREP
 	( cd $PREP ; $RSYNC $PREP $DIST )
 fi
