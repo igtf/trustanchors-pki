@@ -1,3 +1,6 @@
+# EACL GermanGrid CA operated by FZK
+# @(#)$Id$
+# 
 access_id_CA  X509   '/C=DE/O=GermanGrid/CN=GridKa-CA'
 pos_rights    globus CA:sign
-cond_subjects globus '"/C=DE/O=FZK-Grid/*" "/C=DE/O=GermanGrid/*" "/O=GermanGrid/OU=*"'
+cond_subjects globus '"/C=DE/O=GermanGrid/*" "/O=GermanGrid/OU=*"'
