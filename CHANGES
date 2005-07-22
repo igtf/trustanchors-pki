@@ -18,6 +18,8 @@ Changes from 0.29 to 0.30
 * New namespace allocation for the IUCC CA: "/C=IL/O=IUCC/*"
 * Added updated CESNET Root cert and renamed the old one to "CESNET-old"
   for legacy compatibility. The new CESNET CA started operating on June 17th
+* FNAL root CA service has been discontinued and thus removed from the 
+  accredited list
 * RPMs are now signed (experimentally) with PGP keyID 3CDBBC71. This key,
   the "EUGridPMA Distribution Signing Key 3" can be obtained from the
   popular PGP key servers, where it has been signed by the current PMA Chair,
