@@ -1,0 +1,82 @@
+Name: ca_policy_igtf
+Version: @VERSION@
+Release: @RELEASE@
+Source: @TGZNAME@
+License: MIT
+Prefix: /etc/grid-security/certificates
+Group: Security/Certificates
+BuildRoot: %{_tmppath}/%{name}-root
+BuildArch: noarch
+AutoReqProv: no
+
+Summary: Trust anchors production-level collection policy for the IGTF
+URL: http://www.gridpma.org/
+Requires: ca_policy_igtf-classic = @VERSION@
+
+%prep
+%setup -n @PACKAGENAME@
+
+%description
+This collection represent the current set of accredited authorities
+by the International Grid Trust Federation member PMAs, that meet the 
+production qualify Authentication Profiles. This includes the "classic" 
+profile and the profile for short-lived credential generation services
+(slcgs).
+
+%build
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+mkdir -p $RPM_BUILD_ROOT/etc/grid-security/certificates
+
+cp -pr * $RPM_BUILD_ROOT/etc/grid-security/certificates/
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root)
+/etc/grid-security/certificates/policy-igtf.info
+
+
+%package classic
+Summary: Classic X.509 CA collection policy for the IGTF
+URL: http://www.gridpma.org/
+Group: Security/Certificates
+AutoReqProv: no
+Requires: @ACCREDITED:CLASSIC@
+
+%description classic
+This is the policy collection that contains all authorities 
+accredited by the IGTF member PMAs according to the "classic" 
+X.509 Certification Authorities with Secured Infrastructure Profile
+Install this package if you are willing to trust CAs that are 
+accredited by the the member PMAs under the "classic" profile.
+Refer to the IGTF web site for the classic authentication profile.
+
+%files classic
+%defattr(644,root,root)
+/etc/grid-security/certificates/policy-igtf-classic.info
+
+
+
+%package slcgs
+Summary: Short-lived Credential Services collection policy for the IGTF
+URL: http://www.gridpma.org/
+Group: Security/Certificates
+AutoReqProv: no
+#Requires: @ACCREDITED:SLCGS@
+
+%description slcgs
+This is the policy collection that contains all authorities 
+accredited by the IGTF member PMAs according to the "slcgs"
+Short-lived Credential Generation Services Profile
+Install this package if you are willing to trust CAs that are 
+accredited by the the member PMAs under the "slcgs" profile.
+Refer to the IGTF web site for the slcgs authentication profile.
+
+%files slcgs
+%defattr(644,root,root)
+/etc/grid-security/certificates/policy-igtf-slcgs.info
+

@@ -1,0 +1,67 @@
+#! /bin/sh
+#
+#
+INSTALL=install
+PREFIX=/etc/grid-security/certificates
+MKDIR=mkdir
+SED=sed
+PROFILE=ANY
+PROFILES=""
+
+while :
+do
+  case "$1" in
+  --prefix=* ) 
+        PREFIX=`echo $1 | sed -e 's/--prefix=//'`
+        shift 
+        ;;
+  --with-mkdir=* ) 
+        MKDIR=`echo $1 | sed -e 's/--with-mkdir=//'`
+        shift 
+        ;;
+  --with-install=* ) 
+        INSTALL=`echo $1 | sed -e 's/--with-install=//'`
+        shift 
+        ;;
+  --with-profile=* ) 
+        PROFILE=`echo $1 | sed -e 's/--with-profile=//'`
+        PROFILES="install-$PROFILE $PROFILES"
+        shift 
+        ;;
+  -- ) shift ; break ;;
+  -* ) echo "Unknown argument to $0" ; exit 1 ;;
+  * ) break ;;
+  esac
+done
+
+case "$#" in
+0 )     ;;
+* )     cat <<EOF
+Usage: $0
+    [--prefix=path]          Installation path
+                             default: /etc/grid-security/certificates
+    [--with-mkdir=path]      name of mkdir program supporting -p
+                             default: mkdir
+    [--with-install=path]    name of the BSD install programme
+                             default: install
+    [--with-profile=profile] selected CA accreditation profile
+                             default: ANY
+                             (multiple profiles can be selected)
+EOF
+        exit 0
+;;
+esac
+
+[ x"$PROFILES" = x"" ] && PROFILES=install-production
+
+sed -e "
+	s#@PREFIX@#$PREFIX#g;
+	s#@INSTALL@#$INSTALL#g;
+	s#@MKDIR@#$MKDIR#g;
+	s#@INSTALLTARGETS@#$PROFILES#g;
+  " < Makefile.tpl > Makefile
+
+echo "Configuration of the IGTF bundle complete"
+echo "use \"make install\" to install the selected authorities in"
+echo "$PREFIX."
+
