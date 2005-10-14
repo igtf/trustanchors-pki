@@ -1,0 +1,7 @@
+#
+# @(#)$Id$
+# Information for CA Globus-CA-service
+#   obtained from b38b4d8c in Globus-CA-service/
+alias = Globus-CA-service
+status = worthless
+version = @VERSION@

@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA NIKHEF
+#   obtained from 16da7552 in NIKHEF/
+alias = NIKHEF
+ca_url = http://ca.dutchgrid.nl/medium/cacert.pem
+crl_url = http://ca.dutchgrid.nl/medium/cacrl.pem
+status = accredited:classic
+url = http://ca.dutchgrid.nl/medium/
+version = @VERSION@

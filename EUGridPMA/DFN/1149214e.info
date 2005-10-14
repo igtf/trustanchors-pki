@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+# Information for CA DFN-GridGermany-Root
+#   obtained from 1149214e in DFN/
+alias = DFN-GridGermany-Root
+ca_url = http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/certs/root-ca-cert.crt
+crl_url = http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/crls/root-ca-crl.crl
+email = dfnpca@dfn-cert.de
+status = accredited:classic
+url = http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/html/cacert.html
+version = @VERSION@

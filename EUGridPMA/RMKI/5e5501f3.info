@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA RMKI
+#   obtained from 5e5501f3 in RMKI/
+alias = RMKI
+ca_url = http://pki.kfki.hu/pki0/pub/cacert/cacert.pem
+crl_url = http://pki.kfki.hu/pki0/pub/crl/cacrl.crl
+status = accredited:classic
+url = http://pki.kfki.hu/
+version = @VERSION@

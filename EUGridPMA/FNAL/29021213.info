@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA FNAL
+#   obtained from 29021213 in FNAL/
+alias = FNAL
+crl_url = http://computing.fnal.gov/security/pki/29021213.crl
+status = discontinued
+version = @VERSION@

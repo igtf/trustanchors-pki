@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA AIST
+#   obtained from a317c467 in APGrid/
+alias = AIST
+crl_url = https://www.apgrid.org/CA/AIST/Production/a317c467.r0
+email = yoshio.tanaka@aist.go.jp
+status = accredited:classic
+url = https://www.apgrid.org/CA/AIST/Production/
+version = @VERSION@

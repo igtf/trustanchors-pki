@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA ESnet
+#   obtained from d1b603c3 in ESnet/
+alias = ESnet
+crl_url = http://es.net/CA/d1b603c3/CRL/d1b603c3.r0
+status = accredited:classic
+version = @VERSION@

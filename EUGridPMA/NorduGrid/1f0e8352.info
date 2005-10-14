@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA NorduGrid
+#   obtained from 1f0e8352 in NorduGrid/
+alias = NorduGrid
+crl_url = http://www.nbi.dk/HEP/CA/1f0e8352.r0
+status = accredited:classic
+version = @VERSION@

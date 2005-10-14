@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA PolishGrid
+#   obtained from 8a661490 in PolishGrid/
+alias = PolishGrid
+crl_url = http://www.man.poznan.pl/plgrid-ca/crl.pem
+status = accredited:classic
+version = @VERSION@

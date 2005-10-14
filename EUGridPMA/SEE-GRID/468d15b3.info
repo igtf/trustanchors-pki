@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA SEE-GRID
+#   obtained from 468d15b3 in SEE-GRID/
+alias = SEE-GRID
+ca_url = http://www.grid.auth.gr/pki/seegrid-ca/cacert/468d15b3.0
+crl_url = http://www.grid.auth.gr/pki/seegrid-ca/services/crl/468d15b3.r0
+status = accredited:classic
+url = http://www.grid.auth.gr/pki/seegrid-ca
+version = @VERSION@

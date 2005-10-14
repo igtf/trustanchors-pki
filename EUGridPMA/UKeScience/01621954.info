@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA UKeScience
+#   obtained from 01621954 in UKeScience/
+alias = UKeScience
+crl_url = http://ca.grid-support.ac.uk/cgi-bin/importCRLpem
+status = accredited:classic
+version = @VERSION@

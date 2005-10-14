@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+# Information for CA 
+#   obtained from fe73f137 in BalticGrid/
+alias = BalticGrid
+ca_url = http://grid.eenet.ee/BalticGridCA/fe73f137.0
+crl_url = http://grid.eenet.ee/BalticGridCA/fe73f137.r0
+email = BalticGridCA@grid.eenet.ee
+status = worthless
+url = http://grid.eenet.ee/BalticGridCA/
+version = @VERSION@

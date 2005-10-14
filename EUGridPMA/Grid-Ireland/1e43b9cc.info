@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA Grid-Ireland
+#   obtained from 1e43b9cc in Grid-Ireland/
+alias = Grid-Ireland
+crl_url = http://www.cs.tcd.ie/Grid-Ireland/gi-ca/1e43b9cc.r0
+status = accredited:classic
+version = @VERSION@

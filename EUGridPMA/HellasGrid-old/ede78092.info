@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA HellasGrid
+#   obtained from ede78092 in HellasGrid/
+alias = HellasGrid
+crl_url = http://pki.physics.auth.gr/hellasgrid-ca/CRL/ede78092.r0
+status = accredited:classic
+version = @VERSION@

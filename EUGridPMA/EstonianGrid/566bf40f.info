@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA EstonianGrid
+#   obtained from 566bf40f in EstonianGrid/
+alias = EstonianGrid
+ca_url = http://grid.eenet.ee/CA/566bf40f.0
+crl_url = http://grid.eenet.ee/CA/566bf40f.r0
+status = accredited:classic
+url = http://grid.eenet.ee/CA/
+version = @VERSION@

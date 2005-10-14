@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA CESNET-old
+#   obtained from ed99a497 in CESNET/
+alias = CESNET-old
+crl_url = http://www.cesnet.cz/pki/crl/cca.crl
+status = accredited:classic
+version = @VERSION@

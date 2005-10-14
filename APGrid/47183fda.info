@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA KISTI
+#   obtained from 47183fda in APGrid/
+alias = KISTI
+crl_url = https://ca.gridcenter.or.kr/CRL/47183fda.crl
+email = jhkwak@kisti.re.kr
+status = accredited:classic
+url = https://ca.gridcenter.or.kr/
+version = @VERSION@

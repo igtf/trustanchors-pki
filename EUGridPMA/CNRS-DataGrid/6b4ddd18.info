@@ -1,0 +1,9 @@
+#
+# @(#)$Id$
+# Information for CA CNRS-DataGrid
+#   obtained from 6b4ddd18 in CNRS-DataGrid/
+alias = CNRS-DataGrid
+crl_url = http://igc.services.cnrs.fr/cgi-bin/loadcrl?CA=Datagrid-fr&format=PEM
+requires = CNRS-Projets
+status = accredited:classic
+version = @VERSION@

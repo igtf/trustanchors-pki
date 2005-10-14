@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+# Information for CA DFN-GridGermany-User
+#   obtained from 34f8e29c in DFN/
+alias = DFN-GridGermany-User
+ca_url = http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/certs/ca-user-cert.crt
+crl_url = http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/crls/ca-user-crl.crl
+email = dfnpca@dfn-cert.de
+requires = DFN-GridGermany-Root
+status = accredited:classic
+url = http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/html/cacert.html
+version = @VERSION@

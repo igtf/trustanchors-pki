@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA CNRS-Grid-FR
+#   obtained from 12a1d8c2 in CNRS-Grid-FR/
+alias = CNRS-Grid-FR
+crl_url = http://crls.services.cnrs.fr/GRID-FR/getpem.crl
+requires = CNRS-Projets
+status = accredited:classic
+url = http://igc.services.cnrs.fr/GRID-FR/
+version = @VERSION@

@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA LIP
+#   obtained from 41380387 in LIP/
+alias = LIP
+crl_url = http://www.lip.pt/ca/lip-crl.pem
+status = accredited:classic
+version = @VERSION@

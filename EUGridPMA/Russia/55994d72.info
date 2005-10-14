@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+# Information for CA RDIG
+#   obtained from 55994d72 in Russia/
+alias = RDIG
+ca_url = http://ca.grid.kiae.ru/RDIG/cacrt.pem
+crl_url = http://ca.grid.kiae.ru/RDIG/cacrl.pem
+email = rea@mbslab.kiae.ru
+status = accredited:classic
+url = http://ca.grid.kiae.ru/RDIG/
+version = @VERSION@

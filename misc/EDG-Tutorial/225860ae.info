@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA EDG-Tutorial
+#   obtained from 225860ae in EDG-Tutorial/
+alias = EDG-Tutorial
+crl_url = http://certificate.nikhef.nl/cgi-bin/tutorca-list?command=crl
+status = worthless
+version = @VERSION@

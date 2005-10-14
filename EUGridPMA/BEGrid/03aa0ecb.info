@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA BEGrid
+#   obtained from 03aa0ecb in BEGrid/
+alias = BEGrid
+crl_url = https://gridra.belnet.be/pub/crl/cacrl.pem
+status = accredited:classic
+version = @VERSION@

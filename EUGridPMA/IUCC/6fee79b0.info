@@ -1,0 +1,9 @@
+#
+# @(#)$Id$
+# Information for CA IUCC
+#   obtained from 6fee79b0 in IUCC/
+alias = IUCC
+ca_url = http://certificate.iucc.ac.il/ca/cacert.pem
+crl_url = http://certificate.iucc.ac.il/ca/cacrl.pem
+status = accredited:classic
+version = @VERSION@

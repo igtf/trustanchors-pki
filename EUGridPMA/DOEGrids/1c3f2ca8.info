@@ -1,0 +1,9 @@
+#
+# @(#)$Id$
+# Information for CA DOEGrids
+#   obtained from 1c3f2ca8 in DOEGrids/
+alias = DOEGrids
+crl_url = http://pki1.doegrids.org/CRL/1c3f2ca8.r0
+requires = ESnet
+status = accredited:classic
+version = @VERSION@

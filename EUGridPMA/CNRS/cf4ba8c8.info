@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA CNRS
+#   obtained from cf4ba8c8 in CNRS/
+alias = CNRS
+crl_url = http://crls.services.cnrs.fr/CNRS/getpem.crl
+status = accredited:classic
+version = @VERSION@

@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA Russia
+#   obtained from d64ccb53 in Russia/
+alias = Russia
+crl_url = http://lhc.sinp.msu.ru/CA/d64ccb53.r0
+status = accredited:classic
+version = @VERSION@

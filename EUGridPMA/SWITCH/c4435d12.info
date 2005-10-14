@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA SWITCH
+#   obtained from c4435d12 in SWITCH/
+alias = SWITCH
+ca_url = https://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=25C907F5142CD02905EF95F54243D5EA908D7373
+crl_url = https://swisssign.net/cgi-bin/authority/crl?into=file&ca=SWITCH
+requires = SwissSign-Silver
+status = accredited:classic
+version = @VERSION@

@@ -1,0 +1,9 @@
+#
+# @(#)$Id$
+# Information for CA DutchDemo
+#   obtained from 75304a28 in DutchDemo/
+alias = DutchDemo
+crl_url = http://www.dutchgrid.nl/ca/dutchdemo/cacrl.pem
+status = worthless
+url = http://www.dutchgrid.nl/ca/dutchdemo/
+version = @VERSION@

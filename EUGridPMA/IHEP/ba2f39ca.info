@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+# Information for CA IHEP
+#   obtained from ba2f39ca in IHEP/
+alias = IHEP
+ca_url = https://gridca.ihep.ac.cn/cacert/cacert.pem
+crl_url = https://gridca.ihep.ac.cn/crl/cacrl.pem
+email = gridca@ihep.ac.cn
+status = accredited:classic
+url = https://gridca.ihep.ac.cn/
+version = @VERSION@

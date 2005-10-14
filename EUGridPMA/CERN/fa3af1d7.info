@@ -1,0 +1,8 @@
+#
+# @(#)$Id$
+# Information for CA CERN
+#   obtained from fa3af1d7 in CERN/
+alias = CERN
+crl_url = http://service-grid-ca.web.cern.ch/service-grid-ca/cgi-bin/getCRL
+status = accredited:classic
+version = @VERSION@

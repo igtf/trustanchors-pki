@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA SiGNET
+#   obtained from 747183a5 in SiGNET/
+alias = SiGNET
+ca_url = http://signet-ca.ijs.si/pub/cacert/cacert.pem
+crl_url = https://signet-ca.ijs.si/pub/crl/cacrl.crl
+status = accredited:classic
+url = http://signet-ca.ijs.si/
+version = @VERSION@

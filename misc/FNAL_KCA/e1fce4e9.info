@@ -1,0 +1,7 @@
+#
+# @(#)$Id$
+# Information for CA FNAL_KCA
+#   obtained from e1fce4e9 in FNAL_KCA/
+alias = FNAL_KCA
+status = accredited:slcs
+version = @VERSION@

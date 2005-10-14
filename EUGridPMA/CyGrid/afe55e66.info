@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA CyGrid
+#   obtained from afe55e66 in CyGrid/
+alias = CyGrid
+ca_url = http://grid.ucy.ac.cy/CyGridCA/afe55e66.0
+crl_url = http://grid.ucy.ac.cy/CyGridCA/afe55e66.r0
+status = accredited:classic
+url = http://grid.ucy.ac.cy/CyGridCA/
+version = @VERSION@

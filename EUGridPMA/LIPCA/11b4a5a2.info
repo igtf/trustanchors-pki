@@ -1,0 +1,9 @@
+#
+# @(#)$Id$
+# Information for CA LIPCA
+#   obtained from 11b4a5a2 in LIPCA/
+alias = LIPCA
+crl_url = http://ca.lip.pt/lip-lisboa/pub/crl/cacrl.pem
+status = accredited:classic
+url = http://ca.lip.pt/
+version = @VERSION@
