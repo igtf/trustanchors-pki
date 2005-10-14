@@ -1,0 +1,44 @@
+Name: ca_policy_eugridpma
+Version: @VERSION@
+Release: @RELEASE@
+License: MIT
+Prefix: /
+Group: Security/Certificates
+BuildRoot: %{_tmppath}/%{name}-root
+BuildArch: noarch
+AutoReqProv: no
+
+Summary: Legacy compatibility package to trigger IGTF installation
+URL: http://www.eugridpma.org/
+Requires: ca_policy_igtf = @VERSION@
+
+%prep
+
+%description
+Legacy compatibility package to trigger IGTF installation
+
+%build
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root)
+
+
+%package classic
+Summary: Legacy compatibility package "classic" to trigger IGTF installation
+URL: http://www.eugridpma.org/
+Group: Security/Certificates
+AutoReqProv: no
+Requires: ca_policy_igtf-classic = @VERSION@
+
+%description classic
+Legacy compatibility package "classic" to trigger IGTF installation
+
+%files classic
+%defattr(644,root,root)
+

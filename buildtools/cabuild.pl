@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.3 2005/10/14 16:33:09 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.4 2005/10/14 16:51:09 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -36,6 +36,7 @@ defined $opt_url or
                   discontinued experimental worthless );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
+$Main::legacyEUGridPMASpecFileTemplate="eugridpma.spec.cin";
 $Main::bundleMakefileTPL="Makefile.tpl.cin";
 $Main::bundleConfigureTPL="configure.cin";
 @Main::infoGlob=("*/*.info","*/*/*.info");
@@ -59,7 +60,7 @@ mkdir $bundledir;
 
 print "  bundle directory $bundledir\n\n";
 
-foreach my $k ( sort keys %auth ) {
+foreach my $k ( (sort keys %auth)[1] ) {
   my %info = %{$auth{$k}{"info"}};
   &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"hash"},%info) 
     or die "packSingleCA: $err\n";
@@ -333,6 +334,9 @@ sub makeCollectionInfo($$$) {
   
   &copyWithExpansion($Main::collectionSpecFileTemplate,"$tmpdir/$pname.spec",
                      %tokens);
+  &copyWithExpansion($Main::legacyEUGridPMASpecFileTemplate,
+                     "$tmpdir/ca_policy_eugridpma-$opt_gver.spec",
+                     %tokens);
 
   chomp(my $sourcedir=`rpm --eval %_sourcedir`);
   chomp(my $rpmdir=`rpm --eval %_rpmdir`);
@@ -345,11 +349,16 @@ sub makeCollectionInfo($$$) {
   copy("$tmpdir/$pname.tar.gz","$sourcedir/$pname.tar.gz");
   system("rpmbuild --quiet -ba $tmpdir/$pname.spec");
 
+  system("rpmbuild --quiet -ba $tmpdir/ca_policy_eugridpma-$opt_gver.spec");
+
   # now collect all information in the proper place
   foreach my $n ( 
                   "ca_policy_igtf-classic-$opt_gver",
                   "ca_policy_igtf-$opt_gver",
-                  "ca_policy_igtf-slcs-$opt_gver" ) {
+                  "ca_policy_igtf-slcs-$opt_gver",
+                  "ca_policy_eugridpma-classic-$opt_gver",
+                  "ca_policy_eugridpma-$opt_gver"
+    ) {
     move("$rpmdir/noarch/$n-$opt_r.noarch.rpm",
       "$targetdir/accredited/RPMS/") or do {
       $err="Cannot move $n-$opt_r.noarch.rpm to accredited/RPMS/: $!";
