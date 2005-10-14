@@ -1,0 +1,11 @@
+# TRGrid CA Information
+#
+# @(#)$Id$
+# 
+alias = TRGrid
+ca_url = http://www.grid.org.tr/ca/ca_cert/1691b9ba.0
+crl_url = http://www.grid.org.tr/ca/crl/crl.pem
+email = ca@grid.org.tr
+status = accredited:classic
+url = http://www.grid.org.tr/ca
+version = @VERSION@
