@@ -12,7 +12,7 @@ BuildArch: noarch
 
 %define GSI_CA_NAME  %(tar xOfz %{SOURCE0} @PACKAGENAME@/@HASH@.0 | openssl x509 -noout -subject |sed 's#^.*/CN=##')
 
-Summary: Trust anchors for @COLLECTION@ authority @ALIAS@
+Summary: Trust anchors for @PROFILE@ @COLLECTION@ authority @ALIAS@
 
 %if %([ -n "@URL@" ] && echo 1 || echo 0)
 URL: @URL@
@@ -26,7 +26,7 @@ Requires: %(echo "@REQUIRES@" | sed -e 's/^/ca_/' )
 %setup -n @PACKAGENAME@
 
 %description
-This is the trust anchor package for the @COLLECTION@ authority @ALIAS@.
+This is the trust anchor for the @PROFILE@ @COLLECTION@ authority @ALIAS@.
 You should install this package if you want to trust the identity 
 assertions issued by the %{GSI_CA_NAME}.
 Several instances of this package, corresponding to different CA's, can 

@@ -1,0 +1,18 @@
+APT repository for IGTF Distribution @VERSION@
+-----------------------------------------------------------------------------
+
+This repository contains the CA trust anchor distribution from the IGTF. 
+PLEASE NOTE that only those CAs contained in the "RPMS.accredited/" 
+subdirectory are compliant with a "production-level" authentication profile,
+like the classic X.509 secured CAs or the Short-Lived Credential Services
+profile.
+
+The "RPMS.worthless/" distribution is obviously worthless, the "experimental"
+ones are just that as well: experimental, and for informational purposes only.
+
+Add the following to your "/etc/apt/sources.list.d/eugridpma.list" file:
+
+  rpm http://www.eugridpma.org distribution/igtf/current/apt accredited
+
+and run apt-get update && apt-get install ca_policy_igtf
+

@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.2 2005/10/14 15:00:12 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.3 2005/10/14 16:33:09 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -74,6 +74,12 @@ foreach my $k ( sort keys %auth ) {
 (defined $opt_s) and (&signRPMs($opt_o) or die "signRPMs: $err\n");
 &yumifyDirectory($opt_o) or die "yumifyDirectory: $err\n";
 &aptifyDirectory($opt_o) or die "aptifyDirectory: $err\n";
+
+&copyWithExpansion("toplevel-README.cin","$opt_o/README",
+  ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
+    "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) );
+&copyWithExpansion("toplevel-version.txt.cin","$opt_o/version.txt",
+  ( "VERSION" => $opt_gver) );
 
 1;
 
@@ -165,6 +171,9 @@ EOF
     and do {
       $err="system command error: $!"; return undef;
     };
+
+  &copyWithExpansion("apt-README.cin","$targetdir/apt/README",
+	( "VERSION" => $opt_gver ) );
 
   return 1;
 }
@@ -489,6 +498,12 @@ sub packSingleCA($$$$) {
 
 
   (my $collection=$info{"status"})=~s/:.*//;
+  my ($profile);
+  if ( $collection eq "accredited" ) {
+    ($profile=$info{"status"})=~s/.*://;
+  } else {
+    $profile="";
+  }
   my $pname="ca_".$info{"alias"}."-".$info{"version"};
   my $pdir="$tmpdir/$pname";
   mkdir $pdir;
@@ -526,6 +541,7 @@ sub packSingleCA($$$$) {
 	  "TGZNAME" => "$pname.tar.gz",
 	  "URL" => $info{"url"},
 	  "COLLECTION" => $collection,
+	  "PROFILE" => $profile,
 	  "REQUIRES" => &expandRequiresWithVersion($info{"requires"})
 	) 
     );

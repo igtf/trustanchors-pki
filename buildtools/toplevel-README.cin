@@ -1,0 +1,47 @@
+IGTF Distribution of Authority Root Certificates
+------------------------------------------------------------------------------
+
+This is version @VERSION@ of the distribution, built on @DATE@
+
+The distribution contains root certificates and related meta-information: 
+Certificate Revocation List (CRL) locations, contact information, and signing
+policies. This distribution is subject to the IGTF Federation Document 
+and the appropriate charters and authentication profiles. 
+Please refer to your local PMA (EUGridPMA, APGridPMA or TAGPMA) for more
+information.
+
+The IGTF itself does not provide identity assertions but instead 
+asserts that - within the scope of its charter - the certificates issued by
+the Accredited Authorities meet or exceed the relevant guidelines.
+
+PLEASE NOTE that this assertion extends only to accredited authorities,
+i.e., those authorities of which the trust anchor is contained in the
+"accredited/" subdirectory of this distribution! 
+
+You can install the trust anchors in the following ways:
+* install all RPM or tar-ball packages from the "accredited/RPMS/" resp.
+  "accredited/tgz/" directories manually
+* use a RPM package manament system like "yum" to install the 
+  meta-RPM "ca_policy_igtf-@VERSION@-@RELEASE@.noarch.rpm"
+* install all authorities with the accredited tarball bundle
+  "igtf-policy-accredited-bundle-@VERSION@.tar.gz", using the 
+  "./configure && make && make install" mechanism.
+  This tarball can be found in the "accredited/" directory.
+
+Please make sure you validate the correctness of the trust anchors with the
+TERENA Academic CA Repository (https://www.tacar.org/) where possible.
+
+This distribution contains, for your convenience, also selected other CAs 
+in the "worthless/" and "experimental/" directories. These are NOT 
+part of the accredited trust fabric and you install these at your own risk.
+
+Comments and suggestions for improvement of this distribution are welcome;
+please send them to <info@eugridpma.org>. For more information, see
+the web site:
+
+	http://www.gridpma.org/
+
+	http://www.eugridpma.org/
+	http://www.apgridpma.org/
+	http://www.tagpma.org/
+
