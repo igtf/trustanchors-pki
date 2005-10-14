@@ -2,6 +2,7 @@
 #
 for $f ( @ARGV ) {
   $f=~/\.0$/ or next;
+  %info=();
 
   ($hash=$f)=~s/\.0$//; $hash=~s/.*\///;
   ($dir=$f)=~s/[^\/]*$//;
@@ -10,6 +11,10 @@ for $f ( @ARGV ) {
   -f "$dir/$hash.info" and next;
 
   $age=(stat("$dir/$hash.0"))[9];
+
+  -r "$dir/status" and do {
+      chomp($info{"status"}=`cat $dir/status`);
+  };
 
   $info{"version"}='@VERSION@';
   foreach $n ( "status", "requires", "crl_url", 

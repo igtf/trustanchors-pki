@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id$
+# @(#)$Id: cabuild.pl,v 1.1 2005/10/08 18:34:20 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -28,7 +28,7 @@ $opt_gver or die "Need at least a global version (--gver=) option\n";
 # ----------------------------------------------------------------------------
 # configuration settings
 #
-@validStatus = qw(accredited:classic accredited:slcgs 
+@validStatus = qw(accredited:classic accredited:slcs 
                   discontinued experimental worthless );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
@@ -239,7 +239,7 @@ sub makeCollectionInfo($$$) {
   foreach my $n ( 
                   "ca_policy_igtf-classic-$opt_gver",
                   "ca_policy_igtf-$opt_gver",
-                  "ca_policy_igtf-slcgs-$opt_gver" ) {
+                  "ca_policy_igtf-slcs-$opt_gver" ) {
     move("$rpmdir/noarch/$n-$opt_r.noarch.rpm",
       "$targetdir/accredited/RPMS/") or do {
       $err="Cannot move $n-$opt_r.noarch.rpm to accredited/RPMS/: $!";
