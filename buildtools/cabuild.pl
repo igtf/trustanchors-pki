@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.1 2005/10/08 18:34:20 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.2 2005/10/14 15:00:12 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -10,20 +10,24 @@ use File::Temp qw(tempdir);
 use File::Copy qw(copy move);
 use strict;
 use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp 
-	$opt_version $opt_o $opt_carep $opt_gver %auth);
+	$opt_url $opt_s $opt_version $opt_o $opt_carep $opt_gver %auth);
 
 $opt_tmp="/tmp";
 $opt_carep="../";
 $opt_o="../distribution";
 $opt_r=1;
 
-my @optdef=qw( f v gver|distversion=s version|ver=s r|release=s 
+my @optdef=qw( url|finalURL=s
+    s|sign f v gver|distversion=s version|ver=s r|release=s 
     carep|repository=s tmp|tmpdir=s o|target=s );
 
 $0 =~ s/.*\///;
 &GetOptions(@optdef);
 $opt_gver=$opt_version unless $opt_gver;
 $opt_gver or die "Need at least a global version (--gver=) option\n";
+
+defined $opt_url or
+  $opt_url="http://www.eugridpma.org/distribution/igtf/$opt_gver/apt";
 
 # ----------------------------------------------------------------------------
 # configuration settings
@@ -67,7 +71,104 @@ foreach my $k ( sort keys %auth ) {
 &makeBundleScripts($bundledir,$tmpdir,$opt_o)
     or die "makeBundleScripts: $err\n";
 
+(defined $opt_s) and (&signRPMs($opt_o) or die "signRPMs: $err\n");
+&yumifyDirectory($opt_o) or die "yumifyDirectory: $err\n";
+&aptifyDirectory($opt_o) or die "aptifyDirectory: $err\n";
+
 1;
+
+# ----------------------------------------------------------------------------
+# sub signRPMs($targetdir)
+sub signRPMs($) {
+  my ($targetdir) = @_;
+
+  $|=1; 
+  print "Please insert any removable disks that contain your signing key\n";
+  print "and make sure that your rpmmacros file is correct\n\n";
+  print "press enter to continue ...\n";
+  my $nonsense=<>;
+  system("cd $targetdir ; find . -name \*.rpm -print | xargs rpm --resign")
+    and do {
+      $err="system command error: $!"; return undef;
+    };
+  return 1;
+}
+
+# ----------------------------------------------------------------------------
+# sub yumifyDirectory($targetdir)
+# create the headers/ directories and build the yum metadata
+sub yumifyDirectory($) {
+  my ($targetdir) = @_;
+
+  system("cd $targetdir ; yum-arch .")
+    and do {
+      $err="system command error: $!"; return undef;
+    };
+  return 1;
+}
+  
+# ----------------------------------------------------------------------------
+# sub aptifyDirectory($targetdir)
+# create the symlinks in the rpt/RPMS.<status> directories and build
+# the APT metadata
+sub aptifyDirectory($) {
+  my ($targetdir) = @_;
+  my ($s);
+  chomp(my $cwd = `/bin/pwd`);
+  $targetdir =~ /^\// or do {
+    $targetdir="$cwd/$targetdir";
+  };
+
+  mkdir "$targetdir/apt" or return undef;
+  mkdir "$targetdir/apt/base" or return undef;
+
+  open RELEASE,">$targetdir/apt/base/release" or do {
+      $err="Cannot create $targetdir/apt/base/release.$s: $!"; return undef;
+    };
+  print RELEASE <<EOF;
+Origin: $opt_url
+Label: IGTF Distribution $opt_gver
+Suite: IGTF Distribution $opt_gver
+Architectures: noarch
+Components: accredited experimental worthless
+Description: APT repository of IGTF distribution $opt_gver
+EOF
+  close RELEASE;
+
+  for my $s ( qw(accredited experimental worthless) ) {
+    mkdir "$targetdir/apt/RPMS.$s" or return undef;
+    open RELEASE,">$targetdir/apt/base/release.$s" or do {
+        $err="Cannot create $targetdir/apt/base/release.$s: $!"; return undef;
+      };
+    print RELEASE <<EOF;
+Archive: stable
+Component: $s
+Version: $opt_gver
+Origin: $opt_url
+Label: IGTF $s CA distribution version $opt_gver
+Architectures: noarch
+EOF
+    close RELEASE;
+    foreach my $f ( glob "$targetdir/$s/RPMS/*.rpm" ) {
+      (my $filename=$f)=~s/.*\///;
+      symlink "../../$s/RPMS/$filename","$targetdir/apt/RPMS.$s/$filename";
+    }
+
+    system("genbasedir --bloat $targetdir/apt $s")
+      and do {
+        $err="system command error: $!"; return undef;
+      };
+  }
+
+  system("genbasedir --hashonly $targetdir/apt ".
+                     "accredited experimental worthless")
+    and do {
+      $err="system command error: $!"; return undef;
+    };
+
+  return 1;
+}
+
 
 # ----------------------------------------------------------------------------
 # sub makeBundleScripts($builddir,$tmpdir,$targetdir)
@@ -321,15 +422,7 @@ sub getAuthoritiesList($$) {
 #
 # Generate the directory structure for the final distribution. It should be:
 #     TOP
-#     +- accredited
-#        +- RPMS
-#        +- SRPMS
-#        +- tgz
-#     +- apt
-#        +- RPMS.accredited
-#        +- RPMS.experimental
-#        +- RPMS.worthless
-#     +- {experimental,worthless}
+#     +- {accredited,experimental,worthless}
 #        +- RPMS
 #        +- SRPMS
 #        +- tgz
@@ -340,10 +433,8 @@ sub generateDistDirectory($) {
   -d $dir and $err="$dir already exists, clean first" and return undef;
   mkdir $dir or return undef;
 
-  mkdir "$dir/apt" or return undef;
   for my $s ( qw(accredited experimental worthless) ) {
     mkdir "$dir/$s" or return undef;
-    mkdir "$dir/apt/RPMS.$s" or return undef;
     for my $t ( qw (RPMS SRPMS tgz) ) {
       mkdir "$dir/$s/$t" or return undef;
     }
