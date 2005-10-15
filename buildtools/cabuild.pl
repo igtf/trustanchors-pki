@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.13 2005/10/15 17:58:37 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.14 2005/10/15 18:07:15 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -41,6 +41,9 @@ $Main::bundleMakefileTPL="Makefile.tpl.cin";
 $Main::bundleConfigureTPL="configure.cin";
 @Main::infoGlob=("*/*.info","*/*/*.info","*/*/*/*.info");
 # ----------------------------------------------------------------------------
+#
+# IGTF distribution generation logic
+#
 
 
 $opt_f and system("rm -fr $opt_o > /dev/null 2>&1");
@@ -57,8 +60,6 @@ print "Generating global version $opt_gver\n";
 my $tmpdir=tempdir("$opt_tmp/pBundle-XXXXXX", CLEANUP => 0 );
 my $bundledir="$tmpdir/igtf-policy-accredited-bundle-$opt_gver";
 mkdir $bundledir;
-
-print "  bundle directory $bundledir\n\n";
 
 foreach my $k ( sort keys %auth ) {
   my %info = %{$auth{$k}{"info"}};
@@ -549,7 +550,6 @@ sub packSingleCA($$$$) {
 
   my $tmpdir=tempdir("$opt_tmp/pSCA-$hash-XXXXXX", CLEANUP => 1 );
   print "** CA $info{alias} v$info{version} (hash $hash, dir $srcdir)\n";
-  print "   generating in $tmpdir\n";
 
 
   (my $collection=$info{"status"})=~s/:.*//;
