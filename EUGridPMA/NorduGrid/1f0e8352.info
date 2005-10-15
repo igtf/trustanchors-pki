@@ -1,8 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: 1f0e8352.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA NorduGrid
 #   obtained from 1f0e8352 in NorduGrid/
 alias = NorduGrid
+url = http://www.nbi.dk/HEP/CA/
+email = waananen@nbi.dk
 crl_url = http://www.nbi.dk/HEP/CA/1f0e8352.r0
 status = accredited:classic
 version = @VERSION@

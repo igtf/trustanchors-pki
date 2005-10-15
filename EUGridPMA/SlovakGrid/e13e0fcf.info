@@ -1,8 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: e13e0fcf.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA SlovakGrid
 #   obtained from e13e0fcf in SlovakGrid/
 alias = SlovakGrid
+url = http://ups.savba.sk/ca
+email = astalos.ui@savba.sk
 crl_url = http://ups.savba.sk/ca/slovakgrid.crl
 status = accredited:classic
 version = @VERSION@

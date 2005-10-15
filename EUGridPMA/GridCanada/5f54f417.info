@@ -1,8 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: 5f54f417.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA GridCanada
 #   obtained from 5f54f417 in GridCanada/
 alias = GridCanada
 crl_url = http://www.gridcanada.ca/ca/5f54f417.r0
+url = http://www.gridcanada.ca/ca
+email = ca@gridcanada.ca
 status = accredited:classic
 version = @VERSION@

@@ -1,8 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: 12a1d8c2.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
 # Information for CA CNRS-Grid-FR
 #   obtained from 12a1d8c2 in CNRS-Grid-FR/
 alias = CNRS-Grid-FR
+url = http://igc.services.cnrs.fr/GRID-FR/
+email = Sophie.Nicoud@urec.cnrs.fr
 crl_url = http://crls.services.cnrs.fr/GRID-FR/getpem.crl
 requires = CNRS-Projets
 status = accredited:classic

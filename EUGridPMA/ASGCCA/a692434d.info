@@ -1,8 +1,0 @@
-#
-# @(#)$Id$
-# Information for CA ASGCCA
-#   obtained from a692434d in ASGCCA/
-alias = ASGCCA
-crl_url = http://ca.grid.sinica.edu.tw/CRL/ASGCCA-crl.pem
-status = accredited:classic
-version = @VERSION@

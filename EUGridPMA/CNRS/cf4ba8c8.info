@@ -1,8 +1,9 @@
 #
-# @(#)$Id$
+# @(#)$Id: cf4ba8c8.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
 # Information for CA CNRS
 #   obtained from cf4ba8c8 in CNRS/
 alias = CNRS
 crl_url = http://crls.services.cnrs.fr/CNRS/getpem.crl
 status = accredited:classic
 version = @VERSION@
+email = Sophie.Nicoud@urec.cnrs.fr

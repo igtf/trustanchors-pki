@@ -1,8 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: 6fee79b0.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA IUCC
 #   obtained from 6fee79b0 in IUCC/
 alias = IUCC
+url = http://certificate.iucc.ac.il/
+email = halina@post.tau.ac.il
 ca_url = http://certificate.iucc.ac.il/ca/cacert.pem
 crl_url = http://certificate.iucc.ac.il/ca/cacrl.pem
 status = accredited:classic
