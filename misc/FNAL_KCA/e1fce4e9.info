@@ -1,7 +1,7 @@
 #
-# @(#)$Id$
+# @(#)$Id: e1fce4e9.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA FNAL_KCA
 #   obtained from e1fce4e9 in FNAL_KCA/
 alias = FNAL_KCA
-status = accredited:slcs
+status = experimental
 version = @VERSION@
