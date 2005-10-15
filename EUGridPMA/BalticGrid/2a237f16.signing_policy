@@ -1,0 +1,7 @@
+#
+# EACL Baltic Grid Certification Authority
+# @(#)$Id$
+#
+access_id_CA  X509   '/DC=org/DC=balticgrid/CN=Baltic Grid Certification Authority'
+pos_rights    globus CA:sign
+cond_subjects globus '"/DC=org/DC=balticgrid/*"'
