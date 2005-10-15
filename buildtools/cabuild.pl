@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.9 2005/10/15 10:48:34 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.10 2005/10/15 11:10:11 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -87,13 +87,14 @@ foreach my $k ( sort keys %auth ) {
 sub makeInfoFiles($$) {
   my ($carep,$targetdir) = @_;
 
-  &copyWithExpansion("toplevel-README.cin","$targetdir/README",
+  &copyWithExpansion("toplevel-README.cin","$targetdir/README.txt",
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
-  &copyWithExpansion("experimental-README.cin","$targetdir/experimental/README",
+  &copyWithExpansion("experimental-README.cin",
+                     "$targetdir/experimental/README.txt",
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
-  &copyWithExpansion("worthless-README.cin","$targetdir/worthless/README",
+  &copyWithExpansion("worthless-README.cin","$targetdir/worthless/README.txt",
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
   &copyWithExpansion("toplevel-version.txt.cin","$targetdir/version.txt",
@@ -139,7 +140,7 @@ sub signRPMs($) {
 sub yumifyDirectory($) {
   my ($targetdir) = @_;
 
-  system("cd $targetdir ; yum-arch .")
+  system("sync ; sleep 1 ; cd $targetdir ; yum-arch .")
     and do {
       $err="system command error: $!"; return undef;
     };
@@ -205,7 +206,7 @@ EOF
       $err="system command error: $!"; return undef;
     };
 
-  &copyWithExpansion("apt-README.cin","$targetdir/apt/README",
+  &copyWithExpansion("apt-README.cin","$targetdir/apt/README.txt",
 	( "VERSION" => $opt_gver ) );
 
   return 1;
@@ -379,9 +380,9 @@ sub makeCollectionInfo($$$) {
   }
 
   copy("$tmpdir/$pname.tar.gz","$sourcedir/$pname.tar.gz");
-  system("rpmbuild --quiet -ba $tmpdir/$pname.spec");
+  system("rpmbuild --quiet -ba $tmpdir/$pname.spec > /dev/null 2>&1");
 
-  system("rpmbuild --quiet -ba $tmpdir/ca_policy_eugridpma-$opt_gver.spec");
+  system("rpmbuild --quiet -ba $tmpdir/ca_policy_eugridpma-$opt_gver.spec > /dev/null 2>&1");
 
   # now collect all information in the proper place
   foreach my $n ( 
