@@ -1,9 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: 6e3b436b.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
 # Information for CA AustrianGrid
 #   obtained from 6e3b436b in AustrianGrid/
 alias = AustrianGrid
 ca_url = https://ca.austriangridca.at/certs/cacert.pem
 crl_url = http://ca.austriangridca.at/crl/crl.pem
+email = weisz@vcpc.univie.ac.at
 status = accredited:classic
 version = @VERSION@

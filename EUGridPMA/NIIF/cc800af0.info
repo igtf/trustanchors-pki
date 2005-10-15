@@ -1,10 +1,11 @@
 #
-# @(#)$Id$
+# @(#)$Id: cc800af0.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA NIIF
 #   obtained from cc800af0 in NIIF/
 alias = NIIF
 ca_url = http://www.ca.niif.hu/Certificates/niif_ca_root_x509.pem
 crl_url = http://www.ca.niif.hu/crl/niif-ca-crl.pem
+email = maray@niif.hu
 status = accredited:classic
 url = http://www.ca.niif.hu/
 version = @VERSION@

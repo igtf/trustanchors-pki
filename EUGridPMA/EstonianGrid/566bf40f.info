@@ -1,10 +1,11 @@
 #
-# @(#)$Id$
+# @(#)$Id: 566bf40f.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA EstonianGrid
 #   obtained from 566bf40f in EstonianGrid/
 alias = EstonianGrid
 ca_url = http://grid.eenet.ee/CA/566bf40f.0
 crl_url = http://grid.eenet.ee/CA/566bf40f.r0
+email = lauri.anton@eenet.ee
 status = accredited:classic
 url = http://grid.eenet.ee/CA/
 version = @VERSION@

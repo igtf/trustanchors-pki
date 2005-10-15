@@ -1,8 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: 01621954.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA UKeScience
 #   obtained from 01621954 in UKeScience/
 alias = UKeScience
+url = http://www.grid-support.ac.uk/ca/
 crl_url = http://ca.grid-support.ac.uk/cgi-bin/importCRLpem
+email = ca-manager@grid-support.ac.uk
 status = accredited:classic
 version = @VERSION@

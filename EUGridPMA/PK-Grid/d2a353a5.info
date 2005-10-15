@@ -1,9 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: d2a353a5.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA PK-Grid
 #   obtained from d2a353a5 in PK-Grid/
 alias = PK-Grid
 crl_url = http://www.ncp.edu.pk/pk-grid-ca/CRL/ncp.crl
+url = http://www.ncp.edu.pk/pk-grid-ca/
+email = sajjad@NCP.EDU.PK
 status = accredited:classic
-url = http://www.ncp.edu.pk/pk-grid-ca
 version = @VERSION@
