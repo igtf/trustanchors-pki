@@ -4,9 +4,12 @@ Experimental Authorities
 
 This area contains the trust anchors of "experimental" authority certificates. 
 
-   THESE ARE NOT ACCREDITED AND THE IGTF DOES NOT MAKE ANY CLAIMS
-     REGARDING THEIR CONFORMANCE TO ANY AUTHENTICATION PROFILE
+  THESE ARE NOT (YET) ACCREDITED AND THE IGTF DOES NOT MAKE ANY CLAIMS
+      REGARDING THEIR CONFORMANCE TO ANY AUTHENTICATION PROFILE
 
+This area may also contain certificates for authorities that are in 
+the accreditation process and that already supplied enough technical 
+information to start the distribution validation process.
 
 [this is distribution/igtf/@VERSION@/experimental/README]
 

@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.5 2005/10/14 16:59:40 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.6 2005/10/15 09:40:28 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -76,25 +76,44 @@ foreach my $k ( (sort keys %auth)[1] ) {
 &yumifyDirectory($opt_o) or die "yumifyDirectory: $err\n";
 &aptifyDirectory($opt_o) or die "aptifyDirectory: $err\n";
 
-# copy generic files to distribution directory
-&copyWithExpansion("toplevel-README.cin","$opt_o/README",
-  ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
-    "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) );
-&copyWithExpansion("experimental-README.cin","$opt_o/experimental/README",
-  ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
-    "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) );
-&copyWithExpansion("worthless-README.cin","$opt_o/worthless/README",
-  ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
-    "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) );
-&copyWithExpansion("toplevel-version.txt.cin","$opt_o/version.txt",
-  ( "VERSION" => $opt_gver) );
-copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-3","$opt_o/GPG-KEY-EUGridPMA-RPM-3")
-    or die "GPG key copy: $!\n";
-copy("$opt_carep/CHANGES","$opt_o/CHANGES")
-    or die "CHANGES copy: $!\n";
+&makeInfoFiles($opt_carep,$opt_o) or die "makeInfoFiles: $err\n";
 
 # done
 1;
+
+# ----------------------------------------------------------------------------
+# sub makeInfoFiles($repo,$targetdir)
+# copy generic files to distribution directory
+sub makeInfoFiles($$) {
+  my ($carep,$targetdir) = @_;
+
+  &copyWithExpansion("toplevel-README.cin","$targetdir/README",
+    ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
+      "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
+  &copyWithExpansion("experimental-README.cin","$targetdir/experimental/README",
+    ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
+      "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
+  &copyWithExpansion("worthless-README.cin","$targetdir/worthless/README",
+    ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
+      "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
+  &copyWithExpansion("toplevel-version.txt.cin","$targetdir/version.txt",
+    ( "VERSION" => $opt_gver) ) or return undef;
+  copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-3",
+       "$targetdir/GPG-KEY-EUGridPMA-RPM-3")
+    or do { $err="GPG key copy: $!\n"; return undef };
+  copy("$carep/CHANGES","$targetdir/CHANGES")
+    or do { $err="CHANGES copy: $!\n"; return undef};
+  open ACCIN,">$targetdir/accredited/accredited.in" 
+    or do { $err="accredited.in generation: $!\n"; return undef};
+  foreach my $alias ( sort keys %auth ) {
+    $auth{$alias}{"info"}->{"status"} =~ /^accredited/ or next; 
+    (my $pname=$auth{$alias}{"info"}->{"status"})=~s/.*://;
+    print ACCIN "$alias\t$pname\n";
+  }
+  close ACCIN;
+
+  return 1;
+}
 
 # ----------------------------------------------------------------------------
 # sub signRPMs($targetdir)
