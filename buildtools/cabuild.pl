@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.14 2005/10/15 18:07:15 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.15 2005/10/15 18:10:30 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -58,6 +58,7 @@ $opt_f and system("rm -fr $opt_o > /dev/null 2>&1");
 print "Generating global version $opt_gver\n";
 
 my $tmpdir=tempdir("$opt_tmp/pBundle-XXXXXX", CLEANUP => 0 );
+#my $tmpdir="$opt_o/expanded"; mkdir $tmpdir;
 my $bundledir="$tmpdir/igtf-policy-accredited-bundle-$opt_gver";
 mkdir $bundledir;
 

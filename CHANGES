@@ -2,10 +2,20 @@ Changes from 0.32 to 0.33
 -------------------------
 (15 October 2005)
 
-* IGTF policy metapackages replace EUGridPMA-only ones
-* New meta-data layout in .info files per ca added in the distribution
-* APGridPMA accreditations: KISTI and AIST
-* EUGridPMA accreditations: TR-Grid and BalticGrid
+* IGTF policy metapackages replace EUGridPMA-only ones. The legacy
+  "ca_policy_eugridpma" RPMs now depend on their IGTF counterparts. The
+  EUGridPMA specific files will be withdrawn in a future release.
+* New directory structure moves all data regarding accredited authorities
+  to the singe "accredited/" directory (including the policy meta-RPM)
+* Tar-ball installation now supports multiple profiles and targets
+* Meta-data (".info") for each CA added, and installed in trusted directory
+* The "experimental" profile supercedes the "others/" area in the distribution
+  (note: this affects the FNAL_KCA, which will shortly be added as an
+  accredited authority under the new Short-Lived Credential Services profile)
+* Discontinued authorities are no longer distributed
+* Only accredited authority RPM packages are signed by the PMA's GPG key
+* APGridPMA accreditations added: KISTI and AIST
+* New EUGridPMA accreditations: TR-Grid and BalticGrid
 
 Changes from 0.31 to 0.32
 -------------------------
