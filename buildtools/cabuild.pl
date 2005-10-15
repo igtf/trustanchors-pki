@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.8 2005/10/15 10:30:56 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.9 2005/10/15 10:48:34 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -39,7 +39,7 @@ $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
 $Main::legacyEUGridPMASpecFileTemplate="eugridpma.spec.cin";
 $Main::bundleMakefileTPL="Makefile.tpl.cin";
 $Main::bundleConfigureTPL="configure.cin";
-@Main::infoGlob=("*/*.info","*/*/*.info","*/*/*/*.info);
+@Main::infoGlob=("*/*.info","*/*/*.info","*/*/*/*.info");
 # ----------------------------------------------------------------------------
 
 

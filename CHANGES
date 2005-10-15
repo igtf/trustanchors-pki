@@ -1,3 +1,12 @@
+Changes from 0.32 to 0.33
+-------------------------
+(15 October 2005)
+
+* IGTF policy metapackages replace EUGridPMA-only ones
+* New meta-data layout in .info files per ca added in the distribution
+* APGridPMA accreditations: KISTI and AIST
+* EUGridPMA accreditations: TR-Grid and BalticGrid
+
 Changes from 0.31 to 0.32
 -------------------------
 (23 August 2005)
