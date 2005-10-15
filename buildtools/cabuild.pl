@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.7 2005/10/15 09:51:40 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.8 2005/10/15 10:30:56 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -60,7 +60,7 @@ mkdir $bundledir;
 
 print "  bundle directory $bundledir\n\n";
 
-foreach my $k ( (sort keys %auth)[1] ) {
+foreach my $k ( sort keys %auth ) {
   my %info = %{$auth{$k}{"info"}};
   &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"hash"},%info) 
     or die "packSingleCA: $err\n";
@@ -125,7 +125,8 @@ sub signRPMs($) {
   print "and make sure that your rpmmacros file is correct\n\n";
   print "press enter to continue ...\n";
   my $nonsense=<>;
-  system("cd $targetdir ; find . -name \*.rpm -print | xargs rpm --resign")
+  system("cd $targetdir ; ".
+         "find accredited -name \*.rpm -print | xargs rpm --resign")
     and do {
       $err="system command error: $!"; return undef;
     };
