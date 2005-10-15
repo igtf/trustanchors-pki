@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.4 2005/10/14 16:51:09 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.5 2005/10/14 16:59:40 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -76,12 +76,24 @@ foreach my $k ( (sort keys %auth)[1] ) {
 &yumifyDirectory($opt_o) or die "yumifyDirectory: $err\n";
 &aptifyDirectory($opt_o) or die "aptifyDirectory: $err\n";
 
+# copy generic files to distribution directory
 &copyWithExpansion("toplevel-README.cin","$opt_o/README",
+  ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
+    "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) );
+&copyWithExpansion("experimental-README.cin","$opt_o/experimental/README",
+  ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
+    "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) );
+&copyWithExpansion("worthless-README.cin","$opt_o/worthless/README",
   ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
     "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) );
 &copyWithExpansion("toplevel-version.txt.cin","$opt_o/version.txt",
   ( "VERSION" => $opt_gver) );
+copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-3","$opt_o/GPG-KEY-EUGridPMA-RPM-3")
+    or die "GPG key copy: $!\n";
+copy("$opt_carep/CHANGES","$opt_o/CHANGES")
+    or die "CHANGES copy: $!\n";
 
+# done
 1;
 
 # ----------------------------------------------------------------------------

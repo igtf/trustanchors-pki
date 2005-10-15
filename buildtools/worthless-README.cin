@@ -1,0 +1,31 @@
+
+Worthless Authorities
+---------------------
+
+This area contains the trust anchors of "worthless" authority certificates. 
+
+   THESE ARE NOT ACCREDITED AND THE IGTF DOES NOT MAKE ANY CLAIMS
+     REGARDING THEIR CONFORMANCE TO ANY AUTHENTICATION PROFILE
+
+   THERE AUTHORITIES THEMSELVES CLAIM THAT THEY ARE NOT TO BE USED
+   IN A PRODUCTION ENVIRONMENT, OR EVEN IN ANY ENVIRONMENT AT ALL!
+
+Examples of worthless CAs include the "tutorial" on-line exercise CA, and 
+the Globus Certificate Service. Especially the Globus Certificate Service 
+is governed by this disclaimer from the Globus web site:
+
+"The Globus Certificate Service is a service that issues low-quality
+certificates to users who require certificates to use the Globus
+Toolkit(C) and do not have other means of acquiring certificates.  The
+Globus Certificate Service is not a true CA (for example, it does not
+revoke or reissue certificates) and certificates from the Globus
+Certificate Service are intended solely for experimentation and
+testing.  Care should be taken when using certificates issued by it,
+particularly on production resources.
+
+We strongly encourage users to use more secure alternatives to the
+Globus Certificate Service."
+
+
+[this is distribution/igtf/@VERSION@/worthless/README]
+
