@@ -31,6 +31,11 @@ rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/etc/grid-security/certificates
 
 cp -pr * $RPM_BUILD_ROOT/etc/grid-security/certificates/
+# clean up files that should not be packaged (experimental/worthless info)
+for pname in experimental worthless discontinued 
+do
+  rm $RPM_BUILD_ROOT/etc/grid-security/certificates/policy-igtf-$pname.info
+done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
