@@ -19,7 +19,7 @@ URL: @URL@
 %endif
 
 %if %([ -n "@REQUIRES@" ] && echo 1 || echo 0)
-Requires: %(echo "@REQUIRES@" | sed -e 's/^/ca_/' ) 
+Requires: @REQUIRES@
 %endif
 
 %prep
