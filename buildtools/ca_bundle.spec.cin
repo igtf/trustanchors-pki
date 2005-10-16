@@ -20,8 +20,7 @@ Requires: ca_policy_igtf-classic = @VERSION@
 This collection represent the current set of accredited authorities
 by the International Grid Trust Federation member PMAs, that meet the 
 production qualify Authentication Profiles. This includes the "classic" 
-profile and the profile for short-lived credential generation services
-(slcs).
+profile.
 
 %build
 
