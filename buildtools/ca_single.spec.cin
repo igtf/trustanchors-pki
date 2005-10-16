@@ -2,7 +2,7 @@ Name: ca_@ALIAS@
 Version: @VERSION@
 Release: @RELEASE@
 Source: @TGZNAME@
-License: MIT
+License: IGTF Federation
 Prefix: /etc/grid-security/certificates
 Group: Security/Certificates
 #BuildRequires: openssl

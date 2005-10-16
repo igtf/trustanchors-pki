@@ -2,7 +2,7 @@ Name: ca_policy_igtf
 Version: @VERSION@
 Release: @RELEASE@
 Source: @TGZNAME@
-License: MIT
+License: IGTF Federation
 Prefix: /etc/grid-security/certificates
 Group: Security/Certificates
 BuildRoot: %{_tmppath}/%{name}-root
