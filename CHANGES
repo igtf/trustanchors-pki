@@ -16,6 +16,7 @@ Changes from 0.32 to 0.33
 * Only accredited authority RPM packages are signed by the PMA's GPG key
 * APGridPMA accreditations added: KISTI and AIST
 * New EUGridPMA accreditations: TR-Grid and BalticGrid
+* CRL URL for SiGNET changed to http instead of https
 
 Changes from 0.31 to 0.32
 -------------------------
