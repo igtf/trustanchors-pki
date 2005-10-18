@@ -1,8 +1,9 @@
 #
-# @(#)$Id$
+# @(#)$Id: d64ccb53.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA Russia
 #   obtained from d64ccb53 in Russia/
 alias = Russia
 crl_url = http://lhc.sinp.msu.ru/CA/d64ccb53.r0
 status = accredited:classic
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

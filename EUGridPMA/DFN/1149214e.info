@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 1149214e.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA DFN-GridGermany-Root
 #   obtained from 1149214e in DFN/
 alias = DFN-GridGermany-Root
@@ -9,3 +9,4 @@ email = dfnpca@dfn-cert.de
 status = accredited:classic
 url = http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/data/html/cacert.html
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

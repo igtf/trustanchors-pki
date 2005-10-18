@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 34f8e29c.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA DFN-GridGermany-User
 #   obtained from 34f8e29c in DFN/
 alias = DFN-GridGermany-User
@@ -10,3 +10,4 @@ requires = DFN-GridGermany-Root
 status = accredited:classic
 url = http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-user/g1/data/html/cacert.html
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

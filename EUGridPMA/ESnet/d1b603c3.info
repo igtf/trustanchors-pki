@@ -1,5 +1,5 @@
 #
-# @(#)$Id: d1b603c3.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: d1b603c3.info,v 1.2 2005/10/15 10:47:14 pmacvsdg Exp $
 # Information for CA ESnet
 #   obtained from d1b603c3 in ESnet/
 alias = ESnet
@@ -8,3 +8,4 @@ crl_url = http://es.net/CA/d1b603c3/CRL/d1b603c3.r0
 email = trouble@es.net
 status = accredited:classic
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

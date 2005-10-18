@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 9b59ecad.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
+# @(#)$Id: 9b59ecad.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
 # Information for CA CESNET
 #   obtained from 9b59ecad in CESNET/
 alias = CESNET
@@ -8,3 +8,4 @@ crl_url = http://www.cesnet.cz/pki/crl/cn=CESNET%20CA,dc=cesnet-ca,dc=cz.crl
 email = ca@cesnet.cz
 status = accredited:classic
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

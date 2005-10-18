@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: fe102e03.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA DFN-GridGermany-Server
 #   obtained from fe102e03 in DFN/
 alias = DFN-GridGermany-Server
@@ -10,3 +10,4 @@ requires = DFN-GridGermany-Root
 status = accredited:classic
 url = http://www.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/data/html/cacert.html
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

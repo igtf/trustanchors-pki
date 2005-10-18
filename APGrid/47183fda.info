@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 47183fda.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
 # Information for CA KISTI
 #   obtained from 47183fda in APGrid/
 alias = KISTI
@@ -8,3 +8,4 @@ email = jhkwak@kisti.re.kr
 status = accredited:classic
 url = https://ca.gridcenter.or.kr/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

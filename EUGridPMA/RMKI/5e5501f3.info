@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 5e5501f3.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: 5e5501f3.info,v 1.2 2005/10/15 10:47:15 pmacvsdg Exp $
 # Information for CA RMKI
 #   obtained from 5e5501f3 in RMKI/
 alias = RMKI
@@ -9,3 +9,4 @@ email = kadlec@sunserv.kfki.hu
 status = accredited:classic
 url = http://pki.kfki.hu/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 29021213.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: 29021213.info,v 1.2 2005/10/15 10:47:14 pmacvsdg Exp $
 # Information for CA FNAL
 #   obtained from 29021213 in FNAL/
 alias = FNAL
@@ -8,3 +8,4 @@ crl_url = http://computing.fnal.gov/security/pki/29021213.crl
 email = dane@fnal.gov
 status = discontinued
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

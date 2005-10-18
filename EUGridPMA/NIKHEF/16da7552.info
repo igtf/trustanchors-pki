@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 16da7552.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: 16da7552.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
 # Information for CA NIKHEF
 #   
 alias = NIKHEF
@@ -9,3 +9,4 @@ email = ca@dutchgrid.nl
 status = accredited:classic
 url = http://ca.dutchgrid.nl/medium/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

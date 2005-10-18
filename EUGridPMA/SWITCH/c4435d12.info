@@ -1,5 +1,5 @@
 #
-# @(#)$Id: c4435d12.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: c4435d12.info,v 1.2 2005/10/15 10:47:15 pmacvsdg Exp $
 # Information for CA SWITCH
 #   obtained from c4435d12 in SWITCH/
 alias = SWITCH
@@ -9,3 +9,4 @@ requires = SwissSign-Silver
 status = accredited:classic
 version = @VERSION@
 email = pki@switch.ch
+sha1fp.0 = @SHA1FP.0@

@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 84c1f123.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA CyGrid-old
 #   obtained from 84c1f123 in CyGrid-old/
 alias = CyGrid-old
@@ -8,3 +8,4 @@ crl_url = http://grid.ucy.ac.cy/CyGridCA/84c1f123.r0
 status = accredited:classic
 url = http://grid.ucy.ac.cy/CyGridCA
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

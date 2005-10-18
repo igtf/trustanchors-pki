@@ -1,5 +1,5 @@
 #
-# @(#)$Id: d2a353a5.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: d2a353a5.info,v 1.2 2005/10/15 10:47:15 pmacvsdg Exp $
 # Information for CA PK-Grid
 #   obtained from d2a353a5 in PK-Grid/
 alias = PK-Grid
@@ -8,3 +8,4 @@ url = http://www.ncp.edu.pk/pk-grid-ca/
 email = sajjad@NCP.EDU.PK
 status = accredited:classic
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

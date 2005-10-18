@@ -1,5 +1,5 @@
 #
-# @(#)$Id: afe55e66.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: afe55e66.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
 # Information for CA CyGrid
 #   obtained from afe55e66 in CyGrid/
 alias = CyGrid
@@ -9,3 +9,4 @@ email = kyriacos@ucy.ac.cy
 status = accredited:classic
 url = http://grid.ucy.ac.cy/CyGridCA/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

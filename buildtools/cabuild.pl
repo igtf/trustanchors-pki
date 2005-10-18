@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.15 2005/10/15 18:10:30 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.16 2005/10/15 19:26:52 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -552,6 +552,13 @@ sub packSingleCA($$$$) {
   my $tmpdir=tempdir("$opt_tmp/pSCA-$hash-XXXXXX", CLEANUP => 1 );
   print "** CA $info{alias} v$info{version} (hash $hash, dir $srcdir)\n";
 
+  -f "$srcdir/$hash.0" and do {
+    if ( (!defined $info{"sha1fp.0"}) or ($info{"sha1fp.0"}=~/@/) ) {
+      chomp($info{"sha1fp.0"} = 
+        `openssl x509 -fingerprint -sha1 -noout -in $srcdir/$hash.0`);
+      $info{"sha1fp.0"}=~s/^[^=]+=//;
+    }
+  };
 
   (my $collection=$info{"status"})=~s/:.*//;
   my ($profile);
@@ -565,7 +572,7 @@ sub packSingleCA($$$$) {
   mkdir $pdir;
   foreach my $ext ( qw(info signing_policy) ) {
     &copyWithExpansion("$srcdir/$hash.$ext","$pdir/$hash.$ext",
-	( "VERSION" => $info{"version"} ) );
+	( "VERSION" => $info{"version"}, "SHA1FP.0" => $info{"sha1fp.0"} ) );
   }
   if ( $info{"crl_url"} ) {
     open CRLURL,">$pdir/$hash.crl_url" or 

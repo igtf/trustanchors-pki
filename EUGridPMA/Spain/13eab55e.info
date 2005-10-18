@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 13eab55e.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA Spain
 #   obtained from 13eab55e in Spain/
 alias = Spain
@@ -9,3 +9,4 @@ email = datagrid-es-ca@ifca.unican.es
 status = accredited:classic
 url = http://grid.ifca.unican.es/ca/datagrid-es/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

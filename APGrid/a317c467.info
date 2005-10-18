@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: a317c467.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
 # Information for CA AIST
 #   obtained from a317c467 in APGrid/
 alias = AIST
@@ -8,3 +8,4 @@ email = yoshio.tanaka@aist.go.jp
 status = accredited:classic
 url = https://www.apgrid.org/CA/AIST/Production/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

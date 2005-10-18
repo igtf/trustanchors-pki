@@ -1,5 +1,5 @@
 #
-# @(#)$Id: cc800af0.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: cc800af0.info,v 1.2 2005/10/15 10:47:15 pmacvsdg Exp $
 # Information for CA NIIF
 #   obtained from cc800af0 in NIIF/
 alias = NIIF
@@ -9,3 +9,4 @@ email = maray@niif.hu
 status = accredited:classic
 url = http://www.ca.niif.hu/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

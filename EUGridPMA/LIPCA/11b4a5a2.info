@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 11b4a5a2.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: 11b4a5a2.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
 # Information for CA LIPCA
 #   obtained from 11b4a5a2 in LIPCA/
 alias = LIPCA
@@ -8,3 +8,4 @@ email = ndias@lip.pt
 status = accredited:classic
 url = http://ca.lip.pt/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

@@ -1,5 +1,5 @@
 # /DC=org/DC=balticgrid/CN=Baltic Grid Certification Authority
-# @(#)$Id$
+# @(#)$Id: 2a237f16.info,v 1.1 2005/10/15 10:03:30 pmacvsdg Exp $
 # 
 # 
 alias = BalticGrid
@@ -9,3 +9,4 @@ email = ca@ca.balticgrid.org
 status = accredited:classic
 url = http://ca.balticgrid.org/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

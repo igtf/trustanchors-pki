@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 55994d72.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
 # Information for CA RDIG
 #   obtained from 55994d72 in Russia/
 alias = RDIG
@@ -9,3 +9,4 @@ email = rea@mbslab.kiae.ru
 status = accredited:classic
 url = http://ca.grid.kiae.ru/RDIG/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

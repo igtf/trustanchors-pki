@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: ba2f39ca.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
 # Information for CA IHEP
 #   obtained from ba2f39ca in APGrid/
 alias = IHEP
@@ -9,3 +9,4 @@ email = gridca@ihep.ac.cn
 status = accredited:classic
 url = https://gridca.ihep.ac.cn/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
