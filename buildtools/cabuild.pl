@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.16 2005/10/15 19:26:52 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.17 2005/10/18 20:26:01 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -24,7 +24,7 @@ my @optdef=qw( url|finalURL=s
 $0 =~ s/.*\///;
 &GetOptions(@optdef);
 $opt_gver=$opt_version unless $opt_gver;
-$opt_gver or die "Need at least a global version (--gver=) option\n";
+$opt_gver or die "Need at least a global version (--gver=) option\nThis version may be set to AUTO, in which case the version is read\nfrom the VERSION file in the current directory.";
 
 defined $opt_url or
   $opt_url="http://www.eugridpma.org/distribution/igtf/$opt_gver/apt";
@@ -45,6 +45,14 @@ $Main::bundleConfigureTPL="configure.cin";
 # IGTF distribution generation logic
 #
 
+$opt_gver=~/AUTO/i and do {
+  chomp($opt_gver=`cat VERSION`);
+  $opt_gver=~/-/ and do {
+    ($opt_r=$opt_gver)=~s/.*-//;
+    $opt_gver=~s/-.*//;
+  };
+};
+
 
 $opt_f and system("rm -fr $opt_o > /dev/null 2>&1");
 &generateDistDirectory($opt_o) or die "generateDistDirectory: $err\n";
@@ -55,7 +63,7 @@ $opt_f and system("rm -fr $opt_o > /dev/null 2>&1");
 %auth = &getAuthoritiesList($opt_carep,$opt_version);
 
 
-print "Generating global version $opt_gver\n";
+print "Generating global version $opt_gver release $opt_r\n";
 
 my $tmpdir=tempdir("$opt_tmp/pBundle-XXXXXX", CLEANUP => 0 );
 #my $tmpdir="$opt_o/expanded"; mkdir $tmpdir;
