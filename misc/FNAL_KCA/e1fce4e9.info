@@ -1,11 +1,11 @@
 #
-# @(#)$Id: e1fce4e9.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: e1fce4e9.info,v 1.4 2005/10/19 15:33:16 pmacvsdg Exp $
 # Information for CA FNAL_KCA
 #   obtained from e1fce4e9 in FNAL_KCA/
 alias = FNAL_KCA
 status = experimental
 ca_url = https://security.fnal.gov/pki/e1fce4e9.0
 url = http://security.fnal.gov/pki/
-email = nightwatch@fnal.gov
+email = cst@fnal.gov
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
