@@ -1,6 +1,6 @@
-Changes from 0.32 to 0.33
+Changes from 0.32 to 1.0
 -------------------------
-(15 October 2005)
+(21 October 2005)
 
 * IGTF policy metapackages replace EUGridPMA-only ones. The legacy
   "ca_policy_eugridpma" RPMs now depend on their IGTF counterparts. The
