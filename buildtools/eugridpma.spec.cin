@@ -10,7 +10,7 @@ AutoReqProv: no
 
 Summary: Legacy compatibility package to trigger IGTF installation
 URL: http://www.eugridpma.org/
-Requires: ca_policy_igtf = @VERSION@
+Requires: ca_policy_igtf-classic = @VERSION@
 
 %prep
 
