@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.17 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.18 2005/10/19 19:39:18 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -83,6 +83,7 @@ foreach my $k ( sort keys %auth ) {
     or die "makeBundleScripts: $err\n";
 
 (defined $opt_s) and (&signRPMs($opt_o) or die "signRPMs: $err\n");
+
 &yumifyDirectory($opt_o) or die "yumifyDirectory: $err\n";
 &aptifyDirectory($opt_o) or die "aptifyDirectory: $err\n";
 
@@ -137,7 +138,7 @@ sub signRPMs($) {
   print "press enter to continue ...\n";
   my $nonsense=<>;
   system("cd $targetdir ; ".
-         "find accredited -name \*.rpm -print | xargs rpm --resign")
+         "find -name \*.rpm -print | xargs rpm --resign")
     and do {
       $err="system command error: $!"; return undef;
     };
