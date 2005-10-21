@@ -46,6 +46,6 @@ cp -pr @HASH@.* $RPM_BUILD_ROOT/etc/grid-security/certificates/
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644,root,root)
+%defattr(-,root,root)
 /etc/grid-security/certificates/
 

@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.18 2005/10/19 19:39:18 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.19 2005/10/21 11:40:08 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -23,6 +23,15 @@ my @optdef=qw( url|finalURL=s
 
 $0 =~ s/.*\///;
 &GetOptions(@optdef);
+
+$opt_version=~/AUTO/i and do {
+  chomp($opt_version=`cat VERSION`);
+  $opt_version=~/-/ and do {
+    ($opt_r=$opt_version)=~s/.*-//;
+    $opt_version=~s/-.*//;
+  };
+};
+
 $opt_gver=$opt_version unless $opt_gver;
 $opt_gver or die "Need at least a global version (--gver=) option\nThis version may be set to AUTO, in which case the version is read\nfrom the VERSION file in the current directory.";
 
@@ -44,14 +53,6 @@ $Main::bundleConfigureTPL="configure.cin";
 #
 # IGTF distribution generation logic
 #
-
-$opt_gver=~/AUTO/i and do {
-  chomp($opt_gver=`cat VERSION`);
-  $opt_gver=~/-/ and do {
-    ($opt_r=$opt_gver)=~s/.*-//;
-    $opt_gver=~s/-.*//;
-  };
-};
 
 
 $opt_f and system("rm -fr $opt_o > /dev/null 2>&1");
