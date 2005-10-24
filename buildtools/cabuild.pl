@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.19 2005/10/21 11:40:08 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.20 2005/10/21 16:54:35 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -268,8 +268,8 @@ sub makeBundleScripts($$$) {
       print MKTPL "\t\$(install) policy-igtf-$pname.info \$(prefix)/\n";
     print MKTPL "\n";
   }
-  print MKTPL "install-production: $prodcas\n".
-              "\t\@echo Installing all IGTF production-level CAs\n".
+  print MKTPL "install-all-accredited: $prodcas\n".
+              "\t\@echo Installing all IGTF accredited CAs under ANY profile\n".
               "\t\$(install) policy-igtf.info \$(prefix)/\n\n";
   print MKTPL "#\n# single CA installations\n#\n\n";
 
@@ -412,7 +412,6 @@ sub makeCollectionInfo($$$) {
   # now collect all information in the proper place
   foreach my $n ( 
                   "ca_policy_igtf-classic-$opt_gver",
-                  "ca_policy_igtf-$opt_gver",
                   "ca_policy_igtf-slcs-$opt_gver",
                   "ca_policy_eugridpma-classic-$opt_gver",
                   "ca_policy_eugridpma-$opt_gver"

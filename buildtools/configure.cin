@@ -52,7 +52,11 @@ EOF
 ;;
 esac
 
-[ x"$PROFILES" = x"" ] && PROFILES=install-production
+if [ x"$PROFILES" = x"" ] ; then
+  PROFILES=install-all-accredited
+  echo "WARNING: installing ALL authorities accredited under ANY PROFILE" >&2
+  echo "         Use --with-profile=pname to select specific profile(s)" >&2
+fi
 
 sed -e "
 	s#@PREFIX@#$PREFIX#g;
