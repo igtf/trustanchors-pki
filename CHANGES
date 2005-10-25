@@ -1,6 +1,6 @@
 Changes from 0.32 to 1.0
 -------------------------
-(21 October 2005)
+(25 October 2005)
 
 * IGTF policy metapackages replace EUGridPMA-only ones. The legacy
   "ca_policy_eugridpma" RPMs now depend on their IGTF counterparts. The
@@ -17,6 +17,7 @@ Changes from 0.32 to 1.0
 * APGridPMA accreditations added: KISTI and AIST
 * New EUGridPMA accreditations: TR-Grid and BalticGrid
 * CRL URL for SiGNET changed to http instead of https
+* Added compatibility namespace for NIIF "/C=HU/O=NIIF CA/OU=NIIF/OU=GRID/*"
 
 Changes from 0.31 to 0.32
 -------------------------
