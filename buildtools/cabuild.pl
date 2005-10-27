@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.21 2005/10/24 08:28:32 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.22 2005/10/27 13:31:51 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -596,13 +596,13 @@ sub packSingleCA($$$$) {
     copy("$srcdir/$hash.$i","$pdir/$hash.$i");
     system("openssl x509 -outform der -in $srcdir/$hash.$i -out $tmpdir/$hash-der.$i");
     system("keytool -import -alias ".$info{"alias"}."-$i ".
-           "-keystore $targetdir/$collection/jks/ca-".$info{"alias"}.".jks ".
+           "-keystore $targetdir/$collection/jks/ca-".$info{"alias"}."-".$info{"version"}.".jks ".
            "-storepass $Main::jksPass -noprompt -trustcacerts ".
            "-file $tmpdir/$hash-der.$i");
-    my $jksname="igtf-bundle-$collection";
+    my $jksname="igtf-policy-$collection";
     $profile ne "" and $jksname.="-$profile";
     system("keytool -import -alias ".$info{"alias"}."-$i ".
-           "-keystore $targetdir/$collection/jks/$jksname.jks ".
+           "-keystore $targetdir/$collection/jks/$jksname-$opt_gver.jks ".
            "-storepass $Main::jksPass -noprompt -trustcacerts ".
            "-file $tmpdir/$hash-der.$i");
     unlink "$tmpdir/$hash-der.$i";
