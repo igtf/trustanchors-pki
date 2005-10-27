@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.20 2005/10/21 16:54:35 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.21 2005/10/24 08:28:32 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -48,6 +48,7 @@ $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
 $Main::legacyEUGridPMASpecFileTemplate="eugridpma.spec.cin";
 $Main::bundleMakefileTPL="Makefile.tpl.cin";
 $Main::bundleConfigureTPL="configure.cin";
+$Main::jksPass="eugridpma";
 @Main::infoGlob=("*/*.info","*/*/*.info","*/*/*/*.info");
 # ----------------------------------------------------------------------------
 #
@@ -510,7 +511,7 @@ sub generateDistDirectory($) {
 
   for my $s ( qw(accredited experimental worthless) ) {
     mkdir "$dir/$s" or return undef;
-    for my $t ( qw (RPMS SRPMS tgz) ) {
+    for my $t ( qw (RPMS SRPMS tgz jks) ) {
       mkdir "$dir/$s/$t" or return undef;
     }
   }
@@ -593,6 +594,18 @@ sub packSingleCA($$$$) {
   my $i=0;
   while ( -f "$srcdir/$hash.$i" ) { 
     copy("$srcdir/$hash.$i","$pdir/$hash.$i");
+    system("openssl x509 -outform der -in $srcdir/$hash.$i -out $tmpdir/$hash-der.$i");
+    system("keytool -import -alias ".$info{"alias"}."-$i ".
+           "-keystore $targetdir/$collection/jks/ca-".$info{"alias"}.".jks ".
+           "-storepass $Main::jksPass -noprompt -trustcacerts ".
+           "-file $tmpdir/$hash-der.$i");
+    my $jksname="igtf-bundle-$collection";
+    $profile ne "" and $jksname.="-$profile";
+    system("keytool -import -alias ".$info{"alias"}."-$i ".
+           "-keystore $targetdir/$collection/jks/$jksname.jks ".
+           "-storepass $Main::jksPass -noprompt -trustcacerts ".
+           "-file $tmpdir/$hash-der.$i");
+    unlink "$tmpdir/$hash-der.$i";
     $i++;
   }
 
