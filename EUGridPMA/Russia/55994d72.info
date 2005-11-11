@@ -1,11 +1,11 @@
 #
-# @(#)$Id: 55994d72.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: 55994d72.info,v 1.2 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA RDIG
 #   obtained from 55994d72 in Russia/
 alias = RDIG
 ca_url = http://ca.grid.kiae.ru/RDIG/cacrt.pem
 crl_url = http://ca.grid.kiae.ru/RDIG/cacrl.pem
-email = rea@mbslab.kiae.ru
+email = rdig-ca-support@grid.kiae.ru
 status = accredited:classic
 url = http://ca.grid.kiae.ru/RDIG/
 version = @VERSION@
