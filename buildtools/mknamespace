@@ -1,0 +1,87 @@
+#! /usr/bin/perl
+#
+
+foreach $f ( @ARGV ) {
+
+  ($hash=$f)=~s/.*\/([a-z0-9]+)\..*$/$1/;
+  ($infof=$f)=~s/signing_policy$/info/;
+
+  open SP,"$f" or die "Cannot open signing policy file $f: $!\n";
+
+  -f "$infof" and %info=&readInfoFile("$infof");
+
+  $caname="";
+  while (<SP>) {
+    undef @fields;
+    push(@fields, defined($1) ? $1:$3) 
+	while m/'([^'\\]*(\\.[^'\\]*)*)'|([^\s]+)/g;
+
+    $fields[0] eq "access_id_CA" and do {
+      $caname=$fields[2];
+    };
+
+    $fields[0] eq "cond_subjects" and do {
+      $ns{$caname}.=$fields[2]." ";
+    };
+  }
+  close SP;
+
+
+  -f "$hash.namespaces" or do { 
+  open NS,">$hash.namespaces";
+
+  print NS "##############################################################################\n";
+  print NS "# @(#)$hash.namespaces\n";
+  print NS "# CA alias    : $info{alias}\n";
+  print NS "#    subord_of: $info{requires}\n";
+  print NS "#    subjectDN: $caname\n";
+  print NS "#    hash     : $hash\n";
+  print NS "#    (generated automatically from $f)\n#\n";
+  foreach $ca ( keys %ns ) {
+    $ca =~ /Email=/ and next;
+    undef @names;
+    $_=$ns{$ca};
+    if ( /^['"]/  ) { # singel or multiple entries?
+      push(@names, defined($1) ? $1:$3) 
+        while m/"([^"\\]*(\\.[^"\\]*)*)"|([^\s]+)/g;
+    } else {
+      $names[0]=$_;
+    }
+
+    foreach ( @names ) { 
+      $_ eq $ca and next;
+      /Email=/ and next;
+      s/\*/.\*/g;
+      print NS "TO Issuer \"$ca\" \\\n";
+      print NS "  PERMIT Subject \"$_\"\n\n";
+    }
+  }
+  close NS;
+  };
+
+}
+
+
+# ----------------------------------------------------------------------------
+# readInfoFile($filename)
+# returns: hash with information
+#
+sub readInfoFile($) {
+  my ($filename) = @_;
+  my ($attr,$val,$l,%info);
+ 
+  -r "$filename" or
+    ($err="Cannot read info file $filename: $!") and return undef;
+ 
+  open F,"$filename" or die "Still cannot read $filename: $!\n";
+  while ($l=<F>) {
+    chomp($l);
+    while ($l=~/\\$/) {chop($l);chomp($l.=<F>)}
+    $l=~s/\s*#.*$//; $l=~s/^\s*//; $l=~/^\s*$/ and next;
+    ($attr,$val)=split(/\s*=\s*/,$l,2);
+    $info{$attr}=$val unless ($attr eq "");
+  }
+  close F;
+  return %info;
+}
+
