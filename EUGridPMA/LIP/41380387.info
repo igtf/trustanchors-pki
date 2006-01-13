@@ -1,11 +1,11 @@
 #
-# @(#)$Id: 41380387.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
+# @(#)$Id: 41380387.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA LIP
 #   obtained from 41380387 in LIP/
 alias = LIP
 url = http://www.lip.pt/ca
 crl_url = http://www.lip.pt/ca/lip-crl.pem
-email = jorge@lip.pt
+email = ca@lip.pt
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
