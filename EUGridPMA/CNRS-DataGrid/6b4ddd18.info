@@ -1,11 +1,11 @@
 #
-# @(#)$Id: 6b4ddd18.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
+# @(#)$Id: 6b4ddd18.info,v 1.3 2005/10/18 20:26:00 pmacvsdg Exp $
 # Information for CA CNRS-DataGrid
 #   obtained from 6b4ddd18 in CNRS-DataGrid/
 alias = CNRS-DataGrid
 crl_url = http://igc.services.cnrs.fr/cgi-bin/loadcrl?CA=Datagrid-fr&format=PEM
 requires = CNRS-Projets
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 email = Sophie.Nicoud@urec.cnrs.fr
 sha1fp.0 = @SHA1FP.0@

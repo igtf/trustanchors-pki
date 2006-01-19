@@ -31,6 +31,8 @@ foreach $f ( @ARGV ) {
   open NS,">$hash.namespaces";
 
   print NS "##############################################################################\n";
+  print NS "#NAMESPACES-VERSION: 1.0\n";
+  print NS "#\n";
   print NS "# @(#)$hash.namespaces\n";
   print NS "# CA alias    : $info{alias}\n";
   print NS "#    subord_of: $info{requires}\n";
