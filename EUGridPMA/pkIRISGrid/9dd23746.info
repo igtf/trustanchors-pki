@@ -1,8 +1,8 @@
 alias = pkIRISGrid
 ca_url = http://www.irisgrid.es/pki/cacert/9dd23746.0
 crl_url = http://www.irisgrid.es/pki/crl/cacrl.pem
-email = javier.masa@rediris.es
-status = experimental
+email = pkirisgrid-ca@rediris.es
+status = accredited:classic
 url = http://www.irisgrid.es/pki/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
