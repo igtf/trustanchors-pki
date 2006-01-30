@@ -2,10 +2,15 @@ Changes from 1.0 to 1.1
 -----------------------
 (dd mmm yyyy)
 
-* corrected malformed signing_policy file for CESNET-old
-* new (generic) email address for the LIP and LIPCA CAs
-* expired Cygrid-old and CNRS-Datagrid CAs
-* added alternative syntax for namespace constraints
+* Corrected malformed signing_policy file for CESNET-old
+* New (generic) email address for the LIP and LIPCA CAs
+* Expired Cygrid-old and CNRS-Datagrid CAs. The IGTF-classic
+  meta-RPM package implicitly obsoletes there two discontinued CAs
+* Added alternative syntax for namespace constraints in .namespaces
+  files. See http://www.eugridpma.org/documentation/ for details
+* Added pkIRISGrid CA as an accredited:classic CA
+* Corrected SWITCH CA hierarchy, adding the SWITCH Server and Personal
+  CAs inbetween the SWITCH CA and the end-entities
 
 Changes from 0.32 to 1.0
 -------------------------
