@@ -1,9 +1,9 @@
 #
-# @(#)$Id: 47183fda.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
+# @(#)$Id: 47183fda.info,v 1.2 2005/10/18 20:25:59 pmacvsdg Exp $
 # Information for CA KISTI
 #   obtained from 47183fda in APGrid/
 alias = KISTI
-crl_url = https://ca.gridcenter.or.kr/CRL/47183fda.crl
+crl_url = http://ca.gridcenter.or.kr/CRL/47183fda.crl
 email = jhkwak@kisti.re.kr
 status = accredited:classic
 url = https://ca.gridcenter.or.kr/
