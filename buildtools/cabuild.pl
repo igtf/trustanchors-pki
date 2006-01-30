@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.22 2005/10/27 13:31:51 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.23 2005/10/27 16:35:53 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -423,7 +423,7 @@ sub makeCollectionInfo($$$) {
       return undef;
     };
   }
-  move("$srcrpmdir/$pname-$opt_r.src.rpm",
+  move("$srcrpmdir/ca_policy_eugridpma-$opt_gver-$opt_r.src.rpm",
     "$targetdir/accredited/SRPMS") or do {
       $err="Cannor move $pname-$opt_r.src.rpm to SRPMS/: $!\nRPM builde error?";
       return undef;
