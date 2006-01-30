@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)6349a761.namespaces
+# CA alias    : DOESG-Root
+#    subord_of: 
+#    subjectDN: /O=DOE Science Grid/OU=Certificate Authorities/CN=Certificate Manager
+#    hash     : 6349a761
+#    (generated automatically from ./DOESG-Root/6349a761.signing_policy)
+#
+TO Issuer "/O=DOE Science Grid/OU=Certificate Authorities/CN=Certificate Manager" \
+  PERMIT Subject "/DC=net/DC=es/OU=Certificate Authorities/OU=DOE Science Grid/CN=pki1"
+

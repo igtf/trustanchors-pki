@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)d64ccb53.namespaces
+# CA alias    : Russia
+#    subord_of: 
+#    subjectDN: /C=RU/O=DataGrid/CN=Russian DataGrid CA
+#    hash     : d64ccb53
+#    (generated automatically from ./Russia/d64ccb53.signing_policy)
+#
+TO Issuer "/C=RU/O=DataGrid/CN=Russian DataGrid CA" \
+  PERMIT Subject "/C=RU/O=DataGrid/.*"
+

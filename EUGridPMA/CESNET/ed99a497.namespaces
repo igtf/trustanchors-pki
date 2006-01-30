@@ -1,0 +1,16 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)ed99a497.namespaces
+# CA alias    : CESNET-old
+#    subord_of: 
+#    subjectDN: /C=CZ/O=CESNET/CN=CESNET CA
+#    hash     : ed99a497
+#    (generated automatically from ./CESNET/ed99a497.signing_policy)
+#
+TO Issuer "/C=CZ/O=CESNET/CN=CESNET CA" \
+  PERMIT Subject "/C=CZ/O=CESNET/.*"
+
+TO Issuer "/C=CZ/O=CESNET/CN=CESNET CA" \
+  PERMIT Subject "/O=CESNET/.*"
+

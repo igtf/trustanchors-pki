@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)84c1f123.namespaces
+# CA alias    : CyGrid-old
+#    subord_of: 
+#    subjectDN: /C=CY/O=CyGrid/CN=CyGrid CA
+#    hash     : 84c1f123
+#    (generated automatically from ./CyGrid-old/84c1f123.signing_policy)
+#
+TO Issuer "/C=CY/O=CyGrid/CN=CyGrid CA" \
+  PERMIT Subject "/C=CY/O=CyGrid/.*"
+

@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)5f54f417.namespaces
+# CA alias    : GridCanada
+#    subord_of: 
+#    subjectDN: /C=CA/O=Grid/CN=Grid Canada CA
+#    hash     : 5f54f417
+#    (generated automatically from ./GridCanada/5f54f417.signing_policy)
+#
+TO Issuer "/C=CA/O=Grid/CN=Grid Canada CA" \
+  PERMIT Subject "/C=CA/O=Grid/.*"
+

@@ -5,6 +5,7 @@ foreach $f ( @ARGV ) {
 
   ($hash=$f)=~s/.*\/([a-z0-9]+)\..*$/$1/;
   ($infof=$f)=~s/signing_policy$/info/;
+  ($nsf=$f)=~s/signing_policy$/namespaces/;
 
   open SP,"$f" or die "Cannot open signing policy file $f: $!\n";
 
@@ -27,8 +28,8 @@ foreach $f ( @ARGV ) {
   close SP;
 
 
-  -f "$hash.namespaces" or do { 
-  open NS,">$hash.namespaces";
+  -f "$nsf" or do { 
+  open NS,">$nsf";
 
   print NS "##############################################################################\n";
   print NS "#NAMESPACES-VERSION: 1.0\n";

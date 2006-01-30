@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)fa3af1d7.namespaces
+# CA alias    : CERN
+#    subord_of: 
+#    subjectDN: /C=CH/O=CERN/OU=GRID/CN=CERN CA
+#    hash     : fa3af1d7
+#    (generated automatically from ./CERN/fa3af1d7.signing_policy)
+#
+TO Issuer "/C=CH/O=CERN/OU=GRID/CN=CERN CA" \
+  PERMIT Subject "/C=CH/O=CERN/OU=GRID/.*"
+

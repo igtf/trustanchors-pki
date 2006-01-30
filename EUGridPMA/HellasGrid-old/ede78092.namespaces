@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)ede78092.namespaces
+# CA alias    : HellasGrid
+#    subord_of: 
+#    subjectDN: /C=GR/O=HellasGrid/CN=HellasGrid CA
+#    hash     : ede78092
+#    (generated automatically from ./HellasGrid/ede78092.signing_policy)
+#
+TO Issuer "/C=GR/O=HellasGrid/CN=HellasGrid CA" \
+  PERMIT Subject "/C=GR/O=HellasGrid/.*"
+

@@ -1,0 +1,16 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)225860ae.namespaces
+# CA alias    : EDG-Tutorial
+#    subord_of: 
+#    subjectDN: /O=dutchgrid/OU=Certificate Authorities/CN=EDG Tutorial Worthless Certification Authority
+#    hash     : 225860ae
+#    (generated automatically from ./EDG-Tutorial/225860ae.signing_policy)
+#
+TO Issuer "/O=dutchgrid/OU=Certificate Authorities/CN=EDG Tutorial Worthless Certification Authority" \
+  PERMIT Subject "/O=edgtutorial/.*"
+
+TO Issuer "/O=dutchgrid/OU=Certificate Authorities/CN=EDG Tutorial Worthless Certification Authority" \
+  PERMIT Subject "/O=dutchgrid/.*"
+

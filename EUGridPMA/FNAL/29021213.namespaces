@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)29021213.namespaces
+# CA alias    : FNAL
+#    subord_of: 
+#    subjectDN: /DC=gov/DC=fnal/O=Fermilab/OU=Certificate Authorities/CN=Top-Level CA
+#    hash     : 29021213
+#    (generated automatically from ./FNAL/29021213.signing_policy)
+#
+TO Issuer "/DC=gov/DC=fnal/O=Fermilab/OU=Certificate Authorities/CN=Top-Level CA" \
+  PERMIT Subject "/DC=gov/DC=fnal/O=Fermilab/.*"
+

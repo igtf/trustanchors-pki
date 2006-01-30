@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)6b4ddd18.namespaces
+# CA alias    : CNRS-DataGrid
+#    subord_of: CNRS-Projets
+#    subjectDN: /C=FR/O=CNRS/CN=Datagrid-fr
+#    hash     : 6b4ddd18
+#    (generated automatically from ./CNRS-DataGrid/6b4ddd18.signing_policy)
+#
+TO Issuer "/C=FR/O=CNRS/CN=Datagrid-fr" \
+  PERMIT Subject "/.*"
+

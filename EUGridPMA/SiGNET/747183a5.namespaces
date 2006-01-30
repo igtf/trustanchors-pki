@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)747183a5.namespaces
+# CA alias    : SiGNET
+#    subord_of: 
+#    subjectDN: /C=SI/O=SiGNET/CN=SiGNET CA/Email=signet-ca@ijs.si
+#    hash     : 747183a5
+#    (generated automatically from ./SiGNET/747183a5.signing_policy)
+#
+TO Issuer "/C=SI/O=SiGNET/CN=SiGNET CA/emailAddress=signet-ca@ijs.si" \
+  PERMIT Subject "/C=SI/O=SiGNET/.*"
+
