@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.23 2005/10/27 16:35:53 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.24 2006/01/30 08:32:34 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -425,7 +425,12 @@ sub makeCollectionInfo($$$) {
   }
   move("$srcrpmdir/ca_policy_eugridpma-$opt_gver-$opt_r.src.rpm",
     "$targetdir/accredited/SRPMS") or do {
-      $err="Cannor move $pname-$opt_r.src.rpm to SRPMS/: $!\nRPM builde error?";
+      $err="Cannor move ca_policy_eugridpma-$opt_gver-$opt_r.src.rpm to SRPMS/: $!\nRPM builde error?";
+      return undef;
+    };
+  move("$srcrpmdir/ca_policy_igtf-$opt_gver-$opt_r.src.rpm",
+    "$targetdir/accredited/SRPMS") or do {
+      $err="Cannor move ca_policy_igtf-$opt_gver-$opt_r.src.rpm to SRPMS/: $!\nRPM builde error?";
       return undef;
     };
 
@@ -538,7 +543,7 @@ sub packSingleCA($$$$) {
     return undef;
   };
   -f "$srcdir/$hash.info" or do {
-    $err="packSingleCA failed: $srcdir/$hash.0 not available: $!";
+    $err="packSingleCA failed: $srcdir/$hash.info not available: $!";
     return undef;
   };
 
@@ -580,7 +585,7 @@ sub packSingleCA($$$$) {
   my $pname="ca_".$info{"alias"}."-".$info{"version"};
   my $pdir="$tmpdir/$pname";
   mkdir $pdir;
-  foreach my $ext ( qw(info signing_policy) ) {
+  foreach my $ext ( qw(info signing_policy namespaces) ) {
     &copyWithExpansion("$srcdir/$hash.$ext","$pdir/$hash.$ext",
 	( "VERSION" => $info{"version"}, "SHA1FP.0" => $info{"sha1fp.0"} ) );
   }
