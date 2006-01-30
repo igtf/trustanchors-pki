@@ -1,0 +1,39 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)$Id$
+# CA alias    : SWITCH hierarchy from SwissSign-Root
+#    subjectDN: /C=CH/O=SwissSign/CN=SwissSign CA (RSA IK May 6 1999 18:00:58)/Email=ca@SwissSign.com
+#    hash     : 7b2d086c
+#
+TO Issuer "/C=CH/O=SwissSign/CN=SwissSign CA (RSA IK May 6 1999 18:00:58)/emailAddress=ca@SwissSign.com" \
+  PERMIT Subject "/CN=SwissSign Bronze CA/emailAddress=bronze@swisssign.com/O=SwissSign/C=CH"
+
+TO Issuer "/CN=SwissSign Bronze CA/emailAddress=bronze@swisssign.com/O=SwissSign/C=CH" \
+  PERMIT Subject "/CN=SwissSign Silver CA/emailAddress=silver@swisssign.com/O=SwissSign/C=CH"
+
+TO Issuer "/CN=SwissSign Silver CA/emailAddress=silver@swisssign.com/O=SwissSign/C=CH" \
+  PERMIT Subject "/CN=SWITCH CA/emailAddress=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH"
+
+# SWITCH CA signs a Personal and a Server CA
+
+TO Issuer "/CN=SWITCH CA/emailAddress=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \
+  PERMIT Subject "/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH"
+
+TO Issuer "/CN=SWITCH CA/emailAddress=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \
+  PERMIT Subject "/CN=SWITCH Server CA/emailAddress=switch.server.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH"
+
+# for SWITCH Personal and Server CAs
+
+TO Issuer "/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \
+  DENY Subject "/C=CH/O=CERN/.*"
+
+TO Issuer "/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \
+  PERMIT Subject "/C=CH/O=.*"
+
+TO Issuer "/CN=SWITCH Server CA/emailAddress=switch.server.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \
+  DENY Subject "/C=CH/O=CERN/.*"
+
+TO Issuer "/CN=SWITCH Server CA/emailAddress=switch.server.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \
+  PERMIT Subject "/C=CH/O=.*"
+
