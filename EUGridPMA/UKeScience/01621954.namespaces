@@ -9,5 +9,5 @@
 #    (generated automatically from ./UKeScience/01621954.signing_policy)
 #
 TO Issuer "/C=UK/O=eScience/OU=Authority/CN=CA/emailAddress=ca-operator@grid-support.ac.uk" \
-  PERMIT Subject "/C=UK/O=eScience/.* "
+  PERMIT Subject "/C=UK/O=eScience/.*"
 
