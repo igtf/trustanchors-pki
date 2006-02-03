@@ -1,0 +1,6 @@
+alias = APAC
+crl_url = http://ca.apac.edu.au/pub/crl/cacrl.pem
+email = d.bannon@vpac.org
+status = accredited:classic
+url = http://www.vpac.org/twiki/bin/view/APACgrid/CaInterface
+version = @VERSION@
