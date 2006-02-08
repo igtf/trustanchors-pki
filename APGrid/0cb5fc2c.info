@@ -4,3 +4,4 @@ email = kanamori@grid.nii.ac.jp
 status = accredited:classic
 url = https://www.naregi.org/ca/
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

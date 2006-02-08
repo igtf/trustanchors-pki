@@ -4,3 +4,4 @@ email = d.bannon@vpac.org
 status = accredited:classic
 url = http://www.vpac.org/twiki/bin/view/APACgrid/CaInterface
 version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
