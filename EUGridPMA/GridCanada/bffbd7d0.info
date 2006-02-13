@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for CA GridCanada new CA "bffbd7d0"
+alias = GridCanada
+crl_url = http://www.gridcanada.ca/ca/bffbd7d0.r0
+url = http://www.gridcanada.ca/ca
+email = ca@gridcanada.ca
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

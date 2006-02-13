@@ -1,0 +1,4 @@
+# $Id$
+ access_id_CA      X509         '/C=CA/O=Grid/CN=Grid Canada Certificate Authority'
+ pos_rights        globus        CA:sign
+ cond_subjects     globus       '"/C=CA/O=Grid/*"'
