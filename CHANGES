@@ -15,6 +15,7 @@ Changes from 1.0 to 1.1
   hierarchy
 * New authorities from the APGridPMA: APAC GRID, KEK GRID, and NAREGI CA
 * New GridCanada CA root, renamed the "5f54f417" CA to GridCanada-old
+* New root cert (with same keypair) for the worthless DutchDemo CA
 
 Changes from 0.32 to 1.0
 -------------------------
