@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+# Information for CA SWITCH Personal 2006
+#   
+alias = SWITCH-Personal-2006
+ca_url = http://swisssign.net/cgi-bin/authority/download?ca=631A26BF8AF3916D7189FF22C7A6BB3D6DBF2C95&into=file&format=pem
+crl_url = 
+requires = SWITCH
+status = accredited:classic
+version = @VERSION@
+email = pki@switch.ch
+sha1fp.0 = @SHA1FP.0@
