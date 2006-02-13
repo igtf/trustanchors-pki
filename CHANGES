@@ -11,6 +11,9 @@ Changes from 1.0 to 1.1
 * Added pkIRISGrid CA as an accredited:classic CA
 * Corrected SWITCH CA hierarchy, adding the SWITCH Server and Personal
   CAs inbetween the SWITCH CA and the end-entities
+* New 2006+ SWITCH Personal and Server CAs in the SwissSign Root-originating 
+  hierarchy
+* New authorities from the APGridPMA: APAC GRID, KEK GRID, and NAREGI CA
 
 Changes from 0.32 to 1.0
 -------------------------
