@@ -8,6 +8,8 @@ $in="switch-orgs.in";
 "e9d08b40" => '',
 "c4435d12" => '',
 "7c0f6d74" => '',
+"4aa5ef7d" => '',
+"072fe468" => '',
 "f8b4299c" => ''
 );
 
@@ -32,7 +34,8 @@ foreach $k ( sort keys %certnames ) {
     /SwissSign CA/ and @targets=( $certnames{"e36e7a72"} );
     /SwissSign Bronze CA/ and @targets=( $certnames{"e9d08b40"} );
     /SwissSign Silver CA/ and @targets=( $certnames{"c4435d12"} );
-    /SWITCH CA/ and @targets=( $certnames{"7c0f6d74"} , $certnames{"f8b4299c"} );
+    /SWITCH CA/ and @targets=( $certnames{"7c0f6d74"} , $certnames{"f8b4299c"} ,
+                               $certnames{"072fe468"} , $certnames{"4aa5ef7d"} );
     /SWITCH \w+ CA/ and @targets = @orgs;
   }
 
