@@ -23,9 +23,9 @@ You can install the trust anchors in the following ways:
   "accredited/tgz/" directories manually
 * use a RPM package manament system like "yum" to install the 
   meta-RPM "ca_policy_igtf-@VERSION@-@RELEASE@.noarch.rpm"
-* install all authorities with the accredited tarball bundle
-  "igtf-policy-accredited-bundle-@VERSION@.tar.gz", using the 
-  "./configure && make && make install" mechanism.
+* install all authorities with the installation tarball bundle
+  "igtf-policy-installation-bundle-@VERSION@.tar.gz", using the 
+  "./configure --with-profile=NAME && make && make install" mechanism.
   This tarball can be found in the "accredited/" directory.
 
 Please make sure you validate the correctness of the trust anchors with the
