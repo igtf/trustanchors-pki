@@ -1,5 +1,5 @@
 # Information for CA SWITCH2
-alias = SWITCH2
+alias = SWITCH-CA2
 ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca= 59CA84DF5C37AB1AF8E4672E9CECEA3BB67161C8
 crl_url = http://swisssign.net/cgi-bin/authority/crl/59CA84DF5C37AB1AF8E4672E9CECEA3BB67161C8
 requires = SwissSign-Silver-Root
