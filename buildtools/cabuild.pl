@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.24 2006/01/30 08:32:34 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.25 2006/01/30 17:04:18 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -295,7 +295,22 @@ sub makeBundleScripts($$$) {
 
   system("cd $tmpdir && tar zcf igtf-policy-accredited-bundle-$opt_gver.tar.gz igtf-policy-accredited-bundle-$opt_gver");
 
-  copy("$tmpdir/igtf-policy-accredited-bundle-$opt_gver.tar.gz","$targetdir/accredited/igtf-policy-accredited-bundle-$opt_gver.tar.gz");
+  copy("$tmpdir/igtf-policy-accredited-bundle-$opt_gver.tar.gz","$targetdir/accredited/igtf-policy-installation-bundle-$opt_gver.tar.gz");
+
+  # make the pre-installed tarballs
+  foreach my $s ( @validStatus ) {
+    my $pname;
+    if ($s=~/^accredited/) { 
+      ($pname=$s)=~s/.*://; 
+    } else { next; }
+    my $preinst_tmp=tempdir("$opt_tmp/pPreinstBundle-$pname-XXXXXX", CLEANUP => 0 );
+    system("cd $tmpdir/igtf-policy-accredited-bundle-$opt_gver ; ".
+           "./configure --with-profile=$pname --prefix=$preinst_tmp && make install");
+    system("cd $preinst_tmp ; tar zcf $tmpdir/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz .");
+    system("rm $preinst_tmp/*");
+    copy("$tmpdir/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz",
+         "$targetdir/accredited/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz");
+  }
 
   return 1;
 }
