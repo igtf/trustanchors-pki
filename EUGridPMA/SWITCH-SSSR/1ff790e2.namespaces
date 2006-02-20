@@ -1,0 +1,36 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)$Id$
+# CA alias    : SWITCH hierarchy from SwissSign-Silver-Root
+#    subjectDN: /C=CH/O=SwissSign AG/CN=SwissSign Silver CA
+#    hash     : 1ff790e2
+#
+#    1ff790e2 : /C=CH/O=SwissSign AG/CN=SwissSign Silver CA
+#    770cd2b7 : /C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH CA
+#    47d3d1a0 : /C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA
+#    eebc7717 : /C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Server CA
+
+TO Issuer "/C=CH/O=SwissSign AG/CN=SwissSign Silver CA"
+  PERMIT Subject "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH CA"
+
+TO Issuer "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH CA"
+  PERMIT Subject "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA"
+
+TO Issuer "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH CA"
+  PERMIT Subject "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Server CA"
+
+# policy for end-entity issuing CAs
+
+TO Issuer "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA"
+  DENY Subject "/C=CH/O=CERN/.*"
+
+TO Issuer "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA"
+  PERMIT Subject "/C=CH/O=.*"
+
+TO Issuer "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Server CA"
+  DENY Subject "/C=CH/O=CERN/.*"
+
+TO Issuer "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Server CA"
+  PERMIT Subject "/C=CH/O=.*"
+

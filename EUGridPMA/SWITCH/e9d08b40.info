@@ -1,10 +1,10 @@
 #
-# @(#)$Id: e9d08b40.info,v 1.2 2005/10/15 10:47:15 pmacvsdg Exp $
+# @(#)$Id: e9d08b40.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA SwissSign-Silver
 #   obtained from e9d08b40 in SWITCH/
 alias = SwissSign-Silver
-ca_url = https://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=CDA1AC23BFD03B208A5481CDFBDB4126E34A705A
-crl_url = https://swisssign.net/cgi-bin/authority/crl?into=file&ca=Silver
+ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=CDA1AC23BFD03B208A5481CDFBDB4126E34A705A
+crl_url = http://swisssign.net/cgi-bin/authority/crl/CDA1AC23BFD03B208A5481CDFBDB4126E34A705A
 requires = SwissSign-Bronze
 status = accredited:classic
 version = @VERSION@

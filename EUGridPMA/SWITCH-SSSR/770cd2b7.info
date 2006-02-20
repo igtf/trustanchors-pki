@@ -1,0 +1,9 @@
+# Information for CA SWITCH2
+alias = SWITCH2
+ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca= 59CA84DF5C37AB1AF8E4672E9CECEA3BB67161C8
+crl_url = http://swisssign.net/cgi-bin/authority/crl/59CA84DF5C37AB1AF8E4672E9CECEA3BB67161C8
+requires = SwissSign-Silver-Root
+email = pki@switch.ch
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = 1F:F3:FC:B6:71:82:65:46:4B:B7:1E:BC:35:0E:7F:3F:5B:A9:66:66

@@ -54,8 +54,10 @@ esac
 
 if [ x"$PROFILES" = x"" ] ; then
   PROFILES=install-all-accredited
-  echo "WARNING: installing ALL authorities accredited under ANY PROFILE" >&2
-  echo "         Use --with-profile=pname to select specific profile(s)" >&2
+  echo "ERROR: installing ALL authorities accredited under ANY PROFILE" >&2
+  echo "       is NO LONGER SUPPORTED" >&2
+  echo "       Use --with-profile=pname to select specific profile(s)" >&2
+  exit 1
 fi
 
 sed -e "

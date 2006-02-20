@@ -1,10 +1,10 @@
 #
-# @(#)$Id: e36e7a72.info,v 1.2 2005/10/15 10:47:15 pmacvsdg Exp $
+# @(#)$Id: e36e7a72.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA SwissSign-Bronze
 #   obtained from e36e7a72 in SWITCH/
 alias = SwissSign-Bronze
-ca_url = https://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=E2DE8E8AE3FF7141C7533C93DA8D6EB1D241484A
-crl_url = https://swisssign.net/cgi-bin/authority/crl?into=file&ca=Bronze
+ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=E2DE8E8AE3FF7141C7533C93DA8D6EB1D241484A
+crl_url = http://swisssign.net/cgi-bin/authority/crl/E2DE8E8AE3FF7141C7533C93DA8D6EB1D241484A
 requires = SwissSign-Root
 status = accredited:classic
 version = @VERSION@
