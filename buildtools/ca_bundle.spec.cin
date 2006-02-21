@@ -50,7 +50,7 @@ URL: http://www.gridpma.org/
 Group: Security/Certificates
 AutoReqProv: no
 Requires: @ACCREDITED:CLASSIC@
-Obsoletes: ca_CyGrid-old ca_CNRS-Datagrid
+Obsoletes: ca_CyGrid-old ca_CNRS-DataGrid
 
 %description classic
 This is the policy collection that contains all authorities 
