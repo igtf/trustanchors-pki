@@ -28,6 +28,11 @@ do
         PROFILES="install-$PROFILE $PROFILES"
         shift 
         ;;
+  --with-authority=* ) 
+        AUTH=`echo $1 | sed -e 's/--with-authority=//'`
+        AUTHS="$AUTH $AUTHS"
+        shift 
+        ;;
   -- ) shift ; break ;;
   -* ) echo "Unknown argument to $0" ; exit 1 ;;
   * ) break ;;
@@ -45,8 +50,11 @@ Usage: $0
     [--with-install=path]    name of the BSD install programme
                              default: install
     [--with-profile=profile] selected CA accreditation profile
-                             default: ANY
+                             default: (none)
                              (multiple profiles can be selected)
+    [--with-authority=ca]    selected a specific (additional) CA
+                             default: (none)
+                             (multiple CAs can be selected)
 EOF
         exit 0
 ;;
@@ -64,7 +72,7 @@ sed -e "
 	s#@PREFIX@#$PREFIX#g;
 	s#@INSTALL@#$INSTALL#g;
 	s#@MKDIR@#$MKDIR#g;
-	s#@INSTALLTARGETS@#$PROFILES#g;
+	s#@INSTALLTARGETS@#$PROFILES $AUTHS#g;
   " < Makefile.tpl > Makefile
 
 echo "Configuration of the IGTF bundle complete"

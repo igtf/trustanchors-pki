@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.25 2006/01/30 17:04:18 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.26 2006/02/20 14:41:08 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -9,7 +9,7 @@ use POSIX qw(strftime);
 use File::Temp qw(tempdir);
 use File::Copy qw(copy move);
 use strict;
-use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp 
+use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp $opt_nojks
 	$opt_url $opt_s $opt_version $opt_o $opt_carep $opt_gver %auth);
 
 $opt_tmp="/tmp";
@@ -17,7 +17,7 @@ $opt_carep="../";
 $opt_o="../distribution";
 $opt_r=1;
 
-my @optdef=qw( url|finalURL=s
+my @optdef=qw( url|finalURL=s nojks:i
     s|sign f v gver|distversion=s version|ver=s r|release=s 
     carep|repository=s tmp|tmpdir=s o|target=s );
 
@@ -69,7 +69,7 @@ print "Generating global version $opt_gver release $opt_r\n";
 
 my $tmpdir=tempdir("$opt_tmp/pBundle-XXXXXX", CLEANUP => 0 );
 #my $tmpdir="$opt_o/expanded"; mkdir $tmpdir;
-my $bundledir="$tmpdir/igtf-policy-accredited-bundle-$opt_gver";
+my $bundledir="$tmpdir/igtf-policy-installation-bundle-$opt_gver";
 mkdir $bundledir;
 
 foreach my $k ( sort keys %auth ) {
@@ -246,6 +246,11 @@ sub makeBundleScripts($$$) {
     return undef;
   };
 
+  &copyWithExpansion("bundle-README.cin","$builddir/README.txt",
+    ( "VERSION" => $opt_gver, "RELEASE" => $opt_r,
+      "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
+
+
   open MKTPL,">>$builddir/Makefile.tpl" or do {
     $err="Cannot open makefile template for append: $!";
     return undef;
@@ -275,10 +280,12 @@ sub makeBundleScripts($$$) {
   print MKTPL "#\n# single CA installations\n#\n\n";
 
   foreach $ca ( sort keys %auth ) {
+    (my $collection=$auth{$ca}{"info"}->{"status"})=~s/:.*//;
     print MKTPL "$ca: prep\n";
-    foreach my $ext ( glob("$builddir/".$auth{$ca}{"hash"}.".*") ) {
+    foreach my $ext (
+            glob("$builddir/src/$collection/".$auth{$ca}{"hash"}.".*") ) {
       (my $f=$ext)=~s/.*\///;
-      print MKTPL "\t\$(install) $f \$(prefix)/\n";
+      print MKTPL "\t\$(install) src/$collection/$f \$(prefix)/\n";
     }
     print MKTPL "\n";
   }
@@ -293,9 +300,9 @@ sub makeBundleScripts($$$) {
     return undef;
   };
 
-  system("cd $tmpdir && tar zcf igtf-policy-accredited-bundle-$opt_gver.tar.gz igtf-policy-accredited-bundle-$opt_gver");
+  system("cd $tmpdir && tar zcf igtf-policy-installation-bundle-$opt_gver.tar.gz igtf-policy-installation-bundle-$opt_gver");
 
-  copy("$tmpdir/igtf-policy-accredited-bundle-$opt_gver.tar.gz","$targetdir/accredited/igtf-policy-installation-bundle-$opt_gver.tar.gz");
+  copy("$tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz","$targetdir/accredited/igtf-policy-installation-bundle-$opt_gver.tar.gz");
 
   # make the pre-installed tarballs
   foreach my $s ( @validStatus ) {
@@ -304,7 +311,7 @@ sub makeBundleScripts($$$) {
       ($pname=$s)=~s/.*://; 
     } else { next; }
     my $preinst_tmp=tempdir("$opt_tmp/pPreinstBundle-$pname-XXXXXX", CLEANUP => 0 );
-    system("cd $tmpdir/igtf-policy-accredited-bundle-$opt_gver ; ".
+    system("cd $tmpdir/igtf-policy-installation-bundle-$opt_gver ; ".
            "./configure --with-profile=$pname --prefix=$preinst_tmp && make install");
     system("cd $preinst_tmp ; tar zcf $tmpdir/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz .");
     system("rm $preinst_tmp/*");
@@ -614,26 +621,32 @@ sub packSingleCA($$$$) {
   my $i=0;
   while ( -f "$srcdir/$hash.$i" ) { 
     copy("$srcdir/$hash.$i","$pdir/$hash.$i");
-    system("openssl x509 -outform der -in $srcdir/$hash.$i -out $tmpdir/$hash-der.$i");
-    system("keytool -import -alias ".$info{"alias"}."-$i ".
-           "-keystore $targetdir/$collection/jks/ca-".$info{"alias"}."-".$info{"version"}.".jks ".
-           "-storepass $Main::jksPass -noprompt -trustcacerts ".
-           "-file $tmpdir/$hash-der.$i");
-    my $jksname="igtf-policy-$collection";
-    $profile ne "" and $jksname.="-$profile";
-    system("keytool -import -alias ".$info{"alias"}."-$i ".
-           "-keystore $targetdir/$collection/jks/$jksname-$opt_gver.jks ".
-           "-storepass $Main::jksPass -noprompt -trustcacerts ".
-           "-file $tmpdir/$hash-der.$i");
-    unlink "$tmpdir/$hash-der.$i";
+    $opt_nojks or do {
+     system("openssl x509 -outform der -in $srcdir/$hash.$i -out $tmpdir/$hash-der.$i");
+     system("keytool -import -alias ".$info{"alias"}."-$i ".
+            "-keystore $targetdir/$collection/jks/ca-".$info{"alias"}."-".$info{"version"}.".jks ".
+            "-storepass $Main::jksPass -noprompt -trustcacerts ".
+            "-file $tmpdir/$hash-der.$i");
+     my $jksname="igtf-policy-$collection";
+     $profile ne "" and $jksname.="-$profile";
+     system("keytool -import -alias ".$info{"alias"}."-$i ".
+            "-keystore $targetdir/$collection/jks/$jksname-$opt_gver.jks ".
+            "-storepass $Main::jksPass -noprompt -trustcacerts ".
+            "-file $tmpdir/$hash-der.$i");
+     unlink "$tmpdir/$hash-der.$i";
+    };
     $i++;
   }
 
   system("cd $tmpdir && tar zcf $pname.tar.gz $pname");
+  -d "$builddir/src" or mkdir "$builddir/src" or 
+    die "Cannot mkdir $builddir/src: $!\n";
   defined $builddir and do {
     foreach my $f ( glob("$pdir/*") ) { 
       (my $b=$f)=~s/.*\///; 
-      copy("$f","$builddir/$b");
+      -d "$builddir/src/$collection" or mkdir "$builddir/src/$collection" or 
+        die "Cannot mkdir $builddir/$collection: $!\n";
+      copy("$f","$builddir/src/$collection/$b");
     }
   };
   

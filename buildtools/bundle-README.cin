@@ -1,0 +1,115 @@
+IGTF Authority Trust Anchor Installation Bundle version @VERSION@
+-----------------------------------------------------------------
+(release @RELEASE@, issued on @DATE@)
+
+This installation bundle contains the trust anchor sources for
+all IGTF distributed authorities. It must be configured before
+use, as explained below. Use "make install" to actually copy a 
+configured source repository to the specified location.
+
+The structure of this installation tar-ball is as follows:
+
+  <this-installation-bundle-VERSION>/
+   README
+   configure
+   Makefile
+   src/
+     accredited/
+     worthless/
+     experimental/
+
+where the source trust anchors (all of them) are located in their
+appropriate subdirectories under "src/". Note that of these trust
+anchors, ONLY THE ONES UNDER "src/accredited/" ARE PART OF THE
+IGTF TRUST FABRIC. The others you install antirely at your OWN RISK.
+
+
+
+Configuration of your distribution
+----------------------------------
+Use the "./configure" script to select the profiles and authorities
+you want to be installed in your trust anchor repository. After the
+initial configuration step, you will also need to "install" the
+trust achors in the target area using the "make install" command.
+
+Configure
+---------
+The "./configure" script takes some of the arguments usually encountered
+in the GNU autoconf context, such as "--prefix". Ther are two
+arguments specific to the IGTF distribution:
+
+  "--with-profile="
+  The "profiles" correspond to *all* Authorities accredited by any of the 
+  IGTF member PMAs under a specific profile:
+
+    classic -- Traditional X.509 Authorities with Secured Infrastructure
+    slcs    -- Short-Lived Credential generation Services
+
+  Notes:
+  * there is no collective installation for experimental or worthless 
+    CAs, as there are no assertions made by the PMAs regarding such 
+    experimental or worthless authority trust anchors.
+  * You can repeat the "--with-profile=" stanza to select multiple
+    profiles
+
+  Example:
+    ./configure --with-profile=classic --with-profile=slcs && make install
+
+  "--with-authority="
+  Add specific named authorities to the trust configuration. The names
+  of these authorities can be found in the ".info" file associated
+  with the trust anchor sources. You can repeat the "--with-authority="
+  stanza to add multiple authorities. 
+  Specific authorities are added *in addition* to those selected with
+  the "--with-profile=" option.
+
+  Example:
+    ./configure --with-profile=classic --with-authority=FNAL_KCA
+
+  "--prefix"
+  The location where the root certificates and the information files
+  will be stored.
+  
+
+  Full syntax: 
+    [--prefix=path]          Installation path
+                             default: /etc/grid-security/certificates
+    [--with-mkdir=path]      name of mkdir program supporting -p
+                             default: mkdir
+    [--with-install=path]    name of the BSD install programme
+                             default: install
+    [--with-profile=profile] selected CA accreditation profile
+                             default: (none)
+                             (multiple profiles can be selected)
+    [--with-authority=ca]    selected a specific (additional) CA
+                             default: (none)
+                             (multiple CAs can be selected)
+
+
+Installing your distribution
+----------------------------
+After configuration, you will have a "Makefile" in the current
+directory. You should "make install" these to copy the files
+to the specified trust anchor directory. This directory
+is by default set to "/etc/grid-security/certificates/", but
+may be directed to other locations.
+
+In this directory, you will now find for each Authority:
+
+ <hash>.0    -- the PEM-formatted certificate of this authority
+ <hash>.info -- Authority meta-data, suh as the common alias, the
+                web site URL, and an email address for concerns
+ <hash>.crl_url
+             -- location (http) of the current CRL issued by
+                this authority
+ <hash>.signing_policy
+             -- the EACL formatted list of namespace constraints,
+                specifying with subject names are subject to the 
+                IGTF managed namespace. The assertions of the IGTF
+                only extend to subject names within this namespace
+ <hash>.namespaces
+             -- alternate format of the same namespace constraints.
+                See http://www.eugridpma.org/documentation/ for
+                a full description of this format.
+
+
