@@ -27,6 +27,7 @@ You can install the trust anchors in the following ways:
   "igtf-policy-installation-bundle-@VERSION@.tar.gz", using the 
   "./configure --with-profile=NAME && make && make install" mechanism.
   This tarball can be found in the "accredited/" directory.
+  The tar-ball containts a README.txt with detailed instructions.
 
 Please make sure you validate the correctness of the trust anchors with the
 TERENA Academic CA Repository (https://www.tacar.org/) where possible.

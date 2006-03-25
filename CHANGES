@@ -1,3 +1,20 @@
+Changes from 1.1 to 1.2
+-----------------------
+(xx xxx xxxx)
+
+* new contact email address for KISTI CA
+* consistent quote formatting for pkIRISgrid signing_policy file
+* updated DutchDemo CA root certificate (in the worthless area)
+
+Changes from 1.1 R1 to 1.1 R2
+-----------------------------
+(22 Feb 2006)
+
+NOTE: THERE ARE NO CHANGES TO THE CONTENT IN THIS SUB-RELEASE
+* Corrected typo in the obsoletion of the old ca_CNRS-DataGrid 
+* Improved understandability of the igtf-policy-installation-bundle
+
+
 Changes from 1.0 to 1.1
 -----------------------
 (20 Feb 2006)

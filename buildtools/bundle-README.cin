@@ -23,6 +23,18 @@ appropriate subdirectories under "src/". Note that of these trust
 anchors, ONLY THE ONES UNDER "src/accredited/" ARE PART OF THE
 IGTF TRUST FABRIC. The others you install antirely at your OWN RISK.
 
+This bundle is primarily intended for re-packagers. Relying parties 
+that use the pre-built and signed (policy) RPMs directly need not
+configure or install this bundle package. The RPM distribution
+is self-consistent and complete.
+
+Note that specific individual CAs can also be installed directly from 
+their individual tar-balls in the "accredited/tgz/" directory.
+
+This tar-ball can be obtained from the PMA repositories, e.g. from
+  http://www.eugridpma.org/distribution/igtf/current/
+
+
 
 
 Configuration of your distribution
@@ -111,5 +123,13 @@ In this directory, you will now find for each Authority:
              -- alternate format of the same namespace constraints.
                 See http://www.eugridpma.org/documentation/ for
                 a full description of this format.
+
+
+Uninstall
+---------
+
+Automatic un-install of the bundle is not supported. Please look 
+carefully at the CHANGES file provided with each release to
+determine which CAs have been obsoleted or withdrawn. 
 
 

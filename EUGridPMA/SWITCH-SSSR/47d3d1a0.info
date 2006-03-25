@@ -4,6 +4,6 @@ ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca
 crl_url = http://swisssign.net/cgi-bin/authority/crl/CA33191B6BC8C184DF1DA81222EB1A32A7104B24
 requires = SWITCH-CA2
 email = pki@switch.ch
-status = accredited:classic
+status = suspended
 version = @VERSION@
 sha1fp.0 = @SHA1FP@

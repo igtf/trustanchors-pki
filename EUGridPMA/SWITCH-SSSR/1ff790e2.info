@@ -3,6 +3,6 @@ alias = SwissSign-Silver-Root
 ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=FEFF681DD0976B326EB4ABE69EB2DBD911BFE462
 crl_url = http://swisssign.net/cgi-bin/authority/crl/FEFF681DD0976B326EB4ABE69EB2DBD911BFE462
 email = pki@switch.ch
-status = accredited:classic
+status = suspended
 version = @VERSION@
 sha1fp.0 = A3:C6:C9:80:08:D0:DE:D4:D0:15:34:BA:64:0A:04:B5:3B:A6:28:79
