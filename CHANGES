@@ -5,7 +5,7 @@ Changes from 1.1 to 1.2
 * new contact email address for KISTI CA
 * consistent quote formatting for pkIRISgrid signing_policy file
 * updated DutchDemo CA root certificate (in the worthless area)
-* suspended SWITCH Silver-root based hierarchy
+* suspended SWITCH Silver-root based hierarchy, since CRLs are not ready
 * added new organisation to the SWITCH namespace
 * changed ArmeSFO CRL download location to new server
 
