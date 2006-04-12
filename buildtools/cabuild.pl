@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.27 2006/02/21 17:53:50 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.28 2006/03/25 17:56:54 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -10,7 +10,7 @@ use File::Temp qw(tempdir);
 use File::Copy qw(copy move);
 use strict;
 use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp $opt_nojks
-	$opt_url $opt_s $opt_version $opt_o $opt_carep $opt_gver %auth);
+	$opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_gver %auth);
 
 $opt_tmp="/tmp";
 $opt_carep="../";
@@ -18,7 +18,7 @@ $opt_o="../distribution";
 $opt_r=1;
 
 my @optdef=qw( url|finalURL=s nojks:i
-    s|sign f v gver|distversion=s version|ver=s r|release=s 
+    s|sign f v:i gver|distversion=s version|ver=s r|release=s 
     carep|repository=s tmp|tmpdir=s o|target=s );
 
 $0 =~ s/.*\///;
@@ -42,7 +42,7 @@ defined $opt_url or
 # configuration settings
 #
 @validStatus = qw(accredited:classic accredited:slcs 
-                  discontinued experimental worthless );
+                  suspended discontinued experimental worthless );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
 $Main::legacyEUGridPMASpecFileTemplate="eugridpma.spec.cin";
@@ -437,9 +437,9 @@ sub makeCollectionInfo($$$) {
   }
 
   copy("$tmpdir/$pname.tar.gz","$sourcedir/$pname.tar.gz");
-  system("rpmbuild --quiet -ba $tmpdir/$pname.spec > /dev/null 2>&1");
+  system("rpmbuild --quiet -ba $tmpdir/$pname.spec ".($opt_v?"> /dev/null 2>&1":""));
 
-  system("rpmbuild --quiet -ba $tmpdir/ca_policy_eugridpma-$opt_gver.spec > /dev/null 2>&1");
+  system("rpmbuild --quiet -ba $tmpdir/ca_policy_eugridpma-$opt_gver.spec ".($opt_v?"> /dev/null 2>&1":"") );
 
   # now collect all information in the proper place
   foreach my $n ( 
@@ -450,13 +450,13 @@ sub makeCollectionInfo($$$) {
     ) {
     move("$rpmdir/noarch/$n-$opt_r.noarch.rpm",
       "$targetdir/accredited/RPMS/") or do {
-      $err="Cannot move $n-$opt_r.noarch.rpm to accredited/RPMS/: $!\nRPM builde error?";
+      $err="Cannot move $n-$opt_r.noarch.rpm \n  from $rpmdir/noarch/$n-$opt_r.noarch.rpm\n  to $targetdir/accredited/RPMS/:\n  $!\nRPM build error?";
       return undef;
     };
   }
   move("$srcrpmdir/ca_policy_eugridpma-$opt_gver-$opt_r.src.rpm",
     "$targetdir/accredited/SRPMS") or do {
-      $err="Cannor move ca_policy_eugridpma-$opt_gver-$opt_r.src.rpm to SRPMS/: $!\nRPM builde error?";
+      $err="Cannor move ca_policy_eugridpma-$opt_gver-$opt_r.src.rpm to $targetdir/accredited/SRPMS/:\n  $!\nRPM build error?";
       return undef;
     };
   move("$srcrpmdir/ca_policy_igtf-$opt_gver-$opt_r.src.rpm",
