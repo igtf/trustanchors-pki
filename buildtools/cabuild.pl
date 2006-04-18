@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.28 2006/03/25 17:56:54 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.29 2006/04/12 15:53:14 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -155,7 +155,11 @@ sub yumifyDirectory($) {
 
   system("sync ; sleep 1 ; cd $targetdir ; yum-arch .")
     and do {
-      $err="system command error: $!"; return undef;
+      $err="old-style YUM system command error: $!"; return undef;
+    };
+  system("sync ; sleep 1 ; cd $targetdir ; createrepo -x apt/\* .")
+    and do {
+      $err="new-style YUM system command error: $!"; return undef;
     };
   return 1;
 }

@@ -8,6 +8,8 @@ Changes from 1.1 to 1.2
 * suspended SWITCH Silver-root based hierarchy, since CRLs are not ready
 * added new organisation to the SWITCH namespace
 * changed ArmeSFO CRL download location to new server
+* new pkIRISGrid root certificate (same keypair) from TACAR added
+* added extra double quotes to the UK eScience signing policy file
 
 Changes from 1.1 R1 to 1.1 R2
 -----------------------------
