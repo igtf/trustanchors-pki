@@ -1,12 +1,12 @@
 #
-# @(#)$Id: 1f0e8352.info,v 1.4 2005/10/16 23:48:34 pmacvsaw Exp $
+# @(#)$Id: 1f0e8352.info,v 1.5 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA NorduGrid
 #   obtained from 1f0e8352 in NorduGrid/
 alias = NorduGrid
-ca_url = http://www.nbi.dk/HEP/CA/1f0e8352.0
-url = http://www.nbi.dk/HEP/CA/
+ca_url = http://ca.nordugrid.org/cacrt.crt
+url = http://ca.nordugrid.org/
 email = ca@nordugrid.org
-crl_url = http://www.nbi.dk/HEP/CA/1f0e8352.r0
+crl_url = http://ca.nordugrid.org/cacrl.crl
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
