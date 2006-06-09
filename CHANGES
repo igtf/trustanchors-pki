@@ -1,6 +1,6 @@
 Changes from 1.4 to 1.5
 -----------------------
-(29 May 2006)
+(XX June 2006)
 
 * new CRL download URL for the RDIG CA
 * extended lifetime for the root trust anchor for the GermanGrid (GridKa)
