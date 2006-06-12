@@ -1,6 +1,6 @@
 # ASGCCA signing policy
-# Date: 19 June 2003
+# Date: 10 June 2006
 
 access_id_CA      X509          '/C=TW/O=AS/CN=Academia Sinica Grid Computing Certification Authority'
 pos_rights        globus        CA:sign
-cond_subjects     globus        '"/C=TW/*" "/C=CN/O=IHEP/OU=CC/*"'
+cond_subjects     globus        '"/C=TW/*"'
