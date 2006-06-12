@@ -3,8 +3,12 @@ Changes from 1.4 to 1.5
 (XX June 2006)
 
 * new CRL download URL for the RDIG CA
-* extended lifetime for the root trust anchor for the GermanGrid (GridKa)
-  Certification Authority
+* extended lifetime of root trust anchor for the GermanGrid CA (GridKa CA)
+  old expiration date: Jun 10 13:45:54 2007 GMT
+  new expiration date: Jun 10 13:45:54 2014 GMT
+* extended lifetime of root trust anchor for the Grid-Ireland CA (TCD)
+  old expiration date: Jul 27 17:10:40 2007 GMT
+  new expiration date: Jul 27 17:10:40 2012 GMT
 
 Changes from 1.2 to 1.4
 -----------------------
