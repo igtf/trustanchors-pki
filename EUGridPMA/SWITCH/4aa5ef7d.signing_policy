@@ -47,24 +47,6 @@
  pos_rights    globus  CA:sign
  cond_subjects globus  '"/C=CH/O=Fachhochschule beider Basel/*"'
 #
-# --- for /C=CH/O=Kantonale Technikerinnen- und Techniker-Schule fuer Informatik/*
- access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
- pos_rights    globus  CA:sign
- cond_subjects globus  '"/C=CH/O=Kantonale Technikerinnen- und Techniker-Schule fuer Informatik/*"'
-#
- access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/Email=switch.personal.ca@switch.ch'
- pos_rights    globus  CA:sign
- cond_subjects globus  '"/C=CH/O=Kantonale Technikerinnen- und Techniker-Schule fuer Informatik/*"'
-#
-# --- for /C=CH/O=PSI - Paul Scherrer Institut/*
- access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
- pos_rights    globus  CA:sign
- cond_subjects globus  '"/C=CH/O=PSI - Paul Scherrer Institut/*"'
-#
- access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/Email=switch.personal.ca@switch.ch'
- pos_rights    globus  CA:sign
- cond_subjects globus  '"/C=CH/O=PSI - Paul Scherrer Institut/*"'
-#
 # --- for /C=CH/O=Paedagogische Hochschule Thurgau/*
  access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
  pos_rights    globus  CA:sign
@@ -73,6 +55,15 @@
  access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/Email=switch.personal.ca@switch.ch'
  pos_rights    globus  CA:sign
  cond_subjects globus  '"/C=CH/O=Paedagogische Hochschule Thurgau/*"'
+#
+# --- for /C=CH/O=Paul-Scherrer-Institut (PSI)/*
+ access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Paul-Scherrer-Institut (PSI)/*"'
+#
+ access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/Email=switch.personal.ca@switch.ch'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Paul-Scherrer-Institut (PSI)/*"'
 #
 # --- for /C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/*
  access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
@@ -83,6 +74,15 @@
  pos_rights    globus  CA:sign
  cond_subjects globus  '"/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/*"'
 #
+# --- for /C=CH/O=Scuola universitaria professionale della Svizzera italiana (SUPSI)/*
+ access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Scuola universitaria professionale della Svizzera italiana (SUPSI)/*"'
+#
+ access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/Email=switch.personal.ca@switch.ch'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Scuola universitaria professionale della Svizzera italiana (SUPSI)/*"'
+#
 # --- for /C=CH/O=Stiftung Hochschule fuer Technik und Wirtschaft (HTW) Chur/*
  access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
  pos_rights    globus  CA:sign
@@ -91,6 +91,15 @@
  access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/Email=switch.personal.ca@switch.ch'
  pos_rights    globus  CA:sign
  cond_subjects globus  '"/C=CH/O=Stiftung Hochschule fuer Technik und Wirtschaft (HTW) Chur/*"'
+#
+# --- for /C=CH/O=Universita della Svizzera Italiana/*
+ access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Universita della Svizzera Italiana/*"'
+#
+ access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/Email=switch.personal.ca@switch.ch'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Universita della Svizzera Italiana/*"'
 #
 # --- for /C=CH/O=Universitaet Basel/*
  access_id_CA  X509    '/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch'
