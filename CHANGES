@@ -11,6 +11,7 @@ Changes from 1.4 to 1.5
   new expiration date: Jul 27 17:10:40 2012 GMT
 * ASGCC CA no longer authoritative for "/C=CN/O=IHEP/OU=CC/*"
 * AIST CA updated with new X.509v3 extensions (same keypair)
+* change in list of supported organisations for SWITCH CA (Switserland)
 
 Changes from 1.2 to 1.4
 -----------------------
