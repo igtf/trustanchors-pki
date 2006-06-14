@@ -6,11 +6,7 @@
 #    subord_of: 
 #    subjectDN: /C=TW/O=AS/CN=Academia Sinica Grid Computing Certification Authority
 #    hash     : a692434d
-#    (generated automatically from ./APGrid/a692434d.signing_policy)
 #
 TO Issuer "/C=TW/O=AS/CN=Academia Sinica Grid Computing Certification Authority" \
   PERMIT Subject "/C=TW/.*"
-
-TO Issuer "/C=TW/O=AS/CN=Academia Sinica Grid Computing Certification Authority" \
-  PERMIT Subject "/C=CN/O=IHEP/OU=CC/.*"
 
