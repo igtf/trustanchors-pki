@@ -1,6 +1,12 @@
+Changes from 1.5 to 1.6
+-----------------------
+(20 June 2006)
+
+* Removed NAREGI CA with too-short root certificate key length
+
 Changes from 1.4 to 1.5
 -----------------------
-(XX June 2006)
+(19 June 2006)
 
 * new CRL download URL for the RDIG CA
 * extended lifetime of root trust anchor for the GermanGrid CA (GridKa CA)
