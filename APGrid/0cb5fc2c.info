@@ -1,7 +1,0 @@
-alias = NAREGI
-crl_url = https://www.naregi.org/ca/out-CRL.crl
-email = kanamori@grid.nii.ac.jp
-status = accredited:classic
-url = https://www.naregi.org/ca/
-version = @VERSION@
-sha1fp.0 = @SHA1FP.0@
