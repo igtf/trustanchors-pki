@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+# BrGrid UFF managed Brazilian classic CA
+#
+alias = BrGrid
+url =
+ca_url =
+crl_url =
+email =
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

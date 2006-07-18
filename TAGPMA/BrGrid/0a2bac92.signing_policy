@@ -1,0 +1,7 @@
+#
+# @(#)$Id$
+#
+access_id_CA   X509   '/C=BR/O=ICPEDU/O=UFF BrGrid CA/CN=UFF Brazilian Grid Certification Authority'
+
+pos_rights     globus CA:sign
+cond_subjects  globus '"/C=BR/O=ICPEDU/*"'
