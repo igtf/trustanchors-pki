@@ -1,7 +1,7 @@
 #
-# @(#)$Id$
+# @(#)$Id: 0a2bac92.signing_policy,v 1.1 2006/07/18 22:23:14 pmacvsdg Exp $
 #
 access_id_CA   X509   '/C=BR/O=ICPEDU/O=UFF BrGrid CA/CN=UFF Brazilian Grid Certification Authority'
 
 pos_rights     globus CA:sign
-cond_subjects  globus '"/C=BR/O=ICPEDU/*"'
+cond_subjects  globus '"/C=BR/O=ICPEDU/O=UFF BrGrid CA/*"'

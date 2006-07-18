@@ -1,0 +1,46 @@
+Required information for registration
+
+(1) CA metadata for the INFO file
+	alias = 	UFF BrGrid CA
+	url = 		http://brgridca.ic.uff.br/ 
+	ca_url = 	http://brgridca.ic.uff.br/rootcert.html
+	crl_url = 	http://brgridca.ic.uff.br/crl/cacrl.crl 
+	email = 	brgridca@ic.uff.br
+	sha1fp.0 = 	SHA1 Fingerprint=EB:E5:93:4D:04:8F:A0:72:A3:01:71:CB:43:57:E6:CD:FC:59:DF:BD
+
+
+
+(2) Your CA subject name (case sensititive) in OpenSSL X509_one_line format
+
+Subject: C=BR, O=ICPEDU, O=UFF BrGrid CA, CN=UFF Brazilian Grid Certification Authority
+
+
+(3) Your signing namespace on X509_one_line format
+
+/C=BR/O=ICPEDU/O=UFF BrGrid CA
+
+
+(4) Your root certificate in PEM format
+    (note that you must register it also with TACAR, so that it can be
+    cross-checked before being entered into the distribution, or you
+    should give it on WORM media in a face-to-face meeting)
+
+(5) URL for your CP/CPS on your web site
+
+http://brgridca.ic.uff.br/policy
+
+
+(6) Physical address and phone/fax number of the CA manager (from the CP/CPS)
+
+Prof. Vinod Rebello,
+Sala 302, Bloco E, 3ºAndar,
+Instituto de Computação,
+Universidade Federal Fluminense,
+Rua Passos da Pátria, 156 – São Domingos,
+CEP 24210-240 Niterói, RJ,
+Brazil.
+Phone: (+ 55 21) 2629 5640
+Fax: (+ 55 21) 2629 5627
+MSN Messenger Name: Vinod Rebello
+Skype Name: vinod_rebello
+E-mail: brgridca-manager@ic.uff.br
