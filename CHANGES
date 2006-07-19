@@ -2,10 +2,10 @@ Changes from 1.6 to 1.7
 -----------------------
 (XX July 2006)
 
-* removed CESNET-old CA from the accredited list and obsoleted in the RPM
-  distribution
-* Added new SRCE (Croatia) classic CA
-* Added new brGrid (Brazil) classic CA
+* removed CESNET-old from accredited list and obsoleted in RPM distribution
+* Added new accredited SRCE (Croatia) classic CA
+* Added new accredited BrGrid (Brazil) classic CA
+* New root and online CA certificates for updated UKeScience CA
 
 
 Changes from 1.5 to 1.6
