@@ -1,10 +1,10 @@
 #
-# @(#)$Id: ba2f39ca.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
+# @(#)$Id: ba2f39ca.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
 # Information for CA IHEP
 #   obtained from ba2f39ca in APGrid/
 alias = IHEP
 ca_url = https://gridca.ihep.ac.cn/cacert/cacert.pem
-crl_url = https://gridca.ihep.ac.cn/crl/cacrl.pem
+crl_url = http://gridca.ihep.ac.cn/cacrl.pem
 email = gridca@ihep.ac.cn
 status = accredited:classic
 url = https://gridca.ihep.ac.cn/
