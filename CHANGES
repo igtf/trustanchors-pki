@@ -1,8 +1,10 @@
 Changes from 1.7 to 1.8
 -----------------------
-(XX August 2006)
+(07 August 2006)
 
-* added O=Universitaet St. Gallen to the list of SWITCH Organisations
+* added O=Universitaet St. Gallen to the list of SWITCH Organisations (CH)
+* added newly accredited CINC Root CA and CINC SDC Grid CA (CN)
+* added new root certificate for the NAREGI CA (JP)
 
 Changes from 1.6 to 1.7
 -----------------------
