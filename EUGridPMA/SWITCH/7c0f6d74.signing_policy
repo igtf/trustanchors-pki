@@ -128,6 +128,15 @@
  pos_rights    globus  CA:sign
  cond_subjects globus  '"/C=CH/O=Universitaet Luzern/*"'
 #
+# --- for /C=CH/O=Universitaet St. Gallen/*
+ access_id_CA  X509    '/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Universitaet St. Gallen/*"'
+#
+ access_id_CA  X509    '/CN=SWITCH Personal CA/Email=switch.personal.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Universitaet St. Gallen/*"'
+#
 # --- for /C=CH/O=Universitaet Zuerich/*
  access_id_CA  X509    '/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/C=CH'
  pos_rights    globus  CA:sign
