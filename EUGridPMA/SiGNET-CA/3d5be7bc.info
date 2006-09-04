@@ -1,0 +1,13 @@
+# Information for CA SiGNET
+# Subject: C=SI, O=SiGNET, CN=SiGNET CA
+#
+# @(#)$Id$
+#
+alias = SiGNET-CA
+ca_url = http://signet-ca.ijs.si/pub/cacert/signet02cacert.pem
+crl_url = http://signet-ca.ijs.si/pub/crl/signet02cacrl.crl
+email = signet-ca@ijs.si
+status = accredited:classic
+url = http://signet-ca.ijs.si/
+version = @VERSION@
+sha1fp.0 = @SHA1FP@
