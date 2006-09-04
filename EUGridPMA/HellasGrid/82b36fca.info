@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+# Information for CA HellasGrid CA 2006
+# /C=GR/O=HellasGrid/OU=Certification Authorities/CN=HellasGrid CA 2006
+# hash: 82b36fca
+alias = HellasGrid-CA-2006
+url = http://www.grid.auth.gr/pki/hellasgrid-ca-2006/
+crl_url = http://crl.grid.auth.gr/hellasgrid-ca-2006/82b36fca.pem 
+email = skanct@physics.auth.gr
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+
