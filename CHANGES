@@ -1,9 +1,12 @@
 Changes from 1.8 to 1.9
 -----------------------
-(04 September 2006)
+(07 September 2006)
 
 * New SiGNET CA (with 2048-bit key length) and new Subject DN (SI)
 * New HellasGrid CA (both Root and EE) issue 2006 added (GR)
+* Modified CINC Root and CINC SDC CA certificate extensions: 
+  removed SubjectAltName and IssuerAltName. (CN)
+* Updated extendedKeyUsage and nsCertType extension in AustrianGrid CA (AT)
 
 Changes from 1.7 to 1.8
 -----------------------
