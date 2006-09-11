@@ -1,9 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: 82b36fca.info,v 1.1 2006/09/04 15:46:20 pmacvsdg Exp $
 # Information for CA HellasGrid CA 2006
 # /C=GR/O=HellasGrid/OU=Certification Authorities/CN=HellasGrid CA 2006
 # hash: 82b36fca
 alias = HellasGrid-CA-2006
+requires = HellasGrid-Root
 url = http://www.grid.auth.gr/pki/hellasgrid-ca-2006/
 crl_url = http://crl.grid.auth.gr/hellasgrid-ca-2006/82b36fca.pem 
 email = skanct@physics.auth.gr
