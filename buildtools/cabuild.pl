@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.29 2006/04/12 15:53:14 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.30 2006/04/18 10:44:35 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -622,7 +622,10 @@ sub packSingleCA($$$$) {
   mkdir $pdir;
   foreach my $ext ( qw(info signing_policy namespaces) ) {
     &copyWithExpansion("$srcdir/$hash.$ext","$pdir/$hash.$ext",
-	( "VERSION" => $info{"version"}, "SHA1FP.0" => $info{"sha1fp.0"} ) );
+	( "VERSION" => $info{"version"}, 
+          "SHA1FP.0" => $info{"sha1fp.0"},
+          "SRCDIR" => $srcdir
+        ) );
   }
   if ( $info{"crl_url"} ) {
     open CRLURL,">$pdir/$hash.crl_url" or 
