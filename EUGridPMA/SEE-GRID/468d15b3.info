@@ -1,11 +1,11 @@
 #
-# @(#)$Id: 468d15b3.info,v 1.2 2005/10/15 10:47:15 pmacvsdg Exp $
+# @(#)$Id: 468d15b3.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA SEE-GRID
 #   obtained from 468d15b3 in SEE-GRID/
 alias = SEE-GRID
 ca_url = http://www.grid.auth.gr/pki/seegrid-ca/cacert/468d15b3.0
 crl_url = http://www.grid.auth.gr/pki/seegrid-ca/services/crl/468d15b3.r0
-email = skanct@physics.auth.gr
+email = contact@grid.auth.gr
 status = accredited:classic
 url = http://www.grid.auth.gr/pki/seegrid-ca
 version = @VERSION@
