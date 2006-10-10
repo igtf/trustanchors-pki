@@ -1,10 +1,10 @@
 #
-# @(#)$Id: 49f18420.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
+# @(#)$Id: 49f18420.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA INFN
 #   obtained from 49f18420 in INFN/
 alias = INFN
 url = http://security.fi.infn.it/CA/
-email = roberto.cecchini@fi.infn.it
+email = infn-ca@fi.infn.it
 crl_url = http://security.fi.infn.it/CA/crl.crl
 status = accredited:classic
 version = @VERSION@
