@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+# CA CERN-TCA
+#
+alias = CERN-TCA
+requires = CERN-Root
+crl_url = http://ca.cern.ch/ca/CRL/CERN%20Trusted%20Certification%20Authority.crl
+url = http://www.cern.ch/ca
+email = cern-ca-managers@cern.ch
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
