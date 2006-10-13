@@ -7,6 +7,7 @@ Changes from 1.9 to 1.10
 * New contact email addresses for INFN CA (IT)
 * New contact email addresses for Grid-Ireland (IE)
 * New CERN CA added (root and on-line CA), managed by CERN IT/IS (CERN)
+* New INFN CA issue 2006 to replace current one (expiring 2007) (IT)
 * Retired SWITCH-SSSR hierarchy pending replacement of the tree (CH)
 * Added new organisations to the SWITCH namespace (CH)
 
