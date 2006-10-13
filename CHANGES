@@ -6,7 +6,9 @@ Changes from 1.9 to 1.10
 * New contact email addresses for HellasGrid and SEE-GRID (GR, SEE)
 * New contact email addresses for INFN CA (IT)
 * New contact email addresses for Grid-Ireland (IE)
-* New CERN CA, managed by IS (CERN)
+* New CERN CA added (root and on-line CA), managed by CERN IT/IS (CERN)
+* Retired SWITCH-SSSR hierarchy pending replacement of the tree (CH)
+* Added new organisations to the SWITCH namespace (CH)
 
 Changes from 1.8 to 1.9
 -----------------------
