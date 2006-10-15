@@ -1,10 +1,10 @@
 #
-# @(#)$Id: a692434d.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
+# @(#)$Id: a692434d.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
 # Information for CA ASGCCA
 #   obtained from a692434d in APGrid/
 alias = ASGCCA
 crl_url = http://ca.grid.sinica.edu.tw/CRL/ASGCCA-crl.pem
-email = eric@sinica.edu.tw
+email = ca@lists.grid.sinica.edu.tw
 status = accredited:classic
 url = http://ca.grid.sinica.edu.tw/
 version = @VERSION@
