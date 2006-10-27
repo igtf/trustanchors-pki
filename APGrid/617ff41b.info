@@ -1,5 +1,5 @@
 alias = KEK
-crl_url = https://gridca.kek.jp/repository/617ff41b.r0
+crl_url = http://gridca.kek.jp/repository/617ff41b.r0
 email = Takashi.Sasaki@kek.jp
 status = accredited:classic
 url = https://gridca.kek.jp/
