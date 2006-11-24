@@ -1,4 +1,4 @@
-# $Id: 1c3f2ca8.signing_policy,v 1.2 2003/05/27 16:29:35 helm Exp $ 
+# $Id: 1c3f2ca8.signing_policy,v 1.3 2006/08/23 23:07:04 dhiva Exp $ 
 
 # ca-signing-policy.conf, see ca-signing-policy.doc for more information
 #
@@ -19,7 +19,7 @@
 #
 # This policy file dictates the following policy:
 #
-#  The DOEGrids CA signs certificates for doegrids.org and doesciencegrid.org
+#  The DOEGrids CA signs certificates for doegrids.org 
 #
 # Format:
 #------------------------------------------------------------------------
@@ -31,13 +31,16 @@
  
  pos_rights        globus        CA:sign
  
- cond_subjects     globus     	'"/DC=org/DC=DOEGrids/*" "/DC=org/DC=doegrids/*" "/O=DOEGrids.org/*" "/O=doegrids.org/*" "/O=doesciencegrid.org/*" "/DC=org/DC=doesciencegrid/*"'
+ cond_subjects     globus     	'"/DC=org/DC=DOEGrids/*" "/DC=org/DC=doegrids/*" "/O=DOEGrids.org/*" "/O=doegrids.org/*"'
 
 
 #
 # End DOE SG CA Policy
 # 
 # $Log: 1c3f2ca8.signing_policy,v $
+# Revision 1.3  2006/08/23 23:07:04  dhiva
+# updated with doesciencegrid string removal
+#
 # Revision 1.2  2003/05/27 16:29:35  helm
 # Change statement of policy
 #
@@ -53,7 +56,7 @@
 # to   /DC=DOEGrids
 #
 # Revision 1.2  2003/05/03 01:16:38  dhiva
-# $Id: 1c3f2ca8.signing_policy,v 1.2 2003/05/27 16:29:35 helm Exp $ Included
+# $Id: 1c3f2ca8.signing_policy,v 1.3 2006/08/23 23:07:04 dhiva Exp $ Included
 #
 # Revision 1.1  2003/05/03 01:15:05  dhiva
 # Globus Support Files for pki1.doegrids.org CA

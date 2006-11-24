@@ -20,9 +20,3 @@ TO Issuer "/DC=org/DC=DOEGrids/OU=Certificate Authorities/CN=DOEGrids CA 1" \
 TO Issuer "/DC=org/DC=DOEGrids/OU=Certificate Authorities/CN=DOEGrids CA 1" \
   PERMIT Subject "/O=doegrids.org/.*"
 
-TO Issuer "/DC=org/DC=DOEGrids/OU=Certificate Authorities/CN=DOEGrids CA 1" \
-  PERMIT Subject "/O=doesciencegrid.org/.*"
-
-TO Issuer "/DC=org/DC=DOEGrids/OU=Certificate Authorities/CN=DOEGrids CA 1" \
-  PERMIT Subject "/DC=org/DC=doesciencegrid/.*"
-
