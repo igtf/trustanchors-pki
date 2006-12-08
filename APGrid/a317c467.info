@@ -1,9 +1,9 @@
 #
-# @(#)$Id: a317c467.info,v 1.1 2005/10/14 14:59:56 pmacvsdg Exp $
+# @(#)$Id: a317c467.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
 # Information for CA AIST
 #   obtained from a317c467 in APGrid/
 alias = AIST
-crl_url = https://www.apgrid.org/CA/AIST/Production/a317c467.r0
+crl_url = http://www.apgrid.org/CA/AIST/Production/a317c467.r0
 email = yoshio.tanaka@aist.go.jp
 status = accredited:classic
 url = https://www.apgrid.org/CA/AIST/Production/
