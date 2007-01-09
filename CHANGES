@@ -3,6 +3,7 @@ Changes from 1.10 to 1.11
 (xx December 2006)
 
 * change crl_url from https to http for KEK (JP)
+* change crl_url from https to http for AIST (JP)
 * extended lifetime of ESnet (+10y) and DoEGrids (+5y) CA certs (US/DoE)
 
 Changes from 1.9 to 1.10
