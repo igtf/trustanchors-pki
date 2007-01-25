@@ -1,0 +1,7 @@
+alias = NECTEC
+crl_url = http://gridca.hpcc.nectec.or.th/pub/crl/cacrl.crl
+email = camanager@hpcc.nectec.or.th
+status = accredited:classic
+url = http://gridca.hpcc.nectec.or.th/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
