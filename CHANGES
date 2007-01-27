@@ -4,7 +4,7 @@ Changes from 1.11 to 1.12
 
 * Extended life time of root certificate for SlovakGrid (SK)
 * Obsoleted Russian DataGrid CA also in RPM updates (RU)
-
+* fixed SHA-1 finger print for new SiGNET CA (SI)
 
 Changes from 1.10 to 1.11
 -------------------------
