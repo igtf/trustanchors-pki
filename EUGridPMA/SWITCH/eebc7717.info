@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+# Information for CA SWITCH Server 2007
+#   
+alias = SWITCH-Server-2007
+ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=1AFDCB5395B081DD3A38849F63E87C0A42E0E6FE
+crl_url = http://crl.swisssign.net/1AFDCB5395B081DD3A38849F63E87C0A42E0E6FE
+requires = SWITCH
+status = accredited:classic
+version = @VERSION@
+email = pki@switch.ch
+sha1fp.0 = @SHA1FP.0@
