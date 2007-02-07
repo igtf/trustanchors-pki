@@ -6,6 +6,7 @@ Changes from 1.11 to 1.12
 * Obsoleted Russian DataGrid CA also in RPM updates (RU)
 * Fixed SHA-1 finger print for new SiGNET CA (SI)
 * Add NECTEC GOC CA (TH)
+* Added SWITCH Personal and Server 2007 CAs, removed 2005 CAs (CH)
 
 Changes from 1.10 to 1.11
 -------------------------
