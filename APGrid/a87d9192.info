@@ -1,5 +1,5 @@
 alias = NAREGI
-crl_url = https://www.naregi.org/ca/out-CRL2.crl
+crl_url = http://www.naregi.org/ca/out-CRL2.crl
 email = naregi-ca@grid.nii.ac.jp
 status = accredited:classic
 url = https://www.naregi.org/ca/
