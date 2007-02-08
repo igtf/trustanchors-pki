@@ -7,6 +7,8 @@ Changes from 1.11 to 1.12
 * Fixed SHA-1 finger print for new SiGNET CA (SI)
 * Add NECTEC GOC CA (TH)
 * Added SWITCH Personal and Server 2007 CAs, removed 2005 CAs (CH)
+* Extended life time of root certificate for PolishGrid (PL)
+* Changed CRL URL of the NAREGI CA from https to http (JP)
 
 Changes from 1.10 to 1.11
 -------------------------
