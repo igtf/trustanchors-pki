@@ -1,6 +1,6 @@
 Changes from 1.11 to 1.12
 -------------------------
-(XX February 2006)
+(09 February 2006)
 
 * Extended life time of root certificate for SlovakGrid (SK)
 * Obsoleted Russian DataGrid CA also in RPM updates (RU)
