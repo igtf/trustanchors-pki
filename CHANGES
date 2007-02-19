@@ -3,6 +3,7 @@ Changes from 1.12 to 1.13
 (XX March 2007)
 
 * Extended lifetime of CyGrid CA to 2013 based on same key pair (CY)
+* Updated ArmeSFO CA root certificate following TACAR (AM)
 
 
 Changes from 1.11 to 1.12
