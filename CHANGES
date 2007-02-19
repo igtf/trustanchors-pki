@@ -1,13 +1,13 @@
 Changes from 1.12 to 1.13
 -------------------------
-(XX March 2006)
+(XX March 2007)
 
 * Extended lifetime of CyGrid CA to 2013 based on same key pair (CY)
 
 
 Changes from 1.11 to 1.12
 -------------------------
-(09 February 2006)
+(09 February 2007)
 
 * Extended life time of root certificate for SlovakGrid (SK)
 * Obsoleted Russian DataGrid CA also in RPM updates (RU)
@@ -19,7 +19,7 @@ Changes from 1.11 to 1.12
 
 Changes from 1.10 to 1.11
 -------------------------
-(10 January 2006)
+(10 January 2007)
 
 * updated signing policy files for SWITCH CA (CH)
 * change crl_url from https to http for KEK (JP)
