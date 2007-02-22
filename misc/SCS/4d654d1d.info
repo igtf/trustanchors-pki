@@ -1,0 +1,9 @@
+# GlobalSign SureServer EDU (TERENA SCS)
+# @(#)$Id$
+#
+alias = GTE-CyberTrust-Global-Root
+status = worthless
+crl_url = http://www.public-trust.com/cgi-bin/CRL/2018/cdp.crl
+url = http://www.terena.org/activities/tf-emc2/scs.html
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
