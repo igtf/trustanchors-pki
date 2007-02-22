@@ -4,7 +4,9 @@ Changes from 1.12 to 1.13
 
 * Extended lifetime of CyGrid CA to 2013 based on same key pair (CY)
 * Updated ArmeSFO CA root certificate following TACAR (AM)
-
+* Added TERENA SCS CA hierarchy to the "worthless" area. Please note 
+  that the SCS CA has not been accredited yet (EU)
+* Discontinued old (pre-2004) LIP CA (PT)
 
 Changes from 1.11 to 1.12
 -------------------------
