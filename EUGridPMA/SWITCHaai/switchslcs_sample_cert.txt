@@ -1,0 +1,266 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            1f:ae:ca:cd:00:00:00:00:00:03
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=CH, O=Switch - Teleinformatikdienste fuer Lehre und Forschung, CN=SWITCHslcs CA
+        Validity
+            Not Before: Feb 26 10:30:32 2007 GMT
+            Not After : Mar 10 00:27:11 2007 GMT
+        Subject: DC=ch, DC=switch, DC=slcs, O=Switch - Teleinformatikdienste fuer Lehre und Forschung, CN=________________ 8CA3021D
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:f6:27:1e:bb:06:02:00:f9:0b:8e:33:3e:e4:26:
+                    d5:19:3c:2a:56:e6:48:df:79:c9:a4:a5:77:b5:59:
+                    60:e9:fe:2f:88:74:82:6b:c0:90:c5:c2:8f:e6:fd:
+                    af:e9:08:9c:7b:e5:15:6d:a7:d5:05:b5:c9:04:4a:
+                    ef:83:0a:a8:1a:35:fb:7a:f7:61:76:c3:a2:4c:8b:
+                    72:a5:3d:31:a0:cc:e4:dc:1c:aa:b5:86:31:fc:e0:
+                    82:4d:16:23:7b:25:47:1f:9c:50:c5:86:87:cc:76:
+                    24:c4:65:0f:85:2b:b0:7f:d1:41:87:f7:d0:0f:4a:
+                    4e:89:7e:6f:c9:95:60:a4:fd:2e:d6:b8:2e:8f:3c:
+                    ca:c8:dc:bc:77:dd:e8:36:04:19:4d:c1:b3:fb:4b:
+                    79:cf:e8:b6:25:25:68:86:73:32:fa:4a:1a:01:26:
+                    d7:d9:07:14:f4:2a:08:14:a5:61:66:0d:8b:1b:3b:
+                    60:1f:f1:7a:9c:86:87:1e:3c:93:c4:a8:7d:71:ad:
+                    ae:d1:68:06:62:ff:8a:90:bf:c0:2b:98:fe:84:20:
+                    99:2f:88:9c:60:02:1d:86:d1:b4:ac:19:dc:40:9c:
+                    fc:96:f6:63:28:cd:d5:3a:d3:18:58:8e:7d:89:7f:
+                    85:aa:c1:b5:92:15:75:f8:12:ba:6f:80:5a:a7:8b:
+                    c1:71
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Certificate Policies: 
+                Policy: 2.16.756.1.2.6.4.1.0
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Subject Alternative Name: 
+                email:______@switch.ch
+            X509v3 Subject Key Identifier: 
+                DE:AB:8F:E1:37:AA:00:D9:DF:FB:9A:0E:3E:67:B5:B3:89:85:2E:97
+            X509v3 Authority Key Identifier: 
+                keyid:36:01:EC:B9:2D:C2:4B:2F:A5:71:98:7A:A1:C5:32:15:08:05:9A:53
+
+            Authority Information Access: 
+                CA Issuers - URI:http://ca.grid.switch.ch/SWITCHslcsCA.crt
+
+    Signature Algorithm: sha1WithRSAEncryption
+        42:ba:3a:1b:e1:a9:52:d1:65:a5:ff:54:f9:2a:c2:27:6f:ef:
+        51:4b:a6:26:b4:5e:9e:de:a0:7f:df:a0:cc:b2:86:e1:8a:4a:
+        ec:c6:16:a6:a3:b9:5a:8e:62:38:63:82:d5:99:2d:7f:f0:5d:
+        15:63:df:eb:4c:09:0f:53:d9:30:d1:50:ed:e2:a6:79:cf:07:
+        b1:e9:14:77:d6:8a:78:98:4c:12:30:05:95:22:8b:7d:ea:1e:
+        6c:1a:b7:cc:2c:44:91:2d:d6:9d:fa:29:60:3f:27:05:70:91:
+        3d:4c:f2:e3:c8:e6:f2:ce:6b:b1:c2:c2:08:ad:ae:28:3a:c0:
+        6a:97:11:77:dc:76:35:d3:f3:b2:a7:71:de:9b:83:7e:10:08:
+        12:e9:54:a4:35:1e:bd:de:a4:5b:6b:bb:f9:67:d6:4f:f2:a1:
+        1d:ff:e1:84:7b:72:03:b6:51:b5:32:64:11:2d:8d:bc:39:6f:
+        04:a6:8d:4c:47:de:b1:cd:b9:ab:28:d4:40:b5:2c:ff:86:fa:
+        92:d0:a8:9e:a1:e3:f9:3b:8c:c6:61:fb:d8:29:ae:4e:b4:dc:
+        d9:04:52:95:da:79:bd:8b:02:65:e4:f6:d9:9c:cb:86:08:ad:
+        89:99:ba:19:88:cd:44:3f:99:3e:77:06:ea:19:1e:ba:fe:a1:
+        6e:3f:ae:c0
+-----BEGIN CERTIFICATE-----
+MIIEeTCCA2GgAwIBAgIKH67KzQAAAAAAAzANBgkqhkiG9w0BAQUFADBnMQswCQYD
+VQQGEwJDSDFAMD4GA1UEChM3U3dpdGNoIC0gVGVsZWluZm9ybWF0aWtkaWVuc3Rl
+IGZ1ZXIgTGVocmUgdW5kIEZvcnNjaHVuZzEWMBQGA1UEAxMNU1dJVENIc2xjcyBD
+QTAeFw0wNzAyMjYxMDMwMzJaFw0wNzAzMTAwMDI3MTFaMIGoMRIwEAYKCZImiZPy
+LGQBGRYCY2gxFjAUBgoJkiaJk/IsZAEZFgZzd2l0Y2gxFDASBgoJkiaJk/IsZAEZ
+FgRzbGNzMUAwPgYDVQQKEzdTd2l0Y2ggLSBUZWxlaW5mb3JtYXRpa2RpZW5zdGUg
+ZnVlciBMZWhyZSB1bmQgRm9yc2NodW5nMSIwIAYDVQQDExlDaHJpc3RvcGggV2l0
+emlnIDhDQTMwMjFEMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ice
+uwYCAPkLjjM+5CbVGTwqVuZI33nJpKV3tVlg6f4viHSCa8CQxcKP5v2v6Qice+UV
+bafVBbXJBErvgwqoGjX7evdhdsOiTItypT0xoMzk3ByqtYYx/OCCTRYjeyVHH5xQ
+xYaHzHYkxGUPhSuwf9FBh/fQD0pOiX5vyZVgpP0u1rgujzzKyNy8d93oNgQZTcGz
++0t5z+i2JSVohnMy+koaASbX2QcU9CoIFKVhZg2LGztgH/F6nIaHHjyTxKh9ca2u
+0WgGYv+KkL/AK5j+hCCZL4icYAIdhtG0rBncQJz8lvZjKM3VOtMYWI59iX+FqsG1
+khV1+BK6b4Bap4vBcQIDAQABo4HkMIHhMA4GA1UdDwEB/wQEAwIFoDAWBgNVHSAE
+DzANMAsGCWCFdAECBgQBADATBgNVHSUEDDAKBggrBgEFBQcDAjAbBgNVHREEFDAS
+gRB3aXR6aWdAc3dpdGNoLmNoMB0GA1UdDgQWBBTeq4/hN6oA2d/7mg4+Z7WziYUu
+lzAfBgNVHSMEGDAWgBQ2Aey5LcJLL6VxmHqhxTIVCAWaUzBFBggrBgEFBQcBAQQ5
+MDcwNQYIKwYBBQUHMAKGKWh0dHA6Ly9jYS5ncmlkLnN3aXRjaC5jaC9TV0lUQ0hz
+bGNzQ0EuY3J0MA0GCSqGSIb3DQEBBQUAA4IBAQBCujob4alS0WWl/1T5KsInb+9R
+S6YmtF6e3qB/36DMsobhikrsxhamo7lajmI4Y4LVmS1/8F0VY9/rTAkPU9kw0VDt
+4qZ5zwex6RR31op4mEwSMAWVIot96h5sGrfMLESRLdad+ilgPycFcJE9TPLjyOby
+zmuxwsIIra4oOsBqlxF33HY10/Oyp3Hem4N+EAgS6VSkNR693qRba7v5Z9ZP8qEd
+/+GEe3IDtlG1MmQRLY28OW8Epo1MR96xzbmrKNRAtSz/hvqS0KieoeP5O4zGYfvY
+Ka5OtNzZBFKV2nm9iwJl5PbZnMuGCK2JmboZiM1EP5k+dwbqGR66/qFuP67A
+-----END CERTIFICATE-----
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            49:62:13:08:7b:25:72:cf:82:03
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=CH, O=Switch - Teleinformatikdienste fuer Lehre und Forschung, CN=SWITCHgrid Root CA
+        Validity
+            Not Before: Feb  9 16:00:00 2007 GMT
+            Not After : Feb  9 16:00:00 2012 GMT
+        Subject: C=CH, O=Switch - Teleinformatikdienste fuer Lehre und Forschung, CN=SWITCHslcs CA
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:c3:7f:21:b1:8e:b0:33:0a:8a:67:fb:1c:76:bc:
+                    c5:5d:62:9a:1e:dc:87:cc:f6:4c:b0:ab:5c:ee:5d:
+                    0d:cf:b8:ce:1d:0e:9c:95:1a:98:7b:66:5e:7f:eb:
+                    7d:47:2d:71:fd:46:04:1a:24:eb:df:c6:e9:c2:b7:
+                    de:12:b8:5b:1a:0a:2e:20:a4:ef:43:7b:0b:c7:67:
+                    4e:c6:3b:4a:a8:ef:3c:0b:36:84:f1:12:28:93:02:
+                    2f:b9:c1:24:0f:60:2e:4b:47:a8:c2:66:08:65:a9:
+                    94:01:98:98:2e:89:99:39:cc:30:d1:46:35:cc:20:
+                    6f:36:f7:2e:bb:b8:e1:63:c8:1f:c9:09:fc:df:32:
+                    d4:2f:b6:e3:ff:32:a1:29:b6:d8:71:99:71:44:b4:
+                    07:20:07:b9:2c:30:96:74:87:b8:33:be:fa:dc:4d:
+                    4d:a9:41:fa:f2:2e:90:e1:e4:7c:ed:43:4b:86:4f:
+                    01:68:54:70:55:9a:2f:f9:2d:2a:05:e5:80:f5:fd:
+                    bf:e8:81:be:dd:f7:af:50:aa:1b:69:dd:33:78:a2:
+                    fb:60:dd:0d:17:04:d6:fb:32:b6:73:74:00:ea:26:
+                    95:05:52:a8:ba:19:92:c4:90:c1:f4:88:26:62:42:
+                    8b:f9:4d:28:92:ad:a6:12:c8:d7:d7:b0:ab:bc:47:
+                    1e:35
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Key Usage: critical
+                Certificate Sign
+            X509v3 Authority Key Identifier: 
+                keyid:11:93:D3:4D:AC:6E:AB:69:F6:03:B3:4D:4F:54:51:56:B4:4E:1A:90
+
+            X509v3 Subject Key Identifier: 
+                36:01:EC:B9:2D:C2:4B:2F:A5:71:98:7A:A1:C5:32:15:08:05:9A:53
+            X509v3 CRL Distribution Points: 
+                URI:http://crl.grid.switch.ch/SWITCHgridRootCA.crl
+
+            Authority Information Access: 
+                CA Issuers - URI:http://ca.grid.switch.ch/SWITCHgridRootCA.crt
+
+    Signature Algorithm: sha1WithRSAEncryption
+        80:76:a9:e4:ec:98:2b:66:24:0f:6e:8a:f8:3e:88:94:45:89:
+        75:1f:0d:70:60:07:96:af:7e:3e:8f:1c:93:84:bb:65:8d:e6:
+        c9:43:a3:cf:87:0a:99:3f:3b:c2:63:e4:6c:73:50:27:c6:4f:
+        0c:49:bb:51:4b:a0:97:79:5a:d7:28:c8:96:82:2e:99:3d:f7:
+        e8:db:c8:e5:cd:82:cd:3e:1e:e1:d5:ee:fa:d2:d9:b4:56:63:
+        49:2e:db:41:bf:fa:cf:2d:60:cb:ab:56:ae:c5:db:3c:58:dd:
+        cd:85:c0:be:2e:15:b7:39:09:41:64:b1:c9:f3:84:b1:62:a0:
+        7b:b8:f6:25:93:89:1d:3b:8f:8b:c2:49:cb:ae:3b:f0:70:2f:
+        86:2d:98:01:75:76:bb:07:79:e7:c1:32:47:14:ec:2d:84:74:
+        83:a3:1c:ee:23:ba:c5:b8:5e:9c:7e:37:3e:cc:4a:e6:ca:77:
+        05:9f:9b:76:2d:6a:2e:0d:23:1c:96:15:4f:6a:91:25:ee:13:
+        e7:4b:9d:fd:ce:d4:b3:61:f4:2f:c9:72:3e:6b:1c:42:b4:a1:
+        6a:f2:3b:99:f1:8c:93:31:7c:2d:45:dc:ba:6a:5a:cb:46:13:
+        8f:cd:78:11:64:40:18:ff:bd:e4:a6:fd:e7:ec:4b:9d:26:ae:
+        1d:9d:91:55
+-----BEGIN CERTIFICATE-----
+MIIESDCCAzCgAwIBAgIKSWITCHslcs+CAzANBgkqhkiG9w0BAQUFADBsMQswCQYD
+VQQGEwJDSDFAMD4GA1UEChM3U3dpdGNoIC0gVGVsZWluZm9ybWF0aWtkaWVuc3Rl
+IGZ1ZXIgTGVocmUgdW5kIEZvcnNjaHVuZzEbMBkGA1UEAxMSU1dJVENIZ3JpZCBS
+b290IENBMB4XDTA3MDIwOTE2MDAwMFoXDTEyMDIwOTE2MDAwMFowZzELMAkGA1UE
+BhMCQ0gxQDA+BgNVBAoTN1N3aXRjaCAtIFRlbGVpbmZvcm1hdGlrZGllbnN0ZSBm
+dWVyIExlaHJlIHVuZCBGb3JzY2h1bmcxFjAUBgNVBAMTDVNXSVRDSHNsY3MgQ0Ew
+ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDfyGxjrAzCopn+xx2vMVd
+Ypoe3IfM9kywq1zuXQ3PuM4dDpyVGph7Zl5/631HLXH9RgQaJOvfxunCt94SuFsa
+Ci4gpO9DewvHZ07GO0qo7zwLNoTxEiiTAi+5wSQPYC5LR6jCZghlqZQBmJguiZk5
+zDDRRjXMIG829y67uOFjyB/JCfzfMtQvtuP/MqEptthxmXFEtAcgB7ksMJZ0h7gz
+vvrcTU2pQfryLpDh5HztQ0uGTwFoVHBVmi/5LSoF5YD1/b/ogb7d969Qqhtp3TN4
+ovtg3Q0XBNb7MrZzdADqJpUFUqi6GZLEkMH0iCZiQov5TSiSraYSyNfXsKu8Rx41
+AgMBAAGjgfAwge0wDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAgQwHwYD
+VR0jBBgwFoAUEZPTTaxuq2n2A7NNT1RRVrROGpAwHQYDVR0OBBYEFDYB7Lktwksv
+pXGYeqHFMhUIBZpTMD8GA1UdHwQ4MDYwNKAyoDCGLmh0dHA6Ly9jcmwuZ3JpZC5z
+d2l0Y2guY2gvU1dJVENIZ3JpZFJvb3RDQS5jcmwwSQYIKwYBBQUHAQEEPTA7MDkG
+CCsGAQUFBzAChi1odHRwOi8vY2EuZ3JpZC5zd2l0Y2guY2gvU1dJVENIZ3JpZFJv
+b3RDQS5jcnQwDQYJKoZIhvcNAQEFBQADggEBAIB2qeTsmCtmJA9uivg+iJRFiXUf
+DXBgB5avfj6PHJOEu2WN5slDo8+HCpk/O8Jj5GxzUCfGTwxJu1FLoJd5WtcoyJaC
+Lpk99+jbyOXNgs0+HuHV7vrS2bRWY0ku20G/+s8tYMurVq7F2zxY3c2FwL4uFbc5
+CUFkscnzhLFioHu49iWTiR07j4vCScuuO/BwL4YtmAF1drsHeefBMkcU7C2EdIOj
+HO4jusW4Xpx+Nz7MSubKdwWfm3Ytai4NIxyWFU9qkSXuE+dLnf3O1LNh9C/Jcj5r
+HEK0oWryO5nxjJMxfC1F3LpqWstGE4/NeBFkQBj/veSm/efsS50mrh2dkVU=
+-----END CERTIFICATE-----
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            49:62:13:08:78:2b:89:df:91:a2:8b:7e:08:0f
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=CH, O=Switch - Teleinformatikdienste fuer Lehre und Forschung, CN=SWITCHgrid Root CA
+        Validity
+            Not Before: Feb  9 16:00:00 2007 GMT
+            Not After : Feb  9 16:00:00 2027 GMT
+        Subject: C=CH, O=Switch - Teleinformatikdienste fuer Lehre und Forschung, CN=SWITCHgrid Root CA
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (2048 bit)
+                Modulus (2048 bit):
+                    00:eb:22:b1:5c:80:4e:c8:26:64:13:4c:ee:1e:ad:
+                    97:37:cc:20:88:0a:1f:50:4b:e2:86:f4:58:2e:24:
+                    45:ee:d5:ef:fc:ad:12:59:ee:81:57:aa:c6:93:3c:
+                    a0:82:2e:6d:16:81:8b:a5:fb:79:76:b6:91:bd:93:
+                    1e:e7:45:36:94:76:4f:09:9e:49:b7:65:ae:fd:61:
+                    60:2e:e2:2a:c0:d4:7b:46:bb:33:3e:3e:2a:56:71:
+                    e3:5c:2d:44:c1:a7:77:59:f8:c2:18:f0:c7:d2:b0:
+                    03:60:0f:7a:ac:33:ad:4a:d8:1f:9e:7b:5d:e2:ab:
+                    02:a1:be:98:35:f3:e3:d3:3e:0c:8d:d6:06:da:98:
+                    c3:eb:75:8a:72:13:45:a9:5c:ac:3e:4c:cd:3a:b4:
+                    ff:91:4c:a7:06:9b:bd:27:81:27:87:02:b7:86:d0:
+                    7a:8b:f1:db:4e:28:4c:5b:26:6d:91:e6:cf:49:a3:
+                    9d:35:8d:ef:08:f3:aa:ca:ae:53:2e:9a:17:cf:1b:
+                    54:71:ef:95:9e:6f:64:23:c4:d4:75:e8:e2:ad:c6:
+                    1e:dd:1b:a4:07:d5:ab:4d:5c:72:0f:99:3e:fa:ed:
+                    fe:87:1f:dd:5a:6d:17:0a:09:f8:fa:df:30:fc:e4:
+                    e0:cc:a2:b1:d2:e5:86:87:ec:99:30:32:bb:a0:57:
+                    6d:65
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Subject Key Identifier: 
+                11:93:D3:4D:AC:6E:AB:69:F6:03:B3:4D:4F:54:51:56:B4:4E:1A:90
+    Signature Algorithm: sha1WithRSAEncryption
+        bb:e8:99:27:31:92:43:c5:7a:32:34:ba:b1:78:c6:93:a0:04:
+        54:a1:05:6f:9f:c4:16:0e:78:d3:f3:b1:a3:3f:96:a1:4c:2e:
+        aa:1c:b9:e3:f5:49:16:8c:cc:a3:2d:75:1c:60:74:61:ac:ba:
+        43:0c:63:27:08:fa:4a:e9:d1:21:df:20:f0:c7:e5:2c:60:cb:
+        44:37:8f:fb:6d:4a:8d:3d:c4:96:58:b4:07:f3:ad:48:88:4c:
+        7f:1c:18:2e:40:69:1a:a0:9d:ac:99:c7:0c:1c:4d:33:24:a2:
+        03:77:89:8e:a7:e7:e7:f2:a0:e1:3c:34:32:e7:22:94:ff:b7:
+        e7:4c:fa:34:2c:30:2b:0e:d3:1f:5b:5a:e3:46:23:03:e8:f4:
+        32:58:ba:54:d2:53:d9:fe:90:38:80:fc:da:aa:26:6d:43:c8:
+        62:65:b2:c5:b4:88:67:6f:b3:12:6d:f1:21:de:d3:0b:32:14:
+        41:f6:67:3a:f9:96:8f:4c:3a:27:e6:1a:5b:f7:c5:b3:21:0f:
+        0c:2c:27:05:82:3c:d8:db:2b:ef:c4:58:c5:1f:42:92:89:e9:
+        61:a3:ff:b5:30:8a:b0:59:d8:e2:a3:e9:ea:70:2d:87:d7:07:
+        b4:9e:1b:fc:fb:9e:33:76:e9:6b:06:f6:98:7d:63:a2:60:68:
+        95:30:ac:6c
+-----BEGIN CERTIFICATE-----
+MIIDojCCAoqgAwIBAgIOSWITCHgrid+Root+CA8wDQYJKoZIhvcNAQEFBQAwbDEL
+MAkGA1UEBhMCQ0gxQDA+BgNVBAoTN1N3aXRjaCAtIFRlbGVpbmZvcm1hdGlrZGll
+bnN0ZSBmdWVyIExlaHJlIHVuZCBGb3JzY2h1bmcxGzAZBgNVBAMTElNXSVRDSGdy
+aWQgUm9vdCBDQTAeFw0wNzAyMDkxNjAwMDBaFw0yNzAyMDkxNjAwMDBaMGwxCzAJ
+BgNVBAYTAkNIMUAwPgYDVQQKEzdTd2l0Y2ggLSBUZWxlaW5mb3JtYXRpa2RpZW5z
+dGUgZnVlciBMZWhyZSB1bmQgRm9yc2NodW5nMRswGQYDVQQDExJTV0lUQ0hncmlk
+IFJvb3QgQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDrIrFcgE7I
+JmQTTO4erZc3zCCICh9QS+KG9FguJEXu1e/8rRJZ7oFXqsaTPKCCLm0WgYul+3l2
+tpG9kx7nRTaUdk8Jnkm3Za79YWAu4irA1HtGuzM+PipWceNcLUTBp3dZ+MIY8MfS
+sANgD3qsM61K2B+ee13iqwKhvpg18+PTPgyN1gbamMPrdYpyE0WpXKw+TM06tP+R
+TKcGm70ngSeHAreG0HqL8dtOKExbJm2R5s9Jo501je8I86rKrlMumhfPG1Rx75We
+b2QjxNR16OKtxh7dG6QH1atNXHIPmT767f6HH91abRcKCfj63zD85ODMorHS5YaH
+7JkwMrugV21lAgMBAAGjQjBAMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQD
+AgEGMB0GA1UdDgQWBBQRk9NNrG6rafYDs01PVFFWtE4akDANBgkqhkiG9w0BAQUF
+AAOCAQEAu+iZJzGSQ8V6MjS6sXjGk6AEVKEFb5/EFg540/Oxoz+WoUwuqhy54/VJ
+FozMoy11HGB0Yay6QwxjJwj6SunRId8g8MflLGDLRDeP+21KjT3Elli0B/OtSIhM
+fxwYLkBpGqCdrJnHDBxNMySiA3eJjqfn5/Kg4Tw0MucilP+350z6NCwwKw7TH1ta
+40YjA+j0Mli6VNJT2f6QOID82qombUPIYmWyxbSIZ2+zEm3xId7TCzIUQfZnOvmW
+j0w6J+YaW/fFsyEPDCwnBYI82Nsr78RYxR9CkonpYaP/tTCKsFnY4qPp6nAth9cH
+tJ4b/PueM3bpawb2mH1jomBolTCsbA==
+-----END CERTIFICATE-----
