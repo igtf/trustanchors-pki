@@ -2,11 +2,14 @@ Changes from 1.12 to 1.13
 -------------------------
 (XX March 2007)
 
+* Added BG.ACAD CA accredited under the classic profile (BG)
+* Added SWITCHaai SLCS and (classic) Root CA (CH)
+  NOTE: the SWITCHaai SLCS CA is included in the ca_policy_igtf-slcs bundle
 * Extended lifetime of CyGrid CA to 2013 based on same key pair (CY)
 * Updated ArmeSFO CA root certificate following TACAR (AM)
+* Discontinued old (pre-2004) LIP CA (PT)
 * Added TERENA SCS CA hierarchy to the "worthless" area. Please note 
   that the SCS CA has not been accredited yet (EU)
-* Discontinued old (pre-2004) LIP CA (PT)
 
 Changes from 1.11 to 1.12
 -------------------------
