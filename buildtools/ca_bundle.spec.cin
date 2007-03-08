@@ -72,7 +72,7 @@ Summary: Short-lived Credential Services collection policy for the IGTF
 URL: http://www.gridpma.org/
 Group: Security/Certificates
 AutoReqProv: no
-#Requires: @ACCREDITED:SLCGS@
+Requires: @ACCREDITED:SLCS@
 
 %description slcs
 This is the policy collection that contains all authorities 

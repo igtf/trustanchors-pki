@@ -20,14 +20,20 @@ i.e., those authorities of which the trust anchor is contained in the
 
 You can install the trust anchors in the following ways:
 * install all RPM or tar-ball packages from the "accredited/RPMS/" resp.
-  "accredited/tgz/" directories manually
+  "accredited/tgz/" directories manually. These RPMs correspond to all
+  accredited CAs from all profiles.
 * use a RPM package manament system like "yum" to install the 
-  meta-RPM "ca_policy_igtf-@VERSION@-@RELEASE@.noarch.rpm"
+  meta-RPM "ca_policy_igtf-PROFILE-@VERSION@-@RELEASE@.noarch.rpm"
+  where PROFILE is the name of the profile (e.g., classic or slcs)
+  You should install ALL policy bundles corresponding to the 
+  authentication profiles you want to accept.
 * install all authorities with the installation tarball bundle
   "igtf-policy-installation-bundle-@VERSION@.tar.gz", using the 
   "./configure --with-profile=NAME && make && make install" mechanism.
   This tarball can be found in the "accredited/" directory.
   The tar-ball containts a README.txt with detailed instructions.
+  You can specify multiple "--with-profile" arguments to include
+  more than CAs from one authentication profile.
 
 Please make sure you validate the correctness of the trust anchors with the
 TERENA Academic CA Repository (https://www.tacar.org/) where possible.
