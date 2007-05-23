@@ -3,7 +3,7 @@ Changes from 1.13 to 1.14
 (1 June 2007)
 
 * Discontinued the expired GridCanada-old CA with hash 5f54f417 (CA)
-* APAC CA signing policy now als coveres BeSTGRID in New Zealand (AU)
+* APAC CA signing policy now als covers BeSTGRID in New Zealand (AU)
 * AEGIS (Serbia) CA added (RS)
 
 Changes from 1.12 to 1.13
