@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.30 2006/04/18 10:44:35 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.31 2006/10/09 20:09:50 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -636,6 +636,15 @@ sub packSingleCA($$$$) {
 
   my $i=0;
   while ( -f "$srcdir/$hash.$i" ) { 
+    my $rc;
+    $rc=system("openssl x509 -checkend 15552000 -noout -in $srcdir/$hash.$i");
+    if ( $rc ) {
+      chomp($rc=`openssl x509 -noout -in $srcdir/$hash.$i -enddate`);
+      $rc=~/=(.*)/;
+      print "WARNING: $srcdir/$hash.$i: certificate will expire within 180 days\n";
+      print "         $1\n";
+    }
+
     copy("$srcdir/$hash.$i","$pdir/$hash.$i");
     $opt_nojks or do {
      system("openssl x509 -outform der -in $srcdir/$hash.$i -out $tmpdir/$hash-der.$i");
