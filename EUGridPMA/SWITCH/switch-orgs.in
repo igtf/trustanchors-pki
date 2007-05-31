@@ -1,5 +1,7 @@
 O=Berner Fachhochschule - Haute ecole specialisee bernoise
 O=ETH Swiss Federal Institute of Technology Zurich
+O=ETH Zuerich
+O=Fachhochschule Nordwestschweiz
 O=Fachhochschule Aargau Nordwestschweiz
 O=Fachhochschule beider Basel
 O=Fachhochschule Solothurn Nordwestschweiz
@@ -23,3 +25,4 @@ O=Universite de Neuchatel
 O=Universitaet St. Gallen
 O=Universitaet Zuerich
 O=Universitaetsspital Zuerich
+O=Zuercher Hochschule fuer Angewandte Wissenschaften

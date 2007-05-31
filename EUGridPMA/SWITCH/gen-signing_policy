@@ -53,9 +53,9 @@ foreach $k ( sort keys %certnames ) {
       print SP " pos_rights    globus  CA:sign\n";
       print SP " cond_subjects globus  '";
       foreach $t ( sort @targets ) {
-        print SP "\"$t\" " if $t =~ /(Aargau|Universitaet|Universite|Universita) |ETH|Paul-Scherrer/;
+        print SP "\"$t\" " if $t =~ /schule Nordwestschweiz|(Universitaet|Universite|Universita) |ETH|Paul-Scherrer/;
       }
-      print SP "\"/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/*\" \"/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/*\"'\n\n";
+      print SP "\"/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/*\"'\n\n";
     }
   }
 
@@ -78,3 +78,4 @@ foreach $k ( sort keys %certnames ) {
 
   close SP;
 }
+
