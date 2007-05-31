@@ -6,11 +6,13 @@
 #    subord_of: 
 #    subjectDN: /C=NL/O=NIKHEF/CN=NIKHEF medium-security certification auth
 #    hash     : 16da7552
-#    (generated automatically from ./NIKHEF/16da7552.signing_policy)
 #
 TO Issuer "/C=NL/O=NIKHEF/CN=NIKHEF medium-security certification auth" \
   PERMIT Subject "/O=dutchgrid/O=users/.*"
 
 TO Issuer "/C=NL/O=NIKHEF/CN=NIKHEF medium-security certification auth" \
   PERMIT Subject "/O=dutchgrid/O=hosts/.*"
+
+TO Issuer "/C=NL/O=NIKHEF/CN=NIKHEF medium-security certification auth" \
+  PERMIT Subject "/O=dutchgrid/O=robots/.*"
 
