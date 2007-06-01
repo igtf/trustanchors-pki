@@ -7,6 +7,8 @@ Changes from 1.13 to 1.14
 * AEGIS (Serbia) CA added (RS)
 * New organisations added for SWITCH Classic CA (CH)
 * DutchGrid robot certificates added to signing namespace (NL)
+* Added CA with new keypair for ASGCC CA during roll-over "ASGCC-2007" (TW)
+
 
 Changes from 1.12 to 1.13
 -------------------------
