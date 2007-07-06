@@ -1,12 +1,12 @@
 ##############################################################################
 #NAMESPACES-VERSION: 1.0
 #
-# @(#)efdf6f74.namespaces
+# @(#)9cd75e87.signing_policy.namespaces
 # CA alias    : ASGCCA-2007
 #    subord_of: 
 #    subjectDN: /C=TW/O=AS/CN=Academia Sinica Grid Computing Certificate Authority
-#    hash     : efdf6f74
-#    (generated automatically from APGrid/efdf6f74.signing_policy)
+#    hash     : 9cd75e87.signing_policy
+#    (generated automatically from 9cd75e87.signing_policy)
 #
 TO Issuer "/C=TW/O=AS/CN=Academia Sinica Grid Computing Certificate Authority" \
   PERMIT Subject "/C=TW/.*"
