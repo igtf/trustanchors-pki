@@ -1,13 +1,11 @@
 ##############################################################################
 #NAMESPACES-VERSION: 1.0
 #
-# @(#)9cd75e87.signing_policy.namespaces
+# @(#)$Id$
 # CA alias    : ASGCCA-2007
 #    subord_of: 
 #    subjectDN: /C=TW/O=AS/CN=Academia Sinica Grid Computing Certificate Authority
-#    hash     : 9cd75e87.signing_policy
-#    (generated automatically from 9cd75e87.signing_policy)
 #
-TO Issuer "/C=TW/O=AS/CN=Academia Sinica Grid Computing Certificate Authority" \
+TO Issuer "/C=TW/O=AS/CN=Academia Sinica Grid Computing Certification Authority Mercury" \
   PERMIT Subject "/C=TW/.*"
 
