@@ -11,3 +11,6 @@
 TO Issuer "/C=AU/O=APACGrid/OU=CA/CN=APACGrid/emailAddress=camanager@vpac.org" \
   PERMIT Subject "/C=AU/O=APACGrid/.*"
 
+TO Issuer "/C=AU/O=APACGrid/OU=CA/CN=APACGrid/emailAddress=camanager@vpac.org" \
+  PERMIT Subject "/C=NZ/O=BeSTGRID/.*"
+
