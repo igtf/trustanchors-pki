@@ -24,7 +24,7 @@ You can install the trust anchors in the following ways:
   accredited CAs from all profiles.
 * use a RPM package manament system like "yum" to install the 
   meta-RPM "ca_policy_igtf-PROFILE-@VERSION@-@RELEASE@.noarch.rpm"
-  where PROFILE is the name of the profile (e.g., classic or slcs)
+  where PROFILE is the name of the profile (e.g., classic, mics or slcs)
   You should install ALL policy bundles corresponding to the 
   authentication profiles you want to accept.
 * install all authorities with the installation tarball bundle

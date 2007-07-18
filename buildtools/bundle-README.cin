@@ -56,6 +56,7 @@ arguments specific to the IGTF distribution:
 
     classic -- Traditional X.509 Authorities with Secured Infrastructure
     slcs    -- Short-Lived Credential generation Services
+    mics    -- Member Integrated Credential generation Services
 
   Notes:
   * there is no collective installation for experimental or worthless 

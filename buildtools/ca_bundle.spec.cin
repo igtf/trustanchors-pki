@@ -86,3 +86,23 @@ Refer to the IGTF web site for the slcs authentication profile.
 %defattr(644,root,root)
 /etc/grid-security/certificates/policy-igtf-slcs.info
 
+
+%package mics
+Summary: Member-Integrated Credential Services collection policy for the IGTF
+URL: http://www.gridpma.org/
+Group: Security/Certificates
+AutoReqProv: no
+Requires: @ACCREDITED:MICS@
+
+%description mics
+This is the policy collection that contains all authorities 
+accredited by the IGTF member PMAs according to the "mics"
+Member-Integrated Credential Services Profile
+Install this package if you are willing to trust CAs that are 
+accredited by the the member PMAs under the "mics" profile.
+Refer to the IGTF web site for the mics authentication profile.
+
+%files mics
+%defattr(644,root,root)
+/etc/grid-security/certificates/policy-igtf-mics.info
+

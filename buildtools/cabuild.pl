@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.31 2006/10/09 20:09:50 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.32 2007/05/23 15:13:52 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -41,7 +41,7 @@ defined $opt_url or
 # ----------------------------------------------------------------------------
 # configuration settings
 #
-@validStatus = qw(accredited:classic accredited:slcs 
+@validStatus = qw(accredited:classic accredited:slcs accredited:mics
                   suspended discontinued experimental worthless );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";

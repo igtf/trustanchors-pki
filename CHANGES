@@ -2,7 +2,14 @@ Changes from 1.15 to 1.16
 -------------------------
 (XX August 2007)
 
-* corrected namespaces for for APAC CA (AU)
+* A new profile for Member-Integrated Credential Services (MICS), has 
+  been defined by the IGTF. A policy nstallation bundle for authorities
+  accredited under the MICS profile has been added to the distribution.
+  Please refer to the IGTF web site at http://www.gridpma.org/ for a 
+  description of the MICS profile.
+* Corrected namespaces for for APAC CA (AU)
+* Added REUNA CA as a classic CA (CL)
+* Added NCSA-MICS and NCSA-SLCS CAs (US)
 
 Changes from 1.14 to 1.15
 -------------------------
