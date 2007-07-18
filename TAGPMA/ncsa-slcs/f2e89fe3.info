@@ -1,0 +1,9 @@
+# @<#>$Id$
+#
+alias = NCSA-slcs
+url = http://security.ncsa.uiuc.edu/CA/
+ca_url =  http://ca.ncsa.uiuc.edu/f2e89fe3.0
+email = jbarlow@ncsa.uiuc.edu
+status =  accredited:slcs
+sha1fp.0 = @SHA1FP.0@
+version = @VERSION@
