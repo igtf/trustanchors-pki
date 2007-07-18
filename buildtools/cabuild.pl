@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.32 2007/05/23 15:13:52 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.33 2007/07/18 18:38:26 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -449,6 +449,7 @@ sub makeCollectionInfo($$$) {
   foreach my $n ( 
                   "ca_policy_igtf-classic-$opt_gver",
                   "ca_policy_igtf-slcs-$opt_gver",
+                  "ca_policy_igtf-mics-$opt_gver",
                   "ca_policy_eugridpma-classic-$opt_gver",
                   "ca_policy_eugridpma-$opt_gver"
     ) {
