@@ -1,9 +1,9 @@
 #
-# @(#)$Id: 295adc19.info,v 1.1 2007/07/18 18:18:11 pmacvsdg Exp $
+# @(#)$Id: 295adc19.info,v 1.2 2007/07/18 18:23:45 pmacvsdg Exp $
 #
 alias =	REUNA-ca
 url = http://reuna-ca.reuna.cl/
-ca_url = http://reuna-ca.reuna.cl/cacert/
+ca_url = http://reuna-ca.reuna.cl/cacert/cacert.pem
 crl_url = http://reuna-ca.reuna.cl/crl/crl.pem
 email = reuna-ca@reuna.cl
 status = accredited:classic
