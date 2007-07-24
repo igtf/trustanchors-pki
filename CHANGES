@@ -10,6 +10,7 @@ Changes from 1.15 to 1.16
 * Corrected namespaces for for APAC CA (AU)
 * Added REUNA CA as a classic CA (CL)
 * Added NCSA-MICS and NCSA-SLCS CAs (US)
+* Added Ecole polytechnique federale de Lausanne to SWITCH namespace (CH)
 
 Changes from 1.14 to 1.15
 -------------------------
