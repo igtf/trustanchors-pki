@@ -12,6 +12,7 @@ Changes from 1.15 to 1.16
 * Added NCSA-MICS and NCSA-SLCS CAs (US)
 * Added Ecole polytechnique federale de Lausanne to SWITCH namespace (CH)
 * Added new KISTI classic CA (KR)
+* Obsoleted expired UKeScience (01621954) Root CA (GB)
 
 Changes from 1.14 to 1.15
 -------------------------
