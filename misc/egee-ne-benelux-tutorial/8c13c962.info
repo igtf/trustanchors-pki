@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for the Worthless EGEE Northern and Benelux Tutorial CA 1
+alias = egee-ne-benelux-tutorial
+crl_url = http://ca.dutchgrid.nl/egee-ne/cacrl.pem
+url = http://ca.dutchgrid.nl/egee-ne/
+ca_url = http://ca.dutchgrid.nl/egee-ne/cacert.pem
+status = worthless
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
