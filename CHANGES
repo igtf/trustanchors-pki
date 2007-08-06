@@ -13,6 +13,8 @@ Changes from 1.15 to 1.16
 * Added Ecole polytechnique federale de Lausanne to SWITCH namespace (CH)
 * Added new KISTI (2007) classic CA (KR)
 * Obsoleted expired UKeScience (01621954) Root CA (GB)
+* Added Latin American and Caribbean Catch-all Grid CA (TAGPMA)
+* some new roots added to the worthless area (these are not accredited CAs!)
 
 Changes from 1.14 to 1.15
 -------------------------
