@@ -12,7 +12,7 @@ ones are just that as well: experimental, and for informational purposes only.
 
 Add the following to your "/etc/apt/sources.list.d/eugridpma.list" file:
 
-  rpm http://www.eugridpma.org distribution/igtf/current/apt accredited
+  rpm http://dist.eugridpma.info distribution/igtf/current/apt accredited
 
 and run apt-get update && apt-get install ca_policy_igtf
 
