@@ -15,4 +15,5 @@ Add the following to your "/etc/apt/sources.list.d/eugridpma.list" file:
   rpm http://dist.eugridpma.info distribution/igtf/current/apt accredited
 
 and run apt-get update && apt-get install ca_policy_igtf
-
+For upgrades, the use of "dist-upgrade" is required as new policy meta-RPMs
+may obsolete withdrawn CA that are currently installed.
