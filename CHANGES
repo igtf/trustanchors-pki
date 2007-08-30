@@ -4,6 +4,7 @@ Changes from 1.16 to 1.17
 
 * Corrected several small typographic inconsistencies (DutchDemo,
   apt/README.txt)
+* BEGrid CA provides an http URL for CRL download (BE)
 
 Changes from 1.15 to 1.16
 -------------------------
