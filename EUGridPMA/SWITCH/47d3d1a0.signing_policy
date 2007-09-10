@@ -6,7 +6,7 @@
 # --- (temporary) workaround for http://savannah.cern.ch/bugs/?21033
  access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'
  pos_rights    globus  CA:sign
- cond_subjects globus  '"/C=CH/O=ETH Swiss Federal Institute of Technology Zurich/*" "/C=CH/O=ETH Zuerich/*" "/C=CH/O=Ecole polytechnique federale de Lausanne (EPFL)/*" "/C=CH/O=Fachhochschule Nordwestschweiz/*" "/C=CH/O=Paul-Scherrer-Institut (PSI)/*" "/C=CH/O=Universita della Svizzera Italiana/*" "/C=CH/O=Universitaet Basel/*" "/C=CH/O=Universitaet Bern/*" "/C=CH/O=Universitaet Luzern/*" "/C=CH/O=Universitaet St. Gallen/*" "/C=CH/O=Universitaet Zuerich/*" "/C=CH/O=Universite de Fribourg - Universitaet Freiburg/*" "/C=CH/O=Universite de Geneve/*" "/C=CH/O=Universite de Lausanne/*" "/C=CH/O=Universite de Neuchatel/*" "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/*"'
+ cond_subjects globus  '"/C=CH/O=ETH Swiss Federal Institute of Technology Zurich/*" "/C=CH/O=ETH Zuerich/*" "/C=CH/O=Ecole polytechnique federale de Lausanne (EPFL)/*" "/C=CH/O=Fachhochschule Nordwestschweiz/*" "/C=CH/O=Haute Ecole Specialisee de Suisse occidentale (HES-SO)/*" "/C=CH/O=Paul-Scherrer-Institut (PSI)/*" "/C=CH/O=Universita della Svizzera Italiana/*" "/C=CH/O=Universitaet Basel/*" "/C=CH/O=Universitaet Bern/*" "/C=CH/O=Universitaet Luzern/*" "/C=CH/O=Universitaet St. Gallen/*" "/C=CH/O=Universitaet Zuerich/*" "/C=CH/O=Universite de Fribourg - Universitaet Freiburg/*" "/C=CH/O=Universite de Geneve/*" "/C=CH/O=Universite de Lausanne/*" "/C=CH/O=Universite de Neuchatel/*" "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/*"'
 
 # --- for /C=CH/O=Berner Fachhochschule - Haute ecole specialisee bernoise/*
  access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'
@@ -33,30 +33,25 @@
  pos_rights    globus  CA:sign
  cond_subjects globus  '"/C=CH/O=FHS St. Gallen Hochschule fuer Angewandte Wissenschaften/*"'
 #
-# --- for /C=CH/O=Fachhochschule Aargau Nordwestschweiz/*
- access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'
- pos_rights    globus  CA:sign
- cond_subjects globus  '"/C=CH/O=Fachhochschule Aargau Nordwestschweiz/*"'
-#
 # --- for /C=CH/O=Fachhochschule Nordwestschweiz/*
  access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'
  pos_rights    globus  CA:sign
  cond_subjects globus  '"/C=CH/O=Fachhochschule Nordwestschweiz/*"'
-#
-# --- for /C=CH/O=Fachhochschule Solothurn Nordwestschweiz/*
- access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'
- pos_rights    globus  CA:sign
- cond_subjects globus  '"/C=CH/O=Fachhochschule Solothurn Nordwestschweiz/*"'
 #
 # --- for /C=CH/O=Fachhochschule Zentralschweiz/*
  access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'
  pos_rights    globus  CA:sign
  cond_subjects globus  '"/C=CH/O=Fachhochschule Zentralschweiz/*"'
 #
-# --- for /C=CH/O=Fachhochschule beider Basel/*
+# --- for /C=CH/O=Haute Ecole Specialisee de Suisse occidentale (HES-SO)/*
  access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'
  pos_rights    globus  CA:sign
- cond_subjects globus  '"/C=CH/O=Fachhochschule beider Basel/*"'
+ cond_subjects globus  '"/C=CH/O=Haute Ecole Specialisee de Suisse occidentale (HES-SO)/*"'
+#
+# --- for /C=CH/O=Hochschule Rapperswil/*
+ access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'
+ pos_rights    globus  CA:sign
+ cond_subjects globus  '"/C=CH/O=Hochschule Rapperswil/*"'
 #
 # --- for /C=CH/O=Paedagogische Hochschule Thurgau/*
  access_id_CA  X509    '/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA'

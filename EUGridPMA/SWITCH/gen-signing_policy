@@ -53,7 +53,7 @@ foreach $k ( sort keys %certnames ) {
       print SP " pos_rights    globus  CA:sign\n";
       print SP " cond_subjects globus  '";
       foreach $t ( sort @targets ) {
-        print SP "\"$t\" " if $t =~ /schule Nordwestschweiz|(Universitaet|Universite|Universita) |ETH|EPFL|Paul-Scherrer/;
+        print SP "\"$t\" " if $t =~ /Nordwestschweiz|(Universitaet|Universite|Universita) |ETH|EPFL|Paul-Scherrer|HES-SO/;
       }
       print SP "\"/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/*\"'\n\n";
     }
