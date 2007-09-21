@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 34a509c3.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
+# @(#)$Id: 34a509c3.info,v 1.3 2005/10/18 20:26:00 pmacvsdg Exp $
 # Information for CA CNRS-Projets
 #   obtained from 34a509c3 in CNRS-Projets/
 alias = CNRS-Projets
@@ -7,5 +7,5 @@ crl_url = http://crls.services.cnrs.fr/CNRS-Projets/getpem.crl
 requires = CNRS
 status = accredited:classic
 version = @VERSION@
-email = Sophie.Nicoud@urec.cnrs.fr
+email = alice.de-bignicourt@urec.cnrs.fr
 sha1fp.0 = @SHA1FP.0@
