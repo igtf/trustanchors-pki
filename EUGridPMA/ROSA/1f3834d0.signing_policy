@@ -1,0 +1,4 @@
+# @(#)$Id$
+access_id_CA      X509     '/DC=RO/DC=RomanianGRID/O=ROSA/OU=Certification Authority/CN=RomanianGRID CA'
+pos_rights        globus   CA:sign
+cond_subjects     globus   '"/DC=RO/DC=RomanianGRID/*"'

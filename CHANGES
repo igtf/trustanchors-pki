@@ -1,7 +1,8 @@
 Changes from 1.16 to 1.17
 -------------------------
-(X September 2007)
+(8 October 2007)
 
+* Added new RomanianGRID CA classic authority (RO)
 * Corrected several small typographic inconsistencies (DutchDemo,
   apt/README.txt)
 * Updates list of SWITCH eligible organisations (CH)

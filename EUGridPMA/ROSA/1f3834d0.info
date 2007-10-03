@@ -1,0 +1,10 @@
+# @(#)$Id$
+#
+alias = RomanianGRID
+url = http://www.romaniangrid.ro
+ca_url = http://www.romaniangrid.ro/certs/ca.pem
+crl_url = http://www.romaniangrid.ro/crl/crl-v2.der
+email = grid-ca@rosa.ro
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
