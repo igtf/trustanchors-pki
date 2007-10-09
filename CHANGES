@@ -9,6 +9,8 @@ Changes from 1.16 to 1.17
 * New contact email addresses for the AustrianGrid CA (AT), 
   CNRS (FR) and IUCC (IL)
 * BEGrid CA provides an http URL for CRL download (BE)
+* Expired INFN (49f18420) CA withdrawn (IT)
+* Updated ASGCCCA-2007 certificate extensions (TW)
 
 Changes from 1.15 to 1.16
 -------------------------
