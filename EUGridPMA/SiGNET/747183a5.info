@@ -1,12 +1,12 @@
 #
-# @(#)$Id: 747183a5.info,v 1.4 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: 747183a5.info,v 1.5 2005/10/20 08:27:06 pmacvsdg Exp $
 # Information for CA SiGNET
 #   obtained from 747183a5 in SiGNET/
 alias = SiGNET
 ca_url = http://signet-ca.ijs.si/pub/cacert/cacert.pem
 crl_url = http://signet-ca.ijs.si/pub/crl/cacrl.crl
 email = signet-ca@ijs.si
-status = accredited:classic
+status = discontinued
 url = http://signet-ca.ijs.si/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

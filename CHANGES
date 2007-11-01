@@ -1,9 +1,10 @@
 Changes from 1.17 to 1.18
 -------------------------
-(21 October 2007)
+(02 November 2007)
 
 * ASGCCCA-2007 added to Accredited Classic set again (TW)
 * Withdrawn expired CA "Spain" (hash 13eab55e) (ES)
+* Withdrawn expired CA "SiGNET" (hash 747183a5) (SI)
 
 Changes from 1.16 to 1.17
 -------------------------
