@@ -1,11 +1,11 @@
 #
-# @(#)$Id: fa3af1d7.info,v 1.3 2005/10/18 20:26:00 pmacvsdg Exp $
+# @(#)$Id: fa3af1d7.info,v 1.4 2005/10/21 11:39:50 pmacvsdg Exp $
 # Information for CA CERN
 #   obtained from fa3af1d7 in CERN/
 alias = CERN
 crl_url = http://service-grid-ca.web.cern.ch/service-grid-ca/cgi-bin/getCRL
 url = http://service-grid-ca.web.cern.ch/service-grid-ca/
 email = service-grid-ca@cern.ch
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
