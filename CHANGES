@@ -1,12 +1,13 @@
 Changes from 1.17 to 1.18
 -------------------------
-(02 November 2007)
+(13 November 2007)
 
 * ASGCCCA-2007 added to Accredited Classic set again (TW)
 * Withdrawn expired CA "Spain" (hash 13eab55e) (ES)
 * Withdrawn expired CA "SiGNET" (hash 747183a5) (SI)
 * Withdrawn discontinued CA "CERN" (hash fa3af1d7) (INT)
 * Updated SWITCH (classic) signing namespace policies (CH)
+* Added UNLPGrid (classic CA, hash b7bcb7b2) (AR)
 
 Changes from 1.16 to 1.17
 -------------------------
