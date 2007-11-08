@@ -1,9 +1,9 @@
 #
-# @(#)$Id: 225860ae.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: 225860ae.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
 # Information for CA EDG-Tutorial
 #   obtained from 225860ae in EDG-Tutorial/
 alias = EDG-Tutorial
 crl_url = http://certificate.nikhef.nl/cgi-bin/tutorca-list?command=crl
-status = worthless
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
