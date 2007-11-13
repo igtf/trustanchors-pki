@@ -1,0 +1,4 @@
+# @(#)$Id$
+ access_id_CA      X509     '/C=MA/O=MaGrid/CN=MaGrid CA'
+ pos_rights        globus   CA:sign
+ cond_subjects     globus   '"/C=MA/O=MaGrid/CN=MaGrid CA" "/C=MA/O=MaGrid/*"'
