@@ -10,6 +10,9 @@ Changes from 1.17 to 1.18
 * Added UNLPGrid CA (classic, hash b7bcb7b2) (AR)
 * Added MaGrid CA (classic, hash 7b54708e) (MA)
 * New contact email address for the SlovakGrid CA (SK)
+* New UK e-Science CA hierarchy "-2007" added (98ef0ee5 and 367b75c3)
+  Note: during the transition period, two hierarchies (both old and "2007")
+  will be distributed. See accompanying newsletter for details (UK)
 * (selected updates to repositories containing un-accredited CAs)
 
 Changes from 1.16 to 1.17
