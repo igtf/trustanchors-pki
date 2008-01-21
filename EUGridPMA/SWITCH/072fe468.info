@@ -1,9 +1,9 @@
 #
-# @(#)$Id$
+# @(#)$Id: 072fe468.info,v 1.4 2007/02/08 14:24:44 pmacvsdg Exp $
 # Information for CA SWITCH Server 2006
 #   
 alias = SWITCH-Server-2006
-ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=4F0D10EFD99737FDB1F901DA33558E2DCDD5CA59
+ca_url = http://swisssign.net/cgi-bin/authority/download?into=save_as_pem&ca=4F0D10EFD99737FDB1F901DA33558E2DCDD5CA59
 crl_url = http://crl.swisssign.net/4F0D10EFD99737FDB1F901DA33558E2DCDD5CA59
 requires = SWITCH
 status = accredited:classic

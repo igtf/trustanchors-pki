@@ -1,9 +1,9 @@
 #
-# @(#)$Id$
+# @(#)$Id: 7b2d086c.info,v 1.6 2007/02/08 14:24:44 pmacvsdg Exp $
 # Information for CA SwissSign-Root
 #   obtained from 7b2d086c in SWITCH/
 alias = SwissSign-Root
-ca_url = http://swisssign.net/cgi-bin/authority/download?into=file&format=pem&ca=96D771CD392AD4FC88B18AAB537869EF8F477E16
+ca_url = http://swisssign.net/cgi-bin/authority/download?into=save_as_pem&ca=96D771CD392AD4FC88B18AAB537869EF8F477E16
 crl_url = http://crl.swisssign.net/96D771CD392AD4FC88B18AAB537869EF8F477E16
 email = pki@switch.ch
 status = accredited:classic
