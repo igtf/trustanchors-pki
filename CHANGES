@@ -1,10 +1,12 @@
 Changes from 1.18 to 1.19
 -------------------------
-(17 January 2008)
+(28 January 2008)
 
 * Added PK-Grid-2007 Root CA certificate (will supersede d2a353a5) (PK)
 * New contact email address for all PK-Grid CAs (PK)
 * Updated and extended lifetime of ArmeSFo root cert with same keypair (AM)
+* New CA certificate download locations for SwissSign CAs (CH)
+* New classic CA UGRID (hash 0a12b607) for the Ukraine (UA)
 
 Changes from 1.17 to 1.18
 -------------------------

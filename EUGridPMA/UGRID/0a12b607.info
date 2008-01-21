@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+# UGRID - The Ukrainian Grid CA
+#
+alias = UGRID
+ca_url = https://ca.ugrid.org/certs/cacert.pem
+crl_url = http://ca.ugrid.org/cacrl.der
+email = ca@ugrid.org
+status = accredited:classic
+url = https://ca.ugrid.org/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
