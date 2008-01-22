@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 7d5fea1d.info,v 1.1 2007/11/23 01:09:23 pmacvsdg Exp $
+# @(#)$Id: 24c3ccde.info,v 1.1 2008/01/22 08:03:02 pmacvsmh Exp $
 # Information for UNAMgird CA
 #
 alias =	UNAMgrid-ca
@@ -8,5 +8,5 @@ ca_url = http://ca.unamgrid.unam.mx/pub/cacert/cacert.pem
 crl_url = http://ca.unamgrid.unam.mx/pub/crl/unamgrid-ca-crl.crl
 email = camanager@ca.unamgrid.unam.mx
 status = accredited:classic
-sha1fp.0 = 73:35:B7:8F:77:27:F2:6C:4E:EE:E7:5C:61:35:31:AF:F0:04:AF:99
+sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
