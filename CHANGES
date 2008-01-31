@@ -7,6 +7,7 @@ Changes from 1.18 to 1.19
 * Updated and extended lifetime of ArmeSFo root cert with same keypair (AM)
 * New CA certificate download locations for SwissSign CAs (CH)
 * New classic CA UGRID (hash 0a12b607) for the Ukraine (UA)
+* New classic CA UNAM-grid (hash 24c3ccde) for Mexico (MX)
 
 Changes from 1.17 to 1.18
 -------------------------
