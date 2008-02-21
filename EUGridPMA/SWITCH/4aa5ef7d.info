@@ -1,12 +1,12 @@
 #
-# @(#)$Id: 4aa5ef7d.info,v 1.4 2007/02/08 14:24:44 pmacvsdg Exp $
+# @(#)$Id: 4aa5ef7d.info,v 1.5 2008/01/21 16:03:43 pmacvsdg Exp $
 # Information for CA SWITCH Personal 2006
 #   
 alias = SWITCH-Personal-2006
 ca_url = http://swisssign.net/cgi-bin/authority/download?into=save_as_pem&ca=631A26BF8AF3916D7189FF22C7A6BB3D6DBF2C95
 crl_url = http://crl.swisssign.net/631A26BF8AF3916D7189FF22C7A6BB3D6DBF2C95
 requires = SWITCH
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 email = pki@switch.ch
 sha1fp.0 = @SHA1FP.0@
