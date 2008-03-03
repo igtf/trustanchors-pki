@@ -14,3 +14,5 @@ TO Issuer "/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein PCA Grid - G01" \
 TO Issuer "/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein PCA Grid - G01" \
   PERMIT Subject "/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein User CA Grid - G01"
 
+TO Issuer "/C=DE/O=DFN-Verein/OU=DFN-PKI/CN=DFN-Verein PCA Grid - G01" \
+  PERMIT Subject "/C=DE/O=GridGermany/.*"
