@@ -1,7 +1,7 @@
 ##############################################################################
 #NAMESPACES-VERSION: 1.0
 #
-# @(#)$Id: 7b2d086c.namespaces,v 1.3 2007/02/08 14:24:44 pmacvsdg Exp $
+# @(#)$Id: 7b2d086c.namespaces,v 1.4 2007/11/16 08:46:43 pmacvsdg Exp $
 # CA alias    : SWITCH hierarchy from SwissSign-Root (G1)
 #    subjectDN: /C=CH/O=SwissSign/CN=SwissSign CA (RSA IK May 6 1999 18:00:58)/Email=ca@SwissSign.com
 #    hash     : 7b2d086c
@@ -16,13 +16,6 @@ TO Issuer "/CN=SwissSign Silver CA/emailAddress=silver@swisssign.com/O=SwissSign
   PERMIT Subject "/CN=SWITCH CA/emailAddress=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH"
 
 # SWITCH CA signs a Personal and a Server CA
-
-# those for 2006-2008
-TO Issuer "/CN=SWITCH CA/emailAddress=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \
-  PERMIT Subject "/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Personal CA/emailAddress=switch.personal.ca@switch.ch"
-
-TO Issuer "/CN=SWITCH CA/emailAddress=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \
-  PERMIT Subject "/C=CH/O=SWITCH - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCH Server CA/emailAddress=switch.server.ca@switch.ch"
 
 # and those for 2007-2012
 TO Issuer "/CN=SWITCH CA/emailAddress=switch.ca@switch.ch/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/C=CH" \

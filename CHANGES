@@ -3,6 +3,7 @@ Changes from 1.19 to 1.20
 (14 March 2008)
 
 * Withdrawn expired SWITCH-Server-2006 and SWITCH-Personal-2006 CAs (CH)
+* Corrected namespace syntax for SWITCHaai CA (CH)
 * Updated namespace definitions in DFN GridGermany hierarchy (DE)
 * Added dependency of TERENA-SCS on GTE-CyberTrust-Global-Root. Note that
   neither the TERENA-SCS nor the GTE-CyberTrust-Global-Root are accredited.
