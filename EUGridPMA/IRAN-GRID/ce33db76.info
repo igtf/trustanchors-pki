@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+#   
+alias = IRAN-GRID
+ca_url = http://cagrid.ipm.ac.ir/pub/cacert/cacert.txt
+crl_url = http://cagrid.ipm.ac.ir/pub/crl/cacrl.pem
+email = ca-manager@ipm.ir
+status = accredited:classic
+url = http://cagrid.ipm.ac.ir/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
