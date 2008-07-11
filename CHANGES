@@ -1,7 +1,14 @@
 Changes from 1.21 to 1.22
 -------------------------
+(31 July 2008)
+
+* Updated metadata for CyGrid (CY)
+
+Changes from 1.21 to 1.22
+-------------------------
 (09 June 2008)
 
+* updated extensions in PK-Grid-2007 root certificate (same keypair) (PK)
 * added accredited classic CA Iran-Grid (hash ce33db76) (IR)
 * withdrawn expired ASGCCA (hash a692434d) (TW)
 
