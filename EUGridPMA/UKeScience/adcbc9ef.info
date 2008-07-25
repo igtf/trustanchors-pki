@@ -1,11 +1,11 @@
 #
-# @(#)$Id$
+# @(#)$Id: adcbc9ef.info,v 1.1 2006/07/19 15:09:40 pmacvsdg Exp $
 # Information for CA UKeScience eScience subordinate CA
 #
 alias = UKeScienceCA
 url = http://www.grid-support.ac.uk/ca/
 crl_url = http://ca.grid-support.ac.uk/pub/crl/escience-ca-crl.crl
 email = support@grid-support.ac.uk
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = 0A:E0:5B:0C:64:99:18:2B:4F:FB:15:33:6F:77:33:F9:8E:F2:6D:C7

@@ -1,8 +1,11 @@
-Changes from 1.21 to 1.22
+Changes from 1.22 to 1.23
 -------------------------
-(31 July 2008)
+(28 July 2008)
 
 * Updated metadata for CyGrid (CY), SlovakGrid (SK), Grid-FR (FR)
+* Removed old UKeScienceRoot (8175c1cd) and UKeScience (adcbc9ef)
+  that were replaced in 2006 by updated root and issuing CAs (UK)
+
 
 Changes from 1.21 to 1.22
 -------------------------

@@ -50,7 +50,7 @@ URL: http://www.gridpma.org/
 Group: Security/Certificates
 AutoReqProv: no
 Requires: @ACCREDITED:CLASSIC@
-Obsoletes: ca_CyGrid-old ca_CNRS-DataGrid ca_CESNET-old ca_SwissSign-Silver-Root ca_SWITCH-Personal2 ca_SWITCH-CA2 ca_SWITCH-Server2 ca_KISTI ca_Russia ca_SWITCH-Server ca_SWITCH-Personal ca_LIP ca_GridCanada-old ca_UKeScience ca_HellasGrid ca_INFN ca_Spain ca_SiGNET ca_CERN ca_SWITCH-Personal-2006 ca_SWITCH-Server-2006 ca_ASGCCA
+Obsoletes: ca_CyGrid-old ca_CNRS-DataGrid ca_CESNET-old ca_SwissSign-Silver-Root ca_SWITCH-Personal2 ca_SWITCH-CA2 ca_SWITCH-Server2 ca_KISTI ca_Russia ca_SWITCH-Server ca_SWITCH-Personal ca_LIP ca_GridCanada-old ca_UKeScience ca_HellasGrid ca_INFN ca_Spain ca_SiGNET ca_CERN ca_SWITCH-Personal-2006 ca_SWITCH-Server-2006 ca_ASGCCA ca_UKeScienceRoot ca_UKeScienceCA
 
 
 %description classic
