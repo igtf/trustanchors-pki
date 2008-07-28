@@ -1,5 +1,5 @@
-# @(#)$Id: 3232b9bc.info,v 1.1 2008/07/28 12:13:01 pmacvsdg Exp $
-alias = MREN-CA 
+# @(#)$Id: 3232b9bc.info,v 1.2 2008/07/28 12:16:48 pmacvsdg Exp $
+alias = MREN-CA
 url = http://mren-ca.ac.me/
 ca_url = http://www.mren-ca.ac.me/ca/ca.crt
 crl_url = http://www.mren-ca.ac.me/ca/crl-v2.crl
