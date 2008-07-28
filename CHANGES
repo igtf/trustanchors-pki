@@ -7,6 +7,7 @@ Changes from 1.22 to 1.23
 * Removed old UKeScienceRoot (8175c1cd) and UKeScience (adcbc9ef)
   that were replaced in 2006 by updated root and issuing CAs (UK)
 * Updated LIPCA certificate, based on same key pair (PT)
+* Added accredited classic MREN CA (ME)
 
 
 Changes from 1.21 to 1.22

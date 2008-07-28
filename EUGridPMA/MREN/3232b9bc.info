@@ -1,0 +1,9 @@
+# @(#)$Id$
+alias = MREN-CA 
+url = http://mren-ca.ac.me/
+ca_url = http://www.mren-ca.ac.me/ca%20root%20cert.php
+crl_url =http://www.mren-ca.ac.me/crl.php 
+email = mren-ca@ac.me
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
