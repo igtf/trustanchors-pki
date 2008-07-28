@@ -1,8 +1,8 @@
-# @(#)$Id$
+# @(#)$Id: 3232b9bc.info,v 1.1 2008/07/28 12:13:01 pmacvsdg Exp $
 alias = MREN-CA 
 url = http://mren-ca.ac.me/
-ca_url = http://www.mren-ca.ac.me/ca%20root%20cert.php
-crl_url =http://www.mren-ca.ac.me/crl.php 
+ca_url = http://www.mren-ca.ac.me/ca/ca.crt
+crl_url = http://www.mren-ca.ac.me/ca/crl-v2.crl
 email = mren-ca@ac.me
 status = accredited:classic
 version = @VERSION@
