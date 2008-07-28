@@ -3,8 +3,10 @@ Changes from 1.22 to 1.23
 (28 July 2008)
 
 * Updated metadata for CyGrid (CY), SlovakGrid (SK), Grid-FR (FR)
+  and NCSA-SLCS and MICS (US)
 * Removed old UKeScienceRoot (8175c1cd) and UKeScience (adcbc9ef)
   that were replaced in 2006 by updated root and issuing CAs (UK)
+* Updated LIPCA certificate, based on same key pair (PT)
 
 
 Changes from 1.21 to 1.22

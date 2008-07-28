@@ -1,10 +1,10 @@
-# @<#>$Id$
+# @<#>$Id: 9b95bbf2.info,v 1.1 2007/07/18 19:03:37 pmacvsmh Exp $
 #
 alias = NCSA-mics
 url = http://security.ncsa.uiuc.edu/CA/
 ca_url =  http://ca.ncsa.uiuc.edu/9b95bbf2.0
 crl_url = http://ca.ncsa.uiuc.edu/9b95bbf2.r0
-email = jbarlow@ncsa.uiuc.edu
+email = security@ncsa.uiuc.edu
 status =  accredited:mics
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
