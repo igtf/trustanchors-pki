@@ -1,7 +1,0 @@
-alias = NCHC
-crl_url = http://ca.goc.nchc.org.tw/nchcca/CRL/NCHCCRL.der
-email = nchcca@nchc.org.tw
-status = accredited:classic
-url = http://ca.goc.nchc.org.tw/
-version = @VERSION@
-sha1fp.0 = @SHA1FP.0@
