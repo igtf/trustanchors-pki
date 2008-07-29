@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.33 2007/07/18 18:38:26 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.34 2007/07/18 19:09:24 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -10,16 +10,17 @@ use File::Temp qw(tempdir);
 use File::Copy qw(copy move);
 use strict;
 use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp $opt_nojks
-	$opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_gver %auth);
+	$opt_debian $opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_gver %auth);
 
 $opt_tmp="/tmp";
 $opt_carep="../";
 $opt_o="../distribution";
 $opt_r=1;
+$opt_debian="./check-debian.sh";
 
 my @optdef=qw( url|finalURL=s nojks:i
     s|sign f v:i gver|distversion=s version|ver=s r|release=s 
-    carep|repository=s tmp|tmpdir=s o|target=s );
+    carep|repository=s tmp|tmpdir=s o|target=s debian=s );
 
 $0 =~ s/.*\///;
 &GetOptions(@optdef);
@@ -35,8 +36,12 @@ $opt_version=~/AUTO/i and do {
 $opt_gver=$opt_version unless $opt_gver;
 $opt_gver or die "Need at least a global version (--gver=) option\nThis version may be set to AUTO, in which case the version is read\nfrom the VERSION file in the current directory.";
 
+$opt_debian ne "" and do {
+  -x "$opt_debian" or die "Debian SSL checking tool not available, please install $opt_debian";
+};
+
 defined $opt_url or
-  $opt_url="http://www.eugridpma.org/distribution/igtf/$opt_gver/apt";
+  $opt_url="http://dist.eugridpma.info/distribution/igtf/$opt_gver/apt";
 
 # ----------------------------------------------------------------------------
 # configuration settings
@@ -599,6 +604,12 @@ sub packSingleCA($$$$) {
   # don't include old and dusty CAs
   return 1 if $info{"status"} eq "discontinued";
 
+  # do debian checking
+  -x "$opt_debian" or die "$opt_debian: not found or not executable";
+  my $debianflawed = system "$opt_debian $srcdir/$hash.0";
+  if ( $debianflawed ) {
+    $err = "CA $hash is affected by the Debian SSL vulnerblity" and return undef;
+  }
 
   my $tmpdir=tempdir("$opt_tmp/pSCA-$hash-XXXXXX", CLEANUP => 1 );
   print "** CA $info{alias} v$info{version} (hash $hash, dir $srcdir)\n";
