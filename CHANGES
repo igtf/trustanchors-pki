@@ -1,3 +1,9 @@
+Changes from 1.23 to 1.24
+-------------------------
+(29 July 2008)
+
+* Withdrawn NCHC (hash 71a89a47) for urgent operational reasons (TW)
+
 Changes from 1.22 to 1.23
 -------------------------
 (28 July 2008)
@@ -8,6 +14,7 @@ Changes from 1.22 to 1.23
   that were replaced in 2006 by updated root and issuing CAs (UK)
 * Updated LIPCA certificate, based on same key pair (PT)
 * Added accredited classic MREN CA (ME)
+* Added NGO-Netrust (SG), PRAGMA-UCSD (PRAGMA), and NCHC (TW)
 
 
 Changes from 1.21 to 1.22
