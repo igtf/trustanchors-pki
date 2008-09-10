@@ -1,10 +1,10 @@
 #
-# @(#)$Id: 6fee79b0.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: 6fee79b0.info,v 1.4 2007/10/05 07:39:58 pmacvsdg Exp $
 # Information for CA IUCC
 #   obtained from 6fee79b0 in IUCC/
 alias = IUCC
 url = http://certificate.iucc.ac.il/
-email = erez.etzion@cern.ch
+email = ca@iucc.ac.il
 ca_url = http://certificate.iucc.ac.il/ca/cacert.pem
 crl_url = http://certificate.iucc.ac.il/ca/cacrl.pem
 status = accredited:classic
