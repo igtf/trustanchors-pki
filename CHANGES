@@ -8,6 +8,7 @@ Changes from 1.24 to 1.25
 * Updated metadata for AIST GRID CA (JP)
 * Updated metadata for APAC Grid CA (AU)
 * Updated AIST GRID CA certificate (extended life time), based on same key pair (JP)
+* Updated meatdata for NGO-Netrust CA (SG)
 
 Changes from 1.23 to 1.24
 -------------------------
