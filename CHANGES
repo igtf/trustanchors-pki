@@ -1,14 +1,14 @@
 Changes from 1.24 to 1.25
 -------------------------
-(XX September 2008)
+(29 September 2008)
 
-* updated certificates in the experimental or worthless areas (misc)
-* updates to CA contact data in .info files (*)
 * Added accredited classic NCHC CA (TW)
 * Updated metadata for AIST GRID CA (JP)
+* Updated AIST GRID CA (extended life time) based on same key pair (JP)
 * Updated metadata for APAC Grid CA (AU)
-* Updated AIST GRID CA certificate (extended life time), based on same key pair (JP)
-* Updated meatdata for NGO-Netrust CA (SG)
+* Updated metadata (CRL URL) for NGO-Netrust CA (SG)
+* updates to CA contact data in info files (EU, multiple)
+* updated certificates in the experimental or worthless areas (misc)
 
 Changes from 1.23 to 1.24
 -------------------------
