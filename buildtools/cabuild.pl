@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.34 2007/07/18 19:09:24 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.35 2008/07/29 16:10:30 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -311,7 +311,7 @@ sub makeBundleScripts($$$) {
 
   system("cd $tmpdir && tar zcf igtf-policy-installation-bundle-$opt_gver.tar.gz igtf-policy-installation-bundle-$opt_gver");
 
-  copy("$tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz","$targetdir/accredited/igtf-policy-installation-bundle-$opt_gver.tar.gz");
+  copy("$tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz","$targetdir/igtf-policy-installation-bundle-$opt_gver.tar.gz");
 
   (defined $opt_s) and do {
     chomp(my $gpghome=`awk '/%_gpg_path/ { print \$2 }' \$HOME/.rpmmacros`);
@@ -319,7 +319,7 @@ sub makeBundleScripts($$$) {
     my $cmd="gpg --homedir=$gpghome --default-key=$gpgkey -o $tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc -ba $tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz";
     print "Executing GPG signing command:\n  $cmd\n";
     system($cmd);
-    copy("$tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc","$targetdir/accredited/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc");
+    copy("$tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc","$targetdir/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc");
   };
 
   # make the pre-installed tarballs
