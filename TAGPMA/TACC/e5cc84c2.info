@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+# Information for /DC=EDU/DC=UTEXAS/DC=TACC/O=UT-AUSTIN/CN=TACC Classic CA
+#   
+alias = TACC-Classic
+ca_url = http://www.tacc.utexas.edu/CA/e5cc84c2.0
+crl_url = http://www.tacc.utexas.edu/CA/e5cc84c2.r0
+email = ca@tacc.utexas.edu
+status = experimental
+url = http://www.tacc.utexas.edu/CA/
+requires = TACC-Root
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
