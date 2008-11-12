@@ -1,7 +1,7 @@
 alias = PRAGMA-UCSD
-crl_url = http://goc.pragma-grid.net/ca/ca-certs/7721d4d3.r0
+crl_url = http://ca.pragma-grid.net/ca-certs/7721d4d3.r0
 email = pragma-ucsd-ca@sdsc.edu
 status = accredited:classic
-url = http://goc.pragma-grid.net/ca/
+url = http://ca.pragma-grid.net/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
