@@ -1,9 +1,9 @@
 #
-# @(#)$Id: 03aa0ecb.info,v 1.4 2006/09/22 08:18:45 pmacvsdg Exp $
+# @(#)$Id: 03aa0ecb.info,v 1.5 2007/08/30 09:28:51 pmacvsdg Exp $
 # Information for CA BEGrid
 #   obtained from 03aa0ecb in BEGrid/
 alias = BEGrid
-url = http://www.begrid.be/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=14&MMN_position=29:27
+url = http://www.begrid.be/index.php?module=webpage&id=14
 crl_url = http://gridra.belnet.be/pub/crl/cacrl.pem
 email = gridca@belnet.be
 status = accredited:classic
