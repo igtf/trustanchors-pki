@@ -1,7 +1,0 @@
-alias = NGO-Netrust
-crl_url = http://www.apgridpma.org/CA/NGO-Netrust/netrust.crl
-email = noc@netrust.net
-status = accredited:classic
-url = http://www.netrust.net
-version = @VERSION@
-sha1fp.0 = @SHA1FP.0@

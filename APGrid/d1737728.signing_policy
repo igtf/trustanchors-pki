@@ -1,5 +1,0 @@
-# Signing policy for Netrust Certificate Authority
-access_id_CA	X509	'/C=SG/O=Netrust Certificate Authority 1/OU=Netrust CA1'
-pos_rights	globus	CA:sign
-cond_subjects	globus	'"/C=SG/O=Netrust Certificate Authority 1/*"'
-
