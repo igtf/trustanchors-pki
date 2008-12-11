@@ -10,6 +10,7 @@ Changes from 1.25 to 1.26
 * Extended life time of the SEE-GRID CA (SEE)
 * Included CRL for NCSA SLCS CA (US)
 * Withdrawn expired old PK-Grid CA (d2a353a5, superseded by f5ead794) (PK)
+* Temporally removed NGO-Netrust CA (SG)
 
 Changes from 1.24 to 1.25
 -------------------------
