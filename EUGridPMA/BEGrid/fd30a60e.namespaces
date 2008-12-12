@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)fd30a60e.signing_policy.namespaces
+# CA alias    : BELNET-Root
+#    subord_of: 
+#    subjectDN: /C=BE/O=BELNET/CN=BELNET Root CA
+#    hash     : fd30a60e.signing_policy
+#    (generated automatically from fd30a60e.signing_policy)
+#
+TO Issuer "/C=BE/O=BELNET/CN=BELNET Root CA" \
+  PERMIT Subject "/C=BE/OU=BEGRID/O=BELNET/CN=BEgrid CA"
+

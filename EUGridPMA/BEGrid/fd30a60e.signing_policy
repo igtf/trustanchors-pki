@@ -1,0 +1,4 @@
+# EACL - Belnet root CA
+ access_id_CA      X509     '/C=BE/O=BELNET/CN=BELNET Root CA'
+ pos_rights        globus   CA:sign
+ cond_subjects     globus   '"/C=BE/O=BELNET/CN=BELNET Root CA" "/C=BE/OU=BEGRID/O=BELNET/CN=BEgrid CA"'

@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+# Information for new CA Belnet Root CA
+alias = BELNET-Root
+url = https://gridra.begrid.be/
+crl_url = http://gridra.belnet.be/rootca.pem
+email = gridca@belnet.be
+status = experimental
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
