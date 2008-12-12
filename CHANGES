@@ -3,14 +3,15 @@ Changes from 1.25 to 1.26
 (15 December 2008)
 
 * Added accredited classic Indian Grid CA (IGCA) (hash da75f6a8) (IN)
-* Added Texas Advanced Computer Center TACC Root, Classic CAs (US)
-  (note: TACC MICS CA has been added to the experimental area)
 * Updated IUCC root certificate with extended life time (IL)
 * Updated BEGrid (web, CRL) and UCSD-PRAGMA (web) URL metadata (BE, AP/US)
+* New BEGrid2008 root certificate (transitional) (BE)
 * Extended life time of the SEE-GRID CA (SEE)
 * Included CRL for NCSA SLCS CA (US)
-* Withdrawn expired old PK-Grid CA (d2a353a5, superseded by f5ead794) (PK)
 * Temporally removed NGO-Netrust CA (SG)
+* Withdrawn expired old PK-Grid CA (d2a353a5, superseded by f5ead794) (PK)
+* Experimentally added Texas Advanced Computer Center TACC Root, 
+  Classic, and MICS CAs to the experimental area (US)
 
 Changes from 1.24 to 1.25
 -------------------------
