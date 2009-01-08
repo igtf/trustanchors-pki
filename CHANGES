@@ -1,5 +1,11 @@
 Changes from 1.25 to 1.26
 -------------------------
+(XX January 2008)
+
+* Corrected signing namespace for BEGrid2008 CA (BE)
+
+Changes from 1.25 to 1.26
+-------------------------
 (15 December 2008)
 
 * Added accredited classic Indian Grid CA (IGCA) (hash da75f6a8) (IN)
