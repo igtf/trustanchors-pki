@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+alias = CNRS2-Projets
+url = http://igc.services.cnrs.fr/GRID-FR/
+email = grid-fr@urec.cnrs.fr
+crl_url = http://crls.services.cnrs.fr/CNRS2-Projets/getpem.crl
+requires = CNRS2
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
