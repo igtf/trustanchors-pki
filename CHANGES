@@ -7,6 +7,7 @@ Changes from 1.26 to 1.27
 * ASGCCA-2007 changed signature algorithm from MD5 to SHA1 (TW)
 * Added new CNRS2 hierarchy: CNRS2 -> CNRS2-Projets -> CNRS2-Grid-FR (FR)
 * Updated IUCC root certificate (IL)
+* Obsoleted EstonianGrid CA (EE)
 
 Changes from 1.25 to 1.26
 -------------------------
