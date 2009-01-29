@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.36 2008/10/02 16:12:54 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.37 2009/01/29 13:47:47 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -80,8 +80,8 @@ mkdir $bundledir;
 
 foreach my $k ( sort keys %auth ) {
   my %info = %{$auth{$k}{"info"}};
-#  &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"hash"},%info) 
-#    or die "packSingleCA: $err\n";
+  &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"hash"},%info) 
+    or die "packSingleCA: $err\n";
 }
 
 &makeCollectionInfo($opt_carep,$bundledir,$opt_o)
