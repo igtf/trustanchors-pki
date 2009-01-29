@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.35 2008/07/29 16:10:30 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.36 2008/10/02 16:12:54 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -10,13 +10,14 @@ use File::Temp qw(tempdir);
 use File::Copy qw(copy move);
 use strict;
 use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp $opt_nojks
-	$opt_debian $opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_gver %auth);
+	$opt_debian $opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_obsoletedbase $opt_gver %auth);
 
 $opt_tmp="/tmp";
 $opt_carep="../";
 $opt_o="../distribution";
 $opt_r=1;
 $opt_debian="./check-debian.sh";
+$opt_obsoletedbase="./obsoleted";
 
 my @optdef=qw( url|finalURL=s nojks:i
     s|sign f v:i gver|distversion=s version|ver=s r|release=s 
@@ -79,8 +80,8 @@ mkdir $bundledir;
 
 foreach my $k ( sort keys %auth ) {
   my %info = %{$auth{$k}{"info"}};
-  &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"hash"},%info) 
-    or die "packSingleCA: $err\n";
+#  &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"hash"},%info) 
+#    or die "packSingleCA: $err\n";
 }
 
 &makeCollectionInfo($opt_carep,$bundledir,$opt_o)
@@ -360,7 +361,15 @@ sub makeCollectionInfo($$$) {
   my $pdir="$tmpdir/$pname";
   mkdir $pdir;
   my %fh;
+  my @allobscas=();
   
+  # RPM distribution tokens for spec file
+  my %tokens = ( "VERSION" => $opt_gver,
+	  "RELEASE" => $opt_r,
+	  "PACKAGENAME" => $pname,
+	  "TGZNAME" => "$pname.tar.gz",
+	);
+
   # first the top-level file (with an explicit list of profiles)
   open INFOTL,">$pdir/policy-igtf.info"  or do {
     $err="Cannot open file $pdir/ca-policy_igtf-$pname: $!\n";
@@ -372,6 +381,24 @@ sub makeCollectionInfo($$$) {
   foreach my $s ( @validStatus ) {
     (my $pname=$s)=~s/.*://;
     my $nauthorities=0;
+    my @obscas=();
+
+    my $obsfilename = "${opt_obsoletedbase}.${s}.in";
+    $obsfilename =~ s/:/./g;
+    $tokens{"OBSOLETED.$pname"} = "";
+    -f "$obsfilename" and do {
+      open OBSFILE,"$obsfilename" or die "Cannot open $obsfilename: $!\n";
+      while (<OBSFILE>) {
+        chomp($_);
+        push @obscas,$_;
+        push @allobscas,$_;
+      }
+      close OBSFILE;
+      if ($#obscas>=0) {
+        $tokens{"OBSOLETED.$pname"} = "Obsoletes:";
+      }
+    };
+
     open INFO,">$pdir/policy-igtf-$pname.info"  or do {
       $err="Cannot open file $pdir/ca_policy_igtf-$pname: $!\n";
       return undef;
@@ -395,9 +422,32 @@ sub makeCollectionInfo($$$) {
       $nauthorities++;
     }
     print INFO "\n";
+
+    if ($#obscas>=0) {
+      $nauthorities=0;
+      print INFO "obsoletes = ";
+      foreach my $ca ( @obscas ) { 
+        $tokens{"OBSOLETED.$pname"} .= " ca_${ca}";
+        $nauthorities and print INFO ", \\\n    ";
+        print INFO "$ca";
+        $nauthorities++;
+      }
+    }
+
     close INFO;
   }
   print INFOTL "\n";
+
+  if ($#allobscas>=0) {
+    my $nauthorities=0;
+    print INFOTL "obsoletes = ";
+    foreach my $ca ( @allobscas ) { 
+      $nauthorities and print INFOTL ", \\\n    ";
+      print INFOTL "$ca";
+      $nauthorities++;
+    }
+  }
+
   close INFOTL;
 
   # collect info files for the tgz bundle
@@ -412,13 +462,6 @@ sub makeCollectionInfo($$$) {
   system("cd $tmpdir && tar zcf $pname.tar.gz $pname");
   copy("$tmpdir/$pname.tar.gz",
     "$targetdir/accredited/tgz/");
-
-  # build RPM distribution
-  my %tokens = ( "VERSION" => $opt_gver,
-	  "RELEASE" => $opt_r,
-	  "PACKAGENAME" => $pname,
-	  "TGZNAME" => "$pname.tar.gz",
-	);
 
   foreach my $s ( @validStatus ) {
     $s=~/^accredited/ or next; my $ucs=uc($s);
