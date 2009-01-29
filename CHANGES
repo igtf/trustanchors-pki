@@ -1,6 +1,6 @@
 Changes from 1.26 to 1.27
 -------------------------
-(XX January 2008)
+(30 January 2008)
 
 * Corrected signing namespace for BEGrid2008 CA (BE)
 * Added NERSC SLCS CA (US)
