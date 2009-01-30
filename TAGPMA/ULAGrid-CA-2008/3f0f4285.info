@@ -1,0 +1,11 @@
+#
+#  Information for the ULAGrid CA 2008
+#
+alias = ULAGrid-CA-2008
+url = http://ra.cecalc.ula.ve
+ca_url = http://ra.cecalc.ula.ve/pub/cacert/cacert.txt
+crl_url=http://ra.cecalc.ula.ve/pub/crl/cacrl.crl
+email = ca@cecalc.ula.ve
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+status = accredited:classic
