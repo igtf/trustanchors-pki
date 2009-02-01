@@ -1,10 +1,10 @@
 
-# @(#)$Id$
+# @(#)$Id: b93d6240.info,v 1.1 2009/01/10 01:15:56 pmacvsmh Exp $
 # NERSC Online SLCS CA - subordinate of ESnet root CA
 alias = NERSC-SLCS
 url = http://certs.nersc.gov/
 ca_url = http://certs.nersc.gov/certificates/b93d6240.0
-crl_url = http://certs.nersc.gov/certificates/b93d6240.crl_url
+crl_url = http://certs.nersc.gov/certificates/b93d6240.r0
 email = certs@nersc.gov
 status = accredited:slcs
 sha1fp.0 = AC:1E:80:F7:C6:2F:37:B8:21:56:D8:F2:D3:2C:0A:A3:68:D7:6E:8A
