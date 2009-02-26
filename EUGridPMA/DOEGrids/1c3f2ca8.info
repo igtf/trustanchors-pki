@@ -1,10 +1,10 @@
 #
-# @(#)$Id: 1c3f2ca8.info,v 1.2 2006/11/08 20:36:34 helm Exp $
+# @(#)$Id: 1c3f2ca8.info,v 1.5 2006/11/24 17:00:35 pmacvsdg Exp $
 # Information for CA DOEGrids
 #   obtained from 1c3f2ca8 in DOEGrids/
 alias = DOEGrids
 url = http://www.doegrids.org/
-crl_url = http://pki1.doegrids.org/CRL/1c3f2ca8.r0
+crl_url = http://crl.doegrids.org/1c3f2ca8/1c3f2ca8.r0
 email = trouble@es.net
 requires = ESnet
 status = accredited:classic
