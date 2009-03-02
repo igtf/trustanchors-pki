@@ -1,12 +1,13 @@
 Changes from 1.27 to 1.28
 -------------------------
-(2 March 2009)
+(9 March 2009)
 
 * Added accredited classic ULAGrid CA (VE)
 * Added accredited TACC Root and TACC Classic CAs (US)
 * Updated NERSC CRL URL download location (US)
 * Updated DOEGrids CRL URL download location (US)
 * Extended life time of NorduGrid CA (1f0e8352) (DK,SE,NO,FI,IS)
+* Added SigmaNet LatGrid CA (LV)
 
 Changes from 1.26 to 1.27
 -------------------------

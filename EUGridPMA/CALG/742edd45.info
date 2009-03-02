@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+# Information for CA CALG (LatGrid)
+#   
+alias = LatGrid
+crl_url = http://grid.lumii.lv/calg-crl.pem
+url = http://grid.lumii.lv/
+email = dana@sigmanet.lv
+status = experimental
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
