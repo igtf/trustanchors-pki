@@ -8,6 +8,7 @@ Changes from 1.27 to 1.28
 * Updated DOEGrids CRL URL download location (US)
 * Extended life time of NorduGrid CA (1f0e8352) (DK,SE,NO,FI,IS)
 * Added SigmaNet CALG CA (LV)
+* Updated AEGIS CA root certificate to reflect TLD name change (RS)
 
 Changes from 1.26 to 1.27
 -------------------------
