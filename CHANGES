@@ -7,7 +7,7 @@ Changes from 1.27 to 1.28
 * Updated NERSC CRL URL download location (US)
 * Updated DOEGrids CRL URL download location (US)
 * Extended life time of NorduGrid CA (1f0e8352) (DK,SE,NO,FI,IS)
-* Added SigmaNet LatGrid CA (LV)
+* Added SigmaNet CALG CA (LV)
 
 Changes from 1.26 to 1.27
 -------------------------
