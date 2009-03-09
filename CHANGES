@@ -9,6 +9,9 @@ Changes from 1.27 to 1.28
 * Extended life time of NorduGrid CA (1f0e8352) (DK,SE,NO,FI,IS)
 * Added SigmaNet CALG CA (LV)
 * Updated AEGIS CA root certificate to reflect TLD name change (RS)
+* Added CRL for SWITCH-SLCS issuing CA (304cf809) (CH)
+Other updates to miscellaneous CAs:
+* Worthless CA for EGEE "GILDA" testbed added to 'worthless' section (EU)
 
 Changes from 1.26 to 1.27
 -------------------------

@@ -1,8 +1,9 @@
-# @(#)$Id$
+# @(#)$Id: 304cf809.info,v 1.1 2007/03/07 09:03:03 pmacvsdg Exp $
 alias = SWITCHslcs
 requires = SWITCHgrid-Root
 url = http://www.switch.ch/pki/grid
 ca_url = http://ca.grid.switch.ch/SWITCHslcsCA.crt
+crl_url = http://crl.grid.switch.ch/SWITCHslcsCA.crl
 email = pki@switch.ch
 status = accredited:slcs
 version = @VERSION@
