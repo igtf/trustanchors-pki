@@ -1,0 +1,6 @@
+# EACL GILDA worthless CA
+# @(#)$Id$
+#
+access_id_CA      X509     '/C=IT/O=GILDA/CN=GILDA CA'
+pos_rights        globus   CA:sign
+cond_subjects     globus   '"/C=IT/O=GILDA/CN=GILDA CA" "/C=it/O=GILDA/*" "/C=IT/O=GILDA/*"'

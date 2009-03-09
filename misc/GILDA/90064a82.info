@@ -1,0 +1,10 @@
+# @(#)$Id$
+# GILDA (the EGEE Project) worthless CA
+alias = GILDA-CA
+url = https://gilda-security.ct.infn.it/CA/
+ca_url = https://gilda-security.ct.infn.it/CA/mgt/getCA.php
+crl_url = http://grid018.ct.infn.it/CA/new_crl.crl
+email = gilda-ca@ct.infn.it
+status = worthless
+sha1fp.0 = @SHA1FP.0@
+version = @VERSION@
