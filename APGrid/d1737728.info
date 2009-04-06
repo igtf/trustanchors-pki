@@ -1,0 +1,7 @@
+alias = NGO-Netrust
+crl_url = http://crls.apgrid.org/NGO-Netrust/netrust.crl
+email = noc@netrust.net
+status = accredited:classic
+url = http://netrustconnector.netrust.net/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
