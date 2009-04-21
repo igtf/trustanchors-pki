@@ -5,6 +5,7 @@ Changes from 1.28 to 1.29
 * Restored NGO-Netrust CA (SG)
 * Updated AIST Grid (CRL) URL metadata (JP)
 * Added accredited MD-Grid CA with hash 9ff26ea4 (MD)
+* Added accredited HKU Grid CA with hash 4798da47 (HK)
 
 Changes from 1.27 to 1.28
 -------------------------
