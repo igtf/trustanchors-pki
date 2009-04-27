@@ -3,7 +3,7 @@
 
 foreach $f ( @ARGV ) {
 
-  ($hash=$f)=~s/.*\/([a-z0-9]+)\..*$/$1/;
+  ($hash=$f)=~s/.*([a-z0-9]{8})\..*$/$1/;
   ($infof=$f)=~s/signing_policy$/info/;
   ($nsf=$f)=~s/signing_policy$/namespaces/;
 

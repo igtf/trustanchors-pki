@@ -1,0 +1,11 @@
+# BYGCA - Belarussian Grid CA UIPP/BAS
+# @(#)$Id$
+#   
+alias = BYGCA
+ca_url = http://ca.grid.by/bygca-cacert.pem
+crl_url = http://ca.grid.by/bygca-crl.crl
+email = http://ca.grid.by/bygca-crl.crl
+status = accredited:classic
+url = http://ca.grid.by/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
