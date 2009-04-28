@@ -4,10 +4,10 @@
 # @(#)4798da47.signing_policy.namespaces
 # CA alias    : HKU
 #    subord_of: 
-#    subjectDN: /DC=HK/DC=HKU/DC=Grid/CN=HKU Grid CA
+#    subjectDN: /DC=HK/DC=HKU/DC=GRID/CN=HKU Grid CA
 #    hash     : 4798da47.signing_policy
 #    (generated automatically from 4798da47.signing_policy)
 #
-TO Issuer "/DC=HK/DC=HKU/DC=Grid/CN=HKU Grid CA" \
-  PERMIT Subject "/DC=HK/DC=HKU/DC=Grid/.*"
+TO Issuer "/DC=HK/DC=HKU/DC=GRID/CN=HKU Grid CA" \
+  PERMIT Subject "/DC=HK/DC=HKU/DC=GRID/.*"
 
