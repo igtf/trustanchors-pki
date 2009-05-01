@@ -1,6 +1,6 @@
 Changes from 1.28 to 1.29
 -------------------------
-(28 April 2009)
+(4 May 2009)
 
 * Restored NGO-Netrust CA (SG)
 * Updated AIST Grid (CRL) URL metadata (JP)
@@ -8,6 +8,7 @@ Changes from 1.28 to 1.29
 * Added accredited HKU Grid CA with hash 4798da47 (HK)
 * Updated signing policy file of APAC Grid CA (AU)
 * Added accredited classic BYGCA (Belarus) with hash 709bed08 (BY)
+* Updated namespace for the APAC CA (AU, NZ)
 
 Changes from 1.27 to 1.28
 -------------------------
