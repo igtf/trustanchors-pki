@@ -6,6 +6,7 @@ Changes from 1.28 to 1.29
 * Updated AIST Grid (CRL) URL metadata (JP)
 * Added accredited MD-Grid CA with hash 9ff26ea4 (MD)
 * Added accredited HKU Grid CA with hash 4798da47 (HK)
+* Updated signing policy file of APAC Grid CA (AU)
 * Added accredited classic BYGCA (Belarus) with hash 709bed08 (BY)
 
 Changes from 1.27 to 1.28
