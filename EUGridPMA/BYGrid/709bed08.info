@@ -1,10 +1,10 @@
-# BYGCA - Belarussian Grid CA UIPP/BAS
-# @(#)$Id$
+# BYGCA - Belarusian Grid CA (UIPP NASB)
+# @(#)$Id: 709bed08.info,v 1.1 2009/04/27 18:48:04 pmacvsdg Exp $
 #   
 alias = BYGCA
 ca_url = http://ca.grid.by/bygca-cacert.pem
 crl_url = http://ca.grid.by/bygca-crl.crl
-email = http://ca.grid.by/bygca-crl.crl
+email = ca@newman.bas-net.by
 status = accredited:classic
 url = http://ca.grid.by/
 version = @VERSION@
