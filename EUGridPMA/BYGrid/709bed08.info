@@ -1,5 +1,5 @@
-# BYGCA - Belarusian Grid CA (UIPP NASB)
-# @(#)$Id: 709bed08.info,v 1.1 2009/04/27 18:48:04 pmacvsdg Exp $
+# BYGCA - Belarusian Grid CA (UIIP NASB)
+# @(#)$Id: 709bed08.info,v 1.2 2009/05/05 10:26:42 pmacvsdg Exp $
 #   
 alias = BYGCA
 ca_url = http://ca.grid.by/bygca-cacert.pem
