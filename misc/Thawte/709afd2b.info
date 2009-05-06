@@ -1,0 +1,10 @@
+# @(#)$Id$
+#
+alias = Thawte-freemail-root
+ca_url = http://www.thawte.com/
+crl_url = http://crl.thawte.com/ThawtePersonalFreemailCA.crl
+email = southafricasupport@thawte.com
+status = worthless
+url = http://www.thawte.com/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
