@@ -9,5 +9,5 @@
 #    (generated automatically from e8ac4b61.signing_policy)
 #
 TO Issuer "/C=US/O=National Center for Supercomputing Applications/OU=Certificate Authorities/CN=GridShib CA" \
-  PERMIT Subject "/C=US/O=National Center for Supercomputing Applications/.*"
+  PERMIT Subject "/C=US/O=National Center for Supercomputing Applications/CN=.*"
 
