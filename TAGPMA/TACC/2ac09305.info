@@ -1,12 +1,12 @@
 #
-# @(#)$Id$
+# @(#)$Id: 2ac09305.info,v 1.1 2008/11/06 21:45:41 pmacvsdg Exp $
 # Information for /DC=EDU/DC=UTEXAS/DC=TACC/O=UT-AUSTIN/CN=TACC MICS CA
 #   
 alias = TACC-MICS
 ca_url = http://www.tacc.utexas.edu/CA/2ac09305.0
 crl_url = http://www.tacc.utexas.edu/CA/2ac09305.r0
 email = ca@tacc.utexas.edu
-status = experimental
+status = accredited:mics
 url = http://www.tacc.utexas.edu/CA/
 requires = TACC-Root
 version = @VERSION@

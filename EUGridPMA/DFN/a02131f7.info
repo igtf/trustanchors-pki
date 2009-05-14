@@ -1,0 +1,9 @@
+# @(#)$Id$
+alias = DFN-SLCS
+ca_url = http://cdp1.pca.dfn.de/slcs-ca/pub/cacert/cacert.crt
+crl_url = http://cdp1.pca.dfn.de/slcs-ca/pub/crl/cacrl.crl
+email = dfnpca@dfn-cert.de
+status = accredited:slcs
+url = http://www.pki.dfn.de/index.php?id=slcs
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
