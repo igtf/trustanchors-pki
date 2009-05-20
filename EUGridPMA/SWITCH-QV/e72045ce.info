@@ -1,8 +1,9 @@
 #
-# @(#)$Id: e72045ce.info,v 1.1 2009/05/20 12:54:14 pmacvsdg Exp $
+# @(#)$Id: e72045ce.info,v 1.2 2009/05/20 12:58:17 pmacvsdg Exp $
 #   
-alias = SWITCH-QV-GridICA1
-ca_url = http://www.quovadisglobal.com/QVRepository/~/media/Files/Roots/quovadis_gridica_der.ashx
+alias = SWITCH-QuoVadis-Grid-ICA1
+requires = QuoVadis-Root-CA1
+ca_url = http://trust.quovadisglobal.com/pem/qvgridg1.crt
 crl_url = http://crl.quovadisglobal.com/qvgridg1.crl
 email = pki@switch.ch
 status = accredited:classic

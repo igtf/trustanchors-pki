@@ -2,12 +2,10 @@
 #NAMESPACES-VERSION: 1.0
 #
 # @(#)5cf9d536.namespaces
-# CA alias    : SWITCH-QV-RootCA
-#    subord_of: 
-#    subjectDN: /C=BM/O=QuoVadis Limited/OU=Root Certification Authority/CN=QuoVadis Root Certification Authority
-#    hash     : 5cf9d536
-#    (generated automatically from 5cf9d536.signing_policy)
+# CA Hierarchy anchored at QuoVadis Root CA 1 through GridICA (SWITCH)
 #
 TO Issuer "/C=BM/O=QuoVadis Limited/OU=Root Certification Authority/CN=QuoVadis Root Certification Authority" \
   PERMIT Subject "/C=BM/O=QuoVadis Limited/OU=Issuing Certification Authority/CN=QuoVadis Grid ICA"
 
+TO Issuer "/C=BM/O=QuoVadis Limited/OU=Issuing Certification Authority/CN=QuoVadis Grid ICA" \
+  PERMIT Subject "/dc=com/dc=quovadisglobal/dc=grid/.*"
