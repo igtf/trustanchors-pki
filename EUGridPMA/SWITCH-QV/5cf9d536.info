@@ -1,0 +1,10 @@
+#
+# @(#)$Id$
+#   
+alias = SWITCH-QV-RootCA
+crl_url = http://crl.quovadisglobal.com/qvrca.crl
+email = pki@switch.ch
+status = accredited:classic
+url = http://www.switch.ch/pki/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
