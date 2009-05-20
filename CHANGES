@@ -6,6 +6,7 @@ Changes from 1.29 to 1.30
 * Added accredited NCSA GridShib SLCS CA (US)
 * Added accredited DFN SLCS CA (DE)
 * Added accredited TACC MICS CA (US)
+* Added accredited SWITCH (QuoVadis anchored) CAs (CH)
 
 Changes from 1.28 to 1.29
 -------------------------
