@@ -3,10 +3,12 @@ Changes from 1.29 to 1.30
 (2 June 2009)
 
 * Updated contact meta-data for BYGCA, hash 709bed08 (BY)
+* Updated URLs for DFN Grid PKI public web pages (DE)
 * Added accredited NCSA GridShib SLCS CA (US)
 * Added accredited DFN SLCS CA (DE)
 * Added accredited TACC MICS CA (US)
 * Added accredited SWITCH (QuoVadis anchored) CAs (CH)
+* Added accredited FNAL-SLCS CA (US)
 
 Changes from 1.28 to 1.29
 -------------------------

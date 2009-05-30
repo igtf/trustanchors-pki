@@ -8,4 +8,4 @@ TO Issuer "/C=BM/O=QuoVadis Limited/OU=Root Certification Authority/CN=QuoVadis 
   PERMIT Subject "/C=BM/O=QuoVadis Limited/OU=Issuing Certification Authority/CN=QuoVadis Grid ICA"
 
 TO Issuer "/C=BM/O=QuoVadis Limited/OU=Issuing Certification Authority/CN=QuoVadis Grid ICA" \
-  PERMIT Subject "/dc=com/dc=quovadisglobal/dc=grid/.*"
+  PERMIT Subject "/DC=com/DC=quovadisglobal/DC=grid/.*"
