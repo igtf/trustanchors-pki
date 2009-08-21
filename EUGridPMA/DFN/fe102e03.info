@@ -1,5 +1,5 @@
 #
-# @(#)$Id: fe102e03.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
+# @(#)$Id: fe102e03.info,v 1.3 2009/05/30 12:31:46 pmacvsdg Exp $
 # Information for CA DFN-GridGermany-Server
 #   obtained from fe102e03 in DFN/
 alias = DFN-GridGermany-Server
@@ -7,7 +7,7 @@ ca_url = http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/
 crl_url = http://cdp1.pca.dfn.de/dfn-pki/certification/x509/grid/g1/ca-server/g1/data/crls/ca-server-crl.crl
 email = dfnpca@dfn-cert.de
 requires = DFN-GridGermany-Root
-status = accredited:classic
+status = discontinued
 url = http://www.pki.dfn.de/index.php?id=grid
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
