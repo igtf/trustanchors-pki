@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.39 2009/05/12 08:22:10 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.40 2009/06/02 20:11:25 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -336,6 +336,7 @@ sub makeBundleScripts($$$) {
     system("rm $preinst_tmp/*");
     copy("$tmpdir/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz",
          "$targetdir/accredited/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz");
+    system("cd $targetdir/accredited/ && ln -s igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz igtf-preinstalled-bundle-$pname.tar.gz");
   }
 
   return 1;
