@@ -1,10 +1,10 @@
 # TRGrid CA Information
 #
-# @(#)$Id: 1691b9ba.info,v 1.1 2005/10/14 16:02:37 pmacvsdg Exp $
+# @(#)$Id: 1691b9ba.info,v 1.2 2005/10/18 20:26:01 pmacvsdg Exp $
 # 
 alias = TRGrid
 ca_url = http://www.grid.org.tr/ca/ca_cert/1691b9ba.0
-crl_url = http://www.grid.org.tr/ca/crl/crl.pem
+crl_url = http://www.grid.org.tr/ca/crl/crl.der
 email = ca@grid.org.tr
 status = accredited:classic
 url = http://www.grid.org.tr/ca

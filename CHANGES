@@ -4,7 +4,7 @@ Changes from 1.31 to 1.32
 
 * Updated country TLD in URLs and email for AEGIS CA (RS)
 * Updated contact information for CALC CA (LV)
-* Extended life time and updated profile or TR-Grid CA cert (TR)
+* Extended life time and updated profile or TR-Grid CA cert and CRL URL (TR)
 * Added persistently-named links to pre-installed accredited bundles
 * Updated or added references to CP and CPS documents for GR
 
