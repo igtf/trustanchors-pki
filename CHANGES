@@ -7,6 +7,8 @@ Changes from 1.31 to 1.32
 * Extended life time and updated profile or TR-Grid CA cert and CRL URL (TR)
 * Added persistently-named links to pre-installed accredited bundles
 * Updated or added references to CP and CPS documents for GR
+* Withdrawn obsolete CAs SWITCH-Personal-2007, SwissSign-Root, SWITCH, 
+  SwissSign-Bronze, SwissSign-Silver, SWITCH-Server-2007 (CH)
 
 Changes from 1.30 to 1.31
 -------------------------
