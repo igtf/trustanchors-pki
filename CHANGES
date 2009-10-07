@@ -1,14 +1,15 @@
 Changes from 1.31 to 1.32
 -------------------------
-(XX September 2009)
+(XX October 2009)
 
 * Updated country TLD in URLs and email for AEGIS CA (RS)
 * Updated contact information for CALC CA (LV)
 * Extended life time and updated profile or TR-Grid CA cert and CRL URL (TR)
-* Added persistently-named links to pre-installed accredited bundles
-* Updated or added references to CP and CPS documents for GR
+* Updated and added references to CP and CPS documents for the following
+  authorities: HellasGrid (GR), ROSA (RO), DutchGrid (NL)
 * Withdrawn obsolete CAs SWITCH-Personal-2007, SwissSign-Root, SWITCH, 
   SwissSign-Bronze, SwissSign-Silver, SWITCH-Server-2007 (CH)
+* Added persistently-named links to pre-installed accredited bundles
 
 Changes from 1.30 to 1.31
 -------------------------
