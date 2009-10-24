@@ -1,0 +1,10 @@
+# @(#)$Id$
+# UTN-USERFirst-Hardware.crt
+alias = UTN-USERFirst-Hardware
+ca_url = http://crt.comodoca.com/UTN-USERFirst-Hardware.crt
+crl_url = http://crl.comodoca.com/UTN-USERFirst-Hardware.crl
+policy_url = http://www.comodo.com/about/comodo-agreements.php
+url = http://www.comodo.com/
+status = worthless
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

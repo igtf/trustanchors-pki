@@ -1,0 +1,11 @@
+# @(#)$Id$
+# TERENA SSL CA
+alias = TERENA-SSL-CA
+requires = UTN-USERFirst-Hardware
+ca_url = http://crt.tcs.terena.org/TERENASSLCA.crt
+crl_url = http://crl.tcs.terena.org/TERENASSLCA.crl
+url = http://www.terena.org/activities/tcs/
+policy_url = https://www.terena.org/activities/tcs/repository/
+status = worthless
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
