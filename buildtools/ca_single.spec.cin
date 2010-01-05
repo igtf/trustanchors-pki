@@ -10,7 +10,7 @@ AutoReqProv: no
 BuildRoot: %{_tmppath}/%{name}-root
 BuildArch: noarch
 
-%define GSI_CA_NAME  %(tar xOfz %{SOURCE0} @PACKAGENAME@/@HASH@.0 | openssl x509 -noout -subject |sed 's#^.*/CN=##')
+%define GSI_CA_NAME  %(tar xOfz %{SOURCE0} @PACKAGENAME@/@CERTFILE@ | openssl x509 -noout -subject |sed 's#^.*/CN=##')
 
 Summary: Trust anchors for @PROFILE@ @COLLECTION@ authority @ALIAS@
 
@@ -40,7 +40,7 @@ rm -rf $RPM_BUILD_ROOT
 
 mkdir -p $RPM_BUILD_ROOT/etc/grid-security/certificates
 
-cp -pr @HASH@.* $RPM_BUILD_ROOT/etc/grid-security/certificates/
+cp -pr * $RPM_BUILD_ROOT/etc/grid-security/certificates/
 
 %clean
 rm -rf $RPM_BUILD_ROOT

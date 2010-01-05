@@ -10,7 +10,9 @@ use File::Temp qw(tempdir);
 use File::Copy qw(copy move);
 use strict;
 use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp $opt_nojks
-	$opt_debian $opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_obsoletedbase $opt_gver %auth);
+	$opt_debian $opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_obsoletedbase $opt_gver %auth
+        $opt_opensslzero $opt_opensslone
+    );
 
 $opt_tmp="/tmp";
 $opt_carep="../";
@@ -18,13 +20,19 @@ $opt_o="../distribution";
 $opt_r=1;
 $opt_debian="./check-debian.sh";
 $opt_obsoletedbase="./obsoleted";
+$opt_opensslzero="/usr/bin/openssl";
+$opt_opensslone="/opt/openssl1/bin/openssl";
 
 my @optdef=qw( url|finalURL=s nojks:i
     s|sign f v:i gver|distversion=s version|ver=s r|release=s 
-    carep|repository=s tmp|tmpdir=s o|target=s debian=s );
+    carep|repository=s tmp|tmpdir=s o|target=s debian=s 
+    opensslzero=s opensslone=s );
 
 $0 =~ s/.*\///;
 &GetOptions(@optdef);
+
+-x $opt_opensslzero or die "Cannot execute openssl v0.x command at $opt_opensslzero, exiting.\n";
+-x $opt_opensslone  or die "Cannot execute openssl v1.x command at $opt_opensslone, exiting.\n";
 
 $opt_version=~/AUTO/i and do {
   chomp($opt_version=`cat VERSION`);
@@ -80,7 +88,7 @@ mkdir $bundledir;
 
 foreach my $k ( sort keys %auth ) {
   my %info = %{$auth{$k}{"info"}};
-  &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"hash"},%info) 
+  &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"basename"},%info) 
     or die "packSingleCA: $err\n";
 }
 
@@ -293,10 +301,37 @@ sub makeBundleScripts($$$) {
     (my $collection=$auth{$ca}{"info"}->{"status"})=~s/:.*//;
     print MKTPL "$ca: prep\n";
     foreach my $ext (
-            glob("$builddir/src/$collection/".$auth{$ca}{"hash"}.".*") ) {
+            glob("$builddir/src/$collection/".$auth{$ca}{"info"}->{"alias"}.".*") ) {
       (my $f=$ext)=~s/.*\///;
       print MKTPL "\t\$(install) src/$collection/$f \$(prefix)/\n";
     }
+    # also create the symlinks for both OpenSSL versions
+    # from the info data and offsets
+    print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".pem \$(prefix)/".
+                $auth{$ca}{"info"}->{"hash0"}.".".$auth{$ca}{"info"}->{"offset0"}."\n";
+    print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".pem \$(prefix)/".
+                $auth{$ca}{"info"}->{"hash1"}.".".$auth{$ca}{"info"}->{"offset1"}."\n";
+
+    -f "$builddir/src/$collection/".$auth{$ca}{"info"}->{"alias"}.".signing_policy" and do {
+      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".signing_policy ".
+                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash0"}.".signing_policy\n";
+      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".signing_policy ".
+                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash1"}.".signing_policy\n";
+    };
+    -f "$builddir/src/$collection/".$auth{$ca}{"info"}->{"alias"}.".namespaces" and do {
+      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".namespaces ".
+                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash0"}.".namespaces\n";
+      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".namespaces ".
+                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash1"}.".namespaces\n";
+    };
+    -f "$builddir/src/$collection/".$auth{$ca}{"info"}->{"alias"}.".info" and do {
+      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".info ".
+                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash0"}.".info\n";
+      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".info ".
+                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash1"}.".info\n";
+    };
+
+    # close of stanza needs empty line
     print MKTPL "\n";
   }
   close MKTPL;
@@ -330,6 +365,7 @@ sub makeBundleScripts($$$) {
       ($pname=$s)=~s/.*://; 
     } else { next; }
     my $preinst_tmp=tempdir("$opt_tmp/pPreinstBundle-$pname-XXXXXX", CLEANUP => 0 );
+    chmod 0755,$preinst_tmp;
     system("cd $tmpdir/igtf-policy-installation-bundle-$opt_gver ; ".
            "./configure --with-profile=$pname --prefix=$preinst_tmp && make install");
     system("cd $preinst_tmp ; tar zcf $tmpdir/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz .");
@@ -556,27 +592,62 @@ sub expandRequiresWithVersion($) {
 # sub getAuthoritiesList($dir,$opt_version)
 #
 # collect all CAs anywhere in the tree (1 level deep)
-# and resolve version and version style in the info hash
+# and resolve version and version style in the info basename
 #
 sub getAuthoritiesList($$) {
   my ($carepdir,$eVersion) = @_;
   my %auth;
+  my %hashzerocount;
+  my %hashonecount;
 
   foreach my $pat ( @Main::infoGlob ) {
   foreach my $f ( glob("$carepdir/$pat") ) {
     (my $dir=$f)=~s/\/[^\/]+$//;
-    (my $hash=$f)=~s/.*\/([a-f0-9]{8})\.info/$1/;
+    (my $basename=$f)=~s/.*\/(\w+)\.info$/$1/;
     my %info=&readInfoFile($f);
 
     my $version=undef;
     $version=($eVersion or ($info{"version"}=~/@/) ? $eVersion : undef );
     $version=$info{"version"} unless ($eVersion or ($info{"version"}=~/@/));
-    $version=&getFilesVersion($version,"$dir/$hash.*");
+    $version=&getFilesVersion("$dir/$basename.*") unless defined $version;
     $info{"version"} = $version;
 
+    # figure out if there is a certificate to go with this CA, and
+    # bail out otherwise. A certificate has a ".0" extension or is
+    # named in the info file
+    my $certfilename;
+    if ( defined $info{"certfile"} ) {
+      $certfilename = $info{"certfile"};
+    } else {
+      $certfilename = $info{"certfile"} = "$basename.0";
+    }
+    if ( ! -f "$dir/$certfilename" ) {
+      warn "CA $info{alias} in $dir has no actual certificate file ($certfilename), skipping.\n";
+      next;
+    }
+
+    defined $info{"hash0"} or do {
+      chomp(my $hashzero = `$opt_opensslzero x509 -noout -hash -in '$dir/$certfilename'`);
+      $info{"hash0"} = $hashzero;
+      # calculate the 'offset' for the OpenSSL v0 symlinking (.0, .1, .2, etc files)
+      defined $hashzerocount{$hashzero} or $hashzerocount{$hashzero}=0;
+      $info{"offset0"} = $hashzerocount{$hashzero}++;
+    };
+    defined $info{"hash1"} or do {
+      chomp(my $hashone  = `$opt_opensslone  x509 -noout -hash -in '$dir/$certfilename'`);
+      $info{"hash1"} = $hashone;
+      # calculate the 'offset' for the OpenSSL v1 symlinking (.0, .1, .2, etc files)
+      defined $hashonecount{$hashone} or $hashonecount{$hashone}=0;
+      $info{"offset1"} = $hashonecount{$hashone}++;
+    };
+
     $auth{$info{"alias"}} = 
-      { "hash" => $hash, "dir" => $dir, "info" => \%info };
-    #print "Added CA $hash with version $version\n";
+      { "basename" => $basename, "dir" => $dir, 
+        "hash0" => $info{"hash0"},
+        "hash1" => $info{"hash1"},
+        "info" => \%info 
+      };
+    print "Added CA $basename (alias $info{alias}) with version $version\n";
   }
   }
   return %auth;
@@ -609,32 +680,24 @@ sub generateDistDirectory($) {
 }
 
 # ----------------------------------------------------------------------------
-# sub packCA($srcdir,$builddir,$targetdir,$hash,%info)
+# sub packCA($srcdir,$builddir,$targetdir,$basename,%info)
 #
 # package a single CA in all formats, and store these in the proper
 # structure in the target directory
 #
-# - prerequisites: <hash>.{0,info,singing_policy} files must exist in
+# - prerequisites: <basename>.{0,info,signing_policy} files must exist in
 #   $srcdir; $targetdir must exist and be initialised
 #   $builddir will be created in /tmp if needed (and then removed later)
 # - results: RPM, SRPM, tar.gz packages for this CA
 # - return code: 1 if OK, 0 if error and $err will be set
 #
 sub packSingleCA($$$$) {
-  my ($srcdir,$builddir,$targetdir,$hash,%info) = @_;
-
-  -f "$srcdir/$hash.0" or do {
-    $err="packSingleCA failed: $srcdir/$hash.0 not available: $!";
-    return undef;
-  };
-  -f "$srcdir/$hash.info" or do {
-    $err="packSingleCA failed: $srcdir/$hash.info not available: $!";
-    return undef;
-  };
+  my ($srcdir,$builddir,$targetdir,$basename,%info) = @_;
+  my $alias;
 
   # essential information MUST be there
-  $info{"alias"} or $err="CA $hash has no alias" and return undef;
-  $info{"status"} or $err="CA $hash has no status at all" and return undef;
+  $info{"alias"} or $err="CA $basename has no alias" and return undef;
+  $info{"status"} or $err="CA $basename has no status at all" and return undef;
   { my $sts="";
     foreach my $ts ( @validStatus ) { 
       if ($info{"status"} eq $ts) { $sts=$ts; last; } 
@@ -648,20 +711,22 @@ sub packSingleCA($$$$) {
   # don't include old and dusty CAs
   return 1 if $info{"status"} eq "discontinued";
 
+  $alias = $info{"alias"};
+
   # do debian checking
   -x "$opt_debian" or die "$opt_debian: not found or not executable";
-  my $debianflawed = system "$opt_debian $srcdir/$hash.0";
+  my $debianflawed = system "$opt_debian $srcdir/$basename.0";
   if ( $debianflawed ) {
-    $err = "CA $hash is affected by the Debian SSL vulnerblity" and return undef;
+    $err = "CA $basename (alias $alias) is affected by the Debian SSL vulnerblity" and return undef;
   }
 
-  my $tmpdir=tempdir("$opt_tmp/pSCA-$hash-XXXXXX", CLEANUP => 1 );
-  print "** CA $info{alias} v$info{version} (hash $hash, dir $srcdir)\n";
+  my $tmpdir=tempdir("$opt_tmp/pSCA-$basename-XXXXXX", CLEANUP => 1 );
+  print "** CA $alias v$info{version} (basename $basename, dir $srcdir)\n";
 
-  -f "$srcdir/$hash.0" and do {
+  -f "$srcdir/$basename.0" and do {
     if ( (!defined $info{"sha1fp.0"}) or ($info{"sha1fp.0"}=~/@/) ) {
       chomp($info{"sha1fp.0"} = 
-        `openssl x509 -fingerprint -sha1 -noout -in $srcdir/$hash.0`);
+        `$opt_opensslzero x509 -fingerprint -sha1 -noout -in $srcdir/$basename.0`);
       $info{"sha1fp.0"}=~s/^[^=]+=//;
     }
   };
@@ -677,15 +742,19 @@ sub packSingleCA($$$$) {
   my $pdir="$tmpdir/$pname";
   mkdir $pdir;
   foreach my $ext ( qw(info signing_policy namespaces) ) {
-    &copyWithExpansion("$srcdir/$hash.$ext","$pdir/$hash.$ext",
+    if ( -f "$srcdir/$basename.$ext" ) {
+      &copyWithExpansion("$srcdir/$basename.$ext","$pdir/$alias.$ext",
 	( "VERSION" => $info{"version"}, 
           "SHA1FP.0" => $info{"sha1fp.0"},
           "SRCDIR" => $srcdir
         ) );
+      symlink "$alias.$ext","$pdir/$info{hash0}.$ext";
+      symlink "$alias.$ext","$pdir/$info{hash1}.$ext";
+    }
   }
   if ( $info{"crl_url"} ) {
-    open CRLURL,">$pdir/$hash.crl_url" or 
-      $err="Cannot open $pdir/$hash.crl_url for write: $!" and return undef;
+    open CRLURL,">$pdir/$alias.crl_url" or 
+      $err="Cannot open $pdir/$alias.crl_url for write: $!" and return undef;
     #print CRLURL $info{"crl_url"}."\n";
     foreach my $url ( split(/[; ]+/,$info{"crl_url"}) ) {
       print CRLURL "$url\n";
@@ -693,44 +762,67 @@ sub packSingleCA($$$$) {
     close CRLURL;
   }
 
-  my $i=0;
-  while ( -f "$srcdir/$hash.$i" ) { 
-    my $rc;
-    $rc=system("openssl x509 -checkend 15552000 -noout -in $srcdir/$hash.$i");
-    if ( $rc ) {
-      chomp($rc=`openssl x509 -noout -in $srcdir/$hash.$i -enddate`);
-      $rc=~/=(.*)/;
-      print "WARNING: $srcdir/$hash.$i: certificate will expire within 180 days\n";
-      print "         $1\n";
-    }
+  # package up the certificate, max one per alias
+  # in the symlink generation phase for OpenSSL, increment the ".i" index according to
+  # the global inventory generated in the getAuthoritiesList phase
+  #
+  my $certfile = $info{"certfile"};
+  -f "$srcdir/$certfile" or die "Certificate file for $alias ($srcdir/$certfile) disappeared!\n";
 
-    copy("$srcdir/$hash.$i","$pdir/$hash.$i");
-    $opt_nojks or do {
-     system("openssl x509 -outform der -in $srcdir/$hash.$i -out $tmpdir/$hash-der.$i");
-     system("keytool -import -alias ".$info{"alias"}."-$i ".
-            "-keystore $targetdir/$collection/jks/ca-".$info{"alias"}."-".$info{"version"}.".jks ".
-            "-storepass $Main::jksPass -noprompt -trustcacerts ".
-            "-file $tmpdir/$hash-der.$i");
-     my $jksname="igtf-policy-$collection";
-     $profile ne "" and $jksname.="-$profile";
-     system("keytool -import -alias ".$info{"alias"}."-$i ".
-            "-keystore $targetdir/$collection/jks/$jksname-$opt_gver.jks ".
-            "-storepass $Main::jksPass -noprompt -trustcacerts ".
-            "-file $tmpdir/$hash-der.$i");
-     unlink "$tmpdir/$hash-der.$i";
-    };
-    $i++;
+  #
+  # check for validity and generate visual warning for packager
+  #
+  my $rc;
+  $rc=system("$opt_opensslzero x509 -checkend 15552000 -noout -in $srcdir/$certfile");
+  if ( $rc ) {
+    chomp($rc=`$opt_opensslzero x509 -noout -in $srcdir/$certfile -enddate`);
+    $rc=~/=(.*)/;
+    print "WARNING: $srcdir/$certfile: \n";
+    print "         certificate for $alias will expire within 180 days\n";
+    print "         on: $1\n";
+    print "\n";
   }
+
+  #
+  # package into Java keystore
+  #
+  $opt_nojks or do {
+   system("$opt_opensslzero x509 -outform der -in $srcdir/$certfile -out $tmpdir/$certfile-der");
+   system("keytool -import -alias ".$info{"alias"}." ".
+          "-keystore $targetdir/$collection/jks/ca-".$info{"alias"}."-".$info{"version"}.".jks ".
+          "-storepass $Main::jksPass -noprompt -trustcacerts ".
+          "-file $tmpdir/$certfile-der");
+   my $jksname="igtf-policy-$collection";
+   $profile ne "" and $jksname.="-$profile";
+   system("keytool -import -alias ".$info{"alias"}." ".
+          "-keystore $targetdir/$collection/jks/$jksname-$opt_gver.jks ".
+          "-storepass $Main::jksPass -noprompt -trustcacerts ".
+          "-file $tmpdir/$certfile-der");
+   unlink "$tmpdir/$basename-der";
+  };
+
+  #
+  # put the certificate in place with a generic name
+  # and generate the offsetted symlinks with the proper hashes for both OpenSSL
+  # versions
+  #
+  system("$opt_opensslzero x509 -outform pem -in $srcdir/$certfile -out $pdir/$alias.pem");
+  symlink "$alias.pem","$pdir/".$info{"hash0"}.".".$info{"offset0"};
+  symlink "$alias.pem","$pdir/".$info{"hash1"}.".".$info{"offset1"};
+
+
 
   system("cd $tmpdir && tar zcf $pname.tar.gz $pname");
   -d "$builddir/src" or mkdir "$builddir/src" or 
     die "Cannot mkdir $builddir/src: $!\n";
+  -d "$builddir/src/$collection" or mkdir "$builddir/src/$collection" or 
+    die "Cannot mkdir $builddir/$collection: $!\n";
   defined $builddir and do {
-    foreach my $f ( glob("$pdir/*") ) { 
+    foreach my $f ( "$pdir/$alias.pem","$pdir/$alias.crl_url",
+                    "$pdir/$alias.signing_policy","$pdir/$alias.namespaces",
+                    "$pdir/$alias.info" ) { 
       (my $b=$f)=~s/.*\///; 
-      -d "$builddir/src/$collection" or mkdir "$builddir/src/$collection" or 
-        die "Cannot mkdir $builddir/$collection: $!\n";
-      copy("$f","$builddir/src/$collection/$b");
+      -f "$f" and copy("$f","$builddir/src/$collection/$b");
     }
   };
   
@@ -738,8 +830,8 @@ sub packSingleCA($$$$) {
 	( "VERSION" => $info{"version"},
 	  "RELEASE" => $opt_r,
 	  "ALIAS" => $info{"alias"},
-	  "HASH" => $hash,
-	  "CERTFILE" => "$hash.0",
+	  "CERTFILE" => $info{"certfile"},
+	  "HASH" => $basename,
 	  "PACKAGENAME" => $pname,
 	  "TGZNAME" => "$pname.tar.gz",
 	  "URL" => $info{"url"},
@@ -782,7 +874,7 @@ sub packSingleCA($$$$) {
 
 # ----------------------------------------------------------------------------
 # readInfoFile($filename)
-# returns: hash with information
+# returns: basename with information
 #
 sub readInfoFile($) {
   my ($filename) = @_;
@@ -829,11 +921,10 @@ sub copyWithExpansion($$%) {
 # getFilesVersion($version,$glob)
 #
 # - returns: preferred version  or undef on error ($err will be set)
-sub getFilesVersion($$) {
-  my ($requestedVersion,$glob) = @_;
+sub getFilesVersion($) {
+  my ($glob) = @_;
   my ($version);
 
-  return $requestedVersion if defined $requestedVersion;
   my @filelist = glob($glob);
   foreach my $file ( @filelist ) {
     my $mdate= (stat $file)[9];

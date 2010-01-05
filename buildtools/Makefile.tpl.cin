@@ -1,11 +1,12 @@
 #
-# @(#)$Id$
+# @(#)$Id: Makefile.tpl.cin,v 1.1 2005/10/08 18:34:20 pmacvsdg Exp $
 #
 # This makefile is auto-generated and mofified by ./configure
 #
 prefix=@PREFIX@
 install=@INSTALL@
 mkdir=@MKDIR@
+ln=@LN@
 
 prep: $(prefix)
 

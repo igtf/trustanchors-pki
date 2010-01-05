@@ -4,6 +4,7 @@
 INSTALL=install
 PREFIX=/etc/grid-security/certificates
 MKDIR=mkdir
+LN=ln
 SED=sed
 PROFILE=ANY
 PROFILES=""
@@ -17,6 +18,10 @@ do
         ;;
   --with-mkdir=* ) 
         MKDIR=`echo $1 | sed -e 's/--with-mkdir=//'`
+        shift 
+        ;;
+  --with-ln=* ) 
+        LN=`echo $1 | sed -e 's/--with-ln=//'`
         shift 
         ;;
   --with-install=* ) 
@@ -47,6 +52,8 @@ Usage: $0
                              default: /etc/grid-security/certificates
     [--with-mkdir=path]      name of mkdir program supporting -p
                              default: mkdir
+    [--with-ln=path]         name of ln program supporting -s (symbolic links)
+                             default: ln
     [--with-install=path]    name of the BSD install programme
                              default: install
     [--with-profile=profile] selected CA accreditation profile
@@ -72,6 +79,7 @@ sed -e "
 	s#@PREFIX@#$PREFIX#g;
 	s#@INSTALL@#$INSTALL#g;
 	s#@MKDIR@#$MKDIR#g;
+	s#@LN@#$LN#g;
 	s#@INSTALLTARGETS@#$PROFILES $AUTHS#g;
   " < Makefile.tpl > Makefile
 
