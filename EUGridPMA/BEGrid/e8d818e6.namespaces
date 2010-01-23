@@ -9,5 +9,5 @@
 #    (generated automatically from e8d818e6.signing_policy)
 #
 TO Issuer "/C=BE/OU=BEGRID/O=BELNET/CN=BEgrid CA" \
-  PERMIT Subject "/C=BE/OU=BEGRID/.*"
+  PERMIT Subject "/C=BE/O=BEGRID/.*"
 
