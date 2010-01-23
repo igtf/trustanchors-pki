@@ -2,6 +2,7 @@ Changes from 1.32 to 1.33
 -------------------------
 (XX February 2010)
 
+* Updated AustrianGrid root cert with extended life time (AT)
 * Corrected namespaces file for BEGrid2008 (BE)
 
 Changes from 1.31 to 1.32
