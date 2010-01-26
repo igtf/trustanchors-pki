@@ -6,6 +6,7 @@ Changes from 1.32 to 1.33
 * Removed expired CNRS-Grid-FR CA (has been superseded by CNRS2-Grid-FR) (FR)
 * Removed obsolete CNRS, CNRS-Projets CA (superceded by CNRS2 hierarchy) (FR)
 * Corrected namespaces file for BEGrid2008 (BE)
+* Added comment line to REUNA CA signing_policy file (CL)
 
 Changes from 1.31 to 1.32
 -------------------------
