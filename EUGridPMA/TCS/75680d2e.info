@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+# Information for CA AAACertificateServices
+#   
+alias = AAACertificateServices
+url = https://www.terena.org/activities/tcs/
+ca_url =  http://crt.comodoca.com/AAACertificateServices.crt
+crl_url = http://crl.comodoca.com/AAACertificateServices.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+email = tcs_pcs@terena.org
+status = accredited:mics
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

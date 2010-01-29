@@ -1,0 +1,14 @@
+#
+# @(#)$Id$
+# Information for CA UTNAAAClient
+#   
+alias = UTNAAAClient
+url = https://www.terena.org/activities/tcs/
+ca_url = http://crt.usertrust.com/UTNAAAClient_CA.crt
+crl_url = http://crl.usertrust.com/UTN-USERFirst-ClientAuthenticationandEmail.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+requires = AAACertificateServices
+email = tcs_pcs@terena.org
+status = accredited:mics
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

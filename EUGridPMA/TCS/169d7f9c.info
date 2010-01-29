@@ -1,0 +1,14 @@
+#
+# @(#)$Id$
+# Information for CA TERENAeSciencePersonalCA
+#   
+alias = TERENAeSciencePersonalCA
+url = https://www.terena.org/activities/tcs/
+ca_url = http://crt.tcs.terena.org/TERENAeSciencePersonalCA.crt
+crl_url = http://crl.tcs.terena.org/TERENAeSciencePersonalCA.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+requires = UTNAAAClient
+email = tcs_pcs@terena.org
+status = accredited:mics
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
