@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 75680d2e.info,v 1.1 2010/01/29 09:46:36 pmacvsdg Exp $
 # Information for CA AAACertificateServices
 #   
 alias = AAACertificateServices
@@ -7,7 +7,7 @@ url = https://www.terena.org/activities/tcs/
 ca_url =  http://crt.comodoca.com/AAACertificateServices.crt
 crl_url = http://crl.comodoca.com/AAACertificateServices.crl
 policy_url = https://www.terena.org/activities/tcs/repository/
-email = tcs_pcs@terena.org
+email = tcs-escience-admin@terena.org
 status = accredited:mics
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
