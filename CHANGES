@@ -4,6 +4,7 @@ Changes from 1.32 to 1.33
 
 * Added accredited MICS TCS eScience Personal CA and hierarchy (EU)
 * Updated AustrianGrid root cert with extended life time (AT)
+* Updated PolishGrid CA root cert with extended life time and new contact (PL)
 * Removed expired CNRS-Grid-FR CA (has been superseded by CNRS2-Grid-FR) (FR)
 * Removed obsolete CNRS, CNRS-Projets CA (superceded by CNRS2 hierarchy) (FR)
 * Corrected namespaces file for BEGrid2008 (BE)
