@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 9ec3a561.info,v 1.1 2010/01/29 09:46:36 pmacvsdg Exp $
+# @(#)$Id: 9ec3a561.info,v 1.2 2010/01/29 16:31:50 pmacvsdg Exp $
 # Information for CA UTNAAAClient
 #   
 alias = UTNAAAClient
@@ -8,7 +8,7 @@ ca_url = http://crt.usertrust.com/UTNAAAClient_CA.crt
 crl_url = http://crl.usertrust.com/UTN-USERFirst-ClientAuthenticationandEmail.crl
 policy_url = https://www.terena.org/activities/tcs/repository/
 requires = AAACertificateServices
-email = tcs-escience-admin@terena.org
+email = tcs-pma@terena.org
 status = accredited:mics
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
