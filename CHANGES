@@ -1,6 +1,6 @@
 Changes from 1.32 to 1.33
 -------------------------
-(XX February 2010)
+(15 February 2010)
 
 * Added accredited MICS TCS eScience Personal CA and hierarchy (EU)
 * Updated AustrianGrid root cert with extended life time (AT)
@@ -9,8 +9,7 @@ Changes from 1.32 to 1.33
 * Removed obsolete CNRS, CNRS-Projets CA (superceded by CNRS2 hierarchy) (FR)
 * Corrected namespaces file for BEGrid2008 (BE)
 * Added comment line to REUNA CA signing_policy file (CL)
-* Added new CESNET hierarchy "CESNET-CA-Root" and "CA-3" for testing in 
-  worthless area (CZ)
+* Added new classic CESNET hierarchy "CESNET-CA-Root" and "CESNET-CA-3" (CZ)
 
 Changes from 1.31 to 1.32
 -------------------------

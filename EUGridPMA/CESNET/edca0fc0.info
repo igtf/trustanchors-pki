@@ -1,13 +1,13 @@
 #
-# @($)$Id$
+# @($)$Id: edca0fc0.info,v 1.1 2010/02/12 19:54:17 pmacvsdg Exp $
 # /DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA Root
 #
 alias = CESNET-CA-Root
 url = http://www.cesnet.cz/pki/
-ca_url = http://crt.cesnet.cz/CESNET_CA_Root.crt
-crl_url = http://crl.cesnet.cz/CESNET_CA_Root.crl
+ca_url = http://crt.cesnet-ca.cz/CESNET_CA_Root.crt
+crl_url = http://crl.cesnet-ca.cz/CESNET_CA_Root.crl
 policy_url = http://www.cesnet.cz/pki/en/ch-cp-cps.html
 email = ca@cesnet.cz
-status = worthless
+status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
