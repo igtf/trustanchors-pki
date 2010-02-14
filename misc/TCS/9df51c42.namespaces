@@ -9,5 +9,5 @@
 #    (generated automatically from 9df51c42.signing_policy)
 #
 TO Issuer "/C=NL/O=TERENA/CN=TERENA SSL CA" \
-  PERMIT Subject ""
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
 

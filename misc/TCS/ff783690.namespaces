@@ -3,11 +3,11 @@
 #
 # @(#)ff783690.namespaces
 # CA alias    : UTN-USERFirst-Hardware
-#    subord_of: 
+#    subord_of: AddTrust-External-CA-Root
 #    subjectDN: /C=US/ST=UT/L=Salt Lake City/O=The USERTRUST Network/OU=http://www.usertrust.com/CN=UTN-USERFirst-Hardware
 #    hash     : ff783690
 #    (generated automatically from ff783690.signing_policy)
 #
 TO Issuer "/C=US/ST=UT/L=Salt Lake City/O=The USERTRUST Network/OU=http://www.usertrust.com/CN=UTN-USERFirst-Hardware" \
-  PERMIT Subject ""
+  PERMIT Subject "/C=NL/O=TERENA/CN=TERENA SSL CA"
 
