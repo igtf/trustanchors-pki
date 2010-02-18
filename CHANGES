@@ -1,5 +1,11 @@
 Changes from 1.32 to 1.33
 -------------------------
+(18 February 2010)
+
+* Corrected malformed EACL syntax in signing_policy for CESNET-Root-CA (CZ)
+
+Changes from 1.32 to 1.33
+-------------------------
 (15 February 2010)
 
 * Added accredited MICS TCS eScience Personal CA and hierarchy (EU)
