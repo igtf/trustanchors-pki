@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.34 to 1.35
+-------------------------
+(XX April 2010)
+
+* Updated ROSA CA certificate with compliant AKI extension (RO)
+
 Changes from 1.33 to 1.34
 -------------------------
 (18 February 2010)
