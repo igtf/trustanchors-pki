@@ -1,8 +1,8 @@
-# @(#)$Id: 1f3834d0.info,v 1.1 2007/10/03 13:24:45 pmacvsdg Exp $
+# @(#)$Id: 1f3834d0.info,v 1.2 2009/10/07 07:10:51 pmacvsdg Exp $
 #
 alias = RomanianGRID
 url = http://www.romaniangrid.ro
-ca_url = http://www.romaniangrid.ro/certs/ca_root.pem
+ca_url = http://www.romaniangrid.ro/certs/root.pem
 crl_url = http://www.romaniangrid.ro/crl/crl-v2.der
 policy_url = http://www.romaniangrid.ro/docs/RomanianGRID_CA_v1.4.pdf
 email = grid-ca@rosa.ro
