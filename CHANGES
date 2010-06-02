@@ -7,10 +7,11 @@ lay-out.
 
 Changes from 1.34 to 1.35
 -------------------------
-(xx May 2010)
+(02 June 2010)
 
 * Updated root certificate for SRCE with new extensions and life time (HR)
 * Updated root certificate for ROSA with new AKI extension and serial (RO)
+* Removed obsoleted CAs from experimental area (US)
 
 Changes from 1.33 to 1.34
 -------------------------

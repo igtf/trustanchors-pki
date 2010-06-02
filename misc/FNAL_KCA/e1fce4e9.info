@@ -1,9 +1,9 @@
 #
-# @(#)$Id: e1fce4e9.info,v 1.5 2005/10/20 09:13:40 pmacvsdg Exp $
+# @(#)$Id: e1fce4e9.info,v 1.6 2007/11/08 13:37:05 pmacvsdg Exp $
 # Information for CA FNAL_KCA
 #   obtained from e1fce4e9 in FNAL_KCA/
 alias = FNAL_KCA
-status = experimental
+status = discontinued
 ca_url = https://security.fnal.gov/pki/e1fce4e9.0
 crl_url = http://security.fnal.gov/pki/e1fce4e9.crl
 url = http://security.fnal.gov/pki/
