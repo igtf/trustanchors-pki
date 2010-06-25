@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.35 to 1.36
+-------------------------
+(25 June 2010)
+
+* Updated root certificate for PLGrid with corrected SAN extension (PL)
+
 Changes from 1.34 to 1.35
 -------------------------
 (11 June 2010)
