@@ -5,6 +5,14 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.36 to 1.37
+-------------------------
+(XX September 2010)
+
+* The OpenSSL1 compliant format no longer adds symlinks for info metadata
+  (such references would result in multiple downloads of the same CRL data
+  when used with FetchCRL3)
+
 Changes from 1.35 to 1.36
 -------------------------
 (25 June 2010)
