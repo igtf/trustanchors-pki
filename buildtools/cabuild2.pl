@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.41 2009/08/26 19:34:26 pmacvsdg Exp $
+# @(#)$Id: cabuild2.pl,v 1.1 2010/01/05 21:38:02 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -324,12 +324,8 @@ sub makeBundleScripts($$$) {
       print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".namespaces ".
                   "\$(prefix)/".$auth{$ca}{"info"}->{"hash1"}.".namespaces\n";
     };
-    -f "$builddir/src/$collection/".$auth{$ca}{"info"}->{"alias"}.".info" and do {
-      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".info ".
-                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash0"}.".info\n";
-      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".info ".
-                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash1"}.".info\n";
-    };
+    # do NOT link the info (or crl_url) files, or the fetch-crl tool
+    # will do double or triple downloads
 
     # close of stanza needs empty line
     print MKTPL "\n";
