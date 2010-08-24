@@ -12,6 +12,7 @@ Changes from 1.36 to 1.37
 * The OpenSSL1 compliant format no longer adds symlinks for info metadata
   (such references would result in multiple downloads of the same CRL data
   when used with FetchCRL3)
+* Corrected typo errors in namespaces file for AAACertificateServices (EU)
 
 Changes from 1.35 to 1.36
 -------------------------
