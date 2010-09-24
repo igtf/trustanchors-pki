@@ -15,6 +15,7 @@ Changes from 1.36 to 1.37
   (such references would result in multiple downloads of the same CRL data
   when used with FetchCRL3)
 * Corrected typo errors in namespaces file for AAACertificateServices (EU)
+* Added CILogon CAs in experimental area (US)
 
 Changes from 1.35 to 1.36
 -------------------------
