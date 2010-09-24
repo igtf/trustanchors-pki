@@ -7,8 +7,10 @@ lay-out.
 
 Changes from 1.36 to 1.37
 -------------------------
-(XX September 2010)
+(27 September 2010)
 
+* Added accredited classic TERENA eScience SSL CA and hierarchy (EU)
+* Discontinued NGO-Netrust CA (SG)
 * The OpenSSL1 compliant format no longer adds symlinks for info metadata
   (such references would result in multiple downloads of the same CRL data
   when used with FetchCRL3)
