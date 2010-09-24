@@ -1,4 +1,4 @@
-# @(#)$Id: 3c58f906.info,v 1.1 2010/02/14 18:41:06 pmacvsdg Exp $
+# @(#)$Id: 3c58f906.info,v 1.1 2010/09/24 13:29:21 pmacvsdg Exp $
 # AddTrust AB External CA Root
 #
 # Certificate Name: AddTrust External CA Root
@@ -15,6 +15,6 @@ crl_url = http://crl.usertrust.com/AddTrustExternalCARoot.crl
 url = http://www.comodo.com/
 policy_url = http://www.comodo.com/repository
 email = tcs-pma@terena.org
-status = worthless
+status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
