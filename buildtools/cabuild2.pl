@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild2.pl,v 1.1 2010/01/05 21:38:02 pmacvsdg Exp $
+# @(#)$Id: cabuild2.pl,v 1.2 2010/08/17 08:56:21 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -737,7 +737,8 @@ sub packSingleCA($$$$) {
   my $pname="ca_".$info{"alias"}."-".$info{"version"};
   my $pdir="$tmpdir/$pname";
   mkdir $pdir;
-  foreach my $ext ( qw(info signing_policy namespaces) ) {
+  # symlink only signing_policy and namespaces, no info
+  foreach my $ext ( qw(signing_policy namespaces) ) {
     if ( -f "$srcdir/$basename.$ext" ) {
       &copyWithExpansion("$srcdir/$basename.$ext","$pdir/$alias.$ext",
 	( "VERSION" => $info{"version"}, 
