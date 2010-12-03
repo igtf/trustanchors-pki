@@ -11,3 +11,6 @@
 TO Issuer "/DC=ORG/DC=SEE-GRID/CN=SEE-GRID CA" \
   PERMIT Subject "/DC=ORG/DC=SEE-GRID/.*"
 
+TO Issuer "/DC=ORG/DC=SEE-GRID/CN=SEE-GRID CA" \
+  PERMIT Subject "/DC=EU/DC=EGI/.*"
+
