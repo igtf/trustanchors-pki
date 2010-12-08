@@ -28,7 +28,6 @@
 
  pos_rights        globus        CA:sign
 
- cond_subjects     globus       '"/C=JP/O=National Research Grid Initiative/OU=CGRD/*"'
-
+ cond_subjects     globus       '"/C=JP/O=National Research Grid Initiative/OU=CGRD/*" "/C=JP/O=National Research Grid Initiative/OU=NII/*"'
 # end of EACL
 
