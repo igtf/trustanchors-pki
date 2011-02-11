@@ -1,0 +1,13 @@
+Package: @PACKAGENAME@
+Version: @VERSION@-@RELEASE@
+Architecture: all
+Maintainer: David Groep <davidg@eugridpma.org>
+Installed-Size: 4
+Depends: @REQUIRES@
+Section: net
+Priority: optional
+Homepage: @URL@
+Description: IGTF Trust Anchor @ALIAS@
+ This package contains the trust anchor (CA) root of trust for
+ @ALIAS@, which is part of the set of @PROFILE@ authorities
+ accredited by the International Grid Trust Federation
