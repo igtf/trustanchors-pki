@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild2.pl,v 1.4 2010/10/25 13:05:29 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.1 2011/02/11 14:51:28 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -60,6 +60,7 @@ defined $opt_url or
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::singleDebianControlTemplate="ca_single.control.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
+$Main::collectionDebianFileTemplate="ca_bundle.control.cin";
 $Main::legacyEUGridPMASpecFileTemplate="eugridpma.spec.cin";
 $Main::bundleMakefileTPL="Makefile.tpl.cin";
 $Main::bundleConfigureTPL="configure.cin";
@@ -136,6 +137,7 @@ sub makeInfoFiles($$) {
   open ACCIN,">$targetdir/accredited/accredited.in" 
     or do { $err="accredited.in generation: $!\n"; return undef};
   foreach my $alias ( sort keys %auth ) {
+    defined $auth{$alias}{"info"}->{"status"} or next;
     $auth{$alias}{"info"}->{"status"} =~ /^accredited/ or next; 
     (my $pname=$auth{$alias}{"info"}->{"status"})=~s/.*://;
     print ACCIN "$alias\t$pname\n";
@@ -466,6 +468,7 @@ sub makeCollectionInfo($$$) {
     my $obsfilename = "${opt_obsoletedbase}.${s}.in";
     $obsfilename =~ s/:/./g;
     $tokens{"OBSOLETED.$pname"} = "";
+    $tokens{"DEBOBSOLETED.$pname"} = "";
     -f "$obsfilename" and do {
       open OBSFILE,"$obsfilename" or die "Cannot open $obsfilename: $!\n";
       while (<OBSFILE>) {
@@ -508,6 +511,7 @@ sub makeCollectionInfo($$$) {
       print INFO "obsoletes = ";
       foreach my $ca ( @obscas ) { 
         $tokens{"OBSOLETED.$pname"} .= " ca_${ca}";
+        $tokens{"DEBOBSOLETED.$pname"} .= " ca-".lc(${ca});
         $nauthorities and print INFO ", \\\n    ";
         print INFO "$ca";
         $nauthorities++;
@@ -552,7 +556,45 @@ sub makeCollectionInfo($$$) {
       $l.="$alias";
     }
     $tokens{$ucs}=&expandRequiresWithVersion($l);
+    $tokens{"DEB".$ucs}=&expandRequiresWithVersionDebian($l);
   }
+
+  ( defined $opt_mkdeb ) and do {
+    # for each accredited profile, make e metapackge with one file in it
+    # wher ethe file is found at $pdir/policy-igtf-$pname.info
+    #
+    print "Creaing DEB metapackages\n";
+    mkdir "$tmpdir/pCIFdeb";
+    mkdir "$tmpdir/pCIFdeb/etc";
+    mkdir "$tmpdir/pCIFdeb/etc/grid-security";
+    mkdir "$tmpdir/pCIFdeb/etc/grid-security/certificates";
+    foreach my $s ( @validStatus ) {
+      $s=~/^accredited:(.*)/ or next; 
+      my $collection = $1;
+      copy("$pdir/policy-igtf-$collection.info","$tmpdir/pCIFdeb/etc/grid-security/certificates");
+      system("cd $tmpdir/pCIFdeb && ".
+             "tar zcvf $tmpdir/pCIFdeb/data.tar.gz ./etc/grid-security/certificates/policy-igtf-$collection.info");
+      $tokens{"COLLECTION"}=lc($collection);
+      $tokens{"DEBREQUIRED"}=$tokens{"DEBACCREDITED:".uc($collection)};
+      $tokens{"DEBCONFLICTS"}=$tokens{"DEBOBSOLETED.$collection"};
+      $tokens{"DEBREPLACES"}=$tokens{"DEBCONFLICTS"};
+      if ( defined $tokens{"DEBREPLACES"} ) {
+        $tokens{"DEBREPLACES"}=~s/^ /Replaces:/; $tokens{"DEBREPLACES"} ne "" and $tokens{"DEBREPLACES"}.="\n";
+        $tokens{"DEBCONFLICTS"}=~s/^ /Conflicts:/; $tokens{"DEBCONFLICTS"} ne "" and $tokens{"DEBCONFLICTS"}.="\n";
+      } else {
+        $tokens{"DEBREPLACES"}="";
+        $tokens{"DEBCONFLICTS"}="";
+      }
+      &copyWithExpansion($Main::collectionDebianFileTemplate,"$tmpdir/pCIFdeb/control",
+                     %tokens);
+      system("cd $tmpdir/pCIFdeb && ".
+             "tar zcvf $tmpdir/pCIFdeb/control.tar.gz ./control");
+      open DEBIAN,">$tmpdir/pCIFdeb/debian-binary" or die "Cannot write debian-binary: $!\n";
+      print DEBIAN "2.0\n";
+      close DEBIAN;
+      system("cd $tmpdir/pCIFdeb && ar q $targetdir/dists/igtf/accredited/binary-all/ca-policy-igtf-$collection-$opt_gver-$opt_r.deb debian-binary control.tar.gz data.tar.gz");
+    }
+  };
   
   &copyWithExpansion($Main::collectionSpecFileTemplate,"$tmpdir/$pname.spec",
                      %tokens);
@@ -640,12 +682,12 @@ sub expandRequiresWithVersionDebian($) {
 
   foreach my $alias ( split(/,/,$requiresLine) ) {
     $alias=~s/\s//g;
-    $alias=lc($alias); $alias =~ s/_/-/g;
+    my $pkgname=lc("ca-".$alias); $pkgname =~ s/_/-/g;
     my $r;
     if ($auth{$alias}{"info"}->{"version"}) {
-      $r="ca_$alias (>=".$auth{$alias}{"info"}->{"version"}.")";
+      $r="$pkgname (=".$auth{$alias}{"info"}->{"version"}.")";
     } else {
-      $r="ca_$alias";
+      $r="$pkgname";
     }
     if( $vLine ne "" ) { $vLine.=", " }
     $vLine .= "$r";
@@ -747,9 +789,9 @@ sub generateDistDirectory($) {
   }
   mkdir "$dir/dists" or return undef;
   mkdir "$dir/dists/igtf" or return undef;
-  for my $s ( qw(accredited experimental worthless) ) {
-    mkdir "$dir/dists/igtf/$s" or return undef;
-    mkdir "$dir/dists/igtf/$s/binary-all" or return undef;
+  for my $is ( qw(accredited experimental worthless) ) {
+    mkdir "$dir/dists/igtf/$is" or return undef;
+    mkdir "$dir/dists/igtf/$is/binary-all" or return undef;
   }
   return 1;
 }
@@ -931,7 +973,7 @@ sub packSingleCA($$$$) {
 
   # build debian packages if we want to
   ( defined $opt_mkdeb ) and do {
-    my $debname="ca-".$info{"alias"}."-".$info{"version"};
+    my $debname=lc("ca-".$info{"alias"});
     my $debbasedir="$tmpdir/debsource/";
     mkdir $debbasedir;
     my $debdatadir="$tmpdir/debsource/data-$pname";
@@ -941,11 +983,11 @@ sub packSingleCA($$$$) {
     mkdir "$debdatadir/etc";
     mkdir "$debdatadir/etc/grid-security";
     mkdir "$debdatadir/etc/grid-security/certificates";
-    foreach my $f ( "$pdir/$alias.pem","$pdir/$alias.crl_url",
+    foreach my $if ( "$pdir/$alias.pem","$pdir/$alias.crl_url",
                     "$pdir/$alias.signing_policy","$pdir/$alias.namespaces",
                     "$pdir/$alias.info" ) { 
-      (my $b=$f)=~s/.*\///; 
-      -f "$f" and copy("$f","$debdatadir/etc/grid-security/certificates/$b");
+      ($b=$if)=~s/.*\///; 
+      -f "$if" and copy("$if","$debdatadir/etc/grid-security/certificates/$b");
     }
     symlink "$alias.pem","$debdatadir/etc/grid-security/certificates/".$info{"hash0"}.".".$info{"offset0"};
     symlink "$alias.pem","$debdatadir/etc/grid-security/certificates/".$info{"hash1"}.".".$info{"offset1"};
@@ -972,7 +1014,7 @@ sub packSingleCA($$$$) {
     print DEBIAN "2.0\n";
     close DEBIAN;
 
-    system("cd $debbasedir && ar q $targetdir/dists/igtf/$collection/binary-all/$debname-$opt_r.deb debian-binary control.tar.gz data.tar.gz");
+    system("cd $debbasedir && ar q $targetdir/dists/igtf/$collection/binary-all/$debname-".$info{"version"}."-$opt_r.deb debian-binary control.tar.gz data.tar.gz");
   };
 
   # now collect all information in the proper place
