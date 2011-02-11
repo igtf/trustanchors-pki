@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.2 2011/02/11 16:16:03 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.3 2011/02/11 19:38:44 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -172,14 +172,14 @@ sub debifyDirectory($) {
   # $targetdir/dists/igtf/$collection/binary-all/
 
   for my $collection ( qw(accredited experimental worthless) ) {
-  open RELEASE,">$targetdir/dists/igtf/$collection/binary-all/Release" and do {
-    print RELEASE "Archive: igtf\n";
-    print RELEASE "Component: $collection\n";
-    print RELEASE "Origin: International Grid Trust Federation\n";
-    print RELEASE "Label: IGTF Trust Anchor Distribution\n";
-    print RELEASE "Architecture: all\n";
-    close RELEASE;
-  };
+  open RELEASE,">$targetdir/dists/igtf/$collection/binary-all/Release" or 
+    die "Cannot write release file for $collection: $!\n";
+  print RELEASE "Archive: igtf\n";
+  print RELEASE "Component: $collection\n";
+  print RELEASE "Origin: International Grid Trust Federation\n";
+  print RELEASE "Label: IGTF Trust Anchor Distribution\n";
+  print RELEASE "Architecture: all\n";
+
   my @files = glob("$targetdir/dists/igtf/$collection/binary-all/*.deb");
   open PACKAGES,">$targetdir/dists/igtf/$collection/binary-all/Packages" and do {
     foreach my $f ( @files ) {
@@ -204,8 +204,58 @@ sub debifyDirectory($) {
     }
   };
   close PACKAGES;
-  system("gzip $targetdir/dists/igtf/$collection/binary-all/Packages");
+  system("gzip -c $targetdir/dists/igtf/$collection/binary-all/Packages ".
+         "> $targetdir/dists/igtf/$collection/binary-all/Packages.gz");
+
+  my $size = (stat("$targetdir/dists/igtf/$collection/binary-all/Packages.gz"))[7];
+  my $md5 = `md5sum $targetdir/dists/igtf/$collection/binary-all/Packages.gz | sed -e 's/ .*//'`; 
+  chomp($md5);
+  my $sha1 = `sha1sum $targetdir/dists/igtf/$collection/binary-all/Packages.gz | sed -e 's/ .*//'`; 
+  chomp($sha1);
+  my $sha2 = `sha256sum $targetdir/dists/igtf/$collection/binary-all/Packages.gz | sed -e 's/ .*//'`; 
+  chomp($sha2);
+  print RELEASE "MD5Sum:\n $md5   $size Packages.gz\n";
+  print RELEASE "SHA1:\n $sha1   $size Packages.gz\n";
+  print RELEASE "SHA256:\n $sha2   $size Packages.gz\n";
+  close RELEASE;
+
   }
+
+  # create the master release file
+  open RELEASE,">$targetdir/dists/igtf/Release" or 
+    die "Cannot write release file for master: $!\n";
+  print RELEASE <<EOF;
+Archive: igtf
+Components: accredited worthless experimental
+Origin: International Grid Trust Federation
+Label: IGTF Trust Anchor Distribution
+Suite: igtf
+Architectures: all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64
+MD5Sum:
+EOF
+  open FLIST,"cd $targetdir/dists/igtf && find . -type f |" or die "Cannot list files: $!\n";
+  while (<FLIST>) {
+    chomp($_);
+    ( my $fname = $_) =~ s/^\.\///;
+    my $size = (stat("$targetdir/dists/igtf/$fname"))[7];
+    my $md5 = `md5sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($md5);
+    my $sha1 = `sha1sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($sha1);
+    my $sha2 = `sha256sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($sha2);
+    foreach my $arch ( all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64 ) {
+      ( my $archname = $fname ) =~ s/binary-all/binary-$arch/;
+      printf RELEASE " %s %10d %s\n",$md5,$size,$archname;
+    }
+  }
+  close RELEASE;
+
+  (defined $opt_s) and do {
+    chomp(my $gpghome=`awk '/%_gpg_path/ { print \$2 }' \$HOME/.rpmmacros`);
+    chomp(my $gpgkey=`awk '/%_gpg_name/ { print \$2 }' \$HOME/.rpmmacros`);
+    my $cmd="cd $targetdir/dists/igtf/ && ".
+            "gpg --homedir=$gpghome --default-key=$gpgkey -o Release.gpg -bas Release";
+    print "Executing GPG signing command:\n  $cmd\n";
+    system($cmd);
+  };
 
   return 1;
 }
@@ -686,7 +736,7 @@ sub expandRequiresWithVersionDebian($) {
     my $pkgname=lc("ca-".$alias); $pkgname =~ s/_/-/g;
     my $r;
     if ($auth{$alias}{"info"}->{"version"}) {
-      $r="$pkgname (=".$auth{$alias}{"info"}->{"version"}.")";
+      $r="$pkgname (=".$auth{$alias}{"info"}->{"version"}."-$opt_r)";
     } else {
       $r="$pkgname";
     }
@@ -793,6 +843,9 @@ sub generateDistDirectory($) {
   for my $is ( qw(accredited experimental worthless) ) {
     mkdir "$dir/dists/igtf/$is" or return undef;
     mkdir "$dir/dists/igtf/$is/binary-all" or return undef;
+    for my $arch ( qw( i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64 ) ) {
+      symlink "binary-all","$dir/dists/igtf/$is/binary-$arch";
+    }
   }
   return 1;
 }
@@ -1005,7 +1058,7 @@ sub packSingleCA($$$$) {
 	  "URL" => $info{"url"},
 	  "COLLECTION" => $collection,
 	  "PROFILE" => $profile,
-	  "REQUIRES" => (defined $info{"requires"}?&expandRequiresWithVersionDebian($info{"requires"})."\n":"")
+	  "REQUIRES" => (defined $info{"requires"}?"Depends: ".&expandRequiresWithVersionDebian($info{"requires"})."\n":"")
 	) 
       );
     system("cd $debdatadir && find . -type f | sed -e 's/^..//' | xargs md5sum > $debcontroldir/md5sums");
