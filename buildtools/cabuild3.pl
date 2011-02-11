@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.4 2011/02/11 20:46:31 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.5 2011/02/11 20:46:57 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -629,9 +629,9 @@ sub makeCollectionInfo($$$) {
       $tokens{"DEBREQUIRED"}=$tokens{"DEBACCREDITED:".uc($collection)};
       $tokens{"DEBCONFLICTS"}=$tokens{"DEBOBSOLETED.$collection"};
       $tokens{"DEBREPLACES"}=$tokens{"DEBCONFLICTS"};
-      if ( defined $tokens{"DEBREPLACES"} ) {
-        $tokens{"DEBREPLACES"}=~s/^ /Replaces:/; $tokens{"DEBREPLACES"} ne "" and $tokens{"DEBREPLACES"}.="\n";
-        $tokens{"DEBCONFLICTS"}=~s/^ /Conflicts:/; $tokens{"DEBCONFLICTS"} ne "" and $tokens{"DEBCONFLICTS"}.="\n";
+      if ( defined $tokens{"DEBREPLACES"} and ( $tokens{"DEBREPLACES"} ne "" ) ) {
+        $tokens{"DEBREPLACES"}=~s/^/Replaces: /; $tokens{"DEBREPLACES"}.="\n";
+        $tokens{"DEBCONFLICTS"}=~s/^/Conflicts: /; $tokens{"DEBCONFLICTS"}.="\n";
       } else {
         $tokens{"DEBREPLACES"}="";
         $tokens{"DEBCONFLICTS"}="";
