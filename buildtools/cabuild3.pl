@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.3 2011/02/11 19:38:44 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.4 2011/02/11 20:46:31 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -241,7 +241,7 @@ EOF
     my $md5 = `md5sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($md5);
     my $sha1 = `sha1sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($sha1);
     my $sha2 = `sha256sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($sha2);
-    foreach my $arch ( all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64 ) {
+    foreach my $arch ( qw(all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64) ) {
       ( my $archname = $fname ) =~ s/binary-all/binary-$arch/;
       printf RELEASE " %s %10d %s\n",$md5,$size,$archname;
     }
