@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.1 2011/02/11 14:51:28 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.2 2011/02/11 16:16:03 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -511,7 +511,8 @@ sub makeCollectionInfo($$$) {
       print INFO "obsoletes = ";
       foreach my $ca ( @obscas ) { 
         $tokens{"OBSOLETED.$pname"} .= " ca_${ca}";
-        $tokens{"DEBOBSOLETED.$pname"} .= " ca-".lc(${ca});
+        ( $tokens{"DEBOBSOLETED.$pname"} ne "" ) and $tokens{"DEBOBSOLETED.$pname"}.=", ";
+        $tokens{"DEBOBSOLETED.$pname"} .= "ca-".lc(${ca});
         $nauthorities and print INFO ", \\\n    ";
         print INFO "$ca";
         $nauthorities++;
@@ -1004,7 +1005,7 @@ sub packSingleCA($$$$) {
 	  "URL" => $info{"url"},
 	  "COLLECTION" => $collection,
 	  "PROFILE" => $profile,
-	  "REQUIRES" => &expandRequiresWithVersionDebian($info{"requires"})
+	  "REQUIRES" => (defined $info{"requires"}?&expandRequiresWithVersionDebian($info{"requires"})."\n":"")
 	) 
       );
     system("cd $debdatadir && find . -type f | sed -e 's/^..//' | xargs md5sum > $debcontroldir/md5sums");
