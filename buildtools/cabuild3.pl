@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.7 2011/02/11 21:25:06 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.8 2011/02/12 09:50:39 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -1047,7 +1047,7 @@ sub packSingleCA($$$$) {
     symlink "$alias.pem","$debdatadir/etc/grid-security/certificates/".$info{"hash1"}.".".$info{"offset1"};
     foreach my $ext ( qw(signing_policy namespaces) ) {
       if ( -f "$debdatadir/etc/grid-security/certificates/$alias.$ext" ) {
-        symlink "$alias.$ext","$debdatadir/etc/grid-security/certificates/".$info{"hash0"}.".$ext" 
+        symlink "$alias.$ext","$debdatadir/etc/grid-security/certificates/".$info{"hash0"}.".$ext";
         symlink "$alias.$ext","$debdatadir/etc/grid-security/certificates/".$info{"hash1"}.".$ext";
       }
     }
