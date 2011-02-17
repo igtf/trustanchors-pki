@@ -11,3 +11,6 @@
 TO Issuer "/DC=org/DC=egee-ne/OU=Training Services/CN=Worthless EGEE Northern and Benelux Tutorial CA 1" \
   PERMIT Subject "/DC=org/DC=egee-ne/O=Training Services/OU=users/.*"
 
+TO Issuer "/DC=org/DC=egee-ne/OU=Training Services/CN=Worthless EGEE Northern and Benelux Tutorial CA 1" \
+  PERMIT Subject "/DC=org/DC=dutchgrid/O=Training Services/OU=users/.*"
+
