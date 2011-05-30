@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.8 2011/02/12 09:50:39 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.9 2011/02/12 09:58:39 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -847,6 +847,12 @@ sub generateDistDirectory($) {
       symlink "binary-all","$dir/dists/igtf/$is/binary-$arch";
     }
   }
+
+  copy("debian-README.txt","$dir/dists/README.txt") or do {
+    $err="Cannot copy readme to dists debian dir $dir/dists: $!";
+    return undef;
+  };
+
   return 1;
 }
 
