@@ -1,0 +1,10 @@
+# @(#)$Id$
+# new GILDA 2011 worthless CA
+alias = GILDA-CA-2011
+url = https://gilda-security.ct.infn.it/CA/
+ca_url = https://gilda-security.ct.infn.it/CA/mgt/getCA.php
+crl_url = http://grid018.ct.infn.it/newCA/crl.crl
+email = gilda-ca@ct.infn.it
+status = worthless
+sha1fp.0 = @SHA1FP.0@
+version = @VERSION@
