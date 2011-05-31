@@ -9,6 +9,8 @@ Changes from 1.38 to 1.39
 -------------------------
 (27 June 2011)
 
+* Added accredited (experimental) HIAST CA (SY)
+
 Changes to unaccredited information:
 * Extended life time for unaccredited Benelux and NE tutorial CA cert and
   re-rooted namespace to new domain name (NL,BE)

@@ -1,0 +1,5 @@
+# @(#)$Id$
+# EACL HIAST CA
+ access_id_CA  X509   '/C=SY/O=HIAST/CN=HIAST GRID CA'
+ pos_rights    globus CA:sign
+ cond_subjects globus '"/C=SY/O=HIAST/CN=HIAST GRID CA" "/C=SY/O=HIAST Grid/*"'
