@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+# Information for CA DZ e-Science
+#   
+alias = DZeScience
+ca_url = https://ca.grid.arn.dz/pki/pub/cacert/cacert.pem
+crl_url = http://ca.grid.arn.dz/pki/pub/crl/cacrl.crl
+policy_url = https://ca.grid.arn.dz/pki/pub/home/cp_cps.htm
+email = ca@grid.arn.dz
+status = experimental
+url = http://www.grid.arn.dz
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

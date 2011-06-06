@@ -12,6 +12,7 @@ Changes from 1.38 to 1.39
 * Added accredited (experimental) HIAST CA (SY)
 
 Changes to unaccredited information:
+* Added experimental DZeScience CA (DZ)
 * Extended life time for unaccredited Benelux and NE tutorial CA cert and
   re-rooted namespace to new domain name (NL,BE)
 * Added worthless replacement gilda 2011 CA (IT)
