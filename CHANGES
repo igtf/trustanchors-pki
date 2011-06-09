@@ -11,6 +11,7 @@ Changes from 1.38 to 1.39
 
 * Change of contact address for NAREGI CA (JP)
 * Extended life time of root certificate for SiGNET-CA (SI)
+* Extended life time of root certificate for Grid-Ireland (IE)
 
 Changes to unaccredited information:
 * Added experimental HIAST CA (SY)
