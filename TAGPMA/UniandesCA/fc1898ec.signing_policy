@@ -1,0 +1,6 @@
+# EACL - UniAndes
+# @(#)$Id$
+#
+ access_id_CA   X509    '/C=CO/O=Uniandes CA/O=UNIANDES/OU=DTI/CN=Uniandes CA'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=CO/O=Uniandes CA/O=UNIANDES/OU=DTI/CN=Uniandes CA" "/C=CO/O=Uniandes CA/*"'
