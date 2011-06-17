@@ -1,11 +1,11 @@
 #
-# @(#)$Id: dd4b34ea.info,v 1.2 2005/10/15 10:30:55 pmacvsdg Exp $
+# @(#)$Id: dd4b34ea.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA GermanGrid
 #   obtained from dd4b34ea in GermanGrid/
 alias = GermanGrid
 url = http://grid.fzk.de/cgi-bin/welcome_ca.pl
 crl_url = http://grid.fzk.de/ca/gridka-crl.pem
-email = GridKa-CA@iwr.fzk.de
+email = GridKa-CA@kit.edu
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
