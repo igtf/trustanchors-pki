@@ -10,11 +10,14 @@ Changes from 1.38 to 1.39
 (27 June 2011)
 
 * Change of contact address for NAREGI CA (JP)
+* Added accredited classic HIAST CA (SY)
+* Added accredited classic Uni Andes CA (CO)
 * Extended life time of root certificate for SiGNET-CA (SI)
 * Extended life time of root certificate for Grid-Ireland (IE)
+#* Extended life time of root certificate for UKeScience (GB)
+#* Updated extensions for ESnet root (US)
 
 Changes to unaccredited information:
-* Added experimental HIAST CA (SY)
 * Added experimental DZeScience CA (DZ)
 * Extended life time for unaccredited Benelux and NE tutorial CA cert and
   re-rooted namespace to new domain name (NL,BE)
