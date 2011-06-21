@@ -15,8 +15,8 @@ Changes from 1.38 to 1.39
 * Added accredited classic Uni Andes CA (CO)
 * Extended life time of root certificate for SiGNET-CA (SI)
 * Extended life time of root certificate for Grid-Ireland (IE)
-#* Extended life time of root certificate for UKeScience (GB)
-#* Updated extensions for ESnet root (US)
+* New issuing certificates (2A, 2B) for UKeScience (GB)
+* Updated extensions for ESnet root (US)
 
 Changes to unaccredited information:
 * Added experimental DZeScience CA (DZ)
