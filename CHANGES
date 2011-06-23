@@ -16,7 +16,7 @@ Changes from 1.38 to 1.39
 * Extended life time of root certificate for SiGNET-CA (SI)
 * Extended life time of root certificate for Grid-Ireland (IE)
 * New issuing certificates (2A, 2B) for UKeScience (GB)
-* Updated extensions for ESnet root (US)
+* Updated extensions for DOEGrids-CA-1 issuing CA (US)
 
 Changes to unaccredited information:
 * Added experimental DZeScience CA (DZ)
