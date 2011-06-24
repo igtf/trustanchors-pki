@@ -1,10 +1,10 @@
 #
-# @(#)$Id: 75304a28.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: 75304a28.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
 # Information for CA DutchDemo
 #   obtained from 75304a28 in DutchDemo/
 alias = DutchDemo
 crl_url = http://www.dutchgrid.nl/ca/dutchdemo/cacrl.pem
-status = worthless
+status = discontinued
 url = http://www.dutchgrid.nl/ca/dutchdemo/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
