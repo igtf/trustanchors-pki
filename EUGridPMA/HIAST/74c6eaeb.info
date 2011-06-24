@@ -1,10 +1,10 @@
-# @(#)$Id$
+# @(#)$Id: 74c6eaeb.info,v 1.1 2011/05/31 07:24:11 pmacvsdg Exp $
 # HIAST CA
 alias = HIAST
 url = http://ca.grid.hiast.edu.sy/
 ca_url = https://ca.grid.hiast.edu.sy/pki/pub/cacert/cacert.pem
 crl_url = http://ca.grid.hiast.edu.sy/pki/pub/crl/cacrl.crl
-status = experimental
+status = accredited:classic
 policy_url = http://ca.grid.hiast.edu.sy/download/HIAST_CP_CPS_V_0_97.doc
 email = cagrid@hiast.edu.sy
 version = @VERSION@
