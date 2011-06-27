@@ -1,11 +1,11 @@
 #
-# @(#)$Id$
+# @(#)$Id: 1b6f5ede.info,v 1.1 2011/06/26 08:41:27 pmacvsdg Exp $
 # Information for 2011 CA UKeScience eScience issuing CA 2A
 #
 alias = UKeScienceCA-2A
 requires = UKeScienceRoot-2007
 url = http://www.grid-support.ac.uk/ca/
-crl_url = http://crl.ca.ngs.ac.uk/crl/ukescience2a.crl
+crl_url = http://crl.ca.ngs.ac.uk/crl/escience2a.crl
 email = support@grid-support.ac.uk
 status = accredited:classic
 version = @VERSION@
