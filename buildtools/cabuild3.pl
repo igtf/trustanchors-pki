@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.9 2011/02/12 09:58:39 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.10 2011/05/30 15:44:55 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -901,10 +901,15 @@ sub packSingleCA($$$$) {
   print "** CA $alias v$info{version} (basename $basename, dir $srcdir)\n";
 
   -f "$srcdir/$basename.0" and do {
+    chomp ( my $actualsha = 
+     `$opt_opensslzero x509 -fingerprint -sha1 -noout -in $srcdir/$basename.0`);
+    $actualsha =~ s/^[^=]+=//;
+
     if ( (!defined $info{"sha1fp.0"}) or ($info{"sha1fp.0"}=~/@/) ) {
-      chomp($info{"sha1fp.0"} = 
-        `$opt_opensslzero x509 -fingerprint -sha1 -noout -in $srcdir/$basename.0`);
-      $info{"sha1fp.0"}=~s/^[^=]+=//;
+      $info{"sha1fp.0"}=$actualsha;
+    } elsif ( defined $info{"sha1fp.0"} and $info{"sha1fp.0"} ne $actualsha) {
+      $err = "CA $basename (alias $alias) has inconsistent SHA1 FP in info" 
+        and return undef;
     }
   };
 
