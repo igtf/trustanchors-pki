@@ -5,4 +5,4 @@ crl_url = http://ra.uniandes.edu.co/pki/pub/crl/cacrl.crl
 ca_url = http://ra.uniandes.edu.co/pki/pub/cacert/cacert.pem
 status = accredited:classic
 version = @VERSION@
-sha1fp.0 = DE:EC:F4:6B:CF:9D:16:A1:8C:41:4D:32:D6:5F:C9:60:8A:5D:A9:C4
+sha1fp.0 = @SHA1FP.0@
