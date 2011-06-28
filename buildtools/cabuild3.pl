@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.10 2011/05/30 15:44:55 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.11 2011/06/28 14:12:23 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -890,6 +890,11 @@ sub packSingleCA($$$$) {
 
   $alias = $info{"alias"};
 
+  ( $err="Alias $alias is not valid" and return undef)
+    unless $alias =~ /^[-a-zA-Z0-9]+$/;
+  ( $err="Status of $alias (".$info{"status"}.") is not valid" and return undef)
+    unless $info{"status"} =~ /^(discontinued|worthless|accredited:mics|accredited:classic|accredited:slcs|experimental)$/;
+
   # do debian checking
   -x "$opt_debian" or die "$opt_debian: not found or not executable";
   my $debianflawed = system "$opt_debian $srcdir/$basename.0";
@@ -941,6 +946,23 @@ sub packSingleCA($$$$) {
     #print CRLURL $info{"crl_url"}."\n";
     foreach my $url ( split(/[; ]+/,$info{"crl_url"}) ) {
       print CRLURL "$url\n";
+      # check CRL for consistency if http
+      if ( $url =~ /^http:/ ) {
+        my $response;
+        chomp ( $response = `GET \'$url\' | openssl crl -CAfile $srcdir/$basename.0 -inform der -noout 2>&1` );
+        chomp ( $response = `GET \'$url\' | openssl crl -CAfile $srcdir/$basename.0 -inform pem -noout 2>&1` ) if ( $response ne "verify OK" );
+        
+        if ( $response ne "verify OK" ) {
+          if ( $collection eq "accredited" ) {
+            $err="CRL URL $url failed: $response" and return undef;
+          } else {
+            print STDERR "Warning: $collection CA CRL $url failed\n";
+          }
+        } else {
+          print "CA CRL $url OK\n";
+        }
+
+      }
     }
     close CRLURL;
   }
