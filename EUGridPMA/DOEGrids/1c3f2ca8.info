@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 1c3f2ca8.info,v 1.5 2006/11/24 17:00:35 pmacvsdg Exp $
+# @(#)$Id: 1c3f2ca8.info,v 1.6 2009/02/26 08:19:12 pmacvsdg Exp $
 # Information for CA DOEGrids
 #   obtained from 1c3f2ca8 in DOEGrids/
 alias = DOEGrids
@@ -9,4 +9,4 @@ email = trouble@es.net
 requires = ESnet
 status = accredited:classic
 version = @VERSION@
-sha1fp.0 = 2D:7C:01:FE:A8:40:6A:D0:2E:80:F5:08:E4:D2:EB:A3:A8:84:F8:90
+sha1fp.0 = @SHA1FP.0@
