@@ -1,9 +1,9 @@
 #
-# @(#)$Id: 11b4a5a2.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: 11b4a5a2.info,v 1.4 2006/01/13 11:06:16 pmacvsdg Exp $
 # Information for CA LIPCA
 #   obtained from 11b4a5a2 in LIPCA/
 alias = LIPCA
-crl_url = http://ca.lip.pt/lip-lisboa/pub/crl/cacrl.pem
+crl_url = http://ca.lip.pt/crl/crl.der
 email = ca@lip.pt
 status = accredited:classic
 url = http://ca.lip.pt/
