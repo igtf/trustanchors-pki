@@ -11,6 +11,8 @@ Changes from 1.40 to 1.41
 
 * Added accredited PSC MyProxy SLCS CA (US)
 * Updated CRL URL for LIPCA (PT)
+* Added new UK eScience issuing CAs 2A and 2B to allowed namespaces and 
+  removed superfluous signing policy entries (UK)
 
 Changes from 1.39 to 1.40
 -------------------------
