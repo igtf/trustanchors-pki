@@ -1,10 +1,10 @@
-# @(#)$Id$
+# @(#)$Id: 709afd2b.info,v 1.1 2009/05/06 20:23:17 pmacvsdg Exp $
 #
 alias = Thawte-freemail-root
 ca_url = http://www.thawte.com/
 crl_url = http://crl.thawte.com/ThawtePersonalFreemailCA.crl
 email = southafricasupport@thawte.com
-status = worthless
+status = unaccredited
 url = http://www.thawte.com/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

@@ -1,10 +1,10 @@
-# @(#)$Id$
+# @(#)$Id: 90064a82.info,v 1.1 2009/03/09 21:19:23 pmacvsdg Exp $
 # GILDA (the EGEE Project) worthless CA
 alias = GILDA-CA
 url = https://gilda-security.ct.infn.it/CA/
 ca_url = https://gilda-security.ct.infn.it/CA/mgt/getCA.php
 crl_url = http://grid018.ct.infn.it/CA/new_crl.crl
 email = gilda-ca@ct.infn.it
-status = worthless
+status = unaccredited
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@

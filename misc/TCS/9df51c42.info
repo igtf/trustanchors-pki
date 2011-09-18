@@ -1,4 +1,4 @@
-# @(#)$Id: 9df51c42.info,v 1.1 2009/10/24 20:55:16 pmacvsdg Exp $
+# @(#)$Id: 9df51c42.info,v 1.2 2010/02/14 18:41:06 pmacvsdg Exp $
 # TERENA SSL CA
 alias = TERENA-SSL-CA
 requires = UTN-USERFirst-Hardware
@@ -7,6 +7,6 @@ crl_url = http://crl.tcs.terena.org/TERENASSLCA.crl
 url = http://www.terena.org/activities/tcs/
 policy_url = https://www.terena.org/activities/tcs/repository/
 email = tcs-pma@terena.org
-status = worthless
+status = unaccredited
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
