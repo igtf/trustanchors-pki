@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild2.pl,v 1.3 2010/10/25 13:03:15 pmacvsdg Exp $
+# @(#)$Id: cabuild2.pl,v 1.4 2010/10/25 13:05:29 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -56,7 +56,7 @@ defined $opt_url or
 # configuration settings
 #
 @validStatus = qw(accredited:classic accredited:slcs accredited:mics
-                  suspended discontinued experimental worthless );
+                  suspended discontinued experimental unaccredited );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
 $Main::legacyEUGridPMASpecFileTemplate="eugridpma.spec.cin";
@@ -121,7 +121,7 @@ sub makeInfoFiles($$) {
                      "$targetdir/experimental/README.txt",
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
-  &copyWithExpansion("worthless-README.cin","$targetdir/worthless/README.txt",
+  &copyWithExpansion("unaccredited-README.cin","$targetdir/unaccredited/README.txt",
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
   &copyWithExpansion("toplevel-version.txt.cin","$targetdir/version.txt",
@@ -201,12 +201,12 @@ Origin: $opt_url
 Label: IGTF Distribution $opt_gver
 Suite: IGTF Distribution $opt_gver
 Architectures: noarch
-Components: accredited experimental worthless
+Components: accredited experimental unaccredited
 Description: APT repository of IGTF distribution $opt_gver
 EOF
   close RELEASE;
 
-  for my $s ( qw(accredited experimental worthless) ) {
+  for my $s ( qw(accredited experimental unaccredited) ) {
     mkdir "$targetdir/apt/RPMS.$s" or return undef;
     open RELEASE,">$targetdir/apt/base/release.$s" or do {
         $err="Cannot create $targetdir/apt/base/release.$s: $!"; return undef;
@@ -232,7 +232,7 @@ EOF
   }
 
   system("genbasedir --hashonly $targetdir/apt ".
-                     "accredited experimental worthless")
+                     "accredited experimental unaccredited")
     and do {
       $err="system command error: $!"; return undef;
     };
@@ -655,7 +655,7 @@ sub getAuthoritiesList($$) {
 #
 # Generate the directory structure for the final distribution. It should be:
 #     TOP
-#     +- {accredited,experimental,worthless}
+#     +- {accredited,experimental,unaccredited}
 #        +- RPMS
 #        +- SRPMS
 #        +- tgz
@@ -666,7 +666,7 @@ sub generateDistDirectory($) {
   -d $dir and $err="$dir already exists, clean first" and return undef;
   mkdir $dir or return undef;
 
-  for my $s ( qw(accredited experimental worthless) ) {
+  for my $s ( qw(accredited experimental unaccredited) ) {
     mkdir "$dir/$s" or return undef;
     for my $t ( qw (RPMS SRPMS tgz jks) ) {
       mkdir "$dir/$s/$t" or return undef;

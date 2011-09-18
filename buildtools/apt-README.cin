@@ -7,8 +7,9 @@ subdirectory are compliant with a "production-level" authentication profile,
 like the classic X.509 secured CAs or the Short-Lived Credential Services
 profile.
 
-The "RPMS.worthless/" distribution is obviously worthless, the "experimental"
-ones are just that as well: experimental, and for informational purposes only.
+The "RPMS.unaccredited/" distribution is obviously worthless, the 
+"experimental" ones are just that as well: experimental, and for 
+informational purposes only.
 
 Add the following to your "/etc/apt/sources.list.d/eugridpma.list" file:
 

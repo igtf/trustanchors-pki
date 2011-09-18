@@ -19,14 +19,16 @@ i.e., those authorities of which the trust anchor is contained in the
 "accredited/" subdirectory of this distribution! 
 
 You can install the trust anchors in the following ways:
-* install all RPM or tar-ball packages from the "accredited/RPMS/" resp.
-  "accredited/tgz/" directories manually. These RPMs correspond to all
-  accredited CAs from all profiles.
+* install all packages from the "accredited/" directory tree for
+  the RPM, tar.gz or Java Key Store format directories manually. 
+  These correspond to all accredited CAs from all profiles.
 * use a RPM package manament system like "yum" to install the 
   meta-RPM "ca_policy_igtf-PROFILE-@VERSION@-@RELEASE@.noarch.rpm"
   where PROFILE is the name of the profile (e.g., classic, mics or slcs)
   You should install ALL policy bundles corresponding to the 
   authentication profiles you want to accept.
+* use the "dists/" directory and containing DEB packages for Debian
+  and derived operating systems (see also dists/README.txt)
 * install all authorities with the installation tarball bundle
   "igtf-policy-installation-bundle-@VERSION@.tar.gz", using the 
   "./configure --with-profile=NAME && make && make install" mechanism.
@@ -39,14 +41,14 @@ Please make sure you validate the correctness of the trust anchors with the
 TERENA Academic CA Repository (https://www.tacar.org/) where possible.
 
 This distribution contains, for your convenience, also selected other CAs 
-in the "worthless/" and "experimental/" directories. These are NOT 
+in the "unaccredited/" and "experimental/" directories. These are NOT 
 part of the accredited trust fabric and you install these at your own risk.
 
 Comments and suggestions for improvement of this distribution are welcome;
 please send them to <info@eugridpma.org>. For more information, see
 the web site:
 
-	http://www.gridpma.org/
+	http://www.igtf.net/
 
 	http://www.eugridpma.org/
 	http://www.apgridpma.org/

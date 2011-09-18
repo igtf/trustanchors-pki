@@ -15,7 +15,7 @@ The structure of this installation tar-ball is as follows:
    Makefile
    src/
      accredited/
-     worthless/
+     unaccredited/
      experimental/
 
 where the source trust anchors (all of them) are located in their
@@ -59,9 +59,9 @@ arguments specific to the IGTF distribution:
     mics    -- Member Integrated Credential generation Services
 
   Notes:
-  * there is no collective installation for experimental or worthless 
+  * there is no collective installation for experimental or unaccredited 
     CAs, as there are no assertions made by the PMAs regarding such 
-    experimental or worthless authority trust anchors.
+    experimental or unaccredited authority trust anchors.
   * You can repeat the "--with-profile=" stanza to select multiple
     profiles
 

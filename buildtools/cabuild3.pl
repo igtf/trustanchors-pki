@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.11 2011/06/28 14:12:23 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.12 2011/06/28 14:48:21 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -56,7 +56,7 @@ defined $opt_url or
 # configuration settings
 #
 @validStatus = qw(accredited:classic accredited:slcs accredited:mics
-                  suspended discontinued experimental worthless );
+                  suspended discontinued experimental unaccredited );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::singleDebianControlTemplate="ca_single.control.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
@@ -124,7 +124,7 @@ sub makeInfoFiles($$) {
                      "$targetdir/experimental/README.txt",
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
-  &copyWithExpansion("worthless-README.cin","$targetdir/worthless/README.txt",
+  &copyWithExpansion("unaccredited-README.cin","$targetdir/unaccredited/README.txt",
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
   &copyWithExpansion("toplevel-version.txt.cin","$targetdir/version.txt",
@@ -171,7 +171,7 @@ sub debifyDirectory($) {
   my ($targetdir) = @_;
   # $targetdir/dists/igtf/$collection/binary-all/
 
-  for my $collection ( qw(accredited experimental worthless) ) {
+  for my $collection ( qw(accredited experimental unaccredited) ) {
   open RELEASE,">$targetdir/dists/igtf/$collection/binary-all/Release" or 
     die "Cannot write release file for $collection: $!\n";
   print RELEASE "Archive: igtf\n";
@@ -226,7 +226,7 @@ sub debifyDirectory($) {
     die "Cannot write release file for master: $!\n";
   print RELEASE <<EOF;
 Archive: igtf
-Components: accredited worthless experimental
+Components: accredited unaccredited experimental
 Origin: International Grid Trust Federation
 Label: IGTF Trust Anchor Distribution
 Suite: igtf
@@ -300,12 +300,12 @@ Origin: $opt_url
 Label: IGTF Distribution $opt_gver
 Suite: IGTF Distribution $opt_gver
 Architectures: noarch
-Components: accredited experimental worthless
+Components: accredited experimental unaccredited
 Description: APT repository of IGTF distribution $opt_gver
 EOF
   close RELEASE;
 
-  for my $s ( qw(accredited experimental worthless) ) {
+  for my $s ( qw(accredited experimental unaccredited) ) {
     mkdir "$targetdir/apt/RPMS.$s" or return undef;
     open RELEASE,">$targetdir/apt/base/release.$s" or do {
         $err="Cannot create $targetdir/apt/base/release.$s: $!"; return undef;
@@ -331,7 +331,7 @@ EOF
   }
 
   system("genbasedir --hashonly $targetdir/apt ".
-                     "accredited experimental worthless")
+                     "accredited experimental unaccredited")
     and do {
       $err="system command error: $!"; return undef;
     };
@@ -818,12 +818,12 @@ sub getAuthoritiesList($$) {
 #
 # Generate the directory structure for the final distribution. It should be:
 #     TOP
-#     +- {accredited,experimental,worthless}
+#     +- {accredited,experimental,unaccredited}
 #     |  +- RPMS
 #     |  +- SRPMS
 #     |  +- tgz
 #     +- debian
-#        +- {accredited,experimental,worthless}
+#        +- {accredited,experimental,unaccredited}
 #           +- binary-all
 
 sub generateDistDirectory($) {
@@ -832,7 +832,7 @@ sub generateDistDirectory($) {
   -d $dir and $err="$dir already exists, clean first" and return undef;
   mkdir $dir or return undef;
 
-  for my $s ( qw(accredited experimental worthless) ) {
+  for my $s ( qw(accredited experimental unaccredited) ) {
     mkdir "$dir/$s" or return undef;
     for my $t ( qw (RPMS SRPMS tgz jks) ) {
       mkdir "$dir/$s/$t" or return undef;
@@ -840,7 +840,7 @@ sub generateDistDirectory($) {
   }
   mkdir "$dir/dists" or return undef;
   mkdir "$dir/dists/igtf" or return undef;
-  for my $is ( qw(accredited experimental worthless) ) {
+  for my $is ( qw(accredited experimental unaccredited) ) {
     mkdir "$dir/dists/igtf/$is" or return undef;
     mkdir "$dir/dists/igtf/$is/binary-all" or return undef;
     for my $arch ( qw( i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64 ) ) {
@@ -893,7 +893,7 @@ sub packSingleCA($$$$) {
   ( $err="Alias $alias is not valid" and return undef)
     unless $alias =~ /^[-a-zA-Z0-9]+$/;
   ( $err="Status of $alias (".$info{"status"}.") is not valid" and return undef)
-    unless $info{"status"} =~ /^(discontinued|worthless|accredited:mics|accredited:classic|accredited:slcs|experimental)$/;
+    unless $info{"status"} =~ /^(discontinued|unaccredited|accredited:mics|accredited:classic|accredited:slcs|experimental)$/;
 
   # do debian checking
   -x "$opt_debian" or die "$opt_debian: not found or not executable";
