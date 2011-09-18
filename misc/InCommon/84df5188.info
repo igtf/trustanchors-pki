@@ -1,0 +1,10 @@
+alias = InCommon-Server-CA
+requires = AddTrust-External-CA-Root
+ca_url = https://www.incommon.org/cert/repository/InCommonServerCA.pem
+crl_url = http://crl.incommon.org/InCommonServerCA.crl
+policy_url = https://www.incommon.org/cert/repository/cps_ssl.pdf
+url = https://www.incommon.org/cert/repository/
+email = incommon-admin@incommonfederation.org
+status = unaccredited
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

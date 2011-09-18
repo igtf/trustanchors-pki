@@ -25,6 +25,7 @@ Changes from 1.40 to 1.41
   "unaccredited". Files contained in this directory must be treated with
   utmost care, and their inclusion in the distribution does not constitute 
   any form of endorsement by the IGTF of these files or their content.
+* Added unaccredited InCommon Server CA to convenience directory (US)
 
 Changes from 1.39 to 1.40
 -------------------------
