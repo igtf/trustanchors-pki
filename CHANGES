@@ -12,6 +12,7 @@ Changes from 1.40 to 1.41
 * Added accredited PSC MyProxy SLCS CA (US)
 * Updated CRL URL for LIPCA (PT)
 * Extended life time of SlovakGrid CA root (SK)
+* Added accredited DZ-eScience CA (DZ)
 * Added new UK eScience issuing CAs 2A and 2B to allowed namespaces and 
   removed superfluous signing policy entries (UK)
 * Normalised the certificate files (.0) for selected CAs in the 'old' format 

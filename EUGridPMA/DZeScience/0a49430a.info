@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 0a49430a.info,v 1.1 2011/06/06 17:33:27 pmacvsdg Exp $
 # Information for CA DZ e-Science
 #   
 alias = DZeScience
@@ -7,7 +7,7 @@ ca_url = https://ca.grid.arn.dz/pki/pub/cacert/cacert.pem
 crl_url = http://ca.grid.arn.dz/pki/pub/crl/cacrl.crl
 policy_url = https://ca.grid.arn.dz/pki/pub/home/cp_cps.htm
 email = ca@grid.arn.dz
-status = experimental
+status = accredited:classic
 url = http://www.grid.arn.dz
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
