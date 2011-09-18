@@ -13,6 +13,10 @@ Changes from 1.40 to 1.41
 * Updated CRL URL for LIPCA (PT)
 * Added new UK eScience issuing CAs 2A and 2B to allowed namespaces and 
   removed superfluous signing policy entries (UK)
+* Normalised the certificate files (.0) for selected CAs in the 'old' format 
+  distribution. This does not affect the 'new' OpenSSL v1+ compatible release. 
+  Affected CAs are CESNET, NIKHEF, NIIF, DFN-GridGermany-Root, PSC-Myproxy-CA,
+  and NERSC-SLCS. Old and new format files are now identical.
 
 Changes from 1.39 to 1.40
 -------------------------
