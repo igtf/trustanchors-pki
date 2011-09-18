@@ -11,12 +11,19 @@ Changes from 1.40 to 1.41
 
 * Added accredited PSC MyProxy SLCS CA (US)
 * Updated CRL URL for LIPCA (PT)
+* Extended life time of SlovakGrid CA root (SK)
 * Added new UK eScience issuing CAs 2A and 2B to allowed namespaces and 
   removed superfluous signing policy entries (UK)
 * Normalised the certificate files (.0) for selected CAs in the 'old' format 
   distribution. This does not affect the 'new' OpenSSL v1+ compatible release. 
   Affected CAs are CESNET, NIKHEF, NIIF, DFN-GridGermany-Root, PSC-Myproxy-CA,
   and NERSC-SLCS. Old and new format files are now identical.
+
+* The "worthless" area, containing some files that are distributed merely
+  for convenience for selected specific purposes, has been re-named to
+  "unaccredited". Files contained in this directory must be treated with
+  utmost care, and their inclusion in the distribution does not constitute 
+  any form of endorsement by the IGTF of these files or their content.
 
 Changes from 1.39 to 1.40
 -------------------------
