@@ -1,5 +1,5 @@
-# @(#)$Id: ffc3d59b.signing_policy,v 1.1 2011/06/26 08:41:27 pmacvsdg Exp $
+# @(#)$Id: ffc3d59b.signing_policy,v 1.2 2011/09/06 14:25:00 pmacvsdg Exp $
 #
  access_id_CA   X509    '/C=UK/O=eScienceCA/OU=Authority/CN=UK e-Science CA 2B'
  pos_rights     globus  CA:sign
- cond_subjects  globus  '/C=UK/O=eScience/*"'
+ cond_subjects  globus  '"/C=UK/O=eScience/*"'
