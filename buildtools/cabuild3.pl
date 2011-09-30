@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.13 2011/09/18 13:12:17 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.14 2011/09/30 08:18:38 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -949,6 +949,10 @@ sub packSingleCA($$$$) {
       symlink "$alias.$ext","$pdir/$info{hash1}.$ext" unless $ext eq "info";
     }
   }
+
+  #
+  # checks on the consistency of the files and syntax
+  #
   if ( -f "$srcdir/$basename.namespaces" ) {
     open F,"<$srcdir/$basename.namespaces" or die "Cannot read existing file $srcdir/$basename.namespaces: $!\n";
     my $line;
@@ -964,6 +968,42 @@ sub packSingleCA($$$$) {
     }
     close F;
   }
+
+  if ( -f "$srcdir/$basename.signing_policy" ) {
+    my $sfname = "$srcdir/$basename.signing_policy";
+    open F,"<$sfname" or die "Cannot read existing file $sfname: $!\n";
+    while (<F>) {
+      my $line_recognised=0;
+      chomp($_); 
+
+      # line continuation not supported in EACL
+      length($_) > 1020 and die "Line too long in $sfname:\n  $_\n";
+
+      /^\s*#/ and next; # comments are supported
+      /^\s*$/ and next; # empty lines are allowed
+      /\.\*/ and
+          die "Weirdly-formatted signing policy (wildcard) in $sfname\n  $_\n";
+      /^\s*access_id_CA/ and do {
+        /^\s*access_id_CA\s+X509\s+\'\/[^\']+\'$/ or
+          die "Weirdly-formatted signing policy (stanzas) in $sfname\n  $_\n";
+        $line_recognised=1;
+      };
+      /^\s*pos_rights/ and do {
+        /^\s*pos_rights\s+globus\s+CA:sign$/ or
+          die "Unexpected pos_rights clause likely unsupported in $sfname\n  $_\n";
+        $line_recognised=1;
+      };
+      /^\s*cond_subjects/ and do {
+        /^\s*cond_subjects\s+globus\s+\'[^\"]+\'$/ or
+        /^\s*cond_subjects\s+globus\s+\'\".*\"\'$/ or
+          die "Unexpected cond_subjects clause likely unsupported in $sfname\n  $_\n";
+        $line_recognised=1;
+      };
+      $line_recognised or die "Unexpected line in $sfname\n  $_\n";
+    }
+    close F;
+  }
+
   if ( $info{"crl_url"} ) {
     open CRLURL,">$pdir/$alias.crl_url" or 
       $err="Cannot open $pdir/$alias.crl_url for write: $!" and return undef;
