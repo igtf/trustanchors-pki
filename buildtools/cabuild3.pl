@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.12 2011/06/28 14:48:21 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.13 2011/09/18 13:12:17 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -935,10 +935,34 @@ sub packSingleCA($$$$) {
           "SHA1FP.0" => $info{"sha1fp.0"},
           "SRCDIR" => $srcdir
         ) );
+      # basic sanity checks on quoting
+      open F,"<$pdir/$alias.$ext" or die "Cannot read written file $pdir/$alias.$ext: $!\n";
+      while (<F>) {
+        (my $dbq=$_)=~s/[^\"]//g; 
+        die "Unbalanced double quotes in $srcdir/$basename.$ext:\n  $_" if (length($dbq)%2);'
+        (my $sq=$_)=~s/[^\']//g; 
+        die "Unbalanced single quotes in $srcdir/$basename.$ext:\n  $_" if (length($sq)%2);'
+      }
+      close F;
       # symlink only signing_policy and namespaces, no info
       symlink "$alias.$ext","$pdir/$info{hash0}.$ext" unless $ext eq "info";
       symlink "$alias.$ext","$pdir/$info{hash1}.$ext" unless $ext eq "info";
     }
+  }
+  if ( -f "$srcdir/$basename.namespaces" ) {
+    open F,"<$srcdir/$basename.namespaces" or die "Cannot read existing file $srcdir/$basename.namespaces: $!\n";
+    my $line;
+    while (<F>) {
+      chomp($_); /^#/ and next;
+      if ( /\\$/ ) { $line=$_; while (<F>) { chomp($_); substr($line,-1)=$_; /\\$/ or last; } }
+      else { $line = $_; }
+      $line =~ /^\s*$/ and next;
+      $line =~ /^TO\s+ISSUER\s+\".*\"\s+PERMIT\s+SUBJECT\s+\".*\"\s*$/i or 
+        die "Weirdly-formatted namespace (stanzas) in $srcdir/$basename.namespaces\n  $line\n";
+      $line =~ /\*/ and $line !~ /\.\*/ and
+        die "Weirdly-formatted namespace (suspect wildcard) in $srcdir/$basename.namespaces\n  $line\n";
+    }
+    close F;
   }
   if ( $info{"crl_url"} ) {
     open CRLURL,">$pdir/$alias.crl_url" or 
