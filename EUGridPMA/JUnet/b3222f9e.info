@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+# Information for CA JUnet
+#   
+alias = JUnet-CA
+ca_url = https://ra.junet.edu.jo/pki/pub/cacert/cacert.pem
+crl_url = http://ra.junet.edu.jo/pki/pub/crl/cacrl.crl
+policy_url = https://ra.junet.edu.jo/pki/pub/cacert/CP_CPS_9-29-2011.pdf
+email = cagrid@junet.edu.jo
+status = accredited:classic
+url = http://www.junet.edu.jo/ca
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
