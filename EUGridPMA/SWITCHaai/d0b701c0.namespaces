@@ -1,13 +1,13 @@
 ##############################################################################
 #NAMESPACES-VERSION: 1.0
 #
-# @(#)$Id: d0b701c0.namespaces,v 1.1 2007/03/07 09:03:03 pmacvsdg Exp $
+# @(#)$Id: d0b701c0.namespaces,v 1.2 2008/03/04 16:54:42 pmacvsdg Exp $
 # CA alias    : SWITCHgrid-Root
 #    subjectDN: /C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCHgrid Root CA
 #    hash     : d0b701c0
 #
 TO Issuer "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCHgrid Root CA" \
-  PERMIT Subject "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCHslcs CA"
+  PERMIT Subject "/C=CH/O=SWITCH/CN=SWITCHslcs CA"
 
-TO Issuer "/C=CH/O=Switch - Teleinformatikdienste fuer Lehre und Forschung/CN=SWITCHslcs CA" \
+TO Issuer "/C=CH/O=SWITCH/CN=SWITCHslcs CA" \
   PERMIT Subject "/DC=ch/DC=switch/DC=slcs/.*"

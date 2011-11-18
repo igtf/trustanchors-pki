@@ -1,0 +1,10 @@
+# @(#)$Id$
+alias = SWITCHslcs2011
+requires = SWITCHgrid-Root
+url = http://www.switch.ch/pki/grid
+ca_url = http://ca.grid.switch.ch/SWITCHslcsCA2011.crt
+crl_url = http://crl.grid.switch.ch/SWITCHslcsCA2011.crl
+email = pki@switch.ch
+status = accredited:slcs
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

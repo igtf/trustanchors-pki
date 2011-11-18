@@ -9,7 +9,8 @@ Changes from 1.42 to 1.43
 -------------------------
 (28 November 2011)
 
-* Added new SWITCHaai CA, rolling over from SWITCHslcs 2009 (CH)
+* Added new SWITCHslcs 2011 CA, replacing SWITCHslcs 2009 (CH)
+* Added new accredited classic JUnet CA (JO)
 * Added additional CRL URL for DOEGrids CA (US)
 * Updated institute information for KIT in signing_policy file (DE)
 * Updated enrolment URLs for Grid-FR CA (FR)
