@@ -1,11 +1,11 @@
 #
-# @(#)$Id: e72045ce.info,v 1.3 2009/05/20 19:05:32 pmacvsdg Exp $
+# @(#)$Id: e72045ce.info,v 1.4 2009/05/30 12:31:46 pmacvsdg Exp $
 #   
 alias = SWITCH-QuoVadis-Grid-ICA
 requires = QuoVadis-Root-CA1
 ca_url = http://trust.quovadisglobal.com/pem/qvgridg1.crt
 crl_url = http://crl.quovadisglobal.com/qvgridg1.crl
-email = pki@switch.ch
+email = grid@switch.ch
 status = accredited:classic
 url = http://www.switch.ch/grid/certificates/
 version = @VERSION@

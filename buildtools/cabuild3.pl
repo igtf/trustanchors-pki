@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.15 2011/09/30 13:53:15 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.16 2011/11/18 15:47:00 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -1004,7 +1004,7 @@ sub packSingleCA($$$$) {
     close F;
   }
 
-  if ( $info{"crl_url"} and $info{"alias"} ne "HIAST" and $info{"alias"} ne "SWITCHslcs2011" ) {
+  if ( $info{"crl_url"} ) {
     open CRLURL,">$pdir/$alias.crl_url" or 
       $err="Cannot open $pdir/$alias.crl_url for write: $!" and return undef;
     #print CRLURL $info{"crl_url"}."\n";

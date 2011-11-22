@@ -1,10 +1,10 @@
-# @(#)$Id: 304cf809.info,v 1.2 2009/03/09 21:18:18 pmacvsdg Exp $
+# @(#)$Id: 304cf809.info,v 1.3 2011/11/18 13:05:44 pmacvsdg Exp $
 alias = SWITCHslcs
 requires = SWITCHgrid-Root
 url = http://www.switch.ch/pki/grid
 ca_url = http://ca.grid.switch.ch/SWITCHslcsCA.crt
 crl_url = http://crl.grid.switch.ch/SWITCHslcsCA.crl
-email = pki@switch.ch
+email = grid@switch.ch
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
