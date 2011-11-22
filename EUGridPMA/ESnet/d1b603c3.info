@@ -1,10 +1,10 @@
 #
-# @(#)$Id: d1b603c3.info,v 1.2 2006/11/08 20:36:34 helm Exp $
+# @(#)$Id: d1b603c3.info,v 1.4 2006/11/24 17:00:35 pmacvsdg Exp $
 # Information for CA ESnet
 #   obtained from d1b603c3 in ESnet/
 alias = ESnet
 url = http://www.es.net/CA/ESnet-Root-CA-1
-crl_url = http://es.net/CA/d1b603c3/CRL/d1b603c3.r0
+crl_url = http://crl.es.net/d1b603c3/d1b603c3.crl;http://commondatastorage.googleapis.com/d1b603c3/d1b603c3.crl
 email = trouble@es.net
 status = accredited:classic
 version = @VERSION@
