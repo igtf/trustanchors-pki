@@ -1,0 +1,16 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)DigiCertGridCA-1.namespaces
+# CA alias    : DigiCertGridCA-1-Classic
+#    subord_of: DigiCertGridRootCA-Root
+#    subjectDN: /DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1
+#
+TO Issuer "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1" \
+  PERMIT Subject "/DC=com/DC=DigiCert-Grid/.*"
+
+TO Issuer "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1" \
+  PERMIT Subject "/DC=com/DC=DigiCertGrid/.*"
+
+TO Issuer "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1" \
+  PERMIT Subject "/C=US/O=DigiCert Grid/.*"
