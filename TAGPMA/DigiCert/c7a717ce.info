@@ -3,7 +3,7 @@
 #
 alias = DigiCertGridCA-1-Classic
 ca_url = http://www.digicert-grid.com/DigiCertGridCA-1_text.txt
-crl_url = http://crl3.digicert.com/DigiCertGridCA-1.crl;http://crl4.digicert.com/DigiCertGridRootCA.crl
+crl_url = http://crl3.digicert.com/DigiCertGridCA-1.crl;http://crl4.digicert.com/DigiCertGridCA-1.crl
 email = support@DigiCert.com
 status = accredited:classic
 url = http://www.Digicert-grid.com/
