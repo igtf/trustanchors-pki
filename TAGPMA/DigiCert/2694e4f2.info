@@ -9,9 +9,3 @@ status = accredited:classic
 url = http://www.digicert-grid.com/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
-
-
-
-
-
-
