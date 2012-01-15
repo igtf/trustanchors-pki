@@ -10,6 +10,7 @@ Changes from 1.43 to 1.44
 (30 January 2012)
 
 * Added accredited classic DigiCert CA chains (US)
+* Extended life time of UGRID root cert (UA)
 
 Changes from 1.42 to 1.43
 -------------------------
