@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.19 2011/11/28 10:03:48 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.20 2012/01/15 07:46:57 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -938,10 +938,11 @@ sub packSingleCA($$$$) {
       # basic sanity checks on quoting
       open F,"<$pdir/$alias.$ext" or die "Cannot read written file $pdir/$alias.$ext: $!\n";
       while (<F>) {
+        /^#/ and next;
         (my $dbq=$_)=~s/[^\"]//g; 
-        die "Unbalanced double quotes in $srcdir/$basename.$ext:\n  $_" if (length($dbq)%2);'
+        die "Unbalanced double quotes in $srcdir/$basename.$ext:\n  $_" if (length($dbq)%2);
         (my $sq=$_)=~s/[^\']//g; 
-        die "Unbalanced single quotes in $srcdir/$basename.$ext:\n  $_" if (length($sq)%2);'
+        die "Unbalanced single quotes in $srcdir/$basename.$ext:\n  $_" if (length($sq)%2);
       }
       close F;
       # symlink only signing_policy and namespaces, no info
@@ -1011,7 +1012,7 @@ sub packSingleCA($$$$) {
     foreach my $url ( split(/[; ]+/,$info{"crl_url"}) ) {
       print CRLURL "$url\n";
       # check CRL for consistency if http
-      if ( $url =~ /^http:/ and $info{"alias"} ne "CALG" ) {
+      if ( $url =~ /^http:/ and $info{"alias"} ne "XXXXXXX" ) {
         my $response;
         chomp ( $response = `GET \'$url\' | openssl crl -CAfile $srcdir/$basename.0 -inform der -noout 2>&1` );
         chomp ( $response = `GET \'$url\' | openssl crl -CAfile $srcdir/$basename.0 -inform pem -noout 2>&1` ) if ( $response ne "verify OK" );
