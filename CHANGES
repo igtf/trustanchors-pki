@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.46 to 1.47
+-------------------------
+(30 April 2012)
+
+* Updates CA URL metadata and CRL for pkIRISGrid CA (ES)
+
 Changes from 1.45 to 1.46
 -------------------------
 (29 March 2012)
