@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.21 2012/01/20 14:01:14 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.22 2012/03/21 08:25:37 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -624,7 +624,7 @@ sub makeCollectionInfo($$$) {
       my $collection = $1;
       copy("$pdir/policy-igtf-$collection.info","$tmpdir/pCIFdeb/etc/grid-security/certificates");
       system("cd $tmpdir/pCIFdeb && ".
-             "tar zcvf $tmpdir/pCIFdeb/data.tar.gz ./etc/grid-security/certificates/policy-igtf-$collection.info");
+             "tar zcvf $tmpdir/pCIFdeb/data.tar.gz --owner root --group root ./etc/grid-security/certificates/policy-igtf-$collection.info");
       $tokens{"COLLECTION"}=lc($collection);
       $tokens{"DEBREQUIRED"}=$tokens{"DEBACCREDITED:".uc($collection)};
       $tokens{"DEBCONFLICTS"}=$tokens{"DEBOBSOLETED.$collection"};
@@ -639,7 +639,7 @@ sub makeCollectionInfo($$$) {
       &copyWithExpansion($Main::collectionDebianFileTemplate,"$tmpdir/pCIFdeb/control",
                      %tokens);
       system("cd $tmpdir/pCIFdeb && ".
-             "tar zcvf $tmpdir/pCIFdeb/control.tar.gz ./control");
+             "tar zcvf $tmpdir/pCIFdeb/control.tar.gz --owner root --group root ./control");
       open DEBIAN,">$tmpdir/pCIFdeb/debian-binary" or die "Cannot write debian-binary: $!\n";
       print DEBIAN "2.0\n";
       close DEBIAN;
@@ -1012,7 +1012,7 @@ sub packSingleCA($$$$) {
     foreach my $url ( split(/[; ]+/,$info{"crl_url"}) ) {
       print CRLURL "$url\n";
       # check CRL for consistency if http
-      if ( $url =~ /^http:/ and ($info{"alias"} !~ ".*CESNET.*") ) {
+      if ( $url =~ /^http:/ and ($info{"alias"} !~ ".*SiGNET.*") ) {
         my $response;
         chomp ( $response = `GET \'$url\' | openssl crl -CAfile $srcdir/$basename.0 -inform der -noout 2>&1` );
         chomp ( $response = `GET \'$url\' | openssl crl -CAfile $srcdir/$basename.0 -inform pem -noout 2>&1` ) if ( $response ne "verify OK" );
