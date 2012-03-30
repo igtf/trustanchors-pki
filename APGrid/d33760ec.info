@@ -1,0 +1,11 @@
+#
+#@(#)$Id$
+#
+alias = MYIFAM
+crl_url = http://myifam.upm.my/pub/MYIFAM-crl.pem
+ca_url = http://myifam.upm.my/pub/MYIFAM.pem
+email = myifam@biruni.upm.my
+status = accredited:classic
+url = http://myifam.upm.my
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

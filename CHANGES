@@ -10,6 +10,7 @@ Changes from 1.46 to 1.47
 (30 April 2012)
 
 * Updates CA URL metadata and CRL for pkIRISGrid CA (ES)
+* Added accredited classic MYIFAM CA (MY)
 
 Changes from 1.45 to 1.46
 -------------------------
