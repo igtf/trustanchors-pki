@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.22 2012/03/21 08:25:37 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.23 2012/03/29 08:10:06 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -1012,7 +1012,7 @@ sub packSingleCA($$$$) {
     foreach my $url ( split(/[; ]+/,$info{"crl_url"}) ) {
       print CRLURL "$url\n";
       # check CRL for consistency if http
-      if ( $url =~ /^http:/ and ($info{"alias"} !~ ".*SiGNET.*") ) {
+      if ( $url =~ /^http:/ and ($info{"alias"} !~ ".*(Br|LAC).*") ) {
         my $response;
         chomp ( $response = `GET \'$url\' | openssl crl -CAfile $srcdir/$basename.0 -inform der -noout 2>&1` );
         chomp ( $response = `GET \'$url\' | openssl crl -CAfile $srcdir/$basename.0 -inform pem -noout 2>&1` ) if ( $response ne "verify OK" );
