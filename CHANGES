@@ -7,9 +7,10 @@ lay-out.
 
 Changes from 1.48 to 1.49
 -------------------------
-(XX July 2012)
+(30 July 2012)
 
 * Added ANSPGrid (126f0acf) classic CA (BR)
+* Extended root cert validity for CA ce33db76 to 20yr (IR)
 
 Changes from 1.47 to 1.48
 -------------------------
