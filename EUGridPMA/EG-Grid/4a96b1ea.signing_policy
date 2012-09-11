@@ -1,0 +1,6 @@
+# EACL - EG-GRID
+# @(#)$Id$
+#
+ access_id_CA      X509     '/C=EG/O=EG-GRID/CN=EG-GRID Certification Authority'
+ pos_rights        globus   CA:sign
+ cond_subjects     globus   '"/C=EG/O=EG-GRID/CN=EG-GRID Certification Authority" "/C=EG/O=EG-GRID/OU=Users/*" "/C=EG/O=EG-GRID/OU=Host/*" "/C=EG/O=EG-GRID/OU=Service/*"'
