@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.50 to 1.51
+-------------------------
+(26 November 2012)
+
+* Due to the unfortunate closure of Grid-Ireland, the Grid-Ireland CA
+  (1e43b9cc) has been discontinued (IE)
+
 Changes from 1.49 to 1.50
 -------------------------
 (24 September 2012)

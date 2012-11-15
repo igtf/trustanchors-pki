@@ -1,11 +1,11 @@
 #
-# @(#)$Id: 1e43b9cc.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: 1e43b9cc.info,v 1.4 2006/10/10 12:28:19 pmacvsdg Exp $
 # Information for CA Grid-Ireland
 #   obtained from 1e43b9cc in Grid-Ireland/
 alias = Grid-Ireland
 url = http://www.cs.tcd.ie/grid-ireland/gi-ca/
 crl_url = http://www.cs.tcd.ie/Grid-Ireland/gi-ca/1e43b9cc.r0
 email = grid-ireland-ca@cs.tcd.ie
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
