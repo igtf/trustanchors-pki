@@ -11,6 +11,7 @@ Changes from 1.50 to 1.51
 
 * Due to the unfortunate closure of Grid-Ireland, the Grid-Ireland CA
   (1e43b9cc) has been discontinued (IE)
+* extended expiry date for CyGrid CA (afe55e66) (CY)
 
 Changes from 1.49 to 1.50
 -------------------------
