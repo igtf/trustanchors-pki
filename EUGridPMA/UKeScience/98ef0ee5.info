@@ -1,10 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: 98ef0ee5.info,v 1.1 2007/11/15 21:04:34 pmacvsdg Exp $
 # Information for the 2007 (new) CA UKeScience ROOT CA
 #
 alias = UKeScienceRoot-2007
 url = http://www.grid-support.ac.uk/ca/
-crl_url = http://ca.grid-support.ac.uk/pub/crl/root-crl.der
+crl_url = http://crl.ca.ngs.ac.uk/crl/root-crl.der
 email = support@grid-support.ac.uk
 status = accredited:classic
 version = @VERSION@

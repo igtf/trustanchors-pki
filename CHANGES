@@ -10,6 +10,9 @@ Changes from 1.51 to 1.52
 (26 January 2012)
 
 * Extended validity of ArmeSFo Root CA (d0c2a341) (AM)
+* Obsoleted UKeScienceCA-2007 and updated Root CRL URL and metadata (UK)
+* removed expiring and unaccredited 'convenience' CAs from the 
+  distribution (Thawte, ZA, TERENA SCS, BE)
 
 Changes from 1.50 to 1.51
 -------------------------

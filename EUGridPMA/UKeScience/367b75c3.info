@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 367b75c3.info,v 1.1 2007/11/15 21:04:34 pmacvsdg Exp $
+# @(#)$Id: 367b75c3.info,v 1.2 2007/11/15 21:12:31 pmacvsdg Exp $
 # Information for new (2007) CA UKeScience eScience subordinate CA
 #
 alias = UKeScienceCA-2007
@@ -7,6 +7,6 @@ requires = UKeScienceRoot-2007
 url = http://www.grid-support.ac.uk/ca/
 crl_url = http://ca.grid-support.ac.uk/pub/crl/ca-crl.der
 email = support@grid-support.ac.uk
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
