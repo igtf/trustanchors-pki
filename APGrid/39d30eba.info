@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+# Information for new CA IHEP 2013
+#   obtained from 39d30eba in APGrid/
+alias = IHEP-2013
+ca_url = http://ihepca.ihep.ac.cn/cacert.pem
+crl_url = http://ihepca.ihep.ac.cn/cacrl.crl
+email = gridca@ihep.ac.cn
+status = accredited:classic
+url = http://ihepca.ihep.ac.cn/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

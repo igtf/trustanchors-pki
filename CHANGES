@@ -5,9 +5,15 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.52 to 1.53
+-------------------------
+(27 May 2013)
+
+* Added new root cert for IHEP CA (2013) (CN)
+
 Changes from 1.51 to 1.52
 -------------------------
-(26 January 2012)
+(26 January 2013)
 
 * Extended validity of ArmeSFo Root CA (d0c2a341) (AM)
 * Obsoleted UKeScienceCA-2007 and updated Root CRL URL and metadata (UK)
