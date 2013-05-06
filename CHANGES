@@ -10,6 +10,7 @@ Changes from 1.52 to 1.53
 (27 May 2013)
 
 * Added new root cert for IHEP CA (2013) (CN)
+* Removed retired NCSA GridShib CA (e8ac4b61) (US)
 
 Changes from 1.51 to 1.52
 -------------------------
