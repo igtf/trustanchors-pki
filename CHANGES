@@ -13,6 +13,7 @@ Changes from 1.52 to 1.53
 * Removed retired NCSA GridShib CA (e8ac4b61) (US)
 * Removed backup crl_url locations for CILogon CAs
   due to future crl.doegrids.org shutdown. (US)
+* Removed retired TACC CAs (2ac09305, 684261aa, e5cc84c2) (US)
 
 Changes from 1.51 to 1.52
 -------------------------
