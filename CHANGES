@@ -14,6 +14,8 @@ Changes from 1.52 to 1.53
 * Removed backup crl_url locations for CILogon CAs
   due to future crl.doegrids.org shutdown. (US)
 * Removed retired TACC CAs (2ac09305, 684261aa, e5cc84c2) (US)
+* Updated NERSC CA (b93d6240) to extend validity and change to
+  self-signed rather than subordinate to ESnet (US)
 
 Changes from 1.51 to 1.52
 -------------------------
