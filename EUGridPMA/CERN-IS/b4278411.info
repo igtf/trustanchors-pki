@@ -1,0 +1,10 @@
+# @(#)$Id$
+# subject= /C=ch/O=CERN/CN=CERN Root Certification Authority 2
+alias = CERN-Root-2
+crl_url = http://cafiles.cern.ch/cafiles/crl/CERN%20Root%20Certification%20Authority%202.crl
+ca_url = http://cafiles.cern.ch/cafiles/certificates/CERN%20Root%20Certification%20Authority%202.crt
+url = http://www.cern.ch/ca
+email = cern-ca-managers@cern.ch
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

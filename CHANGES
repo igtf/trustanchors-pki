@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.53 to 1.54
+-------------------------
+(30 June 2013)
+
+* Extended life time of Grid-KA CA (dd4b34ea) (DE)
+* Added new CERN hierarchy for CERN IT/IS CA (SHA2 migration) (CH)
+
 Changes from 1.52 to 1.53
 -------------------------
 (27 May 2013)

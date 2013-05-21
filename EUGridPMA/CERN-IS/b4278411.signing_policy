@@ -1,0 +1,5 @@
+# @(#)$Id$
+# CERN Root 2
+access_id_CA            X509    '/C=ch/O=CERN/CN=CERN Root Certification Authority 2'
+pos_rights              globus  CA:sign
+cond_subjects           globus  '"/DC=ch/DC=cern/CN=CERN Grid Certification Authority"'
