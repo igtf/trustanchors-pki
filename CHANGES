@@ -12,6 +12,7 @@ Changes from 1.53 to 1.54
 * Extended life time of Grid-KA CA (dd4b34ea) (DE)
 * Added new CERN hierarchy for CERN IT/IS CA (SHA2 migration) (CH)
 * Updated metadata for GridGermany DFN-CERT CAs (DE)
+* Updated contact metadata for KEK (JP)
 
 Changes from 1.52 to 1.53
 -------------------------
