@@ -1,6 +1,6 @@
 alias = HKU
 crl_url = http://ca.grid.hku.hk/crl/cacrl.pem
-email = hpc@cc.hku.hk
+email = group-its-hpc@hku.hk
 status = accredited:classic
 url = http://ca.grid.hku.hk/
 version = @VERSION@

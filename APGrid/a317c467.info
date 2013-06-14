@@ -1,10 +1,10 @@
 #
-# @(#)$Id: a317c467.info,v 1.4 2008/09/11 04:30:11 pmacvsyt Exp $
+# @(#)$Id: a317c467.info,v 1.5 2009/04/06 13:23:40 pmacvsyt Exp $
 # Information for CA AIST
 #   obtained from a317c467 in APGrid/
 alias = AIST
 crl_url = http://crls.apgrid.org/AIST/a317c467.r0
-email = gridca@m.aist.go.jp
+email = gridca-ml@aist.go.jp
 status = accredited:classic
 url = https://www.apgrid.org/CA/AIST/Production/
 version = @VERSION@
