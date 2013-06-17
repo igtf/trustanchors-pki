@@ -13,6 +13,8 @@ Changes from 1.53 to 1.54
 * Added new CERN hierarchy for CERN IT/IS CA (SHA2 migration) (CH)
 * Updated metadata for GridGermany DFN-CERT CAs (DE)
 * Updated contact metadata for KEK (JP)
+* Updated contact metadata for HKU (HK)
+* Updated contact metadata for AIST (JP)
 
 Changes from 1.52 to 1.53
 -------------------------
