@@ -7,9 +7,10 @@ lay-out.
 
 Changes from 1.54 to 1.55
 -------------------------
-(XX October 2013)
+(XX November 2013)
 
 * New root certificate with extended life time for NorduGrid CA 1f0e8352 (DK)
+* Added convenience worthless NL e-Infra Zero tutorial CA 338a3561 (NL)
 
 Changes from 1.53 to 1.54
 -------------------------

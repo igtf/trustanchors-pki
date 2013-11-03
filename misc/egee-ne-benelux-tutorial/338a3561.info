@@ -1,0 +1,10 @@
+#
+# @(#)$Id#
+# Information for the Worthless NL e-Infra Zero Tutorial CA 1
+alias = nl-e-infra-zero
+crl_url = http://ca.dutchgrid.nl/nl-e-infra-zero/cacrl.pem
+url = http://ca.dutchgrid.nl/nl-e-infra-zero/
+ca_url = http://ca.dutchgrid.nl/nl-e-infra-zero/cacert.pem
+status = unaccredited
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

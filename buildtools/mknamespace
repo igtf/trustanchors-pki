@@ -28,6 +28,7 @@ foreach $f ( @ARGV ) {
   close SP;
 
 
+  print "Writing $nsf file\n";
   -f "$nsf" or do { 
   open NS,">$nsf";
 

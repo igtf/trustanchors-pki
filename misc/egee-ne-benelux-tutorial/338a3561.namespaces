@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)338a3561.namespaces
+# CA alias    : nl-e-infra-zero
+#    subord_of: 
+#    subjectDN: /DC=nl/DC=e-infra/OU=Certification Authorities/CN=Worthless NL e-Infra Zero Tutorial CA 1
+#    hash     : 338a3561
+#    (generated automatically from 338a3561.signing_policy)
+#
+TO Issuer "/DC=nl/DC=e-infra/OU=Certification Authorities/CN=Worthless NL e-Infra Zero Tutorial CA 1" \
+  PERMIT Subject "/DC=nl/DC=e-infra/O=Training Services/OU=users/.*"
+
