@@ -1,8 +1,8 @@
 #
-# @(#)$Id: 163af95c.info,v 1.1 2009/01/25 15:32:34 pmacvsdg Exp $
+# @(#)$Id: 163af95c.info,v 1.2 2011/10/25 06:31:49 pmacvsdg Exp $
 alias = CNRS2
 url = http://igc.services.cnrs.fr/GRID2-FR/
-email = grid-fr@urec.cnrs.fr
+email = grid-fr@renater.fr
 crl_url = http://crls.services.cnrs.fr/CNRS2/getpem.crl
 status = accredited:classic
 version = @VERSION@
