@@ -13,6 +13,9 @@ Changes from 1.54 to 1.55
 * Added convenience worthless NL e-Infra Zero tutorial CA 338a3561 (NL)
 * Updated contact metadata for all RENATER Grid-FR related CAs (FR)
 * Updated CRL URL and metadata for IHEP 2013 CA 39d30eba (CN)
+* New root certificates for NCSA CA re-key (US)
+  MyProxy CA 2013 c36f6349/7aa2b7bd and Two Factor CA 2013 ca157cee/48c8f10a.
+  Old NCSA root certificates will be removed soon.
 
 Changes from 1.53 to 1.54
 -------------------------
