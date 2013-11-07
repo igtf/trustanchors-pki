@@ -12,6 +12,7 @@ Changes from 1.54 to 1.55
 * New root certificate with extended life time for NorduGrid CA 1f0e8352 (DK)
 * Added convenience worthless NL e-Infra Zero tutorial CA 338a3561 (NL)
 * Updated contact metadata for all RENATER Grid-FR related CAs (FR)
+* Updated CRL URL and metadata for IHEP 2013 CA 39d30eba (CN)
 
 Changes from 1.53 to 1.54
 -------------------------
