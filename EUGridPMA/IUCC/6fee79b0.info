@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 6fee79b0.info,v 1.4 2007/10/05 07:39:58 pmacvsdg Exp $
+# @(#)$Id: 6fee79b0.info,v 1.5 2008/09/10 15:59:17 pmacvsdg Exp $
 # Information for CA IUCC
 #   obtained from 6fee79b0 in IUCC/
 alias = IUCC
@@ -7,6 +7,6 @@ url = http://certificate.iucc.ac.il/
 email = ca@iucc.ac.il
 ca_url = http://certificate.iucc.ac.il/ca/cacert.pem
 crl_url = http://certificate.iucc.ac.il/ca/cacrl.pem
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

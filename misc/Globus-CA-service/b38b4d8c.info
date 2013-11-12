@@ -1,8 +1,8 @@
 #
-# @(#)$Id: b38b4d8c.info,v 1.2 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: b38b4d8c.info,v 1.3 2011/09/18 13:19:54 pmacvsdg Exp $
 # Information for CA Globus-CA-service
 #   obtained from b38b4d8c in Globus-CA-service/
 alias = Globus-CA-service
-status = unaccredited
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

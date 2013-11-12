@@ -16,7 +16,10 @@ Changes from 1.54 to 1.55
 * New root certificates for NCSA CA re-key (US)
   MyProxy CA 2013 c36f6349/7aa2b7bd and Two Factor CA 2013 ca157cee/48c8f10a.
   Old NCSA root certificates will be removed soon.
-* Removed AIST Grid CA.
+* Removed AIST Grid CA (JP)
+* Discontinued IUCC CA (6fee79b0) following migration to TCS (IL)
+* Suspended JUnet-CA (b3222f9e) (JO)
+* Removed expired unaccredited CAs (misc)
 
 Changes from 1.53 to 1.54
 -------------------------
