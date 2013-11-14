@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+#
+# SEEGRID-CA-2013
+#
+alias = seegrid-ca-2013
+url = http://see-grid-ca.hellasgrid.gr
+ca_url = http://crl.hellasgrid.gr/seegrid-ca-2013/cert.pem
+crl_url = http://crl.hellasgrid.gr/seegrid-ca-2013/crl-v2.pem
+email = see-grid-ca@hellasgrid.gr
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
