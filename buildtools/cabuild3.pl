@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.25 2012/05/22 12:49:26 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.26 2012/06/25 13:07:08 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -118,6 +118,9 @@ sub makeInfoFiles($$) {
   my ($carep,$targetdir) = @_;
 
   &copyWithExpansion("toplevel-README.cin","$targetdir/README.txt",
+    ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
+      "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
+  &copyWithExpansion("LICENSE","$targetdir/LICENSE",
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r, 
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
   &copyWithExpansion("experimental-README.cin",
@@ -367,6 +370,12 @@ sub makeBundleScripts($$$) {
     ( "VERSION" => $opt_gver, "RELEASE" => $opt_r,
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
 
+  &copyWithExpansion("LICENSE","$builddir/LICENSE",
+    ( "VERSION" => $opt_gver, "RELEASE" => $opt_r,
+      "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
+
+  copy("../CHANGES","$builddir/CHANGES")
+    or do { $err="CHANGES copy: $!\n"; return undef};
 
   open MKTPL,">>$builddir/Makefile.tpl" or do {
     $err="Cannot open makefile template for append: $!";
