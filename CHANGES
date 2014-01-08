@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.55 to 1.56
+-------------------------
+(24 February 2013)
+
+* Removed discontinued SWITCHslcs2011 and associated Root (CH)
+
 Changes from 1.54 to 1.55
 -------------------------
 (25 November 2013)
