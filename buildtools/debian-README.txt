@@ -30,4 +30,5 @@ Using the distribution
     apt-get install ca-policy-igtf-classic
     apt-get install ca-policy-igtf-mics
     apt-get install ca-policy-igtf-slcs
+    apt-get install ca-policy-igtf-iota
 

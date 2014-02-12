@@ -57,6 +57,8 @@ arguments specific to the IGTF distribution:
     classic -- Traditional X.509 Authorities with Secured Infrastructure
     slcs    -- Short-Lived Credential generation Services
     mics    -- Member Integrated Credential generation Services
+    iota    -- Identifier-Only Trust Assurance Services - PLEASE read
+               profile first at https://www.eugridpma.org/guidelines/IOTA/
 
   Notes:
   * there is no collective installation for experimental or unaccredited 

@@ -108,3 +108,27 @@ Refer to the IGTF web site for the mics authentication profile.
 %defattr(644,root,root)
 /etc/grid-security/certificates/policy-igtf-mics.info
 
+
+%package iota
+Summary: Identifier-Only Trust Assurance Services collection policy for the IGTF
+URL: http://www.igtf.net/
+Group: Security/Certificates
+AutoReqProv: no
+Requires: @ACCREDITED:IOTA@
+@OBSOLETED.iota@
+
+%description iota
+This is the policy collection that contains all authorities 
+accredited by the IGTF member PMAs according to the "IOTA"
+Identifier-Only Trust Assurance Services Profile
+Install this package if you are willing to trust CAs that are 
+accredited by the the member PMAs under the "IOTA" profile.
+Refer to the IGTF web site for the IOTA authentication profile.
+Please note that the assurance level for IOTA is SIGNIFICANTLY
+DIFFERENT from Clasic, MICS or SLCS, in that only limited 
+traceability is provided and subject naming may be pseudonymous.
+
+%files iota
+%defattr(644,root,root)
+/etc/grid-security/certificates/policy-igtf-iota.info
+

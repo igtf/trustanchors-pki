@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.26 2012/06/25 13:07:08 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.27 2013/11/14 14:44:15 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -56,6 +56,7 @@ defined $opt_url or
 # configuration settings
 #
 @validStatus = qw(accredited:classic accredited:slcs accredited:mics
+                  accredited:iota
                   suspended discontinued experimental unaccredited );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::singleDebianControlTemplate="ca_single.control.cin";
@@ -680,6 +681,7 @@ sub makeCollectionInfo($$$) {
                   "ca_policy_igtf-classic-$opt_gver",
                   "ca_policy_igtf-slcs-$opt_gver",
                   "ca_policy_igtf-mics-$opt_gver",
+                  "ca_policy_igtf-iota-$opt_gver",
                   "ca_policy_eugridpma-classic-$opt_gver",
                   "ca_policy_eugridpma-$opt_gver"
     ) {
@@ -902,7 +904,7 @@ sub packSingleCA($$$$) {
   ( $err="Alias $alias is not valid" and return undef)
     unless $alias =~ /^[-a-zA-Z0-9]+$/;
   ( $err="Status of $alias (".$info{"status"}.") is not valid" and return undef)
-    unless $info{"status"} =~ /^(discontinued|unaccredited|accredited:mics|accredited:classic|accredited:slcs|experimental)$/;
+    unless $info{"status"} =~ /^(discontinued|unaccredited|accredited:mics|accredited:iota|accredited:classic|accredited:slcs|experimental)$/;
 
   # do debian checking
   -x "$opt_debian" or die "$opt_debian: not found or not executable";

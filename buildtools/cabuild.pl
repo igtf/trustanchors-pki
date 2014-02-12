@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild.pl,v 1.42 2010/01/05 21:38:02 pmacvsdg Exp $
+# @(#)$Id: cabuild.pl,v 1.43 2011/09/18 13:12:17 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -48,6 +48,7 @@ defined $opt_url or
 # configuration settings
 #
 @validStatus = qw(accredited:classic accredited:slcs accredited:mics
+                  accredited:iota
                   suspended discontinued experimental unaccredited );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
@@ -499,6 +500,7 @@ sub makeCollectionInfo($$$) {
                   "ca_policy_igtf-classic-$opt_gver",
                   "ca_policy_igtf-slcs-$opt_gver",
                   "ca_policy_igtf-mics-$opt_gver",
+                  "ca_policy_igtf-iota-$opt_gver",
                   "ca_policy_eugridpma-classic-$opt_gver",
                   "ca_policy_eugridpma-$opt_gver"
     ) {
