@@ -1,7 +1,7 @@
 alias = APAC
 crl_url = http://ca.apac.edu.au/pub/crl/cacrl.pem
 email = camanager@vpac.org
-status = accredited:classic
+status = discontinued
 url = http://wiki.arcs.org.au/bin/view/Main/GridCertificates
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
