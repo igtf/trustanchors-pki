@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 1c3f2ca8.info,v 1.7 2011/06/28 13:55:05 pmacvsdg Exp $
+# @(#)$Id: 1c3f2ca8.info,v 1.8 2011/10/31 22:38:41 pmacvsmh Exp $
 # Information for CA DOEGrids
 #   obtained from 1c3f2ca8 in DOEGrids/
 alias = DOEGrids
@@ -7,6 +7,6 @@ url = http://www.doegrids.org/
 crl_url = http://crl.doegrids.org/1c3f2ca8/1c3f2ca8.r0;http://commondatastorage.googleapis.com/1c3f2ca8/1c3f2ca8.crl
 email = trouble@es.net
 requires = ESnet
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

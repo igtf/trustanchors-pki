@@ -7,10 +7,11 @@ lay-out.
 
 Changes from 1.55 to 1.56
 -------------------------
-(24 February 2013)
+(31 March 2014)
 
 * Removed discontinued SWITCHslcs2011 and associated Root (CH)
 * Removed discontinued APAC CA (AU)
+* Removed discontinued DoEGrids CA and ESnet root (US)
 * Add reference to CA website for AustrianGrid CA (AT)
 
 Changes from 1.54 to 1.55
