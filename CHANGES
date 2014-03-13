@@ -13,6 +13,11 @@ Changes from 1.55 to 1.56
 * Removed discontinued APAC CA (AU)
 * Removed discontinued DoEGrids CA and ESnet root (US)
 * Add reference to CA website for AustrianGrid CA (AT)
+* Add meta-package for the IOTA-accredited CAs. Please note that there
+  are no IOTA accredited CAs as this point in time. For specifications see
+  https://www.eugridpma.org/guidelines/IOTA/
+* Debian packaging dependencies in meta-packages now correctly use all-
+  lower-case package names throughout
 
 Changes from 1.54 to 1.55
 -------------------------

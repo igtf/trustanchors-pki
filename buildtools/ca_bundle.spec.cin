@@ -114,7 +114,7 @@ Summary: Identifier-Only Trust Assurance Services collection policy for the IGTF
 URL: http://www.igtf.net/
 Group: Security/Certificates
 AutoReqProv: no
-Requires: @ACCREDITED:IOTA@
+#Requires: @ACCREDITED:IOTA@
 @OBSOLETED.iota@
 
 %description iota
