@@ -1,0 +1,12 @@
+#
+# Information for /DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1 G2
+#
+alias = DigiCertGridCA-1G2-Classic
+ca_url = http://www.digicert-grid.com/DigiCertGridCA-1G2_text.txt
+crl_url = http://crl3.digicert.com/DigiCertGridCA-1G2.crl;http://crl4.digicert.com/DigiCertGridCA-1G2.crl
+email = support@DigiCert.com
+status = accredited:classic
+url = http://www.Digicert-grid.com/
+requires = DigiCertGridRootCA-Root
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
