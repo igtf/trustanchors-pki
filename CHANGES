@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.56 to 1.57
+-------------------------
+(28 April 2014)
+
+* Removed discontinued NCSA Two Factor CA following migration
+  to NCSA Two Factor CA 2013 (US)
+
 Changes from 1.55 to 1.56
 -------------------------
 (31 March 2014)
