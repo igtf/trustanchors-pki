@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.27 2013/11/14 14:44:15 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.28 2014/02/12 16:39:39 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -639,6 +639,13 @@ sub makeCollectionInfo($$$) {
       $tokens{"DEBREQUIRED"}=$tokens{"DEBACCREDITED:".uc($collection)};
       $tokens{"DEBCONFLICTS"}=$tokens{"DEBOBSOLETED.$collection"};
       $tokens{"DEBREPLACES"}=$tokens{"DEBCONFLICTS"};
+
+      if ( defined $tokens{"DEBREQUIRED"} and ( $tokens{"DEBREQUIRED"} ne "" ) ) {
+        $tokens{"DEBREQUIRED"}=~s/^/Depends: /; $tokens{"DEBREQUIRED"}.="\n";
+      } else {
+        $tokens{"DEBREQUIRED"}="";
+      }
+
       if ( defined $tokens{"DEBREPLACES"} and ( $tokens{"DEBREPLACES"} ne "" ) ) {
         $tokens{"DEBREPLACES"}=~s/^/Replaces: /; $tokens{"DEBREPLACES"}.="\n";
         $tokens{"DEBCONFLICTS"}=~s/^/Conflicts: /; $tokens{"DEBCONFLICTS"}.="\n";
@@ -646,6 +653,7 @@ sub makeCollectionInfo($$$) {
         $tokens{"DEBREPLACES"}="";
         $tokens{"DEBCONFLICTS"}="";
       }
+
       &copyWithExpansion($Main::collectionDebianFileTemplate,"$tmpdir/pCIFdeb/control",
                      %tokens);
       system("cd $tmpdir/pCIFdeb && ".

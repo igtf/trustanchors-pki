@@ -3,8 +3,7 @@ Version: @VERSION@-@RELEASE@
 Architecture: all
 Maintainer: David Groep <davidg@eugridpma.org>
 Installed-Size: 1
-Depends: @DEBREQUIRED@
-@DEBCONFLICTS@@DEBREPLACES@Section: net
+@DEBREQUIRED@@DEBCONFLICTS@@DEBREPLACES@Section: net
 Priority: optional
 Homepage: http://www.eugridpma.org/
 Description: IGTF-accredited @COLLECTION@ authority policy set

@@ -9,6 +9,7 @@ Changes from 1.56 to 1.57
 -------------------------
 (28 April 2014)
 
+* Discontinued obsoleted IHEP (2009) CA ba2f39ca (CN)
 * Removed discontinued NCSA Two Factor CA following migration
   to NCSA Two Factor CA 2013 (US)
 
