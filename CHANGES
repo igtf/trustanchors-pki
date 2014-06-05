@@ -9,7 +9,8 @@ Changes from 1.57 to 1.58
 -------------------------
 (30 June 2014)
 
-* Added accredited classic InCommon Server SSL CA (US)
+* Added accredited classic InCommon Server IGTF SSL CA and intermediate 
+  Comodo RSA CA (SHA-2) (US)
 
 Changes from 1.56 to 1.57
 -------------------------
