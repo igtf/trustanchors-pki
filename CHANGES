@@ -13,7 +13,7 @@ Changes from 1.57 to 1.58
   Comodo RSA CA (SHA-2) (US)
 * Extended permitted namespaces for AddTrust-External-CA-Root (EU, US)
 * Updated CILogon Basic CA from experimental to accredited:iota (US)
-* Updated certifcate URL for IHEP-CA-2013 39d30eba (CN)
+* Updated certificate URL for IHEP-CA-2013 39d30eba (CN)
 * Discontinued expiring SEE-GRID '2004' CA - since replaced by 
   new SEEGRID-CA-2013 (GR)
 * Discontinued retired PRAGMA-UCSD CA (US)
