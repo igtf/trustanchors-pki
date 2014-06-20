@@ -16,6 +16,7 @@ Changes from 1.57 to 1.58
 * Updated certifcate URL for IHEP-CA-2013 39d30eba (CN)
 * Discontinued expiring SEE-GRID '2004' CA - since replaced by 
   new SEEGRID-CA-2013 (GR)
+* Discontinued retired PRAGMA-UCSD CA (US)
 
 Changes from 1.56 to 1.57
 -------------------------
