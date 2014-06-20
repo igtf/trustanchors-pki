@@ -15,3 +15,12 @@ TO Issuer "/C=US/ST=UT/L=Salt Lake City/O=The USERTRUST Network/OU=http://www.us
 
 TO Issuer "/C=NL/O=TERENA/CN=TERENA eScience SSL CA" \
   PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+
+TO Issuer "/C=SE/O=AddTrust AB/OU=AddTrust External TTP Network/CN=AddTrust External CA Root" \
+  PERMIT Subject "/C=GB/ST=Greater Manchester/L=Salford/O=COMODO CA Limited/CN=COMODO RSA Certification Authority"
+
+TO Issuer "/C=GB/ST=Greater Manchester/L=Salford/O=COMODO CA Limited/CN=COMODO RSA Certification Authority"
+  PERMIT Subject "/C=US/O=Internet2/OU=InCommon/CN=InCommon IGTF Server CA"
+
+TO Issuer "/C=US/O=Internet2/OU=InCommon/CN=InCommon IGTF Server CA"
+  PERMIT Subject "/DC=org/DC=incommon/.*"
