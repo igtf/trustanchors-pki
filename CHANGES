@@ -13,6 +13,8 @@ Changes from 1.57 to 1.58
   Comodo RSA CA (SHA-2) (US)
 * Updated CILogon Basic CA from experimental to accredited:iota (US)
 * Updated certifcate URL for IHEP-CA-2013 39d30eba (CN)
+* Discontinued expiring SEE-GRID '2004' CA - since replaced by 
+  new SEEGRID-CA-2013 (GR)
 
 Changes from 1.56 to 1.57
 -------------------------
