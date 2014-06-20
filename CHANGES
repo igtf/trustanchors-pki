@@ -12,6 +12,7 @@ Changes from 1.57 to 1.58
 * Added accredited classic InCommon Server IGTF SSL CA and intermediate 
   Comodo RSA CA (SHA-2) (US)
 * Updated CILogon Basic CA from experimental to accredited:iota (US)
+* Updated certifcate URL for IHEP-CA-2013 39d30eba (CN)
 
 Changes from 1.56 to 1.57
 -------------------------
