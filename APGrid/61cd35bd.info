@@ -1,17 +1,12 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww15640\viewh9220\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
-
-\f0\fs24 \cf0 #\
-#@(#)$Id: 61cd35bd.info,v 1.1 2014/09/01 15:54:48 pmacvsey Exp $\
-#\
-alias = HPCI\
-crl_url = http://www.hpci.nii.ac.jp/ca/hpcica.crl\
-ca_url = https://www.hpci.nii.ac.jp/ca/hpcica.pem\
-email = hpci-ca-support@nii.ac.jp\
-status = accredited:MICS\
-url = https://www.hpci.nii.ac.jp/ca/\
-\
-}
+#
+# @(#)$Id$
+#
+alias = HPCI
+crl_url = http://www.hpci.nii.ac.jp/ca/hpcica.crl
+ca_url = https://www.hpci.nii.ac.jp/ca/hpcica.pem
+email = hpci-ca-support@nii.ac.jp
+status = accredited:mics
+url = https://www.hpci.nii.ac.jp/ca/
+policy_url = https://www.hpci.nii.ac.jp/ca/CP_CPS.html
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
