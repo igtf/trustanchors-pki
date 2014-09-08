@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.58 to 1.59
+-------------------------
+(release date TBD)
+
+* Updated crl_url for NCSA-slcs-2013 and NCSA-tfca-2013 (US)
+
 Changes from 1.57 to 1.58
 -------------------------
 (30 June 2014)
