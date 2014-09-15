@@ -1,7 +1,7 @@
 #
-# @(#)$Id: e72045ce.info,v 1.4 2009/05/30 12:31:46 pmacvsdg Exp $
+# @(#)$Id: e72045ce.info,v 1.5 2011/11/22 12:05:05 pmacvsdg Exp $
 #   
-alias = SWITCH-QuoVadis-Grid-ICA
+alias = QuoVadis-Grid-ICA
 requires = QuoVadis-Root-CA1
 ca_url = http://trust.quovadisglobal.com/pem/qvgridg1.crt
 crl_url = http://crl.quovadisglobal.com/qvgridg1.crl

@@ -9,7 +9,9 @@ Changes from 1.58 to 1.59
 -------------------------
 (release date TBD)
 
+* Added accredited classic HPCI CA (JP)
 * Updated crl_url for NCSA-slcs-2013 and NCSA-tfca-2013 (US)
+* Renamed QuoVadis classic grid issuing CA to QuoVadis-Grid-ICA (CH)
 
 Changes from 1.57 to 1.58
 -------------------------
