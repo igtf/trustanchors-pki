@@ -22,6 +22,10 @@ URL: @URL@
 Requires: @REQUIRES@
 %endif
 
+%if %([ -n "@OBSOLETES@" ] && echo 1 || echo 0)
+Obsoletes: @OBSOLETES@
+%endif
+
 %prep
 %setup -n @PACKAGENAME@
 

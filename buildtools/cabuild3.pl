@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.28 2014/02/12 16:39:39 pmacvsdg Exp $
+# @(#)$Id: cabuild3.pl,v 1.29 2014/04/14 14:40:00 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -1128,7 +1128,8 @@ sub packSingleCA($$$$) {
 	  "URL" => $info{"url"},
 	  "COLLECTION" => $collection,
 	  "PROFILE" => $profile,
-	  "REQUIRES" => &expandRequiresWithVersion($info{"requires"})
+	  "REQUIRES" => &expandRequiresWithVersion($info{"requires"}),
+	  "OBSOLETES" => ($info{"obsoletes"}?join ",",map { "ca_".$_ } split /,/,$info{"obsoletes"}:"")
 	) 
     );
 
@@ -1181,7 +1182,9 @@ sub packSingleCA($$$$) {
 	  "URL" => $info{"url"},
 	  "COLLECTION" => $collection,
 	  "PROFILE" => $profile,
-	  "REQUIRES" => (defined $info{"requires"}?"Depends: ".&expandRequiresWithVersionDebian($info{"requires"})."\n":"")
+	  "REQUIRES" => (defined $info{"requires"}?"Depends: ".&expandRequiresWithVersionDebian($info{"requires"})."\n":""),
+	  "REPLACES" => (defined $info{"obsoletes"}?"Replaces: ".(join ",",map { "ca-".lc($_) } split /,/,$info{"obsoletes"})."\n":""),
+	  "CONFLICTS" => (defined $info{"obsoletes"}?"Conflicts: ".(join ",",map { "ca-".lc($_) } split /,/,$info{"obsoletes"})."\n":"")
 	) 
       );
     system("cd $debdatadir && find . -type f | sed -e 's/^..//' | xargs md5sum > $debcontroldir/md5sums");
