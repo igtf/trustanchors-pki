@@ -17,6 +17,15 @@ TO Issuer "/C=NL/O=TERENA/CN=TERENA eScience SSL CA" \
   PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
 
 TO Issuer "/C=SE/O=AddTrust AB/OU=AddTrust External TTP Network/CN=AddTrust External CA Root" \
+  PERMIT Subject "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority"
+
+TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
+  PERMIT Subject "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 2"
+
+TO Issuer "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 2" \
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+
+TO Issuer "/C=SE/O=AddTrust AB/OU=AddTrust External TTP Network/CN=AddTrust External CA Root" \
   PERMIT Subject "/C=GB/ST=Greater Manchester/L=Salford/O=COMODO CA Limited/CN=COMODO RSA Certification Authority"
 
 TO Issuer "/C=GB/ST=Greater Manchester/L=Salford/O=COMODO CA Limited/CN=COMODO RSA Certification Authority" \
