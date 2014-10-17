@@ -1,0 +1,12 @@
+# @(#)$Id$
+# /C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 2
+alias = TERENAeSciencePersonalCA2
+requires = UTN-USERTrust-RSA-CA
+url = https://www.terena.org/activities/tcs/
+ca_url = http://crt.tcs.terena.org/TERENAeSciencePersonalCA2.crt
+crl_url = http://crl.tcs.terena.org/TERENAeSciencePersonalCA2.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+email = tcs-pma@terena.org
+status = accredited:mics
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
