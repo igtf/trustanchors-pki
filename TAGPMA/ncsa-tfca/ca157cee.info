@@ -1,7 +1,7 @@
 alias = NCSA-tfca-2013
 url = https://security.ncsa.illinois.edu/CA/
 ca_url = https://security.ncsa.illinois.edu/CA/48c8f10a.0
-crl_url = http://crl.ncsa.illinois.edu/tfca2013.crl
+crl_url = http://crl-ncsa.ncsa-security.net/tfca2013.crl;http://crl.ncsa.illinois.edu/tfca2013.crl
 email = security@ncsa.illinois.edu
 status =  accredited:slcs
 version = @VERSION@
