@@ -1,0 +1,11 @@
+# @(#)$Id$
+# 
+alias = TSU-GE
+ca_url = https://grid-ca.tsu.ge/Root_Certificate/cacert.pem
+crl_url = http://grid-ca.tsu.ge/tsu.crl
+policy_url = https://grid-ca.tsu.ge/index.php?a=main&pid=3&lang=eng
+email = grid-ca@tsu.ge
+status = accredited:classic
+url = https://grid-ca.tsu.ge/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
