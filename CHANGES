@@ -10,7 +10,7 @@ Changes from 1.60 to 1.61
 (1 December 2014)
 
 * Added new IPv6-capable crl_url entries for NCSA and CILogon CAs (US)
-* Added accredited TSA (Georgia) CA (GE)
+* Added accredited TSU (Georgia) CA (GE)
 
 Changes from 1.59 to 1.60
 -------------------------
