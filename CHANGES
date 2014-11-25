@@ -11,6 +11,7 @@ Changes from 1.60 to 1.61
 
 * Added new IPv6-capable crl_url entries for NCSA and CILogon CAs (US)
 * Added accredited TSU (Georgia) CA (GE)
+* Extended life time and updated digest function of AustrianGrid CA (AT)
 
 Changes from 1.59 to 1.60
 -------------------------
