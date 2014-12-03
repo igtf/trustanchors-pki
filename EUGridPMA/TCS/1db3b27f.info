@@ -1,0 +1,14 @@
+#
+# @(#)$Id$
+# Information for C=NL, ST=Noord-Holland, L=Amsterdam, O=TERENA, CN=TERENA eScience SSL CA 3
+#
+alias = TERENA-eScience-SSL-CA-3
+url = https://www.terena.org/activities/tcs/
+ca_url = http://cacerts.digicert.com/TERENAeScienceSSLCA3.crt
+crl_url = http://crl3.digicert.com/TERENAeScienceSSLCA3.crl;http://crl4.digicert.com/TERENAeScienceSSLCA3.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+requires = DigiCertAssuredIDRootCA-Root
+email = tcs-pma@terena.org
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@

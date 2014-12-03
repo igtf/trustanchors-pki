@@ -1,0 +1,14 @@
+#
+# @(#)$Id$
+# Information for C=NL, ST=Noord-Holland, L=Amsterdam, O=TERENA, CN=TERENA eScience Personal CA 3
+#
+alias = TERENAeSciencePersonalCA3
+url = https://www.terena.org/activities/tcs/
+ca_url = http://cacerts.digicert.com/TERENAeSciencePersonalCA3.crt
+crl_url = http://crl3.digicert.com/TERENAeSciencePersonalCA3.crl;http://crl4.digicert.com/TERENAeSciencePersonalCA3.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+requires = DigiCertAssuredIDRootCA-Root
+email = tcs-pma@terena.org
+status = accredited:mics
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
