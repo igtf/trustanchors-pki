@@ -10,6 +10,7 @@ Changes from 1.61 to 1.62
 (26 January 2015)
 
 * Added new DigiCert based hierarchies for TERENA Certificate Service (EU)
+* Extended life time for pkIRISGrid CA (ES)
 
 Changes from 1.60 to 1.61
 -------------------------
