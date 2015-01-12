@@ -11,6 +11,7 @@ Changes from 1.61 to 1.62
 
 * Added new DigiCert based hierarchies for TERENA Certificate Service (EU)
 * Extended life time for pkIRISGrid CA (ES)
+* Temporarily suspended HIAST/74c6eaeb for operational reasons (SY)
 
 Changes from 1.60 to 1.61
 -------------------------
