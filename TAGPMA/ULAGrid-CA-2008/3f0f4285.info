@@ -8,4 +8,4 @@ crl_url = http://ra.cecalc.ula.ve/pub/crl/cacrl.crl
 email = ca@cecalc.ula.ve
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
-status = accredited:classic
+status = discontinued

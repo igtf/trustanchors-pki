@@ -9,9 +9,11 @@ Changes from 1.61 to 1.62
 -------------------------
 (26 January 2015)
 
-* Added new DigiCert based hierarchies for TERENA Certificate Service (EU)
+* Updated DigiCert root CA meta-data in preparation for TCS (US)
+* Included GEANT TCS CA G3 trust anchors (EU)
 * Extended life time for pkIRISGrid CA (ES)
 * Temporarily suspended HIAST/74c6eaeb for operational reasons (SY)
+* Discontinued ULAGrid-CA-2008 CA (VE)
 
 Changes from 1.60 to 1.61
 -------------------------
