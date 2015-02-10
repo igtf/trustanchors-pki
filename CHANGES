@@ -11,6 +11,7 @@ Changes from 1.61 to 1.62
 
 * Updated DigiCert root CA meta-data in preparation for TCS (US)
 * Included GEANT TCS CA G3 trust anchors (EU)
+* Added Root CA 2 for NIIF (HU)
 * Extended life time for pkIRISGrid CA (ES)
 * Temporarily suspended HIAST/74c6eaeb for operational reasons (SY)
 * Discontinued ULAGrid-CA-2008 CA (VE)

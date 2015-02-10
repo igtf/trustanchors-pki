@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+# Information for CA NIIF 2
+alias = NIIF-Root-CA-2
+ca_url = http://crt.ca.niif.hu/niif-ca-root.crt
+crl_url = http://crl2.ca.niif.hu/cacrl.der
+email = ca@niif.hu
+status = accredited:classic
+url = http://www.ca.niif.hu/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
