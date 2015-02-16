@@ -15,6 +15,7 @@ Changes from 1.61 to 1.62
 * Included GEANT TCS CA G3 trust anchors (EU)
 * Temporarily suspended HIAST/74c6eaeb for operational reasons (SY)
 * Discontinued ULAGrid-CA-2008 CA (VE)
+* Discontinued NCHC CA (TW)
 
 Changes from 1.60 to 1.61
 -------------------------

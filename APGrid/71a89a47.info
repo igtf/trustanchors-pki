@@ -1,11 +1,11 @@
 #
-# @(#)$Id$
+# @(#)$Id: 71a89a47.info,v 1.3 2008/09/11 03:39:44 pmacvsyt Exp $
 # Information for CA NCHC
 #   obtained from 71a89a47 in APGrid/
 alias = NCHC
 crl_url = http://ca.goc.nchc.org.tw/nchcca/CRL/NCHCCRL.der
 email = nchcca@nchc.org.tw
-status = accredited:classic
+status = discontinued
 url = http://ca.goc.nchc.org.tw/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
