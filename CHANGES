@@ -10,6 +10,7 @@ Changes from 1.61 to 1.62
 (23 February 2015)
 
 * Added Root CA 2 for NIIF (HU)
+* Extended validity period for pkIRISgrid CA (ES)
 * Updated DigiCert root CA meta-data in preparation for TCS (US)
 * Included GEANT TCS CA G3 trust anchors (EU)
 * Temporarily suspended HIAST/74c6eaeb for operational reasons (SY)
