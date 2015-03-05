@@ -1,12 +1,12 @@
 #
-# @(#)$Id: cc800af0.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: cc800af0.info,v 1.4 2006/01/30 11:16:24 pmacvsdg Exp $
 # Information for CA NIIF
 #   obtained from cc800af0 in NIIF/
 alias = NIIF
 ca_url = http://www.ca.niif.hu/Certificates/niif_ca_root_x509.pem
 crl_url = http://www.ca.niif.hu/crl/niif-ca-crl.pem
 email = ca@niif.hu
-status = accredited:classic
+status = discontinued
 url = http://www.ca.niif.hu/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
