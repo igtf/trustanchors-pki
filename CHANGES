@@ -12,6 +12,10 @@ Changes from 1.62 to 1.63
 * Removed obsoleted and replaced NIIF CA (HU)
 * Extended validity period of the KEK CA (JP)
 * Removed obsoleted d254cc30/CERN-Root 1d879c6c/CERN-TCA anchors (CERN)
+* Updated RPDNC namespaces to permit DigiCert Grid Trust G2 ICAs for 
+  DigiCert Assured ID Root CA (US)
+* Updated RPDNC namespaces and signing_policy files for G2 series
+  DigiCert Grid CAs pending ICA reissuance for reverse RDN issue (US)
 * Nomalised cond_subject syntax for multiple signing policy files
    cilogon-basic cilogon-silver InCommon-IGTF-Server-CA NCSA-slcs-2013
    NCSA-tfca-2013 Comodo-RSA-CA

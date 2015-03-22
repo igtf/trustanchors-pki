@@ -12,6 +12,9 @@ TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root 
   PERMIT Subject "/C=US/O=DigiCert Grid/OU=www.digicert.com/CN=DigiCert Grid Trust CA"
 
 TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
+  PERMIT Subject "/C=US/O=DigiCert Grid/OU=www.digicert.com/CN=DigiCert Grid Trust CA G2"
+
+TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
   PERMIT Subject "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience Personal CA 3"
 
 TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
