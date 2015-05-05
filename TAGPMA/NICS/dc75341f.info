@@ -6,6 +6,6 @@ url = http://www.nics.tennessee.edu/ca
 ca_url = http://www.nics.tennessee.edu/sites/www.nics.tennessee.edu/files/ca/dc75341f.0
 crl_url = http://www.nics.tennessee.edu/sites/www.nics.tennessee.edu/files/ca/dc75341f.crl
 email = security@nics.tennessee.edu
-status = accredited:slcs
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
