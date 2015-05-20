@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild3.pl,v 1.30 2014/09/16 14:24:54 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.1 2015/05/20 08:15:58 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -69,9 +69,10 @@ $Main::jksPass="eugridpma";
 #
 # IGTF distribution generation logic
 #
+delete($ENV{"DISPLAY"});
 
-
-$opt_f and system("rm -fr $opt_o > /dev/null 2>&1");
+$opt_f and $opt_o ne "/" and $opt_o ne "~" and $opt_o ne "/tmp" and
+  system("rm -fr $opt_o > /dev/null 2>&1");
 &generateDistDirectory($opt_o) or die "generateDistDirectory: $err\n";
 
 # fill list of authorities and resolve versions early to make
