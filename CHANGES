@@ -13,6 +13,7 @@ Changes from 1.63 to 1.64
 * Removed obsolete NICS-MyProxy CA (US)
 * Added revised DigiCertGridCA-1G2-Classic-2015 Classic CA (US)
 * Updated CRL URL information for TCS G3 by preferring secondary URI (EU)
+* Updated RDIG CA with extended validity self-signed root (RU)
 
 Changes from 1.62 to 1.63
 -------------------------
