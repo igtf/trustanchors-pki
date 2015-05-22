@@ -5,6 +5,6 @@ url = http://security.ncsa.uiuc.edu/CA/
 ca_url =  http://ca.ncsa.uiuc.edu/f2e89fe3.0
 crl_url = http://ca.ncsa.uiuc.edu/f2e89fe3.r0
 email = security@ncsa.uiuc.edu
-status =  accredited:slcs
+status = discontinued
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
