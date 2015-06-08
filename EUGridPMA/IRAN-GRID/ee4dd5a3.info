@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+#   
+alias = IRAN-GRID-G2
+ca_url = https://irangrid.ipm.ac.ir/pki/pub/cacert/cacert.pem
+crl_url = http://irangrid.ipm.ac.ir/pki/pub/crl/cacrl.crl
+policy_url = http://cagrid.ipm.ac.ir/policy.htm
+email = ca-manager@ipm.ir
+status = accredited:classic
+url = http://cagrid.ipm.ac.ir/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
