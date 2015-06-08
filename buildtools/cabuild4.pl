@@ -1,10 +1,11 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.1 2015/05/20 08:15:58 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.2 2015/05/20 08:26:30 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
 use Getopt::Long;
+use Data::Dumper;
 use POSIX qw(strftime);
 use File::Temp qw(tempdir);
 use File::Copy qw(copy move);
@@ -90,6 +91,7 @@ mkdir $bundledir;
 
 foreach my $k ( sort keys %auth ) {
   my %info = %{$auth{$k}{"info"}};
+  $info{"casubjectdn"} = $auth{$k}{"casubjectdn"};
   &packSingleCA($auth{$k}{"dir"},$bundledir,$opt_o,$auth{$k}{"basename"},%info) 
     or die "packSingleCA: $err\n";
 }
@@ -564,6 +566,16 @@ sub makeCollectionInfo($$$) {
       $nauthorities++;
     }
     print INFO "\n";
+    # add the subject DN list
+    print INFO "subjectdn = ";
+    my $ndns = 0;
+    foreach my $alias ( keys %auth ) {
+      next if $auth{$alias}{"info"}->{"status"} ne $s;
+      $ndns and print INFO ", \\\n    ";
+      print INFO &quoteDN($auth{$alias}{"casubjectdn"});
+      $ndns++;
+    }
+    print INFO "\n";
 
     if ($#obscas>=0) {
       $nauthorities=0;
@@ -817,14 +829,21 @@ sub getAuthoritiesList($$) {
       defined $hashonecount{$hashone} or $hashonecount{$hashone}=0;
       $info{"offset1"} = $hashonecount{$hashone}++;
     };
+    defined $info{"casubjectdn"} or do {
+      chomp(my $casubjectdn  = `$opt_opensslone  x509 -noout -subject -in '$dir/$certfilename'`);
+      $casubjectdn =~ s/^subject=\s*//;
+      $info{"casubjectdn"} = $casubjectdn;
+    };
 
     $auth{$info{"alias"}} = 
       { "basename" => $basename, "dir" => $dir, 
         "hash0" => $info{"hash0"},
         "hash1" => $info{"hash1"},
+        "casubjectdn" => $info{"casubjectdn"},
         "info" => \%info 
       };
     print "Added CA $basename (alias $info{alias}) with version $version\n";
+    print "  SubjectDN $info{casubjectdn}\n";
   }
   }
   return %auth;
@@ -951,6 +970,7 @@ sub packSingleCA($$$$) {
       &copyWithExpansion("$srcdir/$basename.$ext","$pdir/$alias.$ext",
 	( "VERSION" => $info{"version"}, 
           "SHA1FP.0" => $info{"sha1fp.0"},
+          "SUBJECTDN" => &quoteDN($info{"casubjectdn"}),
           "SRCDIR" => $srcdir
         ) );
       # basic sanity checks on quoting
@@ -1272,4 +1292,11 @@ sub getFilesVersion($) {
   };
   $version = strftime "%Y%m%d",gmtime($version);
   return $version;
+}
+
+sub quoteDN($) {
+  my ($s) = @_;
+  $s =~ s/\%/\%25/g;
+  $s =~ s/\"/\%22/g;
+  return "\"$s\"";
 }
