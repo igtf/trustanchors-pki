@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.2 2015/05/20 08:26:30 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.3 2015/06/08 18:43:16 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -56,7 +56,7 @@ defined $opt_url or
 #
 @validStatus = qw(accredited:classic accredited:slcs accredited:mics
                   accredited:iota
-                  suspended discontinued experimental unaccredited );
+                  discontinued experimental unaccredited );
 $Main::singleSpecFileTemplate="ca_single.spec.cin";
 $Main::singleDebianControlTemplate="ca_single.control.cin";
 $Main::collectionSpecFileTemplate="ca_bundle.spec.cin";
@@ -470,10 +470,11 @@ sub makeBundleScripts($$$) {
     if ($s=~/^accredited/) { 
       ($pname=$s)=~s/.*://; 
     } else { next; }
+    print "Buiding igtf-preinstalled-bundle-$pname-$opt_gver\n";
     my $preinst_tmp=tempdir("$opt_tmp/pPreinstBundle-$pname-XXXXXX", CLEANUP => 0 );
     chmod 0755,$preinst_tmp;
     system("cd $tmpdir/igtf-policy-installation-bundle-$opt_gver ; ".
-           "./configure --with-profile=$pname --prefix=$preinst_tmp && make install");
+           "./configure --with-profile=$pname --prefix=$preinst_tmp && make install > /dev/null");
     system("cd $preinst_tmp ; tar zcf $tmpdir/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz .");
     system("rm $preinst_tmp/*");
     copy("$tmpdir/igtf-preinstalled-bundle-$pname-$opt_gver.tar.gz",
@@ -567,10 +568,24 @@ sub makeCollectionInfo($$$) {
     }
     print INFO "\n";
     # add the subject DN list
+    print "... printing subjectDN list for profile $s\n";
     print INFO "subjectdn = ";
     my $ndns = 0;
-    foreach my $alias ( keys %auth ) {
-      next if $auth{$alias}{"info"}->{"status"} ne $s;
+    SDNLIST: foreach my $alias ( keys %auth ) {
+      next SDNLIST if $auth{$alias}{"info"}->{"status"} ne $s;
+      # especially for the "discontinued" CAs, ONLY include the subjectDN
+      # if it is NOT ALSO the DN of a still-accredited or expt CA
+      if ( $s eq "discontinued" ) {
+        INNERLIST: foreach my $n ( keys %auth ) {
+          next INNERLIST if $auth{$n}{"info"}->{"status"} eq "discontinued";
+          print "NOTICE: removing still-used DN ".$auth{$n}{"casubjectdn"}.
+                " from discontinued list\n"
+            if ($auth{$alias}{"casubjectdn"} eq $auth{$n}{"casubjectdn"});
+          next SDNLIST 
+            if ($auth{$alias}{"casubjectdn"} eq $auth{$n}{"casubjectdn"});
+        }
+      }
+      # 
       $ndns and print INFO ", \\\n    ";
       print INFO &quoteDN($auth{$alias}{"casubjectdn"});
       $ndns++;
@@ -842,8 +857,8 @@ sub getAuthoritiesList($$) {
         "casubjectdn" => $info{"casubjectdn"},
         "info" => \%info 
       };
-    print "Added CA $basename (alias $info{alias}) with version $version\n";
-    print "  SubjectDN $info{casubjectdn}\n";
+    $info{"casubjectdn"} =~ m!.*(\/\w+=[^\/]+)$!; my $cn=$1;
+    print "Added $basename: $info{alias},v$version,...$cn\n";
   }
   }
   return %auth;
@@ -940,7 +955,7 @@ sub packSingleCA($$$$) {
   }
 
   my $tmpdir=tempdir("$opt_tmp/pSCA-$basename-XXXXXX", CLEANUP => 1 );
-  print "** CA $alias v$info{version} (basename $basename, dir $srcdir)\n";
+  print "** CA $alias v$info{version} ($basename in $srcdir)\n";
 
   -f "$srcdir/$basename.0" and do {
     chomp ( my $actualsha = 
@@ -1099,13 +1114,13 @@ sub packSingleCA($$$$) {
    system("keytool -import -alias ".$info{"alias"}." ".
           "-keystore $targetdir/$collection/jks/ca-".$info{"alias"}."-".$info{"version"}.".jks ".
           "-storepass $Main::jksPass -noprompt -trustcacerts ".
-          "-file $tmpdir/$certfile-der");
+          "-file $tmpdir/$certfile-der >/dev/null 2>&1");
    my $jksname="igtf-policy-$collection";
    $profile ne "" and $jksname.="-$profile";
    system("keytool -import -alias ".$info{"alias"}." ".
           "-keystore $targetdir/$collection/jks/$jksname-$opt_gver.jks ".
           "-storepass $Main::jksPass -noprompt -trustcacerts ".
-          "-file $tmpdir/$certfile-der");
+          "-file $tmpdir/$certfile-der >/dev/null 2>&1");
    unlink "$tmpdir/$basename-der";
   };
 
@@ -1213,7 +1228,7 @@ sub packSingleCA($$$$) {
     print DEBIAN "2.0\n";
     close DEBIAN;
 
-    system("cd $debbasedir && ar q $targetdir/dists/igtf/$collection/binary-all/$debname-".$info{"version"}."-$opt_r.deb debian-binary control.tar.gz data.tar.gz");
+    system("cd $debbasedir && ar q $targetdir/dists/igtf/$collection/binary-all/$debname-".$info{"version"}."-$opt_r.deb debian-binary control.tar.gz data.tar.gz 2>/dev/null");
   };
 
   # now collect all information in the proper place
