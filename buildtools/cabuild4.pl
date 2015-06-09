@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.3 2015/06/08 18:43:16 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.4 2015/06/09 10:07:03 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -603,6 +603,7 @@ sub makeCollectionInfo($$$) {
         print INFO "$ca";
         $nauthorities++;
       }
+      print INFO "\n";
     }
 
     close INFO;
