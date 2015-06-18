@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 1f0e8352.info,v 1.5 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: 1f0e8352.info,v 1.6 2006/05/12 05:03:33 pmacvsdg Exp $
 # Information for CA NorduGrid
 #   obtained from 1f0e8352 in NorduGrid/
 alias = NorduGrid
@@ -10,3 +10,4 @@ crl_url = http://ca.nordugrid.org/cacrl.crl
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

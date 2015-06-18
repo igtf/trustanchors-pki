@@ -6,3 +6,4 @@ email = security@ncsa.uiuc.edu
 status =  accredited:slcs
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
+subjectdn = @SUBJECTDN@

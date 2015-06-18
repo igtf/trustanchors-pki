@@ -1,5 +1,5 @@
 #
-# @(#)$Id: a692434d.info,v 1.3 2006/10/15 13:53:58 pmacvsyt Exp $
+# @(#)$Id: a692434d.info,v 1.4 2008/06/03 16:44:53 pmacvsdg Exp $
 # Information for CA ASGCCA
 #   obtained from a692434d in APGrid/
 alias = ASGCCA
@@ -9,3 +9,4 @@ status = discontinued
 url = http://ca.grid.sinica.edu.tw/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

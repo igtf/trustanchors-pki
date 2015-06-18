@@ -1,5 +1,5 @@
 #
-# @(#)$Id: fa3af1d7.info,v 1.4 2005/10/21 11:39:50 pmacvsdg Exp $
+# @(#)$Id: fa3af1d7.info,v 1.5 2007/11/06 16:14:38 pmacvsdg Exp $
 # Information for CA CERN
 #   obtained from fa3af1d7 in CERN/
 alias = CERN
@@ -9,3 +9,4 @@ email = service-grid-ca@cern.ch
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

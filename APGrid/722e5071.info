@@ -5,3 +5,4 @@ status = accredited:classic
 url = http://ca.gridcenter.or.kr/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

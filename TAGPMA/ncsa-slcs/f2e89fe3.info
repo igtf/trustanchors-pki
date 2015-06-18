@@ -1,4 +1,4 @@
-# @<#>$Id: f2e89fe3.info,v 1.2 2008/07/28 11:17:21 pmacvsdg Exp $
+# @<#>$Id: f2e89fe3.info,v 1.4 2015/05/22 14:39:12 pmacvsjb Exp $
 #
 alias = NCSA-slcs
 url = http://security.ncsa.uiuc.edu/CA/
@@ -8,3 +8,4 @@ email = security@ncsa.uiuc.edu
 status = discontinued
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
+subjectdn = @SUBJECTDN@

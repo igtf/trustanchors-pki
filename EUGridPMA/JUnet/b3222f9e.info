@@ -1,5 +1,5 @@
 #
-# @(#)$Id: b3222f9e.info,v 1.1 2011/11/18 12:57:05 pmacvsdg Exp $
+# @(#)$Id: b3222f9e.info,v 1.2 2013/11/12 14:34:39 pmacvsdg Exp $
 # Information for CA JUnet
 #   
 alias = JUnet-CA
@@ -11,3 +11,4 @@ status = discontinued
 url = http://www.junet.edu.jo/ca
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

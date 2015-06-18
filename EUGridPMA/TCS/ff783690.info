@@ -1,4 +1,4 @@
-# @(#)$Id: ff783690.info,v 1.2 2010/02/14 18:41:06 pmacvsdg Exp $
+# @(#)$Id: ff783690.info,v 1.1 2010/09/24 13:29:21 pmacvsdg Exp $
 # UTN-USERFirst-Hardware.crt (as subordinate of AddTrust External CA Root)
 alias = UTN-USERFirst-Hardware
 requires = AddTrust-External-CA-Root
@@ -10,3 +10,4 @@ email = tcs-pma@terena.org
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

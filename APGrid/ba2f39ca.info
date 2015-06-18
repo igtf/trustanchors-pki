@@ -1,5 +1,5 @@
 #
-# @(#)$Id: ba2f39ca.info,v 1.3 2006/07/27 01:49:02 pmacvsyt Exp $
+# @(#)$Id: ba2f39ca.info,v 1.4 2014/04/14 14:40:00 pmacvsdg Exp $
 # Information for CA IHEP
 #   obtained from ba2f39ca in APGrid/
 alias = IHEP
@@ -10,3 +10,4 @@ status = discontinued
 url = https://gridca.ihep.ac.cn/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

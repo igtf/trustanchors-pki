@@ -1,4 +1,4 @@
-# @(#)$Id$
+# @(#)$Id: 35105088.info,v 1.1 2014/10/13 13:40:06 pmacvsdg Exp $
 # C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust RSA Certification Authority
 # 
 alias = UTN-USERTrust-RSA-CA
@@ -11,3 +11,4 @@ email = tcs-pma@terena.org
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

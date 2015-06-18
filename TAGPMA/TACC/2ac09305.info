@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 2ac09305.info,v 1.1 2008/11/06 21:45:41 pmacvsdg Exp $
+# @(#)$Id: 2ac09305.info,v 1.3 2013/05/07 00:24:15 pmacvsjb Exp $
 # Information for /DC=EDU/DC=UTEXAS/DC=TACC/O=UT-AUSTIN/CN=TACC MICS CA
 #   
 alias = TACC-MICS
@@ -11,3 +11,4 @@ url = http://www.tacc.utexas.edu/CA/
 requires = TACC-Root
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

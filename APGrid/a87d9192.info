@@ -5,3 +5,4 @@ status = discontinued
 url = https://www.naregi.org/ca/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

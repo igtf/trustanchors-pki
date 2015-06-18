@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 84c1f123.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
+# @(#)$Id: 84c1f123.info,v 1.3 2006/01/13 11:15:16 pmacvsdg Exp $
 # Information for CA CyGrid-old
 #   obtained from 84c1f123 in CyGrid-old/
 alias = CyGrid-old
@@ -9,3 +9,4 @@ status = discontinued
 url = http://grid.ucy.ac.cy/CyGridCA
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

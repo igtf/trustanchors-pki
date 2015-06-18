@@ -6,3 +6,4 @@ ca_url = http://ra.uniandes.edu.co/pki/pub/cacert/cacert.pem
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

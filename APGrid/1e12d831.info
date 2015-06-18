@@ -5,3 +5,4 @@ status = discontinued
 url = http://wiki.arcs.org.au/bin/view/Main/GridCertificates
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

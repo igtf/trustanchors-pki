@@ -1,5 +1,5 @@
 #
-# @(#)$Id: e72045ce.info,v 1.7 2014/09/15 14:43:23 pmacvsdg Exp $
+# @(#)$Id: e72045ce.info,v 1.8 2014/09/16 14:24:54 pmacvsdg Exp $
 #   
 alias = QuoVadis-Grid-ICA
 requires = QuoVadis-Root-CA1
@@ -11,3 +11,4 @@ status = accredited:classic
 url = https://www.quovadisglobal.bm/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

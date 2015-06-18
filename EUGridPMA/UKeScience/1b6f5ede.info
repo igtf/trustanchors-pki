@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 1b6f5ede.info,v 1.1 2011/06/26 08:41:27 pmacvsdg Exp $
+# @(#)$Id: 1b6f5ede.info,v 1.2 2011/06/27 09:43:40 pmacvsdg Exp $
 # Information for 2011 CA UKeScience eScience issuing CA 2A
 #
 alias = UKeScienceCA-2A
@@ -10,3 +10,4 @@ email = support@grid-support.ac.uk
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

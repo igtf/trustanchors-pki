@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 71a89a47.info,v 1.3 2008/09/11 03:39:44 pmacvsyt Exp $
+# @(#)$Id: 71a89a47.info,v 1.4 2015/02/16 06:38:23 pmacvsdg Exp $
 # Information for CA NCHC
 #   obtained from 71a89a47 in APGrid/
 alias = NCHC
@@ -9,3 +9,4 @@ status = discontinued
 url = http://ca.goc.nchc.org.tw/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

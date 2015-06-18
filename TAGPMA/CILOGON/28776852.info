@@ -6,3 +6,4 @@ email = ca@cilogon.org
 status = accredited:iota
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

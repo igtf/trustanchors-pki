@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 29021213.info,v 1.2 2005/10/15 10:47:14 pmacvsdg Exp $
+# @(#)$Id: 29021213.info,v 1.3 2005/10/18 20:26:01 pmacvsdg Exp $
 # Information for CA FNAL
 #   obtained from 29021213 in FNAL/
 alias = FNAL
@@ -9,3 +9,4 @@ email = dane@fnal.gov
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

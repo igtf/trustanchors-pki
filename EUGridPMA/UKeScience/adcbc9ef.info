@@ -1,5 +1,5 @@
 #
-# @(#)$Id: adcbc9ef.info,v 1.1 2006/07/19 15:09:40 pmacvsdg Exp $
+# @(#)$Id: adcbc9ef.info,v 1.2 2008/07/25 20:00:58 pmacvsdg Exp $
 # Information for CA UKeScience eScience subordinate CA
 #
 alias = UKeScienceCA
@@ -9,3 +9,4 @@ email = support@grid-support.ac.uk
 status = discontinued
 version = @VERSION@
 sha1fp.0 = 0A:E0:5B:0C:64:99:18:2B:4F:FB:15:33:6F:77:33:F9:8E:F2:6D:C7
+subjectdn = @SUBJECTDN@

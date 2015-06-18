@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 6e3b436b.info,v 1.4 2007/09/20 14:21:51 pmacvsdg Exp $
+# @(#)$Id: 6e3b436b.info,v 1.5 2014/03/09 07:54:33 pmacvsdg Exp $
 # Information for CA AustrianGrid
 #   obtained from 6e3b436b in AustrianGrid/
 alias = AustrianGrid
@@ -10,3 +10,4 @@ email = ca@austriangrid.at
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

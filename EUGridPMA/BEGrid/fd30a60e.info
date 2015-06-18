@@ -1,5 +1,5 @@
 #
-# @(#)$Id: fd30a60e.info,v 1.1 2008/12/12 09:30:33 pmacvsdg Exp $
+# @(#)$Id: fd30a60e.info,v 1.2 2008/12/12 09:32:30 pmacvsdg Exp $
 # Information for new CA Belnet Root CA
 alias = BELNET-Root
 url = https://gridra.begrid.be/
@@ -8,3 +8,4 @@ email = gridca@belnet.be
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

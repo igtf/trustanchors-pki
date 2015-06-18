@@ -1,4 +1,4 @@
-# @(#)$Id: 393f7863.info,v 1.3 2007/06/01 14:11:39 pmacvsdg Exp $
+# @(#)$Id: 393f7863.info,v 1.4 2009/08/21 08:51:04 pmacvsdg Exp $
 alias = AEGIS
 url = http://aegis-ca.rcub.bg.ac.rs/
 ca_url = http://aegis-ca.rcub.bg.ac.rs/repository/ca.pem
@@ -7,3 +7,4 @@ email = aegis-ca@rcub.bg.ac.rs
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

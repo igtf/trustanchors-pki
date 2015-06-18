@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 4a96b1ea.info,v 1.1 2012/09/11 18:16:44 pmacvsdg Exp $
 # Information for EG-Grid CA
 #   
 alias = EG-GRID
@@ -11,3 +11,4 @@ status = accredited:classic
 url = http://www.grid.eun.eg
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

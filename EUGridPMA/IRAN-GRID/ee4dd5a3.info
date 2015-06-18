@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: ee4dd5a3.info,v 1.1 2015/06/08 13:28:26 pmacvsdg Exp $
 #   
 alias = IRAN-GRID-G2
 ca_url = https://irangrid.ipm.ac.ir/pki/pub/cacert/cacert.pem
@@ -10,3 +10,4 @@ status = accredited:classic
 url = http://cagrid.ipm.ac.ir/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

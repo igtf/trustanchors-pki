@@ -1,4 +1,4 @@
-# @<#>$Id: 9b95bbf2.info,v 1.1 2007/07/18 19:03:37 pmacvsmh Exp $
+# @<#>$Id: 9b95bbf2.info,v 1.2 2008/07/28 11:17:21 pmacvsdg Exp $
 #
 alias = NCSA-mics
 url = http://security.ncsa.uiuc.edu/CA/
@@ -8,3 +8,4 @@ email = security@ncsa.uiuc.edu
 status =  accredited:mics
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
+subjectdn = @SUBJECTDN@

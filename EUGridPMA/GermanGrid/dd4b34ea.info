@@ -1,5 +1,5 @@
 #
-# @(#)$Id: dd4b34ea.info,v 1.4 2011/06/17 13:28:28 pmacvsdg Exp $
+# @(#)$Id: dd4b34ea.info,v 1.5 2013/05/21 20:45:33 pmacvsdg Exp $
 # Information for CA GermanGrid
 #   obtained from dd4b34ea in GermanGrid/
 alias = GermanGrid
@@ -9,3 +9,4 @@ email = GridKa-CA@kit.edu
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

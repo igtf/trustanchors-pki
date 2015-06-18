@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 0a12b607.info,v 1.1 2008/01/21 20:29:39 pmacvsdg Exp $
 # UGRID - The Ukrainian Grid CA
 #
 alias = UGRID
@@ -10,3 +10,4 @@ status = accredited:classic
 url = https://ca.ugrid.org/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

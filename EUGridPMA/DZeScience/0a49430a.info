@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 0a49430a.info,v 1.1 2011/06/06 17:33:27 pmacvsdg Exp $
+# @(#)$Id: 0a49430a.info,v 1.2 2011/09/18 13:30:29 pmacvsdg Exp $
 # Information for CA DZ e-Science
 #   
 alias = DZeScience
@@ -11,3 +11,4 @@ status = accredited:classic
 url = http://www.grid.arn.dz
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

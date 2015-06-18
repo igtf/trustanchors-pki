@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 98ef0ee5.info,v 1.1 2007/11/15 21:04:34 pmacvsdg Exp $
+# @(#)$Id: 98ef0ee5.info,v 1.2 2013/01/21 10:13:18 pmacvsdg Exp $
 # Information for the 2007 (new) CA UKeScience ROOT CA
 #
 alias = UKeScienceRoot-2007
@@ -9,3 +9,4 @@ email = support@grid-support.ac.uk
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

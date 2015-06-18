@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 5cf9d536.info,v 1.4 2011/11/22 12:05:05 pmacvsdg Exp $
+# @(#)$Id: 5cf9d536.info,v 1.5 2014/09/15 14:43:23 pmacvsdg Exp $
 #   
 alias = QuoVadis-Root-CA1
 url = https://www.quovadisglobal.bm/
@@ -9,3 +9,4 @@ email = compliance@quovadisglobal.com
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

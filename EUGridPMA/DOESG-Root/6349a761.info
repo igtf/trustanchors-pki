@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 6349a761.info,v 1.1 2005/10/14 14:59:57 pmacvsdg Exp $
+# @(#)$Id: 6349a761.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
 # Information for CA DOESG-Root
 #   obtained from 6349a761 in DOESG-Root/
 alias = DOESG-Root
@@ -7,3 +7,4 @@ crl_url = http://www.doegrids.org/OldDOEScienceGridRootCA/CRL/6349a761.r0
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

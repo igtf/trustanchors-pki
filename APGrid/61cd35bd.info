@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 61cd35bd.info,v 1.2 2014/09/01 09:07:18 pmacvsdg Exp $
 #
 alias = HPCI
 crl_url = http://www.hpci.nii.ac.jp/ca/hpcica.crl
@@ -10,3 +10,4 @@ url = https://www.hpci.nii.ac.jp/ca/
 policy_url = https://www.hpci.nii.ac.jp/ca/CP_CPS.html
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

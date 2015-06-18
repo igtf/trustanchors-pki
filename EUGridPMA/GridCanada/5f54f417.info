@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 5f54f417.info,v 1.4 2006/02/13 15:46:12 pmacvsdg Exp $
+# @(#)$Id: 5f54f417.info,v 1.5 2007/04/10 14:45:09 pmacvsdg Exp $
 # Information for CA GridCanada
 #   obtained from 5f54f417 in GridCanada/
 alias = GridCanada-old
@@ -9,3 +9,4 @@ email = ca@gridcanada.ca
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

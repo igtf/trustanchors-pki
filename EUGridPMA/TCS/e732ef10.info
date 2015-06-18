@@ -1,5 +1,5 @@
 #
-# @(#)$Id: e732ef10.info,v 1.1 2014/12/03 21:04:59 pmacvsdg Exp $
+# @(#)$Id: e732ef10.info,v 1.2 2015/05/20 16:24:11 pmacvsdg Exp $
 # Information for C=NL, ST=Noord-Holland, L=Amsterdam, O=TERENA, CN=TERENA eScience Personal CA 3
 #
 alias = TERENAeSciencePersonalCA3
@@ -12,3 +12,4 @@ email = tcs-pma@terena.org
 status = accredited:mics
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

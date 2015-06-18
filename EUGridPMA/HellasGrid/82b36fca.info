@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 82b36fca.info,v 1.3 2006/10/10 08:54:30 pmacvsdg Exp $
+# @(#)$Id: 82b36fca.info,v 1.4 2009/09/21 07:12:36 pmacvsdg Exp $
 # Information for CA HellasGrid CA 2006
 # /C=GR/O=HellasGrid/OU=Certification Authorities/CN=HellasGrid CA 2006
 # hash: 82b36fca
@@ -13,3 +13,4 @@ status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 
+subjectdn = @SUBJECTDN@

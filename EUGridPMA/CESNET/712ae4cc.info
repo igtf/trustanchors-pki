@@ -1,5 +1,5 @@
 #
-# @($)$Id: 712ae4cc.info,v 1.1 2010/02/12 19:54:17 pmacvsdg Exp $
+# @($)$Id: 712ae4cc.info,v 1.2 2010/02/12 21:00:01 pmacvsdg Exp $
 # /DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA Root
 #
 alias = CESNET-CA-3
@@ -12,3 +12,4 @@ email = ca@cesnet.cz
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

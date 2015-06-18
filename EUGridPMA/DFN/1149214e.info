@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 1149214e.info,v 1.5 2012/05/22 12:49:26 pmacvsdg Exp $
+# @(#)$Id: 1149214e.info,v 1.6 2013/06/06 13:34:51 pmacvsdg Exp $
 # Information for CA DFN-GridGermany-Root
 #   obtained from 1149214e in DFN/
 alias = DFN-GridGermany-Root
@@ -10,3 +10,4 @@ status = accredited:classic
 url = https://www.pki.dfn.de/grid/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

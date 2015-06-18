@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 7b2d086c.info,v 1.7 2008/01/21 16:03:43 pmacvsdg Exp $
+# @(#)$Id: 7b2d086c.info,v 1.8 2009/10/06 12:41:29 pmacvsdg Exp $
 # Information for CA SwissSign-Root
 #   obtained from 7b2d086c in SWITCH/
 alias = SwissSign-Root
@@ -9,3 +9,4 @@ email = pki@switch.ch
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

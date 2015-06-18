@@ -1,5 +1,5 @@
 #
-# @(#)$Id: eebc7717.info,v 1.2 2008/01/21 16:03:44 pmacvsdg Exp $
+# @(#)$Id: eebc7717.info,v 1.3 2009/10/06 12:41:29 pmacvsdg Exp $
 # Information for CA SWITCH Server 2007
 #   
 alias = SWITCH-Server-2007
@@ -10,3 +10,4 @@ status = discontinued
 version = @VERSION@
 email = pki@switch.ch
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -5,3 +5,4 @@ status = accredited:classic
 url = http://ca.grid.sinica.edu.tw/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

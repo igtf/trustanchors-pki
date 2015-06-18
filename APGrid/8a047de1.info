@@ -5,3 +5,4 @@ status = accredited:classic
 url = http://gridca.hpcc.nectec.or.th/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

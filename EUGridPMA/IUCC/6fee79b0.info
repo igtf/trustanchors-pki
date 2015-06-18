@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 6fee79b0.info,v 1.5 2008/09/10 15:59:17 pmacvsdg Exp $
+# @(#)$Id: 6fee79b0.info,v 1.6 2013/11/12 14:34:39 pmacvsdg Exp $
 # Information for CA IUCC
 #   obtained from 6fee79b0 in IUCC/
 alias = IUCC
@@ -10,3 +10,4 @@ crl_url = http://certificate.iucc.ac.il/ca/cacrl.pem
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

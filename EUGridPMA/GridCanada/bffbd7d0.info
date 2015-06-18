@@ -1,5 +1,5 @@
 #
-# @(#)$Id: bffbd7d0.info,v 1.1 2006/02/13 15:46:12 pmacvsdg Exp $
+# @(#)$Id: bffbd7d0.info,v 1.2 2006/02/13 15:47:46 pmacvsdg Exp $
 # Information for CA GridCanada new CA "bffbd7d0"
 alias = GridCanada
 ca_url = http://www.gridcanada.ca/ca/bffbd7d0.0
@@ -9,3 +9,4 @@ email = ca@gridcanada.ca
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

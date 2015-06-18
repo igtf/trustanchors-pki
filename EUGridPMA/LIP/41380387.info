@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 41380387.info,v 1.4 2006/01/13 11:06:16 pmacvsdg Exp $
+# @(#)$Id: 41380387.info,v 1.5 2007/02/22 10:51:06 pmacvsdg Exp $
 # Information for CA LIP
 #   obtained from 41380387 in LIP/
 alias = LIP
@@ -9,3 +9,4 @@ email = ca@lip.pt
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

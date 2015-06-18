@@ -6,3 +6,4 @@ email = srce-ca@srce.hr
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

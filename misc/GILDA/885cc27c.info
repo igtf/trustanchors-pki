@@ -1,4 +1,4 @@
-# @(#)$Id: 885cc27c.info,v 1.1 2011/05/30 12:36:06 pmacvsdg Exp $
+# @(#)$Id: 885cc27c.info,v 1.2 2011/09/18 13:19:54 pmacvsdg Exp $
 # new GILDA 2011 worthless CA
 alias = GILDA-CA-2011
 url = https://gilda-security.ct.infn.it/CA/
@@ -8,3 +8,4 @@ email = gilda-ca@ct.infn.it
 status = unaccredited
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
+subjectdn = @SUBJECTDN@

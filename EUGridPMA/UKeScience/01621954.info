@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 01621954.info,v 1.4 2006/01/31 15:50:51 pmacvsdg Exp $
+# @(#)$Id: 01621954.info,v 1.5 2007/07/25 13:54:55 pmacvsdg Exp $
 # Information for CA UKeScience
 #   obtained from 01621954 in UKeScience/
 alias = UKeScience
@@ -9,3 +9,4 @@ email = support@grid-support.ac.uk
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

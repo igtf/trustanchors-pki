@@ -1,5 +1,5 @@
 #
-# @(#)$Id: c4435d12.info,v 1.7 2008/01/21 16:03:43 pmacvsdg Exp $
+# @(#)$Id: c4435d12.info,v 1.8 2009/10/06 12:41:29 pmacvsdg Exp $
 # Information for CA SWITCH
 #   obtained from c4435d12 in SWITCH/
 alias = SWITCH
@@ -10,3 +10,4 @@ status = discontinued
 version = @VERSION@
 email = pki@switch.ch
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

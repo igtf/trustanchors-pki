@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 49f18420.info,v 1.4 2006/10/10 09:01:11 pmacvsdg Exp $
+# @(#)$Id: 49f18420.info,v 1.5 2007/10/09 08:16:03 pmacvsdg Exp $
 # Information for CA INFN
 #   obtained from 49f18420 in INFN/
 alias = INFN
@@ -9,3 +9,4 @@ crl_url = http://security.fi.infn.it/CA/crl.crl
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

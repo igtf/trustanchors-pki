@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 12a1d8c2.info,v 1.5 2008/07/14 08:27:42 pmacvsdg Exp $
+# @(#)$Id: 12a1d8c2.info,v 1.6 2010/01/23 22:24:23 pmacvsdg Exp $
 # Information for CA CNRS-Grid-FR
 #   obtained from 12a1d8c2 in CNRS-Grid-FR/
 alias = CNRS-Grid-FR
@@ -11,3 +11,4 @@ status = discontinued
 url = http://igc.services.cnrs.fr/GRID-FR/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

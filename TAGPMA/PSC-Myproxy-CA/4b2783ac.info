@@ -9,3 +9,4 @@ email = ca-admin@psc.edu
 sha1fp.0 = @SHA1FP.0@
 status = accredited:slcs
 version = @VERSION@
+subjectdn = @SUBJECTDN@

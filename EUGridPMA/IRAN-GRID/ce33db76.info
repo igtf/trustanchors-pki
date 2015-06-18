@@ -1,5 +1,5 @@
 #
-# @(#)$Id: ce33db76.info,v 1.1 2008/06/03 16:29:44 pmacvsdg Exp $
+# @(#)$Id: ce33db76.info,v 1.2 2009/10/24 20:55:15 pmacvsdg Exp $
 #   
 alias = IRAN-GRID
 ca_url = http://cagrid.ipm.ac.ir/pub/cacert/cacert.txt
@@ -10,3 +10,4 @@ status = accredited:classic
 url = http://cagrid.ipm.ac.ir/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

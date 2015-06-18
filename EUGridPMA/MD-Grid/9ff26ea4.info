@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 9ff26ea4.info,v 1.1 2009/04/06 18:55:20 pmacvsdg Exp $
 # Information for MD-Grid CA
 #   
 alias = MD-Grid
@@ -10,3 +10,4 @@ status = accredited:classic
 url = http://ca.grid.md/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 24c3ccde.info,v 1.1 2008/01/22 08:03:02 pmacvsmh Exp $
+# @(#)$Id: 24c3ccde.info,v 1.2 2008/01/22 08:13:13 pmacvsmh Exp $
 # Information for UNAMgird CA
 #
 alias =	UNAMgrid-ca
@@ -10,3 +10,4 @@ email = camanager@ca.unamgrid.unam.mx
 status = accredited:classic
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
+subjectdn = @SUBJECTDN@

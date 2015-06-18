@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 9b59ecad.info,v 1.3 2005/10/18 20:26:00 pmacvsdg Exp $
+# @(#)$Id: 9b59ecad.info,v 1.4 2012/03/27 13:14:30 pmacvsdg Exp $
 # Information for CA CESNET
 #   obtained from 9b59ecad in CESNET/
 alias = CESNET
@@ -9,3 +9,4 @@ email = ca@cesnet.cz
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

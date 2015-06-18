@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 13eab55e.info,v 1.2 2005/10/18 20:26:01 pmacvsdg Exp $
+# @(#)$Id: 13eab55e.info,v 1.3 2007/10/31 15:11:16 pmacvsdg Exp $
 # Information for CA Spain
 #   obtained from 13eab55e in Spain/
 alias = Spain
@@ -10,3 +10,4 @@ status = discontinued
 url = http://grid.ifca.unican.es/ca/datagrid-es/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

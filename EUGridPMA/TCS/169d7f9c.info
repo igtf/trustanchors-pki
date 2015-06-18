@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 169d7f9c.info,v 1.2 2010/01/29 16:31:50 pmacvsdg Exp $
+# @(#)$Id: 169d7f9c.info,v 1.3 2010/02/12 19:55:14 pmacvsdg Exp $
 # Information for CA TERENAeSciencePersonalCA
 #   
 alias = TERENAeSciencePersonalCA
@@ -12,3 +12,4 @@ email = tcs-pma@terena.org
 status = accredited:mics
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -1,5 +1,5 @@
 #
-# @(#)$Id: e1fce4e9.info,v 1.6 2007/11/08 13:37:05 pmacvsdg Exp $
+# @(#)$Id: e1fce4e9.info,v 1.7 2010/06/02 13:18:36 pmacvsdg Exp $
 # Information for CA FNAL_KCA
 #   obtained from e1fce4e9 in FNAL_KCA/
 alias = FNAL_KCA
@@ -10,3 +10,4 @@ url = http://security.fnal.gov/pki/
 email = cst@fnal.gov
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
+subjectdn = @SUBJECTDN@

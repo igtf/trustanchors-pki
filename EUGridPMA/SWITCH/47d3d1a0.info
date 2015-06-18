@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 47d3d1a0.info,v 1.2 2008/01/21 16:03:43 pmacvsdg Exp $
+# @(#)$Id: 47d3d1a0.info,v 1.3 2009/10/06 12:41:29 pmacvsdg Exp $
 # Information for CA SWITCH Personal 2007
 #   
 alias = SWITCH-Personal-2007
@@ -10,3 +10,4 @@ status = discontinued
 version = @VERSION@
 email = pki@switch.ch
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

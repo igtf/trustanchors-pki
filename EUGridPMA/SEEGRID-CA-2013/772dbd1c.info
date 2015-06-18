@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 772dbd1c.info,v 1.1 2013/11/14 14:03:24 pmacvsdg Exp $
 #
 # SEEGRID-CA-2013
 #
@@ -11,3 +11,4 @@ email = see-grid-ca@hellasgrid.gr
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

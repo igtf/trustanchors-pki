@@ -1,4 +1,4 @@
-# @(#)$Id: 709afd2b.info,v 1.2 2011/09/18 13:19:54 pmacvsdg Exp $
+# @(#)$Id: 709afd2b.info,v 1.3 2013/01/21 10:13:18 pmacvsdg Exp $
 #
 alias = Thawte-freemail-root
 ca_url = http://www.thawte.com/
@@ -8,3 +8,4 @@ status = discontinued
 url = http://www.thawte.com/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

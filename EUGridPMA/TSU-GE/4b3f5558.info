@@ -1,4 +1,4 @@
-# @(#)$Id$
+# @(#)$Id: 4b3f5558.info,v 1.1 2014/11/23 17:36:33 pmacvsdg Exp $
 # 
 alias = TSU-GE
 ca_url = https://grid-ca.tsu.ge/Root_Certificate/cacert.pem
@@ -9,3 +9,4 @@ status = accredited:classic
 url = https://grid-ca.tsu.ge/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

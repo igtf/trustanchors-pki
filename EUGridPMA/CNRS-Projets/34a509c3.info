@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 34a509c3.info,v 1.4 2007/09/21 14:33:13 pmacvsdg Exp $
+# @(#)$Id: 34a509c3.info,v 1.5 2010/01/23 22:24:23 pmacvsdg Exp $
 # Information for CA CNRS-Projets
 #   obtained from 34a509c3 in CNRS-Projets/
 alias = CNRS-Projets
@@ -9,3 +9,4 @@ status = discontinued
 version = @VERSION@
 email = alice.de-bignicourt@urec.cnrs.fr
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

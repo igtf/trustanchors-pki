@@ -8,3 +8,4 @@ ca_url = http://ca.dutchgrid.nl/nl-e-infra-zero/cacert.pem
 status = unaccredited
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

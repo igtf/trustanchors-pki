@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 75304a28.info,v 1.2 2005/10/18 20:26:00 pmacvsdg Exp $
+# @(#)$Id: 75304a28.info,v 1.3 2011/06/24 14:17:28 pmacvsdg Exp $
 # Information for CA DutchDemo
 #   obtained from 75304a28 in DutchDemo/
 alias = DutchDemo
@@ -8,3 +8,4 @@ status = discontinued
 url = http://www.dutchgrid.nl/ca/dutchdemo/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

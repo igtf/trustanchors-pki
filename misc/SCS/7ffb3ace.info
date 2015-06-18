@@ -1,5 +1,5 @@
 # GlobalSign SureServer EDU (TERENA SCS)
-# @(#)$Id: 7ffb3ace.info,v 1.4 2011/09/18 13:19:54 pmacvsdg Exp $
+# @(#)$Id: 7ffb3ace.info,v 1.5 2013/01/21 10:13:18 pmacvsdg Exp $
 #
 alias = TERENA-SCS
 status = discontinued
@@ -8,3 +8,4 @@ crl_url = http://crl.globalsign.net/educational.crl
 url = http://www.terena.org/activities/scs/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

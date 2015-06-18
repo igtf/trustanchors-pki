@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: 58435df6.info,v 1.1 2015/02/10 14:38:18 pmacvsdg Exp $
 # Information for CA NIIF 2
 alias = NIIF-Root-CA-2
 ca_url = http://crt.ca.niif.hu/niif-ca-root.crt
@@ -9,3 +9,4 @@ status = accredited:classic
 url = http://www.ca.niif.hu/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

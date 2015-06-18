@@ -1,4 +1,4 @@
-# @(#)$Id: 3c58f906.info,v 1.1 2010/09/24 13:29:21 pmacvsdg Exp $
+# @(#)$Id: 3c58f906.info,v 1.2 2010/09/24 15:23:02 pmacvsdg Exp $
 # AddTrust AB External CA Root
 #
 # Certificate Name: AddTrust External CA Root
@@ -18,3 +18,4 @@ email = tcs-pma@terena.org
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

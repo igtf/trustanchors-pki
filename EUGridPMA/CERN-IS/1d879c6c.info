@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 1d879c6c.info,v 1.1 2006/10/10 12:05:03 pmacvsdg Exp $
+# @(#)$Id: 1d879c6c.info,v 1.2 2015/03/17 01:26:26 pmacvsdg Exp $
 # CA CERN-TCA
 #
 alias = CERN-TCA
@@ -10,3 +10,4 @@ email = cern-ca-managers@cern.ch
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

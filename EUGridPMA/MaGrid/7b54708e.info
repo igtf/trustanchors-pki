@@ -1,4 +1,4 @@
-# @(#)$Id$
+# @(#)$Id: 7b54708e.info,v 1.1 2007/11/13 15:36:50 pmacvsdg Exp $
 alias = MaGrid
 url = http://www.magrid.ma/ca
 crl_url = http://ra.magrid.ma/pub/crl/cacrl.pem
@@ -7,3 +7,4 @@ email = magrid@cnrst.ma
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

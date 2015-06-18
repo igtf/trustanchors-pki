@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 1e43b9cc.info,v 1.4 2006/10/10 12:28:19 pmacvsdg Exp $
+# @(#)$Id: 1e43b9cc.info,v 1.5 2012/11/15 19:54:19 pmacvsdg Exp $
 # Information for CA Grid-Ireland
 #   obtained from 1e43b9cc in Grid-Ireland/
 alias = Grid-Ireland
@@ -9,3 +9,4 @@ email = grid-ireland-ca@cs.tcd.ie
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

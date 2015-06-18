@@ -9,3 +9,4 @@ email = security@nics.tennessee.edu
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -1,5 +1,5 @@
 #
-# @(#)$Id: ed99a497.info,v 1.3 2005/10/18 20:26:00 pmacvsdg Exp $
+# @(#)$Id: ed99a497.info,v 1.4 2006/07/03 08:10:11 pmacvsdg Exp $
 # Information for CA CESNET-old
 #   obtained from ed99a497 in CESNET/
 alias = CESNET-old
@@ -8,3 +8,4 @@ crl_url = http://www.cesnet.cz/pki/crl/cca.crl
 status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -10,3 +10,4 @@ url = http://www.digicert-grid.com/
 requires = DigiCertGridRootCA-Root
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -1,4 +1,4 @@
-# @(#)$Id: 1f3834d0.info,v 1.2 2009/10/07 07:10:51 pmacvsdg Exp $
+# @(#)$Id: 1f3834d0.info,v 1.3 2010/05/17 07:18:55 pmacvsdg Exp $
 #
 alias = RomanianGRID
 url = http://www.romaniangrid.ro
@@ -9,3 +9,4 @@ email = grid-ca@rosa.ro
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

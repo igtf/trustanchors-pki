@@ -1,5 +1,5 @@
 #
-# @(#)$Id: da75f6a8.info,v 1.1 2008/11/06 07:27:02 pmacvsyt Exp $
+# @(#)$Id: da75f6a8.info,v 1.2 2013/06/21 02:34:25 pmacvsyt Exp $
 # Information for CA 
 #   obtained from da75f6a8 in APGrid/
 alias = IGCA
@@ -9,3 +9,4 @@ status = accredited:classic
 url = http://ca.garudaindia.in/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
