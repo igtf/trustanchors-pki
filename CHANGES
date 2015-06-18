@@ -11,6 +11,9 @@ Changes from 1.64 to 1.65
 
 * Discontinued NAREGI CA (JP)
 * Added addition G2 root for IPM CA (IR)
+* Added new subjectdn attribute to the trust anchor and profile meta-data
+  files to aid monitoring and authentication-profile based access control
+  mechanism use cases. See http://wiki.eugridpma.org/Main/IGTFInfoFile (ALL)
 
 Changes from 1.63 to 1.64
 -------------------------
