@@ -5,11 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
-Changes from 1.65 to 1.66
+Changes from 1.65 to 1.67
 -------------------------
-(31 August 2015)
+(31 August 2015 - release jump, skipping 1.66)
 
 * Discontinued NCSA-mics CA (US)
+* Withdrawn G2 root for IPM CA (IR)
 
 Changes from 1.64 to 1.65
 -------------------------
