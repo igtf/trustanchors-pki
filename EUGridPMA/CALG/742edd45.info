@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 742edd45.info,v 1.4 2009/09/09 08:55:02 pmacvsdg Exp $
+# @(#)$Id: 742edd45.info,v 1.5 2015/06/18 09:44:53 pmacvsdg Exp $
 # Information for CA CALG (LatGrid)
 #   
 alias = CALG
@@ -7,7 +7,7 @@ crl_url = http://grid.lumii.lv/calg-crl.pem
 ca_url = http://grid.lumii.lv/uploads/ca-cert.pem
 url = http://grid.lumii.lv/?lang=en
 email = ca@grid.lumii.lv
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@
