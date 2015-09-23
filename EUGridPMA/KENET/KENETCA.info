@@ -1,0 +1,14 @@
+#
+# @(#)$Id$
+#   
+alias = KENETCA-ICA-2015
+requires = KENETROOTCA
+ca_url = http://crt.ca.kenet.or.ke/KENETCA.crt
+crl_url = http://crl.ca.kenet.or.ke/KENETCA.crl
+policy_url = https://ca.kenet.or.ke/media/kenet-draft-cp-cps-v-1.0.1.pdf
+email = ca@kenet.or.ke
+status = experimental
+url = https://ca.kenet.or.ke/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
