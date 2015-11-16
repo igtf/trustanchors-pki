@@ -14,7 +14,3 @@ TO Issuer "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid Root CA" \
 TO Issuer "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid Root CA" \
   PERMIT Subject "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1 G2"
 
-# temporary override to accommodate inverted RDN ordering - per issuer 20150313-01
-TO Issuer "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid Root CA" \
-  PERMIT Subject "/DC=DigiCert-Grid/DC=com/O=DigiCert Grid/CN=DigiCert Grid CA-1 G2"
-
