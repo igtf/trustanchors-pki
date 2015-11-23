@@ -1,0 +1,10 @@
+# Information for CA: NorduGrid-2015
+alias = NorduGrid-2015
+ca_url = http://ca.nordugrid.org/NorduGrid-2015.crt
+url = http://ca.nordugrid.org/
+email = ca@nordugrid.org
+crl_url = http://ca.nordugrid.org/NorduGrid-2015.crl
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -10,6 +10,7 @@ Changes from 1.69 to 1.70
 (30 November 2015)
 
 * Updated CRL URL hosted by KIT for ArmeSFO (AM)
+* Added NorduGrid 2015 trust anchor (DK,NO,SE,FI,IS)
 * Discontinued superseded DigiCertGridCA-1G2-Classic (US)
 
 Changes from 1.68 to 1.69
