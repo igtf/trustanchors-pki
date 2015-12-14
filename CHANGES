@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.70 to 1.71
+-------------------------
+(25 January 2016)
+
+* Added roll-over subordinate for the SDG CA G2 (CN)
+* Removed expiring SDG CA (CN)
+
 Changes from 1.69 to 1.70
 -------------------------
 (30 November 2015)
