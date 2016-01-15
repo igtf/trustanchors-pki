@@ -11,6 +11,7 @@ Changes from 1.70 to 1.71
 
 * Added roll-over subordinate for the SDG CA G2 (CN)
 * Removed expiring SDG CA (CN)
+* Updated CyGrid Root CA with extended validity period (CY)
 
 Changes from 1.69 to 1.70
 -------------------------
