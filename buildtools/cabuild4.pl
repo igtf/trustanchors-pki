@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.4 2015/06/09 10:07:03 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.5 2015/06/09 12:34:10 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -808,7 +808,7 @@ sub getAuthoritiesList($$) {
   foreach my $pat ( @Main::infoGlob ) {
   foreach my $f ( glob("$carepdir/$pat") ) {
     (my $dir=$f)=~s/\/[^\/]+$//;
-    (my $basename=$f)=~s/.*\/(\w+)\.info$/$1/;
+    (my $basename=$f)=~s/.*\/([-_\w]+)\.info$/$1/;
     my %info=&readInfoFile($f);
 
     my $version=undef;
