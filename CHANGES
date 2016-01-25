@@ -5,12 +5,17 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.71 to 1.72
+-------------------------
+(26 January 2016)
+
+* Added roll-over subordinate for the SDG CA G2 (CN)
+
 Changes from 1.70 to 1.71
 -------------------------
 (25 January 2016)
 
 * Added accredited classic KENET ICA and associated Root (KE)
-* Added roll-over subordinate for the SDG CA G2 (CN)
 * Removed expiring SDG CA (CN)
 * Updated CyGrid Root CA with extended validity period (CY)
 * Updated BG-ACAD-CA with extended validity period (BG)
