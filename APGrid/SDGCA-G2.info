@@ -1,5 +1,5 @@
 alias = SDG-G2
-crl_url = file:///dev/null
+crl_url = http://ca.sdg.grid.cn/crl/cacrl-g2.crl
 email = sdgca@cnic.cn
 status = accredited:classic
 url = http://ca.sdg.grid.cn/en/
