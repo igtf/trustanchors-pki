@@ -7,9 +7,10 @@ lay-out.
 
 Changes from 1.71 to 1.72
 -------------------------
-(26 January 2016)
+(29 February 2016)
 
 * Added roll-over subordinate for the SDG CA G2 (CN)
+* Added CERN LCG IOTA CA (CERN)
 
 Changes from 1.70 to 1.71
 -------------------------
