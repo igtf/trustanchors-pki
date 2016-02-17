@@ -11,6 +11,7 @@ Changes from 1.71 to 1.72
 
 * Added roll-over subordinate for the SDG CA G2 (CN)
 * Added CERN LCG IOTA CA (CERN)
+* Updated PSC MyProxy CA with extended validity (US)
 
 Changes from 1.70 to 1.71
 -------------------------
