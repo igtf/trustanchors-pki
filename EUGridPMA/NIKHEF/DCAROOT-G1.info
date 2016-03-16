@@ -1,0 +1,14 @@
+#
+# @(#)$Id$
+# Information for DCAROOT-G1, operated by Nikhef
+#   
+alias = DCAROOT-G1
+ca_url = https://ca.dutchgrid.nl/dcaroot/g1/ca/cacert.pem
+crl_url = http://ca.dutchgrid.nl/dcaroot/g1/crl/crl.crl
+policy_url = https://ca.dutchgrid.nl/dcaroot/policy/
+email = ca@dutchgrid.nl
+status = experimental
+url = https://ca.dutchgrid.nl/dcaroot/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

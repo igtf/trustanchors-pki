@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.72 to 1.73
+-------------------------
+(28 March 2016)
+
+* Updated key pair for SDG CA G2 (CN)
+* Added experimental DCA Root G1 and RCauth.eu Pilot ICA G1 (NL, EU)
+
 Changes from 1.71 to 1.72
 -------------------------
 (29 February 2016)
