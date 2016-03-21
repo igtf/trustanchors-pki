@@ -1,7 +1,7 @@
-# @(#)$Id$
+# @(#)$Id: CERN-LCG-IOTA.info,v 1.1 2016/01/27 17:00:21 pmacvsdg Exp $
 # subject= /DC=ch/DC=cern/CN=CERN LCG IOTA Certification Authority
 alias = CERN-LCG-IOTA-CA
-crl_url = https://cafiles.cern.ch/cafiles/crl/CERN%20LCG%20IOTA%20Certification%20Authority.crl
+crl_url = http://cafiles.cern.ch/cafiles/crl/CERN%20LCG%20IOTA%20Certification%20Authority.crl
 ca_url = https://cafiles.cern.ch/cafiles/certificates/CERN%20LCG%20IOTA%20Certification%20Authority.crt
 url = http://www.cern.ch/ca
 email = cern-ca-managers@cern.ch

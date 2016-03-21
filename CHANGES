@@ -10,6 +10,9 @@ Changes from 1.72 to 1.73
 (28 March 2016)
 
 * Updated key pair for SDG CA G2 (CN)
+* Revised URL to point to http endpoint for CERN IOTA ICA CRL (CERN)
+* Added date field to Debain Release file to work around APT bug 809329
+* Added an InRelease file for changing Debian packaging
 * Added experimental DCA Root G1 and RCauth.eu Pilot ICA G1 (NL, EU)
 
 Changes from 1.71 to 1.72

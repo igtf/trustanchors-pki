@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.5 2015/06/09 12:34:10 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.6 2016/01/25 16:46:55 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -175,6 +175,8 @@ sub signRPMs($) {
 sub debifyDirectory($) {
   my ($targetdir) = @_;
   # $targetdir/dists/igtf/$collection/binary-all/
+  
+  my $debiandate = strftime "%a, %d %b %Y %H:%M:%S UTC",gmtime(time);
 
   for my $collection ( qw(accredited experimental unaccredited) ) {
   open RELEASE,">$targetdir/dists/igtf/$collection/binary-all/Release" or 
@@ -183,6 +185,7 @@ sub debifyDirectory($) {
   print RELEASE "Component: $collection\n";
   print RELEASE "Origin: International Grid Trust Federation\n";
   print RELEASE "Label: IGTF Trust Anchor Distribution\n";
+  print RELEASE "Date: $debiandate\n";
   print RELEASE "Architecture: all\n";
 
   my @files = glob("$targetdir/dists/igtf/$collection/binary-all/*.deb");
@@ -234,6 +237,7 @@ Archive: igtf
 Components: accredited unaccredited experimental
 Origin: International Grid Trust Federation
 Label: IGTF Trust Anchor Distribution
+Date: $debiandate
 Suite: igtf
 Architectures: all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64
 MD5Sum:
@@ -259,6 +263,11 @@ EOF
     my $cmd="cd $targetdir/dists/igtf/ && ".
             "gpg --homedir=$gpghome --default-key=$gpgkey -o Release.gpg -bas Release";
     print "Executing GPG signing command:\n  $cmd\n";
+    system($cmd);
+    # now the new InRelease file
+    my $cmd="cd $targetdir/dists/igtf/ && ".
+            "gpg --homedir=$gpghome --default-key=$gpgkey -o InRelease --digest-algo SHA256 -a -s --clearsign Release";
+    print "Executing GPG InRelease signing command:\n  $cmd\n";
     system($cmd);
   };
 
