@@ -1,8 +1,9 @@
 #
-# @(#)$Id$
+# @(#)$Id: RCauth-Pilot-ICA-G1.info,v 1.1 2016/03/16 03:15:13 pmacvsdg Exp $
 # Information for RCauth-Pilot-ICA-G1
 #   
 alias = RCauth-Pilot-ICA-G1
+requires = DCAROOT-G1
 ca_url = https://www.rcauth.eu/pilot/g1/ca/cacert.pem
 crl_url = http://www.rcauth.eu/pilot/g1/crl/crl.crl
 policy_url = http://www.rcauth.eu/policy/
