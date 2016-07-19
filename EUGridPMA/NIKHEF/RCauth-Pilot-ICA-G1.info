@@ -1,5 +1,5 @@
 #
-# @(#)$Id: RCauth-Pilot-ICA-G1.info,v 1.1 2016/03/16 03:15:13 pmacvsdg Exp $
+# @(#)$Id: RCauth-Pilot-ICA-G1.info,v 1.2 2016/05/11 16:18:02 pmacvsdg Exp $
 # Information for RCauth-Pilot-ICA-G1
 #   
 alias = RCauth-Pilot-ICA-G1
@@ -8,7 +8,7 @@ ca_url = https://www.rcauth.eu/pilot/g1/ca/cacert.pem
 crl_url = http://www.rcauth.eu/pilot/g1/crl/crl.crl
 policy_url = http://www.rcauth.eu/policy/
 email = ca@rcauth.eu
-status = experimental
+status = accredited:iota
 url = https://www.rcauth.eu/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: DCAROOT-G1.info,v 1.1 2016/03/16 03:15:13 pmacvsdg Exp $
 # Information for DCAROOT-G1, operated by Nikhef
 #   
 alias = DCAROOT-G1
@@ -7,7 +7,7 @@ ca_url = https://ca.dutchgrid.nl/dcaroot/g1/ca/cacert.pem
 crl_url = http://ca.dutchgrid.nl/dcaroot/g1/crl/crl.crl
 policy_url = https://ca.dutchgrid.nl/dcaroot/policy/
 email = ca@dutchgrid.nl
-status = experimental
+status = accredited:classic
 url = https://ca.dutchgrid.nl/dcaroot/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
