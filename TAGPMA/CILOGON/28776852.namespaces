@@ -9,5 +9,5 @@
 #    (generated automatically from 28776852.signing_policy)
 #
 TO Issuer "/DC=org/DC=cilogon/C=US/O=CILogon/CN=CILogon Basic CA 1" \
-  PERMIT Subject "/DC=org/DC=cilogon/C=US/.* "
+  PERMIT Subject "/DC=org/DC=cilogon/.* "
 

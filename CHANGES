@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.76 to 1.77
+-------------------------
+(29 August 2016)
+
+* Updated namespaces and signing_policy files for CILogon Basic CA to
+  permit DNs without "/C=US" (US)
+
 Changes from 1.75 to 1.76
 -------------------------
 (25 July 2016)
