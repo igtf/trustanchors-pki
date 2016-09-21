@@ -7,7 +7,7 @@ lay-out.
 
 Changes from 1.76 to 1.77
 -------------------------
-(29 August 2016)
+(26 September 2016)
 
 * Updated namespaces and signing_policy files for CILogon Basic CA to
   permit DNs without "/C=US" (US)
