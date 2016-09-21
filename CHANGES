@@ -11,6 +11,7 @@ Changes from 1.76 to 1.77
 
 * Updated namespaces and signing_policy files for CILogon Basic CA to
   permit DNs without "/C=US" (US)
+* Added G2 series (sha-2) QuoVadis Root 2 and Grid ICA G2 (BM)
 * Removed discontinued UniandesCA (CO)
 
 Changes from 1.75 to 1.76
