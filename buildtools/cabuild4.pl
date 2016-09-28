@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.7 2016/03/21 07:39:22 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.8 2016/06/14 16:39:45 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -240,21 +240,48 @@ Label: IGTF Trust Anchor Distribution
 Date: $debiandate
 Suite: igtf
 Architectures: all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64
-MD5Sum:
 EOF
+  
+  # MD5 first
+  print RELEASE "MD5Sum:\n";
   open FLIST,"cd $targetdir/dists/igtf && find . -type f |" or die "Cannot list files: $!\n";
   while (<FLIST>) {
     chomp($_);
     ( my $fname = $_) =~ s/^\.\///;
     my $size = (stat("$targetdir/dists/igtf/$fname"))[7];
     my $md5 = `md5sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($md5);
-    my $sha1 = `sha1sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($sha1);
-    my $sha2 = `sha256sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($sha2);
     foreach my $arch ( qw(all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64) ) {
       ( my $archname = $fname ) =~ s/binary-all/binary-$arch/;
       printf RELEASE " %s %10d %s\n",$md5,$size,$archname;
     }
   }
+  # SHA1 
+  print RELEASE "SHA1:\n";
+  open FLIST,"cd $targetdir/dists/igtf && find . -type f |" or die "Cannot list files: $!\n";
+  while (<FLIST>) {
+    chomp($_);
+    ( my $fname = $_) =~ s/^\.\///;
+    my $size = (stat("$targetdir/dists/igtf/$fname"))[7];
+    my $sha1 = `sha1sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($sha1);
+    foreach my $arch ( qw(all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64) ) {
+      ( my $archname = $fname ) =~ s/binary-all/binary-$arch/;
+      printf RELEASE " %s %10d %s\n",$sha1,$size,$archname;
+    }
+  }
+  # SHA256 
+  print RELEASE "SHA256:\n";
+  open FLIST,"cd $targetdir/dists/igtf && find . -type f |" or die "Cannot list files: $!\n";
+  while (<FLIST>) {
+    chomp($_);
+    ( my $fname = $_) =~ s/^\.\///;
+    my $size = (stat("$targetdir/dists/igtf/$fname"))[7];
+    my $sha2 = `sha256sum $targetdir/dists/igtf/$fname | sed -e 's/ .*//'`; chomp($sha2);
+    foreach my $arch ( qw(all i386 amd64 ia64 sparc powerpc kfreebsd-i386 kfreebsd-amd64) ) {
+      ( my $archname = $fname ) =~ s/binary-all/binary-$arch/;
+      printf RELEASE " %s %10d %s\n",$sha2,$size,$archname;
+    }
+  }
+
   close RELEASE;
 
   (defined $opt_s) and do {
