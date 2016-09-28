@@ -1,4 +1,4 @@
-# @(#)$Id: 2f3fadf6.info,v 1.1 2006/10/10 10:13:18 pmacvsdg Exp $
+# @(#)$Id: 2f3fadf6.info,v 1.2 2015/06/18 09:44:54 pmacvsdg Exp $
 # Information for CA: INFN-CA-2006
 #   hash = 2f3fadf6
 #   subject = "/C=IT/O=INFN/CN=INFN CA"
@@ -6,7 +6,7 @@ alias = INFN-CA-2006
 url = http://security.fi.infn.it/CA/
 email = infn-ca@fi.infn.it
 crl_url = http://security.fi.infn.it/CA/INFNCA_crl.der
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@
