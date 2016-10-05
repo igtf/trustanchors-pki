@@ -7,9 +7,10 @@ lay-out.
 
 Changes from 1.77 to 1.78
 -------------------------
-(October 2016)
+(5 October 2016)
 
 * Removed superseded INFN-CA-2006 CA (IT)
+* Updated Debian packaging to support APT security improvements
 
 Changes from 1.76 to 1.77
 -------------------------
