@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.8 2016/06/14 16:39:45 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.9 2016/09/28 14:28:55 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -588,6 +588,7 @@ sub makeCollectionInfo($$$) {
     };
     print INFO "# @(#)policy-igtf-$pname.info - IGTF $pname authorities\n";
     print INFO "# Generated ".(strftime "%A, %d %b, %Y",gmtime(time))."\n";
+    print INFO "alias = policy-igtf-$pname\n";
     print INFO "version = $opt_gver\nrequires = ";
     # loop over all accredited CAs for this profile and add them to
     # this and the top-level file
