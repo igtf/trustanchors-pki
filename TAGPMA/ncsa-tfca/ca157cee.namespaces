@@ -8,5 +8,5 @@
 #    hash     : 48c8f10a
 #
 TO Issuer "/C=US/O=National Center for Supercomputing Applications/OU=Certificate Authorities/CN=Two Factor CA 2013" \
-  PERMIT Subject "/C=US/O=National Center for Supercomputing Applications/CN=.* "
+  PERMIT Subject "/C=US/O=National Center for Supercomputing Applications/CN=.*"
 
