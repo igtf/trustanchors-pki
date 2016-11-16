@@ -13,6 +13,7 @@ Changes from 1.78 to 1.79
 * Fix regular expressions in CILogon and NCSA CA namespaces files (US)
 * Included rollover CA IRAN-GRID-CGC-G2 (IR)
 * Corrected an incorrect line in selected info files for DigiCert (US)
+* Discontinued expiring NECTEC CA (TH)
 
 Changes from 1.77 to 1.78
 -------------------------
