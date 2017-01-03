@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.79 to 1.80
+-------------------------
+(30 January 2016)
+
+* Discontinued BEGrid2008 (BELNET) classic authority (BE)
+
 Changes from 1.78 to 1.79
 -------------------------
 (28 November 2016)
