@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+#   
+alias = DarkMatterSecureCA
+url = http://ca.darkmatter.ae/Grid/
+ca_url = http://cacerts.darkmatter.ae/dmsecureca.crt
+crl_url = http://crl1.darkmatter.ae/dmsecureca.crl;http://crl2.darkmatter.ae/dmsecureca.crl
+email = CA-Admins@darkmatter.ae
+status = accredited:classic
+requires = QuoVadis-Root-CA2G3
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
