@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.81 to 1.82
+-------------------------
+(27 March 2017)
+
+* Added new G2 UGrid trust anchor (UA)
+
 Changes from 1.80 to 1.81
 -------------------------
 (28 February 2017)
