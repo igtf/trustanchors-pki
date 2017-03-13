@@ -12,6 +12,7 @@ Changes from 1.81 to 1.82
 * Added new G2 UGrid trust anchor (UA)
 * Extended validity for AEGIS CA (RS)
 * Withdrawn discontinued FNAL KCA (US)
+* Extended valitity for REUNA CA (CL)
 
 Changes from 1.80 to 1.81
 -------------------------
