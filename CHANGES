@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.82 to 1.83
+-------------------------
+(29 May 2017)
+
+* Added new trust anchor for accredited KISTI CA v3 (KR)
+
 Changes from 1.81 to 1.82
 -------------------------
 (27 March 2017)
