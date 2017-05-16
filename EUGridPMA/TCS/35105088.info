@@ -1,4 +1,4 @@
-# @(#)$Id: 35105088.info,v 1.1 2014/10/13 13:40:06 pmacvsdg Exp $
+# @(#)$Id: 35105088.info,v 1.2 2015/06/18 09:44:56 pmacvsdg Exp $
 # C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust RSA Certification Authority
 # 
 alias = UTN-USERTrust-RSA-CA
@@ -8,7 +8,7 @@ crl_url = http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl
 policy_url = http://www.comodo.com/about/comodo-agreements.php
 url = http://www.comodo.com/
 email = tcs-pma@terena.org
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@

@@ -10,6 +10,10 @@ Changes from 1.82 to 1.83
 (29 May 2017)
 
 * Added new trust anchor for accredited KISTI CA v3 (KR)
+* Removed obsolete GEANT TCS G1 and G2 (old Comodo-backed) trust anchors: 
+  UTN-USERFirst-Hardware TERENA-eScience-SSL-CA AAACertificateServices 
+  UTNAAAClient TERENAeSciencePersonalCA UTN-USERTrust-RSA-CA 
+  TERENA-eScience-SSL-CA-2 TERENAeSciencePersonalCA2 (EU)
 
 Changes from 1.81 to 1.82
 -------------------------
