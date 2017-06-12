@@ -1,6 +1,6 @@
 alias = KISTIv3
 crl_url = http://ca.gridcenter.or.kr/CRL/kisti-ca-v3.crl
-email = ca@gridcenter.or.kr
+email = kisti-grid-ca@kisti.re.kr
 status = accredited:classic
 url = http://ca.gridcenter.or.kr/
 policy_url = http://ca.gridcenter.or.kr/cps/KISTI-CA-CPCPS-3.0.pdf
