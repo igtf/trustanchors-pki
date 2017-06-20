@@ -11,6 +11,7 @@ Changes from 1.83 to 1.84
 
 * Updated ROSA root certificate with extended 20yr valitity (RO)
 * Updated contact details for CyGrid CA following transition to CYNET (CY)
+* Removed obsoleted KISTI-2007 trust anchor - replaced by KISTIv3 (KR)
 * Removed expiring LACGrid trust anchor a9082267 (BR)
 * Added UK Pathfinder AAAI CA 1 to unaccredited (misc) area (UK)
 

@@ -1,7 +1,7 @@
 alias = KISTI-2007
 crl_url = http://ca.gridcenter.or.kr/CRL/722e5071.crl
 email = ca@gridcenter.or.kr
-status = accredited:classic
+status = discontinued
 url = http://ca.gridcenter.or.kr/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
