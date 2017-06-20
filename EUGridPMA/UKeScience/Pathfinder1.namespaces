@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)hfinder1.namespaces
+# CA alias    : UKPathfinder1
+#    subord_of: 
+#    subjectDN: /C=UK/O=eScience/OU=Authority/CN=Pathfinder1
+#    hash     : 
+#    (generated automatically from Pathfinder1.signing_policy)
+#
+TO Issuer "/C=UK/O=eScience/OU=Authority/CN=Pathfinder1" \
+  PERMIT Subject "/DC=uk/DC=ac/DC=pathfinder/.*"
+

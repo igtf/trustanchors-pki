@@ -1,0 +1,6 @@
+# EACL UK Pathfinder AAAI CA 1
+# @(#)$Id$
+#
+ access_id_CA      X509     '/C=UK/O=eScience/OU=Authority/CN=Pathfinder1'
+ pos_rights        globus   CA:sign
+ cond_subjects     globus   '"/C=UK/O=eScience/OU=Authority/CN=Pathfinder1" "/DC=uk/DC=ac/DC=pathfinder/*"'

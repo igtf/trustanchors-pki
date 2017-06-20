@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+# Information for Pathfinder AAAI Project CA 1
+#
+alias = UKPathfinder1
+#requires = 
+url = http://www.grid-support.ac.uk/ca/
+crl_url = http://crl.ca.ngs.ac.uk/crl/pathfinder.crl.der
+email = support@grid-support.ac.uk
+status = unaccredited
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
