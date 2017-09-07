@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.9 2016/09/28 14:28:55 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.10 2016/10/13 16:59:31 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -105,7 +105,7 @@ foreach my $k ( sort keys %auth ) {
 (defined $opt_s) and (&signRPMs($opt_o) or die "signRPMs: $err\n");
 
 &yumifyDirectory($opt_o) or die "yumifyDirectory: $err\n";
-&aptifyDirectory($opt_o) or die "aptifyDirectory: $err\n";
+#&aptifyDirectory($opt_o) or die "aptifyDirectory: $err\n";
 &debifyDirectory($opt_o) or die "debifyDirectory: $err\n";
 
 &makeInfoFiles($opt_carep,$opt_o) or die "makeInfoFiles: $err\n";
@@ -307,10 +307,10 @@ EOF
 sub yumifyDirectory($) {
   my ($targetdir) = @_;
 
-  system("sync ; sleep 1 ; cd $targetdir ; yum-arch .")
-    and do {
-      $err="old-style YUM system command error: $!"; return undef;
-    };
+  #system("sync ; sleep 1 ; cd $targetdir ; yum-arch .")
+  #  and do {
+  #    $err="old-style YUM system command error: $!"; return undef;
+  #  };
   system("sync ; sleep 1 ; cd $targetdir ; createrepo -s sha -x apt/\* .")
     and do {
       $err="new-style YUM system command error: $!"; return undef;
