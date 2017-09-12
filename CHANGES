@@ -9,6 +9,7 @@ Changes from 1.85 to 1.86
 -------------------------
 (30 Septembet 2017)
 
+* removed discontinued pkIRISGrid CA (ES)
 * discontinued depricated yum v2 and rpm-apt package management support
   (only affects yum installs on RHEL/CentOS 2&3, Fedora Core 1-3, and bespoke 
   support for installing RPM packages using APT for pre-2006 RedHat systems)
