@@ -7,7 +7,7 @@ lay-out.
 
 Changes from 1.85 to 1.86
 -------------------------
-(30 Septembet 2017)
+(9 October 2017)
 
 * removed discontinued pkIRISGrid CA (ES)
 * discontinued depricated yum v2 and rpm-apt package management support
