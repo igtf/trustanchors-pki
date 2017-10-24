@@ -1,0 +1,12 @@
+#
+# Information for /C=AE/O=DarkMatter LLC/CN=DarkMatter Private Root CA G4
+#
+alias = DarkMatterPrivateRootCAG4
+ca_url = http://ca.darkmatter.ae/certs/DarkMatterPrivateRootCAG4.crt
+crl_url = http://ca.darkmatter.ae/crl/DarkMatterPrivateRootCAG4.crl
+email = CA-Admins@darkmatter.ae
+status = accredited:classic
+url = http://ca.darkmatter.ae/Grid/
+# requires = DarkMatterPrivateRootCAG4
+version = 1.80
+sha1fp.0 = 91:00:af:1e:08:3f:82:41:dc:c8:29:b8:18:e4:2b:84:03:2e:ff:fb

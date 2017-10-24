@@ -9,6 +9,7 @@ Changes from 1.86 to 1.87
 -------------------------
 (30 October 2017)
 
+* added new accredited classic DarkMatter Private Root G4 and ICA (AE)
 * updated PK-Grid-2007 trust anchor with extended validity period (PK)
 * removed expiring UNAMgrid-ca trust anchor (MX)
 
