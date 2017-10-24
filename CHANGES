@@ -10,6 +10,7 @@ Changes from 1.86 to 1.87
 (30 October 2017)
 
 * updated PK-Grid-2007 trust anchor with extended validity period (PK)
+* removed expiring UNAMgrid-ca trust anchor (MX)
 
 Changes from 1.85 to 1.86
 -------------------------
