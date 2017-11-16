@@ -9,6 +9,7 @@ Changes from 1.87 to 1.88
 -------------------------
 (27 November 2017)
 
+* updated UKeScience 2B ICA based on a SHA-2 family digest (UK)
 * added new PKIUNAMgrid (2017) trust anchor for roll-over (MX)
 
 Changes from 1.86 to 1.87
