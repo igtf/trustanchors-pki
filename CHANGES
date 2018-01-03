@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.88 to 1.89
+-------------------------
+(8 January 2018)
+
+* Discontinued expiring UGRID (2008) root CA (UA)
+
 Changes from 1.87 to 1.88
 -------------------------
 (27 November 2017)
