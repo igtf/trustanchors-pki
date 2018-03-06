@@ -1,0 +1,11 @@
+#
+# @(#)$Id$
+alias = AC-GRID-FR-Robots
+url = http://grid-fr.renater.fr/
+email = grid-fr@renater.fr
+ca_url = http://cer.grid-fr.pncn.education.gouv.fr/ac-grid-fr-robots.cer
+crl_url = http://crl.grid-fr.pncn.education.gouv.fr/ac-grid-fr-robots.crl
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
