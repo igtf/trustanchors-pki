@@ -10,6 +10,7 @@ Changes from 1.89 to 1.90
 (26 March 2018)
 
 * Added new Grid-FR hierarchy for Renater (AC-GRID-FR series) (FR)
+* Added new GARUDAINDIA2 root for key roll-over IGCA (IN)
 * Updated contact metadata for UNAM trust anchors (MX)
 
 Changes from 1.88 to 1.89

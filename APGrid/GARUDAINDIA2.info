@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+# Information DC=IN, DC=GARUDAINDIA, CN=Indian Grid Certification Authority 2
+#
+alias = IGCA2
+crl_url = http://ca.garudaindia.in/pki/pub/crl/cacrl.crl
+email = igca@cdac.in
+status = accredited:classic
+url = http://ca.garudaindia.in/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
