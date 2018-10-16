@@ -1,9 +1,9 @@
-# @(#)$Id: a02131f7.info,v 1.2 2013/06/06 13:34:51 pmacvsdg Exp $
+# @(#)$Id: a02131f7.info,v 1.3 2015/06/18 09:44:54 pmacvsdg Exp $
 alias = DFN-SLCS
 ca_url = http://cdp1.pca.dfn.de/slcs-ca/pub/cacert/cacert.crt
 crl_url = http://cdp1.pca.dfn.de/slcs-ca/pub/crl/cacrl.crl
 email = dfnpca@dfn-cert.de
-status = accredited:slcs
+status = discontinued
 url = https://www.pki.dfn.de/grid/slcs/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
