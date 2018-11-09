@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.94 to 1.95
+-------------------------
+(26 Nov 2018)
+
+* Updated namespaces and signing_policy files for CILogon Silver CA to
+  permit DNs without "/C=US" (US)
+
 Changes from 1.93 to 1.94
 -------------------------
 (29 Oct 2018)
