@@ -1,5 +1,5 @@
 #
-# @(#)$Id: e72045ce.info,v 1.9 2015/06/18 09:44:55 pmacvsdg Exp $
+# @(#)$Id: e72045ce.info,v 1.10 2019/01/18 08:14:05 pmacvsdg Exp $
 #   
 alias = QuoVadis-Grid-ICA
 requires = QuoVadis-Root-CA1
@@ -7,7 +7,7 @@ obsoletes = SWITCH-QuoVadis-Grid-ICA
 ca_url = http://trust.quovadisglobal.com/pem/qvgridg1.crt
 crl_url = http://crl.quovadisglobal.com/qvgridg1.crl
 email = compliance@quovadisglobal.com
-status = obsoleted
+status = discontinued
 url = https://www.quovadisglobal.bm/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
