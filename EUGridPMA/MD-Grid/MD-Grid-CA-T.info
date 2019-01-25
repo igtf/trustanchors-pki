@@ -1,0 +1,13 @@
+#
+# @(#)$Id$
+# Information for MD-Grid CA T (edition 2019)
+#   
+alias = MD-Grid-CA-T
+ca_url = http://ca.grid.md/files/T/ca.crt
+crl_url = http://ca.grid.md/files/T/crl-v2.crl
+email = ca@renam.md
+status = accredited:classic
+url = http://ca.grid.md/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
