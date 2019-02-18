@@ -1,12 +1,12 @@
 #
-# @(#)$Id: 9ff26ea4.info,v 1.1 2009/04/06 18:55:20 pmacvsdg Exp $
+# @(#)$Id: 9ff26ea4.info,v 1.2 2015/06/18 09:44:55 pmacvsdg Exp $
 # Information for MD-Grid CA
 #   
 alias = MD-Grid
 ca_url = http://ca.grid.md/files/ca.pem
 crl_url = http://ca.grid.md/files/crl-v2.der
 email = ca@renam.md
-status = accredited:classic
+status = discontinued
 url = http://ca.grid.md/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

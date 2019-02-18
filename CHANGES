@@ -8,10 +8,11 @@ lay-out.
 
 Changes from 1.95 to 1.96
 -------------------------
-(4 Feb 2019)
+(25 Feb 2019)
 
 * withdrawn superseded QuoVadis-Grid-ICA (1st gen) CA (BM)
 * added new trust anchor MD-Grid-CA-T for rollover of existing CA (MD)
+* discontinued expiring 2009 series MD-Grid-CA (MD)
 
 Changes from 1.94 to 1.95
 -------------------------
