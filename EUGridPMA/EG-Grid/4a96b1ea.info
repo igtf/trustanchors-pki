@@ -1,5 +1,5 @@
 #
-# @(#)$Id: 4a96b1ea.info,v 1.2 2015/06/18 09:44:54 pmacvsdg Exp $
+# @(#)$Id: 4a96b1ea.info,v 1.3 2017/02/06 13:03:54 pmacvsdg Exp $
 # Information for EG-Grid CA
 #   
 alias = EG-GRID
@@ -7,7 +7,7 @@ ca_url = https://cert.eun.eg/pki/pub/cacert/cacert.pem
 crl_url = http://cert.eun.eg/pki/pub/crl/cacrl.crl
 policy_url = http://www.grid.eun.eg/cpcps.html
 email = ca@grid.scu.eg
-status = accredited:classic
+status = discontinued
 url = http://www.grid.eun.eg
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
