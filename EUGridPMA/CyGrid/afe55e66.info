@@ -1,5 +1,5 @@
 #
-# @(#)$Id: afe55e66.info,v 1.6 2017/06/13 19:12:05 pmacvsdg Exp $
+# @(#)$Id: afe55e66.info,v 1.7 2017/07/18 12:06:41 pmacvsdg Exp $
 # Information for CA CyGrid
 #   obtained from afe55e66 in CyGrid/
 alias = CyGrid
@@ -7,7 +7,7 @@ ca_url = http://cynet.ac.cy/CygridCA/afe55e66.0
 crl_url = http://cynet.ac.cy/CygridCA/afe55e66.r0
 email = cygrid-ca@cynet.ac.cy
 url = http://cynet.ac.cy/CygridCA/
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@
