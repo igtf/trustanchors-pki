@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)PolishGrid-2019.signing_policy.namespaces
+# CA alias    : PolishGrid-2019
+#    subord_of: 
+#    subjectDN: /C=PL/O=GRID/CN=Polish Grid CA 2019
+#    hash     : PolishGrid-2019.signing_policy
+#    (generated automatically from PolishGrid-2019.signing_policy)
+#
+TO Issuer "/C=PL/O=GRID/CN=Polish Grid CA 2019" \
+  PERMIT Subject "/C=PL/O=GRID/.*"
+

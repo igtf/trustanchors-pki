@@ -1,0 +1,12 @@
+#
+# @(#)$Id$
+#
+alias = PolishGrid-2019
+url = http://www.man.poznan.pl/plgrid-ca
+email = plgrid-ca@man.poznan.pl
+crl_url = http://www.man.poznan.pl/plgrid-ca/2019/crl.crl
+ca_url = http://www.man.poznan.pl/plgrid-ca/PolishGridCA-2019.pem
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
