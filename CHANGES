@@ -5,10 +5,11 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
-Changes from 1.99 to 2.00
--------------------------
-(27 May 2019)
+Changes from 1.99 to 1.101
+--------------------------
+(24 June 2019, note: 1.100 was not issued)
 
+* added new trust anchor for PolishGrid (2019) for key roll-over (PL)
 * withdrawn discontinued CILogon OSG CA (US)
 
 Changes from 1.98 to 1.99
