@@ -10,6 +10,12 @@
 TO Issuer "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA Root" \
   PERMIT Subject "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 3"
 
+TO Issuer "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA Root" \
+  PERMIT Subject "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 4"
+
 TO Issuer "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 3" \
+  PERMIT Subject "/DC=cz/DC=cesnet-ca/.*"
+
+TO Issuer "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 4" \
   PERMIT Subject "/DC=cz/DC=cesnet-ca/.*"
 

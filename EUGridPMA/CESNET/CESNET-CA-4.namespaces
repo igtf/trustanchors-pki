@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)CESNET-CA-4.signing_policy.namespaces
+# CA alias    : CESNET-CA-4
+#    subord_of: CESNET-CA-Root
+#    subjectDN: /DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 4
+#    hash     : CESNET-CA-4.signing_policy
+#    (generated automatically from CESNET-CA-4.signing_policy)
+#
+TO Issuer "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 4" \
+  PERMIT Subject "/DC=cz/DC=cesnet-ca/.*"
+
