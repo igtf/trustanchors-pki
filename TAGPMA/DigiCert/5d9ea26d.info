@@ -4,7 +4,7 @@
 alias = DigiCertGridTrustCAG2-Classic
 ca_url = http://www.digicert-grid.com/DigiCertGridTrustCAG2_text.txt
 crl_url = http://crl3.digicert.com/DigiCertGridTrustCAG2.crl;http://crl4.digicert.com/DigiCertGridTrustCAG2.crl
-email = support@DigiCert.com
+email = prodseccompliance@digicert.com
 status = accredited:classic
 url = http://www.DigiCert-Grid.com/
 requires = DigiCertAssuredIDRootCA-Root

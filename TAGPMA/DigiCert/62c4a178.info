@@ -4,7 +4,7 @@
 alias = DigiCertGridCA-1G2-Classic-2015
 ca_url = http://www.digicert-grid.com/DigiCertGridCA-1G2Update.cer
 crl_url = http://crl4.digicert.com/DigiCertGridCA-1-G2.crl;http://crl3.digicert.com/DigiCertGridCA-1-G2.crl
-email = support@digicert.com
+email = prodseccompliance@digicert.com
 status = accredited:classic
 url = http://www.digicert-grid.com/
 requires = DigiCertGridRootCA-Root

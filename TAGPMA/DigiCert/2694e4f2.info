@@ -4,7 +4,7 @@
 alias = DigiCertGridRootCA-Root
 ca_url = http://www.DigiCert-Grid.com/DigiCertGridRootCA_text.txt
 crl_url = http://crl3.digicert.com/DigiCertGridRootCA.crl;http://crl4.digicert.com/DigiCertGridRootCA.crl
-email = support@DigiCert.com
+email = prodseccompliance@digicert.com
 status = accredited:classic
 url = http://www.digicert-grid.com/
 version = @VERSION@
