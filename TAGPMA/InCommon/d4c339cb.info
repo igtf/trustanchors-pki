@@ -3,7 +3,6 @@ url = http://www.comodo.com/
 policy_url = http://www.comodo.com/about/comodo-agreements.php
 ca_url = http://crt.comodoca.com/COMODORSAAddTrustCA.crt
 crl_url = http://crl.comodoca.com/COMODORSACertificationAuthority.crl
-requires = AddTrust-External-CA-Root
 email = admin@incommon.org
 status = accredited:classic
 version = @VERSION@
