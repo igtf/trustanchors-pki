@@ -1,0 +1,15 @@
+#
+# @(#)$Id$
+# Information for GEANT TCS service G4 (GEANTeSciencePersonalCA4)
+#
+alias = GEANTeSciencePersonalCA4
+url = https://wiki.geant.org/display/TCSNT/
+ca_url = http://geant.crt.sectigo.com/GEANTeSciencePersonalCA4.crt
+crl_url = http://geant.crl.sectigo.com/GEANTeSciencePersonalCA4.crl
+policy_url = https://wiki.geant.org/display/TCSNT/TCS+Repository
+requires = USERTrustRSACertificationAuthority
+email = tcs-pma@lists.geant.org
+status = accredited:mics
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

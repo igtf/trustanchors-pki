@@ -1,0 +1,14 @@
+# @(#)$Id$
+# self-signed root version of USERTrustRSACertificationAuthority for TCSG4 (not subordinate to AddTrust)
+# C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust RSA Certification Authority
+#
+alias = USERTrustRSACertificationAuthority
+ca_url = http://crt.comodoca.com/USERTrustRSACertificationAuthority.crt
+crl_url = http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl
+policy_url = https://sectigo.com/legal
+url = https://sectigo.com/
+email = tcs-pma@lists.geant.org
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

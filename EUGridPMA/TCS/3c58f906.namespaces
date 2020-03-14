@@ -20,15 +20,15 @@ TO Issuer "/C=SE/O=AddTrust AB/OU=AddTrust External TTP Network/CN=AddTrust Exte
   PERMIT Subject "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority"
 
 TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
-  PERMIT Subject "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 2"
-
-TO Issuer "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 2" \
-  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+  PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL CA 4"
 
 TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
-  PERMIT Subject "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience Personal CA 2"
+  PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal CA 4"
 
-TO Issuer "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience Personal CA 2" \
+TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal CA 4" \
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+
+TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL CA 4" \
   PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
 
 TO Issuer "/C=SE/O=AddTrust AB/OU=AddTrust External TTP Network/CN=AddTrust External CA Root" \

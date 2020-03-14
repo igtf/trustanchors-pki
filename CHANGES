@@ -5,6 +5,16 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.104 to 1.105
+---------------------------
+(23 March 2020)
+
+* Discontinued CERN-LCG-IOTA-CA following decommissioning by authority (CERN)
+* Added new G4 intermediates for the GEANT TCS service and supporting 
+  self-signed USERTrust RSA Root (EU)
+* Updated AddTrust External CA Root signing policy to support legacy UTN 
+  chains for GEANT TCS G4 (EU)
+
 Changes from 1.103 to 1.104
 ---------------------------
 (29 January 2020)

@@ -1,0 +1,15 @@
+#
+# @(#)$Id$
+# Information for GEANT TCS service G4 (GEANTeScienceSSLCA4)
+#
+alias = GEANTeScienceSSLCA4
+url = https://wiki.geant.org/display/TCSNT/
+ca_url = http://geant.crt.sectigo.com/GEANTeScienceSSLCA4.crt
+crl_url = http://geant.crl.sectigo.com/GEANTeScienceSSLCA4.crl
+policy_url = https://www.terena.org/activities/tcs/repository/
+requires = USERTrustRSACertificationAuthority
+email = tcs-pma@lists.geant.org
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
