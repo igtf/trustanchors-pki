@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.103 to 1.104
+---------------------------
+(29 January 2020)
+
+* Reinstated AddTrust External CA Root in parallel to Comodo RSA CA 
+  to ease transitionary period (US)
+
 Changes from 1.102 to 1.103
 ---------------------------
 (27 January 2020)
