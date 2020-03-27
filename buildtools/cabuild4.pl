@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.10 2016/10/13 16:59:31 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.11 2017/09/07 12:37:03 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -855,6 +855,10 @@ sub getAuthoritiesList($$) {
     $version=$info{"version"} unless ($eVersion or ($info{"version"}=~/@/));
     $version=&getFilesVersion("$dir/$basename.*") unless defined $version;
     $info{"version"} = $version;
+
+    # do not include discontinued CAs in processing, of you may get
+    # unexpected .1 files without a matching .0 offset
+    if ( $info{"status"} eq "discontinued" ) { next; }
 
     # figure out if there is a certificate to go with this CA, and
     # bail out otherwise. A certificate has a ".0" extension or is
