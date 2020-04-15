@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.105 to 1.106
+---------------------------
+(27 April 2020)
+
+* Removed expiring AddTrust External CA Root (US)
+* Updated legacy DutchGrid (Nikhef MS) Root CA (NL)
+
 Changes from 1.104 to 1.105
 ---------------------------
 (30 March 2020)
