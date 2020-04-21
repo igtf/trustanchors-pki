@@ -11,6 +11,7 @@ Changes from 1.105 to 1.106
 
 * Removed expiring AddTrust External CA Root (US)
 * Updated legacy DutchGrid (Nikhef MS) Root CA (NL)
+* Removed discontinued NCSA-tfca-2013 CA (US)
 
 Changes from 1.104 to 1.105
 ---------------------------
