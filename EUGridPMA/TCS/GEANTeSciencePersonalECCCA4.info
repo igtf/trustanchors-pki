@@ -1,0 +1,15 @@
+#
+# @(#)$Id$
+# Information for GEANT TCS service ECC G4 (GEANTeSciencePersonalECCCA4)
+#
+alias = GEANTeSciencePersonalECCCA4
+url = https://wiki.geant.org/display/TCSNT/
+ca_url = http://geant.crt.sectigo.com/GEANTeSciencePersonalECCCA4.crt
+crl_url = http://geant.crl.sectigo.com/GEANTeSciencePersonalECCCA4.crl
+policy_url = https://wiki.geant.org/display/TCSNT/TCS+Repository
+requires = USERTrustECCCertificationAuthority
+email = tcs-pma@lists.geant.org
+status = experimental
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

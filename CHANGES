@@ -7,11 +7,12 @@ lay-out.
 
 Changes from 1.105 to 1.106
 ---------------------------
-(27 April 2020)
+(4 May 2020)
 
 * Removed expiring AddTrust External CA Root (US)
 * Updated legacy DutchGrid (Nikhef MS) Root CA (NL)
 * Removed discontinued NCSA-tfca-2013 CA (US)
+* Added TCS G4 ECC trust anchors to experimental area (EU)
 
 Changes from 1.104 to 1.105
 ---------------------------

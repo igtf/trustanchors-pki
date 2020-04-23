@@ -1,0 +1,22 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)uthority.namespaces
+# CA alias    : USERTrustECCCertificationAuthority
+#    subord_of: 
+#    subjectDN: /C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority
+#    hash     : uthority
+#    (generated automatically from USERTrustECCCertificationAuthority.signing_policy)
+#
+TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority" \
+  PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL ECC CA 4"
+
+TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority" \
+  PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal ECC CA 4"
+
+TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal ECC CA 4" \
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+
+TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL ECC CA 4" \
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+
