@@ -8,6 +8,7 @@ lay-out.
 Changes from 1.106 to 1.107
 ---------------------------
 * retired DarkMatterSecureCA and DarkMatterAssuredCA (AE)
+* removed superseded PolishGrid CA (PL)
 * Added TCS G4 ECC trust anchors to accredited set (EU)
 
 Changes from 1.105 to 1.106

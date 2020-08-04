@@ -1,12 +1,12 @@
 #
-# @(#)$Id: 8a661490.info,v 1.4 2010/02/09 13:16:33 pmacvsdg Exp $
+# @(#)$Id: 8a661490.info,v 1.5 2015/06/18 09:44:55 pmacvsdg Exp $
 # Information for CA PolishGrid
 #   obtained from 8a661490 in PolishGrid/
 alias = PolishGrid
 url = http://www.man.poznan.pl/plgrid-ca
 email = plgrid-ca@man.poznan.pl
 crl_url = http://www.man.poznan.pl/plgrid-ca/crl.pem
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@
