@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: GEANTeSciencePersonalECCCA4.info,v 1.1 2020/04/23 18:46:41 pmacvsdg Exp $
 # Information for GEANT TCS service ECC G4 (GEANTeSciencePersonalECCCA4)
 #
 alias = GEANTeSciencePersonalECCCA4
@@ -9,7 +9,7 @@ crl_url = http://geant.crl.sectigo.com/GEANTeSciencePersonalECCCA4.crl
 policy_url = https://wiki.geant.org/display/TCSNT/TCS+Repository
 requires = USERTrustECCCertificationAuthority
 email = tcs-pma@lists.geant.org
-status = experimental
+status = accredited:mics
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@

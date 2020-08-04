@@ -1,4 +1,4 @@
-# @(#)$Id$
+# @(#)$Id: USERTrustECCCertificationAuthority.info,v 1.1 2020/04/23 18:46:41 pmacvsdg Exp $
 # self-signed root version of USERTrustECCCertificationAuthority for TCSG4
 # C=US, ST=New Jersey, L=Jersey City, O=The USERTRUST Network, CN=USERTrust ECC Certification Authority
 #
@@ -8,7 +8,7 @@ crl_url = http://crl.usertrust.com/USERTrustECCCertificationAuthority.crl
 policy_url = https://sectigo.com/legal
 url = https://sectigo.com/
 email = tcs-pma@lists.geant.org
-status = experimental
+status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@

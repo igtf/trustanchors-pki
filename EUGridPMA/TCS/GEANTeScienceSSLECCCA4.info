@@ -1,5 +1,5 @@
 #
-# @(#)$Id$
+# @(#)$Id: GEANTeScienceSSLECCCA4.info,v 1.1 2020/04/23 18:46:41 pmacvsdg Exp $
 # Information for GEANT TCS service G4 (GEANTeScienceSSLECCCA4)
 #
 alias = GEANTeScienceSSLECCCA4
@@ -9,7 +9,7 @@ crl_url = http://geant.crl.sectigo.com/GEANTeScienceSSLECCCA4.crl
 policy_url = https://www.terena.org/activities/tcs/repository/
 requires = USERTrustECCCertificationAuthority
 email = tcs-pma@lists.geant.org
-status = experimental
+status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@
