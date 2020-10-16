@@ -5,8 +5,15 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.107 to 1.108
+---------------------------
+(26 October 2020)
+
+* Added DigitalTrust classic IGTF specific and public trust IGTF CAs (AE)
+
 Changes from 1.106 to 1.107
 ---------------------------
+(4 August 2020)
 * retired DarkMatterSecureCA and DarkMatterAssuredCA (AE)
 * removed superseded PolishGrid CA (PL)
 * Added TCS G4 ECC trust anchors to accredited set (EU)

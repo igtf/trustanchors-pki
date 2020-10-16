@@ -1,0 +1,11 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)d58bb4bc.namespaces
+# CA alias    : DigitalTrustPrivateRootCAG4
+#    subord_of: 
+#    subjectDN: /C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust Private Root CA G4
+#    hash     : d58bb4bc
+
+TO Issuer "/C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust Private Root CA G4" \
+  PERMIT Subject "/C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust IGTF CA"

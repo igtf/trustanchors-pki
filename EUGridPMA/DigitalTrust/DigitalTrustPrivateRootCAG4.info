@@ -1,0 +1,12 @@
+#
+# Information for /C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust Private Root CA G4
+#
+alias = DigitalTrustPrivateRootCAG4
+ca_url = http://cacerts.digitaltrust.ae/DigitalTrustPrivateRootCAG4.crt
+crl_url = http://crl1.digitaltrust.ae/DigitalTrustPrivateRootCAG4.crl;http://crl2.digitaltrust.ae/DigitalTrustPrivateRootCAG4.crl
+email = ca-admins@digitaltrust.ae
+status = accredited:classic
+url = https://ca.digitaltrust.ae/Grid/
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

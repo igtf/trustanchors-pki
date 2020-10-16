@@ -1,0 +1,4 @@
+# DigitalTrust Assured CA G4  [Run by the Issuer] Signing Policy (TLS Public Trust) 
+access_id_CA	X509	'/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G4  [Run by the Issuer]'
+pos_rights		globus	CA:sign
+cond_subjects	globus	'"/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G4  [Run by the Issuer]" "/C=AE/O=DigitalTrustGrid/*" "/DC=com/DC=DigitalTrustGrid/*" "/DC=org/DC=DigitalTrustGrid/*"'

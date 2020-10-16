@@ -1,0 +1,17 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)7f23888f.namespaces
+# CA alias    : DigitalTrustIGTFCA
+#    subord_of: DigitalTrustPrivateRootCAG4
+#    subjectDN: /C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust IGTF CA
+#    hash     : 7f23888f
+
+TO Issuer "/C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust IGTF CA" \
+  PERMIT Subject "/C=AE/O=DigitalTrustGrid/.*"
+
+TO Issuer "/C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust IGTF CA" \
+  PERMIT Subject "/DC=com/DC=DigitalTrustGrid/.*"
+
+TO Issuer "/C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust IGTF CA" \
+  PERMIT Subject "/DC=org/DC=DigitalTrustGrid/.*"

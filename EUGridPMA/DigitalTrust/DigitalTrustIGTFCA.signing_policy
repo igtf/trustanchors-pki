@@ -1,0 +1,4 @@
+# DigitalTrust IGTF CA CA Signing Policy (Client, Robot and Host Private Trust) 
+access_id_CA		X509	'/C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust IGTF CA'
+pos_rights		globus	CA:sign
+cond_subjects		globus	'"/C=AE/O=DigitalTrust L.L.C./CN=DigitalTrust IGTF CA" "/C=AE/O=DigitalTrustGrid/*" "/DC=com/DC=DigitalTrustGrid/*" "/DC=org/DC=DigitalTrustGrid/*"'

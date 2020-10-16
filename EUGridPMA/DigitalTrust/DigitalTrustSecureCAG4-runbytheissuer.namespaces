@@ -1,0 +1,17 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)943fd5f3.namespaces
+# CA alias    : DigitalTrustSecureCAG4-runbytheissuer
+#    subord_of: USERTrustRSACertificationAuthority
+#    subjectDN: /C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G4  [Run by the Issuer]
+#    hash     : 943fd5f3
+
+TO Issuer "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G4  [Run by the Issuer]" \
+  PERMIT Subject "/C=AE/O=DigitalTrustGrid/*"
+
+TO Issuer "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G4  [Run by the Issuer]" \
+  PERMIT Subject "/DC=com/DC=DigitalTrustGrid/*"
+
+TO Issuer "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G4  [Run by the Issuer]" \
+  PERMIT Subject "/DC=org/DC=DigitalTrustGrid/*"
