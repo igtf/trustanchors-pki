@@ -6,7 +6,6 @@
 #    subord_of: 
 #    subjectDN: /C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority
 #    hash     : uthority
-#    (generated automatically from USERTrustECCCertificationAuthority.signing_policy)
 #
 TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority" \
   PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL ECC CA 4"
@@ -20,3 +19,8 @@ TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal ECC CA 4" \
 TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL ECC CA 4" \
   PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
 
+TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority" \
+  PERMIT Subject "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G3  [Run by the Issuer]"
+
+TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority" \
+  PERMIT Subject "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G3  [Run by the Issuer]"

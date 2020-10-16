@@ -1,4 +1,4 @@
 # EACL for GEANT TCS eScience SSL and Personal CA 4 ECC
  access_id_CA   X509    '/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority'
  pos_rights     globus  CA:sign
- cond_subjects  globus  '"/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority" "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL ECC CA 4" "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal ECC CA 4"'
+ cond_subjects  globus  '"/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust ECC Certification Authority" "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL ECC CA 4" "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal ECC CA 4" "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G3  [Run by the Issuer]" "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G3  [Run by the Issuer]"'

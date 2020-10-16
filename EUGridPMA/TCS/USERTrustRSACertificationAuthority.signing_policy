@@ -1,4 +1,4 @@
 # EACL for TERENA TCS SSL CA 4 (G2 is obsolete and no longer included)
  access_id_CA   X509    '/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority'
  pos_rights     globus  CA:sign
- cond_subjects  globus  '"/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL CA 4" "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal CA 4"'
+ cond_subjects  globus  '"/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL CA 4" "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal CA 4" "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G4  [Run by the Issuer]" "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G4  [Run by the Issuer]"'
