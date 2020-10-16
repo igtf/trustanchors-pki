@@ -8,10 +8,10 @@
 #    hash     : 3e0d64db
 
 TO Issuer "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G4  [Run by the Issuer]" \
-  PERMIT Subject "/C=AE/O=DigitalTrustGrid/*"
+  PERMIT Subject "/C=AE/O=DigitalTrustGrid/.*"
 
 TO Issuer "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G4  [Run by the Issuer]" \
-  PERMIT Subject "/DC=com/DC=DigitalTrustGrid/*"
+  PERMIT Subject "/DC=com/DC=DigitalTrustGrid/.*"
 
 TO Issuer "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G4  [Run by the Issuer]" \
-  PERMIT Subject "/DC=org/DC=DigitalTrustGrid/*"
+  PERMIT Subject "/DC=org/DC=DigitalTrustGrid/.*"
