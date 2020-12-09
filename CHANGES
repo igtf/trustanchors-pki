@@ -7,9 +7,10 @@ lay-out.
 
 Changes from 1.107 to 1.108
 ---------------------------
-(26 October 2020)
+(14 December 2020)
 
 * Added DigitalTrust classic IGTF specific and public trust IGTF CAs (AE)
+* Updated PCS MyProxy SLCS CRL URL location (US)
 
 Changes from 1.106 to 1.107
 ---------------------------
