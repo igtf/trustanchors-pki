@@ -7,9 +7,10 @@ lay-out.
 
 Changes from 1.108 to 1.109
 ---------------------------
-(11 January 2020)
+(18 January 2020)
 
 * Removed discontinued DM private IGTF classic CAs (AE)
+* Removed obsolete QuoVadis-Root-CA1, under which no ICAs are left (BM)
 
 Changes from 1.107 to 1.108
 ---------------------------

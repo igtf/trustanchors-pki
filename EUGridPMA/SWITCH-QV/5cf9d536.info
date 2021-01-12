@@ -1,12 +1,12 @@
 #
-# @(#)$Id: 5cf9d536.info,v 1.5 2014/09/15 14:43:23 pmacvsdg Exp $
+# @(#)$Id: 5cf9d536.info,v 1.6 2015/06/18 09:44:55 pmacvsdg Exp $
 #   
 alias = QuoVadis-Root-CA1
 url = https://www.quovadisglobal.bm/
 ca_url = http://trust.quovadisglobal.com/pem/qvrca.crt
 crl_url = http://crl.quovadisglobal.com/qvrca.crl
 email = compliance@quovadisglobal.com
-status = accredited:classic
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@
