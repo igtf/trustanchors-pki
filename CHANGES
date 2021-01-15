@@ -11,6 +11,7 @@ Changes from 1.108 to 1.109
 
 * Removed discontinued DM private IGTF classic CAs (AE)
 * Removed obsolete QuoVadis-Root-CA1, under which no ICAs are left (BM)
+* Updated QV Grid ICA G2 intermediary following its re-issuance (BM)
 
 Changes from 1.107 to 1.108
 ---------------------------
