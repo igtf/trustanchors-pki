@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribuion 
 lay-out.
 
+Changes from 1.109 to 1.110
+---------------------------
+(22 March 2020)
+
+* Removed INFN-CA-2015 that has disappeared operationally (IT)
+
 Changes from 1.108 to 1.109
 ---------------------------
 (18 January 2020)
