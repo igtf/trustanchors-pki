@@ -1,11 +1,11 @@
-# @(#)$Id: b93d6240.info,v 1.3 2013/05/08 20:05:12 pmacvsjb Exp $
+# @(#)$Id: b93d6240.info,v 1.4 2015/06/18 09:44:56 pmacvsdg Exp $
 # NERSC Online SLCS CA
 alias = NERSC-SLCS
 url = http://certs.nersc.gov/
 ca_url = http://certs.nersc.gov/certificates/b93d6240.0
 crl_url = http://certs.nersc.gov/certificates/b93d6240.r0
 email = certs@nersc.gov
-status = accredited:slcs
+status = discontinued
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
 subjectdn = @SUBJECTDN@
