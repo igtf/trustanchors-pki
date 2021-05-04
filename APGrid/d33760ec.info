@@ -1,11 +1,11 @@
 #
-#@(#)$Id: d33760ec.info,v 1.1 2012/03/30 12:22:34 pmacvsdg Exp $
+#@(#)$Id: d33760ec.info,v 1.2 2015/06/18 09:44:53 pmacvsdg Exp $
 #
 alias = MYIFAM
 crl_url = http://myifam.upm.my/pub/MYIFAM-crl.pem
 ca_url = http://myifam.upm.my/pub/MYIFAM.pem
 email = myifam@biruni.upm.my
-status = accredited:classic
+status = discontinued
 url = http://myifam.upm.my
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
