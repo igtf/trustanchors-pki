@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.112 to 1.113
+---------------------------
+(4 October 2021)
+
+* Suspended MD-GRID CA due to network resolution issues (MD)
+
 Changes from 1.111 to 1.112
 ---------------------------
 (16 August 2021)

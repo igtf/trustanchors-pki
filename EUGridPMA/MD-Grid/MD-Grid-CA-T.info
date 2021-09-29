@@ -1,12 +1,12 @@
 #
-# @(#)$Id$
+# @(#)$Id: MD-Grid-CA-T.info,v 1.1 2019/01/25 15:41:47 pmacvsdg Exp $
 # Information for MD-Grid CA T (edition 2019)
 #   
 alias = MD-Grid-CA-T
 ca_url = http://ca.grid.md/files/T/ca.crt
 crl_url = http://ca.grid.md/files/T/crl-v2.crl
 email = ca@renam.md
-status = accredited:classic
+status = discontinued
 url = http://ca.grid.md/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
