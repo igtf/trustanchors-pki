@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.114 to 1.115
+---------------------------
+(28 March 2022)
+
+* Removed obsolete CNRS2 CAs, superseded by AC-GRID-FR hierarchy (FR)
+
 Changes from 1.113 to 1.114
 ---------------------------
 (l7 January 2022)
