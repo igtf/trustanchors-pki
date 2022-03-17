@@ -10,6 +10,7 @@ Changes from 1.114 to 1.115
 (28 March 2022)
 
 * Removed obsolete CNRS2 CAs, superseded by AC-GRID-FR hierarchy (FR)
+* Extended validity period of HPCI CA (JP)
 
 Changes from 1.113 to 1.114
 ---------------------------
