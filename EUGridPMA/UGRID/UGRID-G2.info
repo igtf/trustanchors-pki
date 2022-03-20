@@ -1,10 +1,10 @@
 #
-# @(#)$Id$
+# @(#)$Id: UGRID-G2.info,v 1.1 2017/02/27 20:02:19 pmacvsdg Exp $
 # UGRID - The Ukrainian Grid CA G2
 #
 alias = UGRID-G2
 ca_url = https://ca.ugrid.org/g2certs/cacert.pem
-crl_url = http://ca.ugrid.org/ca2crl.der
+crl_url = http://ca.ugrid.org/ca2crl.der;http://ugrid.org.mirror.eugridpma.org/g2crl/crl.der
 email = ca@ugrid.org
 status = accredited:classic
 url = https://ca.ugrid.org/
