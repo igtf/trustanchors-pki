@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.115 to 1.116
+---------------------------
+(27 April 2022)
+
+* Updated intermediate CERN Grid CA ICA with extended validity (CERN)
+
 Changes from 1.114 to 1.115
 ---------------------------
 (28 March 2022)
