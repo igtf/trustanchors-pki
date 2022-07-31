@@ -10,7 +10,10 @@ Changes from 1.116 to 1.117
 (29 August 2022)
 
 * Removed discontinued NCSA-slcs-2013 following end of XSEDE (US)
-* 
+* RPM packaging: rpm packages are now signed using a SHA-256 digest, file 
+  digests using algo 8 (sha-256), and the yum/dnf listings are signed with
+  sha-256 as well. This depricates support for yum-based distributions 
+  <=EL6, but will allow installation on EL9 (Rocky9, AlmaLinux9, &c).
 
 Changes from 1.115 to 1.116
 ---------------------------
