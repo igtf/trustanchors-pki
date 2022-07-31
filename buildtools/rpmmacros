@@ -1,0 +1,10 @@
+%_topdir                /home/davidg/rpmbuild
+%_tmppath               /home/davidg/rpmbuild/tmp
+%_signature gpg
+%_gpg_path /home/davidg/.gnupg/
+%_gpg_name 3CDBBC71
+%__os_install_post %{nil}
+%_source_filedigest_algorithm 8
+%_binary_filedigest_algorithm 8
+%_binary_payload w9.gzdio
+%_gpg_digest_algo sha256
