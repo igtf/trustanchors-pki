@@ -10,6 +10,7 @@ Changes from 1.116 to 1.117
 (29 August 2022)
 
 * Removed discontinued NCSA-slcs-2013 following end of XSEDE (US)
+* Removed discontinued PSC-Myproxy-CA following end of XSEDE (US)
 * RPM packaging: rpm packages are now signed using a SHA-256 digest, file 
   digests using algo 8 (SHA-256), and the yum/dnf listings are signed with
   SHA-256 as well. This removes support for yum-based distributions <=EL5 

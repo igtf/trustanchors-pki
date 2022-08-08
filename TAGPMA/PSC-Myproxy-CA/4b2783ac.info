@@ -8,6 +8,6 @@ ca_url = http://ca.psc.edu/psc-myproxy-ca/cert/4b2783ac.0
 crl_url = http://ca.psc.edu/psc-myproxy-ca/crl/4b2783ac.crl
 email = ca-admin@psc.edu
 sha1fp.0 = @SHA1FP.0@
-status = accredited:slcs
+status = discontinued
 version = @VERSION@
 subjectdn = @SUBJECTDN@
