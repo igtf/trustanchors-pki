@@ -1,0 +1,4 @@
+# DigiCert Assured ID Grid TLS RSA2048 SHA256 2022 CA1 Signing Policy
+access_id_CA		X509	'/C=US/O=DigiCert, Inc./CN=DigiCert Assured ID Grid Client RSA2048 SHA256 2022 CA1'
+pos_rights		globus	CA:sign
+cond_subjects		globus	'"/C=US/O=DigiCert, Inc./CN=DigiCert Assured ID Grid Client RSA2048 SHA256 2022 CA1" "/DC=com/DC=DigiCert-Grid/*" "/DC=com/DC=DigiCertGrid/*" "/C=US/O=DigiCert Grid/*"'

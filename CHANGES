@@ -9,6 +9,8 @@ Changes from 1.116 to 1.117
 ---------------------------
 (29 August 2022)
 
+* Add new intermediate ICA DigiCert Grid-TLS (US)
+* Add new intermediate ICA DigiCert Grid-Client-RSA2048-SHA256-2022-CA1 (US)
 * Removed discontinued NCSA-slcs-2013 following end of XSEDE (US)
 * Removed discontinued PSC-Myproxy-CA following end of XSEDE (US)
 * RPM packaging: rpm packages are now signed using a SHA-256 digest, file 
