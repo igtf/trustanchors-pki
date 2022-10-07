@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.117 to 1.118
+---------------------------
+(31 October 2022)
+
+* Updated GridCanada CA with re-issued SHA-2 based root (CA)
+
 Changes from 1.116 to 1.117
 ---------------------------
 (29 August 2022)
