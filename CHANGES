@@ -7,10 +7,11 @@ lay-out.
 
 Changes from 1.117 to 1.118
 ---------------------------
-(31 October 2022)
+(27 February 2023)
 
 * Updated GridCanada CA with re-issued SHA-2 based root (CA)
 * Updated CILogon basic, silver, and openid with re-issued SHA-2 certs (US)
+* Updated UKeScience Root (2007) re-issued with SHA-2, retired 2A ICA (UK)
 
 Changes from 1.116 to 1.117
 ---------------------------
