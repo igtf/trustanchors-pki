@@ -5,6 +5,14 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.118 to 1.119
+---------------------------
+(13 March 2023)
+
+* Updated UKeScience Root (2007) wih consistent string encodings (UK)
+* Removed obsolete SHA1 subordinates DigiCertGridTrustCA-Classic
+  and DigiCertGridCA-1-Classic from DigiCert, reflected in RPDNC namespaces
+
 Changes from 1.117 to 1.118
 ---------------------------
 (27 February 2023)

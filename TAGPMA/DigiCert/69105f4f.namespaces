@@ -8,9 +8,6 @@
 #    hash     : 69105f4f
 #
 TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
-  PERMIT Subject "/C=US/O=DigiCert Grid/OU=www.digicert.com/CN=DigiCert Grid Trust CA"
-
-TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
   PERMIT Subject "/C=US/O=DigiCert Grid/OU=www.digicert.com/CN=DigiCert Grid Trust CA G2"
 
 TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
@@ -18,10 +15,4 @@ TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root 
 
 TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
   PERMIT Subject "/C=US/O=DigiCert, Inc./CN=DigiCert Assured ID Grid TLS RSA2048 SHA256 2022 CA1"
-
-TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
-  PERMIT Subject "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience Personal CA 3"
-
-TO Issuer "/C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Assured ID Root CA" \
-  PERMIT Subject "/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA eScience SSL CA 3"
 

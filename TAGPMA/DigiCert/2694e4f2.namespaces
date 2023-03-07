@@ -9,8 +9,5 @@
 #    (generated automatically from 2694e4f2.signing_policy)
 #
 TO Issuer "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid Root CA" \
-  PERMIT Subject "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1"
-
-TO Issuer "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid Root CA" \
   PERMIT Subject "/DC=com/DC=DigiCert-Grid/O=DigiCert Grid/CN=DigiCert Grid CA-1 G2"
 
