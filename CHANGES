@@ -12,6 +12,7 @@ Changes from 1.118 to 1.119
 * Updated UKeScience Root (2007) wih consistent string encodings (UK)
 * Removed obsolete SHA1 subordinates DigiCertGridTrustCA-Classic
   and DigiCertGridCA-1-Classic from DigiCert, reflected in RPDNC namespaces
+* Added new InCommon RSA IGTF Server CA 2 (ICA under USERTrust RSA) (US)
 
 Changes from 1.117 to 1.118
 ---------------------------

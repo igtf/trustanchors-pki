@@ -1,11 +1,10 @@
 ##############################################################################
 #NAMESPACES-VERSION: 1.0
 #
-# @(#)uthority.namespaces
+# @(#)USERTrustRSACertificationAuthority.namespaces
 # CA alias    : USERTrustRSACertificationAuthority
 #    subord_of: 
 #    subjectDN: /C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority
-#    hash     : uthority
 #
 TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
   PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL CA 4"
@@ -24,4 +23,7 @@ TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrus
 
 TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
   PERMIT Subject "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G4  [Run by the Issuer]"
+
+TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
+  PERMIT Subject "/C=US/O=Internet2/CN=InCommon RSA IGTF Server CA 2"
 
