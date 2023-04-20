@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.119 to 1.120
+---------------------------
+(30 May 2023)
+
+* Removed discontinued NIIF-Root-CA-2 (HU)
+* Removed expiring GermanGrid (GridKA CrossGrid) CA (DE)
+
 Changes from 1.118 to 1.119
 ---------------------------
 (13 March 2023)
