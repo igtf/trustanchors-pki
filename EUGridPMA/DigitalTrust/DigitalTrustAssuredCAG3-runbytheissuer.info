@@ -3,7 +3,7 @@
 #
 alias = DigitalTrustAssuredCAG3-runbytheissuer
 ca_url = http://digitaltrust.crt.sectigo.com/DigitalTrustAssuredCAG3.crt
-crl_url = http://digitaltrust.crl.sectigo.com/DigitalTrustAssuredCAG3.crl
+crl_url = http://dl.igtf.net/mirror/DigitalTrust/DigitalTrustAssuredCAG3.crl;http://digitaltrust.crl.sectigo.com/DigitalTrustAssuredCAG3.crl
 email = ca-admins@digitaltrust.ae
 status = accredited:classic
 url = http://digitaltrustgrid.ae/Grid/
