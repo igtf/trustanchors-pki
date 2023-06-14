@@ -27,3 +27,9 @@ TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrus
 TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
   PERMIT Subject "/C=US/O=Internet2/CN=InCommon RSA IGTF Server CA 2"
 
+TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
+  PERMIT Subject "/C=US/O=Internet2/CN=InCommon RSA IGTF Server CA 3"
+
+TO Issuer "/C=US/O=Internet2/CN=InCommon RSA IGTF Server CA 3" \
+  PERMIT Subject "/DC=org/DC=incommon/.*"
+

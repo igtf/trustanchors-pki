@@ -1,0 +1,11 @@
+alias = InCommon-RSA-IGTF-Server-CA-3
+url = https://www.incommon.org/cert/
+policy_url = https://www.incommon.org/cert/repository/
+ca_url = http://crt.usertrust.com/InCommonRSAIGTFServerCA3.crt
+crl_url = http://crl.usertrust.com/InCommonRSAIGTFServerCA3.crl
+requires = USERTrustRSACertificationAuthority
+email = admin@incommon.org
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

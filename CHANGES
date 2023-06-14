@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.120 to 1.121
+---------------------------
+(15 June 2023)
+
+* Added accredited (classic) InCommon RSA IGTF Server CA 3 under the
+  Sectigo USERTrust RSA root, for which namespaces have been updated (US)
+
 Changes from 1.119 to 1.120
 ---------------------------
 (30 May 2023)
