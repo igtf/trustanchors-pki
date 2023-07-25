@@ -1,0 +1,16 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)emSignRootCAG1.signing_policy.namespaces
+# CA alias    : emSignRootCAG1
+#    subord_of: 
+#    subjectDN: /C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Root CA - G1
+#    hash     : emSignRootCAG1.signing_policy
+#    (generated automatically from emSignRootCAG1.signing_policy)
+#
+TO Issuer "/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Root CA - G1" \
+  PERMIT Subject "/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign SSL CA - G1"
+
+TO Issuer "/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Root CA - G1" \
+  PERMIT Subject "/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Class 1 CA - G1"
+

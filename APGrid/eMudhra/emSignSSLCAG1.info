@@ -1,0 +1,14 @@
+#
+# @(#)$Id$
+# eMuhdra emSign Certifying Authority trust anchor emSignSSLCAG1
+#
+alias = emSignSSLCAG1
+ca_url = https://repository.emsign.com/certs/emSignSSLCAG1.crt
+crl_url = http://crl.emsign.com/?emSignSSLCAG1.crl
+policy_url = https://repository.emsign.com/
+url = https://emudhra.com/products/digital-certificates
+email = problem-reporting@emsign.com
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

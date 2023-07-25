@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.121 to 1.122
+---------------------------
+(31 July 2023)
+
+* Added accredited eMudhra joint public trust root and issuing CAs (IN)
+* Added private trust eMudhra IGTF root and issuers as experimental (IN, US)
+
 Changes from 1.120 to 1.121
 ---------------------------
 (15 June 2023)

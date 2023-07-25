@@ -1,0 +1,4 @@
+# EACL for eMudhra emSign CA emSignRootCAG1
+ access_id_CA   X509    '/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Root CA - G1'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign SSL CA - G1" "/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Class 1 CA - G1"'

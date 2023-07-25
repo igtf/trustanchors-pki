@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)TrustedRootCAC4.signing_policy.namespaces
+# CA alias    : TrustedRootCAC4
+#    subord_of: 
+#    subjectDN: /C=US/OU=emSign PKI/O=eMudhra Inc/CN=emSign Trusted Root CA - C4
+#    hash     : TrustedRootCAC4.signing_policy
+#    (generated automatically from TrustedRootCAC4.signing_policy)
+#
+TO Issuer "/C=US/OU=emSign PKI/O=eMudhra Inc/CN=emSign Trusted Root CA - C4" \
+  PERMIT Subject "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C4"
+

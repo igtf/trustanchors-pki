@@ -1,0 +1,14 @@
+#
+# @(#)$Id$
+# eMuhdra emSign Certifying Authority trust anchor %NAME%
+#
+alias = %NAME%
+ca_url = https://repository.emsign.com/certs/%NAME%.crt
+crl_url = http://crl.emsign.com/?%NAME%.crl
+policy_url = https://repository.emsign.com/
+url = https://emudhra.com/products/digital-certificates
+email = problem-reporting@emsign.com
+status = experimental
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
