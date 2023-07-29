@@ -9,5 +9,11 @@
 #    (generated automatically from emigtfc5.signing_policy)
 #
 TO Issuer "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5" \
-  PERMIT Subject "/DC=com/DC=emsign/.*"
+  PERMIT Subject "/C=US/O=emSignGrid/.*"
+
+TO Issuer "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5" \
+  PERMIT Subject "/DC=com/DC=emSignGrid/.*"
+
+TO Issuer "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5" \
+  PERMIT Subject "/DC=org/DC=emSignGrid/.*"
 

@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.12 2020/03/27 17:01:23 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.13 2022/07/31 08:02:40 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -136,7 +136,13 @@ sub makeInfoFiles($$) {
     ( "VERSION" => $opt_gver) ) or return undef;
   copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-3",
        "$targetdir/GPG-KEY-EUGridPMA-RPM-3")
-    or do { $err="GPG key copy: $!\n"; return undef };
+    or do { $err="GPG key 3 copy: $!\n"; return undef };
+  copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-4",
+       "$targetdir/GPG-KEY-EUGridPMA-RPM-4")
+    or do { $err="GPG key 4 copy: $!\n"; return undef };
+  copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-4.sig",
+       "$targetdir/GPG-KEY-EUGridPMA-RPM-4.sig")
+    or do { $err="GPG key 4.sig copy: $!\n"; return undef };
   copy("$carep/CHANGES","$targetdir/CHANGES")
     or do { $err="CHANGES copy: $!\n"; return undef};
   open ACCIN,">$targetdir/accredited/accredited.in" 
@@ -292,7 +298,7 @@ EOF
     print "Executing GPG signing command:\n  $cmd\n";
     system($cmd);
     # now the new InRelease file
-    my $cmd="cd $targetdir/dists/igtf/ && ".
+    $cmd="cd $targetdir/dists/igtf/ && ".
             "gpg --homedir=$gpghome --default-key=$gpgkey -o InRelease --digest-algo SHA256 -a -s --clearsign Release";
     print "Executing GPG InRelease signing command:\n  $cmd\n";
     system($cmd);

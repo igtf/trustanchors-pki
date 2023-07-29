@@ -12,6 +12,11 @@ Changes from 1.121 to 1.122
 * Added accredited eMudhra joint public trust root and issuing CAs (IN)
 * Added private trust eMudhra IGTF root and issuers as experimental (IN, US)
 
+NOTICE: in future releases we will move to a new RSA-2048 GPG package signing
+key. The new public key file, GPG-KEY-EUGridPMA-RPM-4, is distributed with
+this and subsequent releases. You can retrieve the new public key file from 
+  https://dl.igtf.net/distribution/GPG-KEY-EUGridPMA-RPM-4
+
 Changes from 1.120 to 1.121
 ---------------------------
 (15 June 2023)

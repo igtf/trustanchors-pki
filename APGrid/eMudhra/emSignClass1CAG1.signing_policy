@@ -1,4 +1,4 @@
 # EACL for eMudhra emSign CA emSignClass1CAG1
  access_id_CA   X509    '/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Class 1 CA - G1'
  pos_rights     globus  CA:sign
- cond_subjects  globus  '"/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Class 1 CA - G1" "/DC=com/DC=emsign/*"'
+ cond_subjects  globus  '"/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Class 1 CA - G1" "/C=US/O=emSignGrid/*" "/DC=com/DC=emSignGrid/*" "/DC=org/DC=emSignGrid/*"'

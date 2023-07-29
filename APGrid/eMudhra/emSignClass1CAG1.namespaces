@@ -9,5 +9,11 @@
 #    (generated automatically from emSignClass1CAG1.signing_policy)
 #
 TO Issuer "/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Class 1 CA - G1" \
-  PERMIT Subject "/DC=com/DC=emsign/.*"
+  PERMIT Subject "/C=US/O=emSignGrid/.*"
+
+TO Issuer "/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Class 1 CA - G1" \
+  PERMIT Subject "/DC=com/DC=emSignGrid/.*"
+
+TO Issuer "/C=IN/OU=emSign PKI/O=eMudhra Technologies Limited/CN=emSign Class 1 CA - G1" \
+  PERMIT Subject "/DC=org/DC=emSignGrid/.*"
 
