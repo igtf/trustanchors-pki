@@ -1,0 +1,16 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)GEANTTCSAuthenticationRSACA4B.signing_policy.namespaces
+# CA alias    : GEANTTCSAuthenticationRSACA4B
+#    subord_of: ResearchandEducationTrustRSARootCA
+#    subjectDN: /C=NL/O=GEANT Vereniging/CN=GEANT TCS Authentication RSA CA 4B
+#    hash     : GEANTTCSAuthenticationRSACA4B.signing_policy
+#    (generated automatically from GEANTTCSAuthenticationRSACA4B.signing_policy)
+#
+TO Issuer "/O=Research and Education Trust/CN=Research and Education Trust RSA Root CA" \
+  PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT TCS Authentication RSA CA 4B"
+
+TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT TCS Authentication RSA CA 4B" \
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+

@@ -1,5 +1,5 @@
 #
-# @(#)$Id: emSignClass1CAG1.info,v 1.1 2023/07/25 08:54:11 pmacvsdg Exp $
+# @(#)$Id: emSignClass1CAG1.info,v 1.2 2023/07/29 12:57:50 pmacvsdg Exp $
 # eMuhdra emSign Certifying Authority trust anchor emSignClass1CAG1
 #
 alias = emSignClass1CAG1
@@ -8,6 +8,7 @@ crl_url = http://crl.emsign.com/?emSignClass1CAG1.crl
 policy_url = https://repository.emsign.com/
 url = https://emudhra.com/products/digital-certificates
 email = support@emsign.com
+requires = emSignRootCAG1
 status = accredited:classic
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

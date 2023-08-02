@@ -1,0 +1,4 @@
+# EACL for the Research and Education root for the RE community by GEANT
+ access_id_CA   X509    '/O=Research and Education Trust/CN=Research and Education Trust RSA Root CA'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/O=Research and Education Trust/CN=Research and Education Trust RSA Root CA" "/C=NL/O=GEANT Vereniging/CN=GEANT TCS Authentication RSA CA 4B"'

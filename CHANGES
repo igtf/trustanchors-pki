@@ -9,6 +9,7 @@ Changes from 1.121 to 1.122
 ---------------------------
 (31 July 2023)
 
+* Added private trust hierarchy for GEANT (Research and Education) TCS (EU)
 * Added accredited eMudhra joint public trust root and issuing CAs (IN)
 * Added private trust eMudhra IGTF root and issuers as experimental (IN, US)
 
