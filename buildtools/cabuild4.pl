@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.13 2022/07/31 08:02:40 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.14 2023/07/29 12:57:50 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -12,7 +12,7 @@ use File::Copy qw(copy move);
 use strict;
 use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp $opt_nojks $opt_mkdeb
 	$opt_debian $opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_obsoletedbase $opt_gver %auth
-        $opt_opensslone
+        $opt_opensslone $opt_gpgkeyid
     );
 
 $opt_tmp="/tmp";
@@ -22,9 +22,10 @@ $opt_r=1;
 $opt_debian="./check-debian.sh";
 $opt_obsoletedbase="./obsoleted";
 $opt_opensslone="/opt/openssl1/bin/openssl";
+$opt_gpgkeyid="3CDBBC71";
 
 my @optdef=qw( url|finalURL=s nojks:i mkdeb
-    s|sign f v:i gver|distversion=s version|ver=s r|release=s 
+    s|sign f v:i gver|distversion=s version|ver=s r|release=s gpgkeyid|K=s
     carep|repository=s tmp|tmpdir=s o|target=s debian=s 
     opensslone=s );
 
@@ -32,6 +33,11 @@ $0 =~ s/.*\///;
 &GetOptions(@optdef);
 
 -x $opt_opensslone  or die "Cannot execute openssl v1.x command at $opt_opensslone, exiting.\n";
+
+$opt_gpgkeyid = "3CDBBC71" if $opt_gpgkeyid eq "3";
+$opt_gpgkeyid = "76341F1A" if $opt_gpgkeyid eq "4";
+
+print "Using GPG KeyID $opt_gpgkeyid\n";
 
 $opt_version=~/AUTO/i and do {
   chomp($opt_version=`cat VERSION`);
@@ -169,7 +175,7 @@ sub signRPMs($) {
   print "press enter to continue ...\n";
   my $nonsense=<>;
   system("cd $targetdir ; ".
-         "find -name \*.rpm -print | xargs rpm --resign")
+         "find -name \*.rpm -print | xargs rpm --resign -D '%_gpg_name $opt_gpgkeyid'")
     and do {
       $err="system command error: $!"; return undef;
     };
@@ -294,12 +300,12 @@ EOF
     chomp(my $gpghome=`awk '/%_gpg_path/ { print \$2 }' \$HOME/.rpmmacros`);
     chomp(my $gpgkey=`awk '/%_gpg_name/ { print \$2 }' \$HOME/.rpmmacros`);
     my $cmd="cd $targetdir/dists/igtf/ && ".
-            "gpg --homedir=$gpghome --default-key=$gpgkey -o Release.gpg -bas Release";
+            "gpg --homedir=$gpghome --default-key=$gpgkey -u $opt_gpgkeyid -o Release.gpg -bas Release";
     print "Executing GPG signing command:\n  $cmd\n";
     system($cmd);
     # now the new InRelease file
     $cmd="cd $targetdir/dists/igtf/ && ".
-            "gpg --homedir=$gpghome --default-key=$gpgkey -o InRelease --digest-algo SHA256 -a -s --clearsign Release";
+            "gpg --homedir=$gpghome --default-key=$gpgkey -u $opt_gpgkeyid -o InRelease --digest-algo SHA256 -a -s --clearsign Release";
     print "Executing GPG InRelease signing command:\n  $cmd\n";
     system($cmd);
   };
@@ -501,7 +507,7 @@ sub makeBundleScripts($$$) {
   (defined $opt_s) and do {
     chomp(my $gpghome=`awk '/%_gpg_path/ { print \$2 }' \$HOME/.rpmmacros`);
     chomp(my $gpgkey=`awk '/%_gpg_name/ { print \$2 }' \$HOME/.rpmmacros`);
-    my $cmd="gpg --homedir=$gpghome --default-key=$gpgkey -o $tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc -ba $tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz";
+    my $cmd="gpg --homedir=$gpghome --default-key=$gpgkey -u $opt_gpgkeyid -o $tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc -ba $tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz";
     print "Executing GPG signing command:\n  $cmd\n";
     system($cmd);
     copy("$tmpdir/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc","$targetdir/igtf-policy-installation-bundle-$opt_gver.tar.gz.asc");
