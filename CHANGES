@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.122 to 1.123
+---------------------------
+(14 August 2023)
+
+* Add ECC private trust hierarchy for GEANT (Research and Education) TCS (EU)
+
 Changes from 1.121 to 1.122
 ---------------------------
 (7 August 2023)

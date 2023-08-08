@@ -1,0 +1,14 @@
+# @(#)$Id$
+# GEANT TCS Authentication (ECC) CA 4B - private trust for Research and Education by GEANT
+#
+alias = GEANTTCSAuthenticationECCCA4B
+ca_url = http://crt.enterprise.sectigo.com/GEANTTCSAuthenticationECCCA4B.crt
+crl_url = http://crl.enterprise.sectigo.com/GEANTTCSAuthenticationECCCA4B.crl
+policy_url = https://wiki.geant.org/display/TCSNT/TCS+Repository
+url = https://security.geant.org/trusted-certificate-services/
+email = tcs-pma@lists.geant.org
+requires = ResearchandEducationTrustECCRootCA
+status = accredited:mics
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)ResearchandEducationTrustECCRootCA.signing_policy.namespaces
+# CA alias    : ResearchandEducationTrustECCRootCA
+#    subord_of: 
+#    subjectDN: /O=Research and Education Trust/CN=Research and Education Trust ECC Root CA
+#    hash     : ResearchandEducationTrustECCRootCA.signing_policy
+#    (generated automatically from ResearchandEducationTrustECCRootCA.signing_policy)
+#
+TO Issuer "/O=Research and Education Trust/CN=Research and Education Trust ECC Root CA" \
+  PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT TCS Authentication ECC CA 4B"
+
