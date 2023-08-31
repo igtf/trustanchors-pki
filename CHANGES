@@ -7,9 +7,10 @@ lay-out.
 
 Changes from 1.122 to 1.123
 ---------------------------
-(14 August 2023)
+(4 September 2023)
 
 * Add ECC private trust hierarchy for GEANT (Research and Education) TCS (EU)
+* Added accrdited private trust eMudhra IGTF root and issuers (IN)
 
 Changes from 1.121 to 1.122
 ---------------------------
