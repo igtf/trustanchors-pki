@@ -1,6 +1,6 @@
 #! /usr/bin/perl -w
 #
-# @(#)$Id: cabuild4.pl,v 1.14 2023/07/29 12:57:50 pmacvsdg Exp $
+# @(#)$Id: cabuild4.pl,v 1.15 2023/08/07 07:53:11 pmacvsdg Exp $
 #
 # The IGTF CA build script
 #
@@ -21,7 +21,7 @@ $opt_o="../distribution";
 $opt_r=1;
 $opt_debian="./check-debian.sh";
 $opt_obsoletedbase="./obsoleted";
-$opt_opensslone="/opt/openssl1/bin/openssl";
+$opt_opensslone="/usr/bin/openssl";
 $opt_gpgkeyid="3CDBBC71";
 
 my @optdef=qw( url|finalURL=s nojks:i mkdeb
