@@ -1,9 +1,9 @@
 #
-# @(#)$Id: d0c2a341.info,v 1.7 2015/06/18 09:44:53 pmacvsdg Exp $
+# @(#)$Id: d0c2a341.info,v 1.8 2015/10/28 09:59:35 pmacvsdg Exp $
 # Information for CA ArmeSFo
 #   obtained from d0c2a341 in ArmeSFo/
 alias = ArmeSFo
-email = ca@escience.am
+email = escience@aanl.am
 crl_url = http://armesfoca-crl.scc.kit.edu/crl.pem
 url = http://www.escience.am/ca/
 status = accredited:classic
