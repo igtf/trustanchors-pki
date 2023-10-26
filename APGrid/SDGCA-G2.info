@@ -1,7 +1,7 @@
 alias = SDG-G2
 crl_url = http://ca.sdg.grid.cn/crl/cacrl-g2.crl
 email = sdgca@cnic.cn
-status = accredited:classic
+status = discontinued
 url = http://ca.sdg.grid.cn/en/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

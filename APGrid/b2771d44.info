@@ -1,7 +1,7 @@
 alias = CNIC
 crl_url = http://ca.grid.cn/crl/cacrl.pem
 email = gridca@cnic.cn
-status = accredited:classic
+status = discontinued
 url = http://ca.grid.cn/en/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@

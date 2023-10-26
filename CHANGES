@@ -11,6 +11,10 @@ Changes from 1.123 to 1.124
 
 * updated contact meta-data for ArmeSFo authority (AM)
 * removed discontinued AEGIS authority (RS)
+* removed suspended KENET Root and issuing CAs (KE)
+* removed suspended SDG-G2 authority (CN)
+* removed suspended CNIC authority (CN)
+* removed all four discontinued DigitalTrust CAs operated by their issuer (AE)
 
 Changes from 1.122 to 1.123
 ---------------------------
