@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.124 to 1.125
+---------------------------
+(29 November 2023)
+
+* updated root certificate ArmeSFo CA with extended validity (AM)
+
 Changes from 1.123 to 1.124
 ---------------------------
 (30 October 2023)
