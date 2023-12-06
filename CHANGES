@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.125 to 1.126
+---------------------------
+(11 December 2023)
+
+* removed replaced InCommon IGTF Server CA and associated Comodo RSA CA (US)
+* removed discontinued UNLPGrid CA (CL)
+
 Changes from 1.124 to 1.125
 ---------------------------
 (29 November 2023)
