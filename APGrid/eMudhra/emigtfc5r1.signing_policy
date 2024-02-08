@@ -1,0 +1,4 @@
+# EACL for eMudhra emSign CA emigtfc5r1
+ access_id_CA   X509    '/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5 - 1'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5 - 1" "/C=US/O=emSignGrid/*" "/DC=com/DC=emSignGrid/*" "/DC=org/DC=emSignGrid/*"'

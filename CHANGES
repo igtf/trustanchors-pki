@@ -5,6 +5,15 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.126 to 1.127
+---------------------------
+(12 February 2024)
+
+* added supplementary issuing CA Issuing CA IGTF - C5 - 1 for eMudhra (IN)
+* removed discontinued QuoVadis CAs QuoVadis-Grid-ICA-G2 QuoVadis-Root-CA2G3
+  QuoVadis-Root-CA2 and QuoVadis-Root-CA3G3 (BM)
+
+
 Changes from 1.125 to 1.126
 ---------------------------
 (11 December 2023)

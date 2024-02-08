@@ -11,3 +11,6 @@
 TO Issuer "/C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5" \
   PERMIT Subject "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5"
 
+TO Issuer "/C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5" \
+  PERMIT Subject "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5 - 1"
+
