@@ -4,7 +4,7 @@
 #   obtained from d0c2a341 in ArmeSFo/
 alias = ArmeSFo
 email = escience@aanl.am
-crl_url = http://armesfoca-crl.scc.kit.edu/crl.pem
+crl_url = http://file.escience.am/crl.pem;https://escience.am/file/crl.pem
 url = http://escience.am/
 status = accredited:classic
 version = @VERSION@
