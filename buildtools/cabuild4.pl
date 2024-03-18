@@ -647,7 +647,7 @@ sub makeCollectionInfo($$$) {
       $nauthorities=0;
       print INFO "obsoletes = ";
       foreach my $ca ( @obscas ) { 
-        $tokens{"OBSOLETED.$pname"} .= " ca_${ca}";
+        $tokens{"OBSOLETED.$pname"} .= " ca_${ca} <= $opt_gver";
         ( $tokens{"DEBOBSOLETED.$pname"} ne "" ) and $tokens{"DEBOBSOLETED.$pname"}.=", ";
         $tokens{"DEBOBSOLETED.$pname"} .= "ca-".lc(${ca});
         $nauthorities and print INFO ", \\\n    ";
@@ -1219,7 +1219,7 @@ sub packSingleCA($$$$) {
 	  "COLLECTION" => $collection,
 	  "PROFILE" => $profile,
 	  "REQUIRES" => &expandRequiresWithVersion($info{"requires"}),
-	  "OBSOLETES" => ($info{"obsoletes"}?join ",",map { "ca_".$_ } split /,/,$info{"obsoletes"}:"")
+	  "OBSOLETES" => ($info{"obsoletes"}?join ",",map { "ca_".$_." <= ".$info{"version"} } split /,/,$info{"obsoletes"}:"")
 	) 
     );
 
