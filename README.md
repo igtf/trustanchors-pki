@@ -60,7 +60,9 @@ by default with the IGTF distributed versions
 ## Building the distribution
 
 1. Checkout or clone this repository
-1. Install the dependendies: perl, perl-DateTime, ar, tar, gpg, rpmbuild, rpm-sign, createrepo_c
+1. Install the dependendies - the build tools expect an RPM-based platform (and will mimick Debian packaging by using the underlying tools explicitlt). You will need at least perl, perl-DateTime, openssl, ar, tar, gpg, rpmbuild, rpm-sign, and createrepo_c
+   (for EL9-like systems: `/usr/bin/crb enable; dnf install epel-release gnupg2 perl git createrepo_c rpm-build rpm-sign pinentry pinentry-tty` and set `export GPG_TTY=$(tty)` for the build user if needed)
+1. when building for legacy systems on an EL9+-like systems, use an appropriate crypto-policy file (`/etc/crypto-policies/policies/GPGCOMPAT.pol`)
 1. When desired, create or select your own PGP key, say with key id `12345678`
 1. Check whether the `buildtools/VERSION` file has your desired content
 1. Build the distribution!

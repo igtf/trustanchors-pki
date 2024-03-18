@@ -1152,7 +1152,7 @@ sub packSingleCA($$$$) {
   # check for validity and generate visual warning for packager
   #
   my $rc;
-  $rc=system("$opt_opensslone x509 -checkend 15552000 -noout -in $srcdir/$certfile");
+  $rc=system("$opt_opensslone x509 -checkend 15552000 -noout -in $srcdir/$certfile > /dev/null");
   if ( $rc ) {
     chomp($rc=`$opt_opensslone x509 -noout -in $srcdir/$certfile -enddate`);
     $rc=~/=(.*)/;
