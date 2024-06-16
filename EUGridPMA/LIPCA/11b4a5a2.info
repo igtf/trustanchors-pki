@@ -5,7 +5,7 @@
 alias = LIPCA
 crl_url = http://ca.lip.pt/crl/crl.der
 email = ca@lip.pt
-status = accredited:classic
+status = discontinued
 url = http://ca.lip.pt/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
