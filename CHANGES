@@ -10,6 +10,8 @@ Changes from 1.128 to 1.129
 (24 June 2024)
 
 * updated CRL URL location for MREN CA (ME)
+* removed discontinued TSU-GE GRENA CA (GE)
+* removed suspended BYGCA (BY)
 * removed discontinued LIP CA (PT)
 * removed obsolete DT transitional CAs (AE)
 
