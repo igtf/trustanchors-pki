@@ -13,6 +13,7 @@ use strict;
 use vars qw(@validStatus $opt_f $err $opt_r $opt_tmp $opt_nojks $opt_mkdeb
 	$opt_debian $opt_v $opt_url $opt_s $opt_version $opt_o $opt_carep $opt_obsoletedbase $opt_gver %auth
         $opt_opensslone $opt_gpgkeyid
+        $osslversion
     );
 
 $opt_tmp="/tmp";
@@ -23,6 +24,7 @@ $opt_debian="./check-debian.sh";
 $opt_obsoletedbase="./obsoleted";
 $opt_opensslone="/usr/bin/openssl";
 $opt_gpgkeyid="3CDBBC71";
+$osslversion=1;
 
 my @optdef=qw( url|finalURL=s nojks:i mkdeb
     s|sign f v:i gver|distversion=s version|ver=s r|release=s gpgkeyid|K=s
@@ -33,6 +35,11 @@ $0 =~ s/.*\///;
 &GetOptions(@optdef);
 
 -x $opt_opensslone  or die "Cannot execute openssl v1.x command at $opt_opensslone, exiting.\n";
+
+chomp(my $osslversionline = `$opt_opensslone version`);
+if ( $osslversionline =~ /OpenSSL\s*(\d+)\D.*/i ) {
+    $osslversion=$1;
+}
 
 $opt_gpgkeyid = "3CDBBC71" if $opt_gpgkeyid eq "3";
 $opt_gpgkeyid = "76341F1A" if $opt_gpgkeyid eq "4";
@@ -901,7 +908,12 @@ sub getAuthoritiesList($$) {
       $info{"offset1"} = $hashonecount{$hashone}++;
     };
     defined $info{"casubjectdn"} or do {
-      chomp(my $casubjectdn  = `$opt_opensslone  x509 -noout -subject -in '$dir/$certfilename'`);
+      my $casubjectdn;
+      if ( $osslversion < 3 ) {
+        chomp($casubjectdn  = `$opt_opensslone  x509 -noout -subject -in '$dir/$certfilename'`);
+      } else {
+        chomp($casubjectdn  = `$opt_opensslone  x509 -noout -nameopt compat -subject -in '$dir/$certfilename'`);
+      }
       $casubjectdn =~ s/^subject=\s*//;
       $info{"casubjectdn"} = $casubjectdn;
     };

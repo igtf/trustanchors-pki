@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.129 to 1.130
+---------------------------
+(1 July 2024)
+
+* resolve subjnectDN nameformat compatibility issues trust anchor metadata
+
 Changes from 1.128 to 1.129
 ---------------------------
 (24 June 2024)
