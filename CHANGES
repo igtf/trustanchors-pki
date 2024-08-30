@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.130 to 1.131
+---------------------------
+(30 September 2024)
+
+* removed discontinued HKU-CA-2 authority (HK)
+
 Changes from 1.129 to 1.130
 ---------------------------
 (1 July 2024)
