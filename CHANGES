@@ -10,6 +10,7 @@ Changes from 1.130 to 1.131
 (30 September 2024)
 
 * removed discontinued HKU-CA-2 authority (HK)
+* removed obsolete 3rd generation TCS intermediates (EU)
 
 Changes from 1.129 to 1.130
 ---------------------------
