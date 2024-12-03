@@ -1,0 +1,13 @@
+# TRGrid 2024 CA Information
+#
+# @(#)$Id$
+# 
+alias = TRGrid2024
+ca_url = http://www.truba.gov.tr/trgridca/cacert/3ca6d4a0.0
+crl_url = http://www.truba.gov.tr/trgridca/crl/crl.der
+email = ca@grid.org.tr
+status = accredited:classic
+url = http://www.grid.org.tr/ca
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

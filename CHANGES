@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.131 to 1.132
+---------------------------
+(16 December 2024)
+
+* added new trust anchor for TRGRID transition (TR)
+
 Changes from 1.130 to 1.131
 ---------------------------
 (30 September 2024)

@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)TRGRID2024.signing_policy.namespaces
+# CA alias    : TRGrid2024
+#    subord_of: 
+#    subjectDN: /C=TR/O=TRGrid/CN=TR-Grid CA 2024
+#    hash     : TRGRID2024.signing_policy
+#    (generated automatically from TRGRID2024.signing_policy)
+#
+TO Issuer "/C=TR/O=TRGrid/CN=TR-Grid CA 2024" \
+  PERMIT Subject "/C=TR/O=TRGrid/.*"
+

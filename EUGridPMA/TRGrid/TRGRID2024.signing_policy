@@ -1,0 +1,5 @@
+# @(#)$Id$
+#
+access_id_CA  X509   '/C=TR/O=TRGrid/CN=TR-Grid CA 2024'
+pos_rights    globus CA:sign
+cond_subjects globus '"/C=TR/O=TRGrid/*"'
