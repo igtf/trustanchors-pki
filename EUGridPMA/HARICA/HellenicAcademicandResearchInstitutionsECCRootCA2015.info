@@ -1,0 +1,12 @@
+# @(#)Hellenic Academic and Research Institutions ECC RootCA 2016
+#
+alias = HellenicAcademicandResearchInstitutionsECCRootCA2015
+ca_url = https://repo.harica.gr/certs/HaricaECCRootCA2015.der
+crl_url = http://crl.harica.gr/HaricaECCRootCA2015.crl
+policy_url = https://repo.harica.gr/procedures
+url = https://www.harica.gr/
+email = tcs-pma@lists.geant.org
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

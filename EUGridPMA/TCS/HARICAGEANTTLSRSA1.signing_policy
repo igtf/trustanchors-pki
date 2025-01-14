@@ -1,0 +1,5 @@
+# EACL for the HARICA OV TLS RSA ICA (GEANT TCS Gen5)
+ access_id_CA   X509    '/C=GR/O=Hellenic Academic and Research Institutions CA/CN=GEANT TLS RSA 1'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=GR/O=Hellenic Academic and Research Institutions CA/CN=GEANT TLS RSA 1" "/DC=org/DC=terena/DC=tcs/*"'
+

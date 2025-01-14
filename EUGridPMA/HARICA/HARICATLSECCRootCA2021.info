@@ -1,0 +1,14 @@
+# @(#)HARICATLSECCRootCA2021 self-signed root
+#
+alias = HARICATLSECCRootCA2021
+ca_url = https://repo.harica.gr/certs/HARICA-TLS-Root-2021-ECC.der
+crl_url = http://crl.harica.gr/HARICA-TLS-Root-2021-ECC.crl
+policy_url = https://repo.harica.gr/procedures
+url = https://www.harica.gr/
+email = tcs-pma@lists.geant.org
+requires = HellenicAcademicandResearchInstitutionsECCRootCA2015
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
+

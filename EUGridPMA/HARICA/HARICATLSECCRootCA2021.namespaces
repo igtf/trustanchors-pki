@@ -1,0 +1,19 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)HARICATLSECCRootCA2021.namespaces
+# CA alias    : HARICATLSECCRootCA2021
+#    subjectDN: /C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA TLS ECC Root CA 2021
+#
+TO Issuer "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA TLS ECC Root CA 2021" \
+  PERMIT Subject "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA OV TLS ECC"
+
+TO Issuer "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA TLS ECC Root CA 2021" \
+  PERMIT Subject "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=GEANT TLS ECC 1"
+
+TO Issuer "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA OV TLS ECC" \
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+
+TO Issuer "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=GEANT TLS ECC 1" \
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+

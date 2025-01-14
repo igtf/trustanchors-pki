@@ -1,0 +1,12 @@
+# @(#)HellenicAcademicandResearchInstitutionsRootCA2015 self-signed root
+#
+alias = HellenicAcademicandResearchInstitutionsRootCA2015
+ca_url = https://repo.harica.gr/certs/HaricaRootCA2015.der
+crl_url = http://crl.harica.gr/HaricaRootCA2015.crl
+policy_url = https://repo.harica.gr/procedures
+url = https://www.harica.gr/
+email = tcs-pma@lists.geant.org
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -1,0 +1,11 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)HARICAOVTLSRSA.namespaces
+# CA alias    : HARICAOVTLSRSA
+#    subord_of: /C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA TLS RSA Root CA 2021
+#    subjectDN: /C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA OV TLS RSA
+#
+TO Issuer "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA OV TLS RSA" \
+  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
+

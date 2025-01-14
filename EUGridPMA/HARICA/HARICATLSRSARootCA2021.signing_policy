@@ -1,0 +1,5 @@
+# EACL for the HARICA TLS RSA Root CA 2021
+ access_id_CA   X509    '/C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA TLS RSA Root CA 2021'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA TLS RSA Root CA 2021" "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=HARICA OV TLS RSA" "/C=GR/O=Hellenic Academic and Research Institutions CA/CN=GEANT TLS RSA 1"'
+

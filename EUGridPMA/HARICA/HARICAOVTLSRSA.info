@@ -1,0 +1,13 @@
+# @(#)HARICAOVTLSRSA Issuing CA GEANT TCS Gen5 OV Base
+#
+alias = HARICAOVTLSRSA
+ca_url = https://repo.harica.gr/certs/HARICA-OV-TLS-Sub-R1.der
+crl_url = http://crl.harica.gr/HARICA-OV-TLS-Sub-R1.crl
+policy_url = https://repo.harica.gr/procedures
+url = https://www.harica.gr/
+email = tcs-pma@lists.geant.org
+requires = HARICATLSRSARootCA2021
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

@@ -1,0 +1,14 @@
+# @(#)HARICAGEANTTLSRSA1 Issuing CA GEANT TCS Gen5 OV dedicated
+# /C=GR/O=Hellenic Academic and Research Institutions CA/CN=GEANT TLS RSA 1
+#
+alias = HARICAGEANTTLSRSA1
+ca_url = https://repo.harica.gr/certs/HARICA-GEANT-TLS-R1.der
+crl_url = http://crl.harica.gr/HARICA-GEANT-TLS-R1.crl
+policy_url = https://wiki.geant.org/display/TCSNT/TCS+Repository
+url = https://security.geant.org/trusted-certificate-services/
+email = tcs-pma@lists.geant.org
+requires = HARICATLSRSARootCA2021
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
