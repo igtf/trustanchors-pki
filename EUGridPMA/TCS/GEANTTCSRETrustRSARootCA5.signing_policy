@@ -1,0 +1,4 @@
+# EACL for the Research and Education Root for GEANT TCS Gen5 RSA
+ access_id_CA   X509    '/C=NL/O=GEANT Vereniging/CN=Research and Education Trust RSA Root CA 5'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=NL/O=GEANT Vereniging/CN=Research and Education Trust RSA Root CA 5" "/C=NL/O=GEANT Vereniging/CN=GEANT TCS Authentication RSA CA 5"'

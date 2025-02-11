@@ -1,0 +1,4 @@
+# EACL for the issuing Client Authentication (RSA) CA for the RE community for GEANT by HARICA
+ access_id_CA   X509    '/C=NL/O=GEANT Vereniging/CN=GEANT TCS Authentication RSA CA 5'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=NL/O=GEANT Vereniging/CN=GEANT TCS Authentication RSA CA 5" "/DC=org/DC=terena/DC=tcs/*"'

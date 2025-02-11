@@ -1,0 +1,13 @@
+# @(#)$Id$
+# CN=Research and Education Trust ECC Root CA 5,O=GEANT Vereniging,C=NL
+#
+alias = GEANTTCSRETrustECCRootCA5
+ca_url = https://wiki.geant.org/download/attachments/929693773/GEANT-TCS-Root-E5.pem
+crl_url = http://crl.geant-prv.harica.gr/GEANT-TCS-Root-E5.crl
+policy_url = https://wiki.geant.org/display/TCSNT/TCS+Repository+2025
+url = https://security.geant.org/trusted-certificate-services/
+email = tcs-pma@lists.geant.org
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
