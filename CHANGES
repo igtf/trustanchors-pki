@@ -7,11 +7,12 @@ lay-out.
 
 Changes from 1.132 to 1.133
 ---------------------------
-(20 January 2024)
+(17 February 2024)
 
 * Updated re-issued GridCanada root with extended validity period (CA)
-* Added GEANT TCS Generation 5 TLS ICAs and corresponding HARICA roots (EU)
-* updated SHA-256 root CA for RDIG mitigating EL9/FedoraCore deprication
+* Added GEANT TCS Generation 5 TLS and Auth ICAs and corresponding HARICA 
+  and private trust roots (EU)
+* updated SHA-256 root CA for RDIG mitigating EL9/FedoraCore deprecation
 * MARGI put on hold due to domainname resolution issues (MK)
 
 Changes from 1.131 to 1.132
