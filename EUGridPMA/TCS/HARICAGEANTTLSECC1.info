@@ -4,7 +4,7 @@
 alias = HARICAGEANTTLSECC1
 ca_url = https://repo.harica.gr/certs/HARICA-GEANT-TLS-E1.der
 crl_url = http://crl.harica.gr/HARICA-GEANT-TLS-E1.crl
-policy_url = https://wiki.geant.org/display/TCSNT/TCS+Repository
+policy_url = https://wiki.geant.org/display/TCSNT/TCS+Repository+2025
 url = https://security.geant.org/trusted-certificate-services/
 email = tcs-pma@lists.geant.org
 requires = HARICATLSECCRootCA2021
