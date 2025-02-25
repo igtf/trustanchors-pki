@@ -1,0 +1,4 @@
+# @(#)ANSPGridCA2 EACL 20250224
+ access_id_CA      X509       '/C=BR/O=ANSP/OU=ANSPGrid CA/CN=ANSPGrid CA 2'
+ pos_rights        globus      CA:sign
+ cond_subjects     globus     '"/C=BR/O=ANSP/OU=ANSPGrid CA/CN=ANSPGrid CA 2" "/C=BR/O=ANSP/OU=ANSPGrid CA/*"'

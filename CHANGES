@@ -5,9 +5,15 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.133 to 1.134
+---------------------------
+(3 March 2025)
+
+* New ANSPGrid CA 2 roll-over for root-issuer key pair (BR)
+
 Changes from 1.132 to 1.133
 ---------------------------
-(17 February 2024)
+(21 February 2025)
 
 * Updated re-issued GridCanada root with extended validity period (CA)
 * Added GEANT TCS Generation 5 TLS and Auth ICAs and corresponding HARICA 

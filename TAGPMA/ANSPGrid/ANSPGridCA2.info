@@ -1,0 +1,9 @@
+alias = ANSPGridCA2
+ca_url = http://gridca.ansp.br/media/ca/anspca2.pem
+crl_url = http://gridca.ansp.br/media/ca/anspca2.crl
+email = gridca@ansp.br
+status = accredited:classic
+url = http://gridca.ansp.br
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
