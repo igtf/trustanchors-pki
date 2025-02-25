@@ -10,6 +10,7 @@ Changes from 1.133 to 1.134
 (3 March 2025)
 
 * New ANSPGrid CA 2 roll-over for root-issuer key pair (BR)
+* Withdrawn discontinued AC-GRID-FR series authorities (FR)
 
 Changes from 1.132 to 1.133
 ---------------------------
