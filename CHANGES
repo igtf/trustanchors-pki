@@ -9,6 +9,7 @@ Changes from 1.134 to 1.135
 ---------------------------
 (5 May 2025)
 
+* Updated SlovakGrid trust anchor with extended validity (SK)
 * Withdrawn discontinued HPCI CA (JP)
 
 NOTE: the _default_ package signing key has changed to the 4th generation
