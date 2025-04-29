@@ -11,7 +11,7 @@ Changes from 1.134 to 1.135
 
 * Withdrawn discontinued HPCI CA (JP)
 
-NOTE: the _default_ package signing key has changes to the 4th generation
+NOTE: the _default_ package signing key has changed to the 4th generation
       for increased security and compatibility. The new key is a 2048 bit
       RSA with fingerprint 565F4528EAD3F53727B5A2E9B055005676341F1A.
       The GPG public key file can be retrieved from 
