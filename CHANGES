@@ -11,6 +11,20 @@ Changes from 1.134 to 1.135
 
 * Withdrawn discontinued HPCI CA (JP)
 
+NOTE: the _default_ package signing key has changes to the 4th generation
+      for increased security and compatibility. The new key is a 2048 bit
+      RSA with fingerprint 565F4528EAD3F53727B5A2E9B055005676341F1A.
+      The GPG public key file can be retrieved from 
+        https://dl.igtf.net/distribution/current/GPG-KEY-EUGridPMA-RPM-4
+      and imported on rpm-based distributions with 'rpmkeys --import <file>' 
+      or on Debian (apt) based systems set in Signed-By in sources.list or
+      added as a file in /etc/apt/trusted.gpg.d/
+
+      This change was first announced in the 1.122 release (August 2023),
+      but a distribution signed with the generation-3 key remains available.
+      A signature of the gen-4 key signed by the gen-3 GPG key is available
+      from https://dl.igtf.net/distribution/current/ for validation.
+
 Changes from 1.133 to 1.134
 ---------------------------
 (5 March 2025)
