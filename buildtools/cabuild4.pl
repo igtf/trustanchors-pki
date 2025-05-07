@@ -153,9 +153,6 @@ sub makeInfoFiles($$) {
   copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-4",
        "$targetdir/GPG-KEY-EUGridPMA-RPM-4")
     or do { $err="GPG key 4 copy: $!\n"; return undef };
-  copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-4.sig",
-       "$targetdir/GPG-KEY-EUGridPMA-RPM-4.sig")
-    or do { $err="GPG key 4.sig copy: $!\n"; return undef };
   copy("$carep/CHANGES","$targetdir/CHANGES")
     or do { $err="CHANGES copy: $!\n"; return undef};
   open ACCIN,">$targetdir/accredited/accredited.in" 

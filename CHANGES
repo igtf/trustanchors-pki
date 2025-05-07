@@ -5,6 +5,14 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.135 to 1.136
+---------------------------
+(2 June 2025)
+
+* a new version of the generation-4 package signing key is now included that
+  uses a SHA-256 digest function. The fingerprint and key material is 
+  otherwise identical: 565F4528EAD3F53727B5A2E9B055005676341F1A.
+
 Changes from 1.134 to 1.135
 ---------------------------
 (5 May 2025)
