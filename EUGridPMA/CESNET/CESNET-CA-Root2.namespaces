@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)CESNET-CA-Root2.namespaces
+# CA alias    : CESNET-CA-Root2
+#    subjectDN: /DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA Root 2
+#
+TO Issuer "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA Root 2" \
+  PERMIT Subject "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 5"
+
+To Issuer "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 5" \
+  PERMIT Subject "/DC=cz/DC=cesnet-ca/.*"
+

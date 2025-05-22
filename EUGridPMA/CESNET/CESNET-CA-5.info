@@ -1,0 +1,15 @@
+#
+# @($)CESNET-CA-5.info
+#  /DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 5
+#
+alias = CESNET-CA-5
+url = http://www.cesnet.cz/pki/
+ca_url = http://crl.cesnet-ca.cz/CESNET_CA_5.crt
+crl_url = http://crl.cesnet-ca.cz/CESNET_CA_5.crl
+policy_url = http://www.cesnet.cz/pki/en/ch-cp-cps.html
+requires = CESNET-CA-Root
+email = ca@cesnet.cz
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

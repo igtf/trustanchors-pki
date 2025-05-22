@@ -1,0 +1,5 @@
+# EACL CESNET-CA-Root2
+access_id_CA	X509	'/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA Root 2'
+pos_rights	globus	CA:sign
+cond_subjects	globus	'"/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA Root 2" "/DC=cz/DC=cesnet-ca/O=CESNET CA/CN=CESNET CA 5"'
+#
