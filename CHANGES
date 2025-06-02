@@ -7,9 +7,10 @@ lay-out.
 
 Changes from 1.135 to 1.136
 ---------------------------
-(2 June 2025)
+(9 June 2025)
 
 * Added new CESNET CA Gen5 hierarchy and new off-line Root 2 (CZ)
+* Withdrawn retired CILogon CAs cilogon-basic and cilogon-silver (US)
 * a new version of the generation-4 package signing key is now included that
   uses a SHA-256 digest function for its self-signature. Fingerprint and key 
   material is otherwise identical: 565F4528EAD3F53727B5A2E9B055005676341F1A.
