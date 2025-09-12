@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.136 to 1.137
+---------------------------
+(22 September 2025)
+
+* Added accredited KEK-2024 classic issuing CA (JP)
+
 Changes from 1.135 to 1.136
 ---------------------------
 (9 June 2025)
