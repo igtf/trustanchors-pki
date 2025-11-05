@@ -3,14 +3,14 @@
 #
 # @(#)TrustedRootCAC5.signing_policy.namespaces
 # CA alias    : TrustedRootCAC5
-#    subord_of: 
 #    subjectDN: /C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5
-#    hash     : TrustedRootCAC5.signing_policy
-#    (generated automatically from TrustedRootCAC5.signing_policy)
 #
 TO Issuer "/C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5" \
   PERMIT Subject "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5"
 
 TO Issuer "/C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5" \
   PERMIT Subject "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5 - 1"
+
+TO Issuer "/C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5" \
+  PERMIT Subject "/C=CL/O=REUNA CA/CN=REUNA Issuing CA - C5"
 

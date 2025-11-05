@@ -1,0 +1,11 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)/C=CL/O=REUNA CA/CN=REUNA Issuing CA - C5
+# CA alias    : REUNA-ICA-C5
+#    subord_of: /C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5
+#    subjectDN: C=CL, O=REUNA CA, CN=REUNA Issuing CA - C5
+#
+TO Issuer "/C=CL/O=REUNA CA/CN=REUNA Issuing CA - C5" \
+  PERMIT Subject "/C=CL/O=REUNACA/.*"
+

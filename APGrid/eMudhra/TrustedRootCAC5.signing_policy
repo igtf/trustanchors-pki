@@ -1,4 +1,4 @@
 # EACL for eMudhra emSign CA TrustedRootCAC5
  access_id_CA   X509    '/C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5'
  pos_rights     globus  CA:sign
- cond_subjects  globus  '"/C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5" "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5" "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5 - 1"'
+ cond_subjects  globus  '"/C=US/O=eMudhra Inc./CN=emSign Trusted Root CA - C5" "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5" "/C=US/O=eMudhra Inc./CN=emSign Issuing CA IGTF - C5 - 1" "/C=CL/O=REUNA CA/CN=REUNA Issuing CA - C5"'

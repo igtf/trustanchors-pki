@@ -1,0 +1,13 @@
+#
+# @(#)REUNA Issuing CA - C5
+#
+alias =	REUNA-ICA-C5
+url = http://reuna-ca.reuna.cl/
+ca_url = https://repository.emsign.com/certs/REUNAIssuingCAC5.crt
+crl_url = http://crl.emsign.com/?REUNAIssuingCAC5.crl
+email = reuna-ca@reuna.cl
+status = accredited:classic
+requires = eMudhra-TrustedRootCAC5
+sha1fp.0 = @SHA1FP.0@
+version = @VERSION@
+subjectdn = @SUBJECTDN@
