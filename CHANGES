@@ -7,9 +7,11 @@ lay-out.
 
 Changes from 1.137 to 1.138
 ---------------------------
-(17 November 2025)
+(24 November 2025)
 
 * Add new REUNA Issuing CA and updated RPDNC for HLCA emSign Trusted Root (CL)
+* Withdraw superseded KEK CA (JP)
+* Update RCauth Pilot ICA G1 with extended validity period (EU)
 
 Changes from 1.136 to 1.137
 ---------------------------

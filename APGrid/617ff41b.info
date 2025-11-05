@@ -1,7 +1,7 @@
 alias = KEK
 crl_url = http://gridca.kek.jp/repository/617ff41b.r0
 email = kekgridca-contact@ml.post.kek.jp
-status = accredited:classic
+status = discontinued
 url = https://gridca.kek.jp/
 version = @VERSION@
 sha1fp.0 = @SHA1FP.0@
