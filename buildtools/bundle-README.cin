@@ -59,6 +59,8 @@ arguments specific to the IGTF distribution:
     mics    -- Member Integrated Credential generation Services
     iota    -- Identifier-Only Trust Assurance Services - PLEASE read
                profile first at https://www.eugridpma.org/guidelines/IOTA/
+    dcvota  -- Domain Control Validation Only Trust Assurance - server-
+               side only authentication based on validated domain names
 
   Notes:
   * there is no collective installation for experimental or unaccredited 
