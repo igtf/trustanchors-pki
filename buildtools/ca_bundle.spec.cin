@@ -129,9 +129,9 @@ Please note that the assurance level for IOTA is SIGNIFICANTLY
 DIFFERENT from Clasic, MICS or SLCS, in that only limited 
 traceability is provided and subject naming may be pseudonymous.
 
-%files dcvota
+%files iota
 %defattr(644,root,root)
-/etc/grid-security/certificates/policy-igtf-dcvota.info
+/etc/grid-security/certificates/policy-igtf-iota.info
 
 %package dcvota
 Summary: Domain Control Validation Only Trust Assurance Services collection policy for the IGTF
