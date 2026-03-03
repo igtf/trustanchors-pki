@@ -5,9 +5,15 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.139 to 1.140
+---------------------------
+(16 March 2026)
+
+* Update ArmeSFo CA re-issued based on SHA-2 family digest (AM)
+
 Changes from 1.138 to 1.139
 ---------------------------
-(1 February 2025)
+(1 February 2026)
 
 * The IGTF DCVOTA assurance profile has been added. For details, please refer
   to https://www.igtf.net/ap/dcvota/
