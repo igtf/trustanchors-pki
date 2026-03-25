@@ -1,0 +1,19 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)EMOVTLSCAG2C.namespaces
+# CA alias    : EMOVTLSCAG2C
+#    subord_of: emSignRootTLSCAG1
+#    subjectDN: /C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C
+#    hash     : EMOVTLSCAG2C.signing_policy
+#    (generated automatically from EMOVTLSCAG2C.signing_policy)
+#
+TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
+  PERMIT Subject "/C=US/O=emSignGrid/.*"
+
+TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
+  PERMIT Subject "/DC=com/DC=emSignGrid/.*"
+
+TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
+  PERMIT Subject "/DC=org/DC=emSignGrid/.*"
+

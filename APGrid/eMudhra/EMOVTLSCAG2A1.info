@@ -1,0 +1,16 @@
+#
+# @(#)EMOVTLSCAG2A1.info
+# eMuhdra emSign Issuing Certifying Authority Global
+# TLS server specific joint trust hierarchy root
+#
+alias = EMOVTLSCAG2A1
+ca_url = https://repository.emsign.com/certs/EMOVTLSCAG2A1.crt
+crl_url = http://crl.emsign.com/?EMOVTLSCAG2A1.crl
+policy_url = https://repository.emsign.com/
+url = https://emudhra.com/products/digital-certificates
+email = support@emsign.com
+status = accredited:classic
+requires = emSignRootTLSCAG1
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

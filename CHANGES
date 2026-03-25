@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.139 to 1.140
+---------------------------
+(30 March 2026)
+
+* Added server TLS specific trust hierarchy for eMudhra joint trust (IN)
+
 Changes from 1.138 to 1.139
 ---------------------------
 (16 March 2026)

@@ -1,0 +1,46 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)emSignRootTLSCAG1.namespaces
+# CA alias    : emSignRootTLSCAG1
+#    subjectDN: /C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1
+#
+TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1" \
+  PERMIT Subject "/C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1"
+
+TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1" \
+  PERMIT Subject "/C=NL/O=eMudhra BV/CN=EM OV TLS CA - G2B"
+
+TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1" \
+  PERMIT Subject "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C"
+
+# /C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1
+TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1" \
+  PERMIT Subject "/C=US/O=emSignGrid/.*"
+
+TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1" \
+  PERMIT Subject "/DC=com/DC=emSignGrid/.*"
+
+TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1" \
+  PERMIT Subject "/DC=org/DC=emSignGrid/.*"
+
+# /C=NL/O=eMudhra BV/CN=EM OV TLS CA - G2B
+TO Issuer "/C=NL/O=eMudhra BV/CN=EM OV TLS CA - G2B" \
+  PERMIT Subject "/C=US/O=emSignGrid/.*"
+
+TO Issuer "/C=NL/O=eMudhra BV/CN=EM OV TLS CA - G2B" \
+  PERMIT Subject "/DC=com/DC=emSignGrid/.*"
+
+TO Issuer "/C=NL/O=eMudhra BV/CN=EM OV TLS CA - G2B" \
+  PERMIT Subject "/DC=org/DC=emSignGrid/.*"
+
+# /C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C
+TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
+  PERMIT Subject "/C=US/O=emSignGrid/.*"
+
+TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
+  PERMIT Subject "/DC=com/DC=emSignGrid/.*"
+
+TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
+  PERMIT Subject "/DC=org/DC=emSignGrid/.*"
+

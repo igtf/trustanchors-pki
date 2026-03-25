@@ -1,0 +1,4 @@
+# EACL for eMudhra emSign ICA TLS hierarchy OV Global
+ access_id_CA   X509    '/C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1" "/C=US/O=emSignGrid/*" "/DC=com/DC=emSignGrid/*" "/DC=org/DC=emSignGrid/*"'

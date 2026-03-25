@@ -1,0 +1,5 @@
+# EACL for eMudhra emSign CA emSignRootTLSCAG1
+# /C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1
+ access_id_CA   X509    '/C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1'
+ pos_rights     globus  CA:sign
+ cond_subjects  globus  '"/C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1" "/C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1" "/C=NL/O=eMudhra BV/CN=EM OV TLS CA - G2B" "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C"'
