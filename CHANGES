@@ -11,6 +11,14 @@ Changes from 1.139 to 1.140
 
 * Added server TLS specific trust hierarchy for eMudhra joint trust (IN)
 
+NOTE: this will be the last release to include a build with Gen3 GPG 
+  package signatures.
+  This release also deprecates SSLeay and OpenSSL 0.x series subject name 
+  hashes in the trust anchor directory (i.e. based on the MD5 encoding of the
+  binary encoding of the subject distinguised name). These will be removed 
+  after August 2026. For reference, systems distributions dependent hereon 
+  reached end of support in 2020 (RHEL5 ELS) or 2016 (for Debian 6 "Squeeze").
+
 Changes from 1.138 to 1.139
 ---------------------------
 (16 March 2026)
