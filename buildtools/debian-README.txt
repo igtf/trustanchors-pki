@@ -13,7 +13,7 @@ Using the distribution
 ----------------------
 1. Install the EUGridPMA PGP key for apt:
     wget -q -O - \
-      https://dist.eugridpma.info/distribution/igtf/current/GPG-KEY-EUGridPMA-RPM-3 \
+      https://dist.eugridpma.info/distribution/igtf/current/GPG-KEY-EUGridPMA-RPM-4 \
       | apt-key add -
  
 2. Add the following line to your sources.list file for APT:

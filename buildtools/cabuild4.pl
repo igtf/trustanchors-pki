@@ -23,7 +23,7 @@ $opt_r=1;
 $opt_debian="./check-debian.sh";
 $opt_obsoletedbase="./obsoleted";
 $opt_opensslone="/usr/bin/openssl";
-$opt_gpgkeyid="3CDBBC71";
+$opt_gpgkeyid="76341F1A";
 $osslversion=1;
 
 my @optdef=qw( url|finalURL=s nojks:i mkdeb
@@ -147,9 +147,9 @@ sub makeInfoFiles($$) {
       "DATE" => (strftime "%A, %d %b, %Y",gmtime(time)) ) ) or return undef;
   &copyWithExpansion("toplevel-version.txt.cin","$targetdir/version.txt",
     ( "VERSION" => $opt_gver) ) or return undef;
-  copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-3",
-       "$targetdir/GPG-KEY-EUGridPMA-RPM-3")
-    or do { $err="GPG key 3 copy: $!\n"; return undef };
+  #copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-3",
+  #     "$targetdir/GPG-KEY-EUGridPMA-RPM-3")
+  #  or do { $err="GPG key 3 copy: $!\n"; return undef };
   copy("$opt_carep/GPG-KEY-EUGridPMA-RPM-4",
        "$targetdir/GPG-KEY-EUGridPMA-RPM-4")
     or do { $err="GPG key 4 copy: $!\n"; return undef };
