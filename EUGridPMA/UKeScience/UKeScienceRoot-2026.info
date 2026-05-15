@@ -1,0 +1,11 @@
+#
+# @(#)UKeScienceRoot-2026.info
+#
+alias = UKeScienceRoot-2026
+url = http://www.grid-support.ac.uk/ca/
+crl_url = http://crl.ca.ngs.ac.uk/crl/uk-root-crl.der
+email = support@grid-support.ac.uk
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

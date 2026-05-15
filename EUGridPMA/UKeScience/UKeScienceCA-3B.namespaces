@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)UKeScienceCA-3B.signing_policy.namespaces
+# CA alias    : UKeScienceCA-3B
+#    subord_of: UKeScienceRoot-2026
+#    subjectDN: /C=UK/O=eScienceCA/OU=Authority/CN=UK
+#    hash     : UKeScienceCA-3B.signing_policy
+#    (generated automatically from UKeScienceCA-3B.signing_policy)
+#
+TO Issuer "/C=UK/O=eScienceCA/OU=Authority/CN=UK" \
+  PERMIT Subject "/C=UK/O=eScience/.*"
+

@@ -1,0 +1,6 @@
+#
+# @(#)UKeScienceRoot-2026.signing_policy
+#
+access_id_CA      X509         '/C=UK/O=eScienceRoot/OU=Authority/CN=UK e-Science Root 2026'
+pos_rights        globus       CA:sign
+cond_subjects     globus       '"/C=UK/O=eScienceRoot/OU=Authority/CN=UK e-Science Root 2026" "/C=UK/O=eScienceCA/OU=Authority/CN=UK e-Science CA 3A" "/C=UK/O=eScienceCA/OU=Authority/CN=UK e-Science CA 3B"'

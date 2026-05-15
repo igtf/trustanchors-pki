@@ -1,0 +1,12 @@
+#
+# @(#)UKeScienceCA-3B.info
+#
+alias = UKeScienceCA-3B
+requires = UKeScienceRoot-2026
+url = http://www.grid-support.ac.uk/ca/
+crl_url = http://crl.ca.ngs.ac.uk/crl/escience3b.crl
+email = support@grid-support.ac.uk
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
