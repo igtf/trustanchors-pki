@@ -11,6 +11,7 @@ Changes from 1.140 to 1.141
 
 * Added new UK eScience CA ECC hierarchy (UK)
 * Withdrawn expiring HellasGrid2016 CA (GR)
+* Withdrawn expiring SRCE CA (HR)
 * Removed GPG Gen3 package signing key (GPG-KEY-EUGridPMA-RPM-3)
 
 Changes from 1.139 to 1.140
