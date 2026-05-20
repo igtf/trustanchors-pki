@@ -1,0 +1,11 @@
+alias = InCommon-RSA-IGTF-Server-CA-4
+url = https://www.incommon.org/cert/
+policy_url = https://www.incommon.org/cert/repository/
+ca_url = https://repository.emsign.com/certs/EEEMIncommonIGTFOVG2C.crt
+crl_url = https://crl.emsign.com/?EEEMIncommonIGTFOVG2C.crl
+requires = emSignRootTLSCAG1
+email = admin@incommon.org
+status = accredited:classic
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

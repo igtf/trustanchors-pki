@@ -14,6 +14,9 @@ TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1" \
 TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1" \
   PERMIT Subject "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C"
 
+TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=emSign Root TLS CA - G1" \
+  PERMIT Subject "/C=US/O=Internet2/CN=InCommon RSA IGTF Server CA 4"
+
 # /C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1
 TO Issuer "/C=IN/O=eMudhra Technologies Limited/CN=EM OV TLS CA - G2A-1" \
   PERMIT Subject "/C=US/O=emSignGrid/.*"
@@ -43,4 +46,8 @@ TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
 
 TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
   PERMIT Subject "/DC=org/DC=emSignGrid/.*"
+
+# InCommon IGTF Server CA G4
+TO Issuer "/C=US/O=eMudhra Inc/CN=EM OV TLS CA - G2C" \
+  PERMIT Subject "/DC=org/DC=incommon/.*"
 
