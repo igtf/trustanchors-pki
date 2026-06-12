@@ -1,0 +1,14 @@
+#
+# @(#)DZeScienceG2.info
+# Information for CA DZ e-Science Gen 2 (2026)
+#   
+alias = DZeScienceG2
+ca_url = https://ca.grid.arn.dz/pki/pub/cacert/cacertG2.pem
+crl_url = http://ca.grid.arn.dz/pki/pub/crl/cacrlG2.cr
+policy_url = https://ca.grid.arn.dz/pki/pub/home/cp_cps.htm
+email = ca@grid.arn.dz
+status = accredited:classic
+url = http://www.grid.arn.dz
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

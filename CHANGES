@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.142 to 1.143
+---------------------------
+(29 June 2026)
+
+* Replaced trust anchor for DZeScience authority by DZeScience G2 (DZ)
+
 Changes from 1.141 to 1.142
 ---------------------------
 (1 June 2026)
