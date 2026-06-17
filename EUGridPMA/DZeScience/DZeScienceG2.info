@@ -4,7 +4,7 @@
 #   
 alias = DZeScienceG2
 ca_url = https://ca.grid.arn.dz/pki/pub/cacert/cacertG2.pem
-crl_url = http://ca.grid.arn.dz/pki/pub/crl/cacrlG2.cr
+crl_url = http://ca.grid.arn.dz/pki/pub/crl/cacrlG2.crl
 policy_url = https://ca.grid.arn.dz/pki/pub/home/cp_cps.htm
 email = ca@grid.arn.dz
 status = accredited:classic
