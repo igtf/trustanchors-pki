@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.143 to 1.144
+---------------------------
+(release 20 July 2026)
+
+* corrected tagging of DCVOTA accredited CAs in RPM packaging
+
 Changes from 1.141 to 1.143
 ---------------------------
 (cumulative release 22 June 2026)
