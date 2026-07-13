@@ -699,6 +699,11 @@ sub makeCollectionInfo($$$) {
       $l.="$alias";
     }
     $tokens{$ucs}=&expandRequiresWithVersion($l);
+    if ( $tokens{$ucs} and $tokens{$ucs} ne "" ) {
+      $tokens{"RPM".$ucs}="Requires: ".&expandRequiresWithVersion($l);
+    } else {
+      $tokens{"RPM".$ucs}="";
+    }
     $tokens{"DEB".$ucs}=&expandRequiresWithVersionDebian($l);
   }
 

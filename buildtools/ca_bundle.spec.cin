@@ -49,7 +49,7 @@ Summary: Classic X.509 CA collection policy for the IGTF
 URL: http://www.gridpma.org/
 Group: Security/Certificates
 AutoReqProv: no
-Requires: @ACCREDITED:CLASSIC@
+@RPMACCREDITED:CLASSIC@
 @OBSOLETED.classic@
 
 
@@ -72,8 +72,7 @@ Summary: Short-lived Credential Services collection policy for the IGTF
 URL: http://www.gridpma.org/
 Group: Security/Certificates
 AutoReqProv: no
-# temporarily no accredited SLCS anchors
-#Requires: @ACCREDITED:SLCS@
+@RPMACCREDITED:SLCS@
 @OBSOLETED.slcs@
 
 %description slcs
@@ -94,7 +93,7 @@ Summary: Member-Integrated Credential Services collection policy for the IGTF
 URL: http://www.gridpma.org/
 Group: Security/Certificates
 AutoReqProv: no
-Requires: @ACCREDITED:MICS@
+@RPMACCREDITED:MICS@
 @OBSOLETED.mics@
 
 %description mics
@@ -115,7 +114,7 @@ Summary: Identifier-Only Trust Assurance Services collection policy for the IGTF
 URL: http://www.igtf.net/
 Group: Security/Certificates
 AutoReqProv: no
-Requires: @ACCREDITED:IOTA@
+@RPMACCREDITED:IOTA@
 @OBSOLETED.iota@
 
 %description iota
@@ -138,7 +137,7 @@ Summary: Domain Control Validation Only Trust Assurance Services collection poli
 URL: http://www.igtf.net/
 Group: Security/Certificates
 AutoReqProv: no
-Requires: @ACCREDITED:IOTA@
+@RPMACCREDITED:DCVOTA@
 @OBSOLETED.dcvota@
 
 %description dcvota
