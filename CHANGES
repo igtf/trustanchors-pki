@@ -9,6 +9,7 @@ Changes from 1.143 to 1.144
 ---------------------------
 (release 20 July 2026)
 
+* extended validity period of SiGNET CA within current policy (SI)
 * corrected tagging of DCVOTA accredited CAs in RPM packaging
 
 Changes from 1.141 to 1.143
