@@ -467,22 +467,16 @@ sub makeBundleScripts($$$) {
       (my $f=$ext)=~s/.*\///;
       print MKTPL "\t\$(install) src/$collection/$f \$(prefix)/\n";
     }
-    # also create the symlinks for both OpenSSL versions
+    # also create the symlink for OpenSSL 1+ X509_CERT_DIR 
     # from the info data and offsets
-    print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".pem \$(prefix)/".
-                $auth{$ca}{"info"}->{"hash0"}.".".$auth{$ca}{"info"}->{"offset0"}."\n";
     print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".pem \$(prefix)/".
                 $auth{$ca}{"info"}->{"hash1"}.".".$auth{$ca}{"info"}->{"offset1"}."\n";
 
     -f "$builddir/src/$collection/".$auth{$ca}{"info"}->{"alias"}.".signing_policy" and do {
       print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".signing_policy ".
-                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash0"}.".signing_policy\n";
-      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".signing_policy ".
                   "\$(prefix)/".$auth{$ca}{"info"}->{"hash1"}.".signing_policy\n";
     };
     -f "$builddir/src/$collection/".$auth{$ca}{"info"}->{"alias"}.".namespaces" and do {
-      print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".namespaces ".
-                  "\$(prefix)/".$auth{$ca}{"info"}->{"hash0"}.".namespaces\n";
       print MKTPL "\t\$(ln) -s ".$auth{$ca}{"info"}->{"alias"}.".namespaces ".
                   "\$(prefix)/".$auth{$ca}{"info"}->{"hash1"}.".namespaces\n";
     };
@@ -896,13 +890,6 @@ sub getAuthoritiesList($$) {
       next;
     }
 
-    defined $info{"hash0"} or do {
-      chomp(my $hashzero = `$opt_opensslone x509 -noout -subject_hash_old -in '$dir/$certfilename'`);
-      $info{"hash0"} = $hashzero;
-      # calculate the 'offset' for the OpenSSL v0 symlinking (.0, .1, .2, etc files)
-      defined $hashzerocount{$hashzero} or $hashzerocount{$hashzero}=0;
-      $info{"offset0"} = $hashzerocount{$hashzero}++;
-    };
     defined $info{"hash1"} or do {
       chomp(my $hashone  = `$opt_opensslone  x509 -noout -hash -in '$dir/$certfilename'`);
       $info{"hash1"} = $hashone;
@@ -923,7 +910,6 @@ sub getAuthoritiesList($$) {
 
     $auth{$info{"alias"}} = 
       { "basename" => $basename, "dir" => $dir, 
-        "hash0" => $info{"hash0"},
         "hash1" => $info{"hash1"},
         "casubjectdn" => $info{"casubjectdn"},
         "info" => \%info 
@@ -1070,7 +1056,6 @@ sub packSingleCA($$$$) {
       }
       close F;
       # symlink only signing_policy and namespaces, no info
-      symlink "$alias.$ext","$pdir/$info{hash0}.$ext" unless $ext eq "info";
       symlink "$alias.$ext","$pdir/$info{hash1}.$ext" unless $ext eq "info";
     }
   }
@@ -1201,7 +1186,6 @@ sub packSingleCA($$$$) {
   # versions
   #
   system("$opt_opensslone x509 -outform pem -in $srcdir/$certfile -out $pdir/$alias.pem");
-  symlink "$alias.pem","$pdir/".$info{"hash0"}.".".$info{"offset0"};
   symlink "$alias.pem","$pdir/".$info{"hash1"}.".".$info{"offset1"};
 
   # tar up the per-CA tarballs ca_<ALIAS>-<version>/<*filenames*>
@@ -1266,11 +1250,9 @@ sub packSingleCA($$$$) {
       ($b=$if)=~s/.*\///; 
       -f "$if" and copy("$if","$debdatadir/etc/grid-security/certificates/$b");
     }
-    symlink "$alias.pem","$debdatadir/etc/grid-security/certificates/".$info{"hash0"}.".".$info{"offset0"};
     symlink "$alias.pem","$debdatadir/etc/grid-security/certificates/".$info{"hash1"}.".".$info{"offset1"};
     foreach my $ext ( qw(signing_policy namespaces) ) {
       if ( -f "$debdatadir/etc/grid-security/certificates/$alias.$ext" ) {
-        symlink "$alias.$ext","$debdatadir/etc/grid-security/certificates/".$info{"hash0"}.".$ext";
         symlink "$alias.$ext","$debdatadir/etc/grid-security/certificates/".$info{"hash1"}.".$ext";
       }
     }
