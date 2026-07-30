@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.144 to 1.145
+---------------------------
+(release 31 August 2026)
+
+* removed deprecated emSignClass1CAG1 (emSign Class 1 CA - G1) (IN)
+* removed support for dual-hash (SSLeay, OpenSSL 0.x) trust anchor lookup
+
 Changes from 1.143 to 1.144
 ---------------------------
 (release 20 July 2026)
