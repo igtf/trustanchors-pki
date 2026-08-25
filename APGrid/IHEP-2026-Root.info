@@ -1,4 +1,4 @@
-# Proposed IHEP Root CA 2026 metadata for APGridPMA/IGTF packaging.
+# IHEP Root CA 2026 metadata for APGridPMA/IGTF packaging.
 alias = IHEP-2026-Root
 ca_url = http://gridca.ihep.ac.cn/download/Institute_of_High_Energy_Physics_Root_CA.crt
 crl_url = http://gridca.ihep.ac.cn/download/Institute_of_High_Energy_Physics_Root_CA.crl
@@ -6,6 +6,6 @@ email = hanx@ihep.ac.cn
 status = accredited:classic
 url = https://gridca.ihep.ac.cn/
 policy_url = http://gridca.ihep.ac.cn/download/cps/IHEP-CA-CP-CPS-v2.pdf
-version = 1.0
-sha1fp.0 = 5C:6B:7D:80:E8:5D:F1:68:62:EA:BC:37:74:32:46:E1:85:0D:2D:E5
-subjectdn = "/C=CN/O=HEP/CN=Institute of High Energy Physics Root CA"
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@

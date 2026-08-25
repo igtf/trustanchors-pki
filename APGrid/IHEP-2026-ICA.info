@@ -1,0 +1,11 @@
+# IHEP ICA 2026 metadata for APGridPMA/IGTF packaging.
+alias = IHEP-2026-ICA
+ca_url = http://gridca.ihep.ac.cn/download/Institute_of_High_Energy_Physics_Certification_Authority_2026.crt
+crl_url = http://gridca.ihep.ac.cn/download/Institute_of_High_Energy_Physics_Certification_Authority_2026.crl
+email = hanx@ihep.ac.cn
+status = accredited:classic
+url = https://gridca.ihep.ac.cn/
+policy_url = http://gridca.ihep.ac.cn/download/cps/IHEP-CA-CP-CPS-v2.pdf
+version = @VERSION@
+sha1fp.0 = @SHA1FP.0@
+subjectdn = @SUBJECTDN@
