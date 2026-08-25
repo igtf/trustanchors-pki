@@ -1,0 +1,11 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# IHEP CA 2026 two-tier namespace policy.
+# The end-entity namespace is retained from IHEP-2013.
+#
+TO Issuer "/C=CN/O=HEP/CN=Institute of High Energy Physics Root CA" \
+  PERMIT Subject "/C=CN/O=HEP/CN=Institute of High Energy Physics Certification Authority 2026"
+
+TO Issuer "/C=CN/O=HEP/CN=Institute of High Energy Physics Certification Authority 2026" \
+  PERMIT Subject "/C=CN/O=HEP/.*"
