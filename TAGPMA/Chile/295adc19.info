@@ -1,12 +1,10 @@
 #
-# @(#)$Id: 295adc19.info,v 1.5 2015/06/18 09:44:56 pmacvsdg Exp $
-#
 alias =	REUNA-ca
 url = http://reuna-ca.reuna.cl/
 ca_url = http://reuna-ca.reuna.cl/cacert/cacert.pem
 crl_url = http://reuna-ca.reuna.cl/crl/crl.der
 email = reuna-ca@reuna.cl
-status = accredited:classic
+status = discontinued
 sha1fp.0 = @SHA1FP.0@
 version = @VERSION@
 subjectdn = @SUBJECTDN@
