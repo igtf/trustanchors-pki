@@ -7,9 +7,17 @@ lay-out.
 
 Changes from 1.145 to 1.146
 ---------------------------
-(28 September 2026)
+(2 September 2026)
 
 * removed superseded REUNA 2007 CA (CL)
+* temporarily re-instated dual-hash support on request of selected relying 
+  parties
+  Please note that the deprecation notice issued in March 2026 remains in
+  force, and OpenSSL1-style hashes, introduced in release 1.35 (June 2010),
+  should be used going forward. 
+  (note: when using fetch-crl(8) dual-hash CRLs will continue to be generated
+  by default. Configure "opensslmode = single" to not create legacy-named CRL
+  files. Continuing to create dual-hash CRLs has no security impact) 
 
 Changes from 1.144 to 1.145
 ---------------------------
