@@ -5,6 +5,12 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.146 to 1.147
+---------------------------
+(2 November 2026)
+
+* Add new CERN Root CA 3 and Grid CA 2 ICA (CERN)
+
 Changes from 1.145 to 1.146
 ---------------------------
 (2 September 2026)
