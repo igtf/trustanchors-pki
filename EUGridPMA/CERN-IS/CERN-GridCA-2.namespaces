@@ -1,0 +1,10 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)CERN Grid Certification Authority 2
+# CA alias    : CERN-GridCA-2
+#    subjectDN: /DC=ch/DC=cern/CN=CERN Grid Certification Authority 2
+#
+TO Issuer "/DC=ch/DC=cern/CN=CERN Grid Certification Authority 2" \
+  PERMIT Subject "/DC=ch/DC=cern/.*"
+

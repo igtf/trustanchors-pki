@@ -1,0 +1,13 @@
+##############################################################################
+#NAMESPACES-VERSION: 1.0
+#
+# @(#)CERN Root Certification Authority 3 RPDNC namespaces
+# CA alias    : CERN-Root-3
+#    subjectDN: /C=CH/O=CERN/CN=CERN Root Certification Authority 3
+#
+TO Issuer "/C=CH/O=CERN/CN=CERN Root Certification Authority 3" \
+  PERMIT Subject "/DC=ch/DC=cern/CN=CERN Grid Certification Authority 2"
+
+TO Issuer "/DC=ch/DC=cern/CN=CERN Grid Certification Authority 2" \
+  PERMIT Subject "/DC=ch/DC=cern/.*"
+

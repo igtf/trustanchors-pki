@@ -1,0 +1,5 @@
+# @(#)CERN-Root-3 EACL signing policy
+access_id_CA            X509    '/C=CH/O=CERN/CN=CERN Root Certification Authority 3'
+pos_rights              globus  CA:sign
+cond_subjects           globus  '"/C=CH/O=CERN/CN=CERN Root Certification Authority 3" "/DC=ch/DC=cern/CN=CERN Grid Certification Authority 2"'
+
