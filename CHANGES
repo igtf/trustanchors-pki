@@ -10,6 +10,10 @@ Changes from 1.146 to 1.147
 (2 November 2026)
 
 * Add new CERN Root CA 3 and Grid CA 2 ICA (CERN)
+* Removed obsolete TCS Gen4 and Gen4B issuing CAs, as well as the Gen4B
+  private trust roots and USERTrustECCCertificationAuthority (EU)
+  Due to the dependency of the (outgoing) InCommon-RSA-IGTF-Server-CA-3, the
+  USERTrustRSACertificationAuthority is temporarily retained (US)
 
 Changes from 1.145 to 1.146
 ---------------------------
