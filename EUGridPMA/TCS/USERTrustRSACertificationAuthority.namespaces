@@ -7,27 +7,6 @@
 #    subjectDN: /C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority
 #
 TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
-  PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL CA 4"
-
-TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
-  PERMIT Subject "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal CA 4"
-
-TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT eScience Personal CA 4" \
-  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
-
-TO Issuer "/C=NL/O=GEANT Vereniging/CN=GEANT eScience SSL CA 4" \
-  PERMIT Subject "/DC=org/DC=terena/DC=tcs/.*"
-
-TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
-  PERMIT Subject "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Assured CA G4  [Run by the Issuer]"
-
-TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
-  PERMIT Subject "/C=AE/O=Digital Trust L.L.C./CN=DigitalTrust Secure CA G4  [Run by the Issuer]"
-
-TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
-  PERMIT Subject "/C=US/O=Internet2/CN=InCommon RSA IGTF Server CA 2"
-
-TO Issuer "/C=US/ST=New Jersey/L=Jersey City/O=The USERTRUST Network/CN=USERTrust RSA Certification Authority" \
   PERMIT Subject "/C=US/O=Internet2/CN=InCommon RSA IGTF Server CA 3"
 
 TO Issuer "/C=US/O=Internet2/CN=InCommon RSA IGTF Server CA 3" \
