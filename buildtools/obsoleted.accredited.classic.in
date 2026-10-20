@@ -155,3 +155,9 @@ GEANTeScienceSSLECCCA4
 ResearchandEducationTrustRSARootCA
 ResearchandEducationTrustECCRootCA
 USERTrustECCCertificationAuthority
+DigiCertGridRootCA-Root
+DigiCertGridTrustCAG2-Classic
+DigiCertGridCA-1G2-Classic-2015
+DigiCertAssuredIDRootCA-Root
+DigiCert-Assured-ID-Grid-Client-RSA2048-SHA256-2022-CA1
+DigiCert-Assured-ID-Grid-TLS-RSA2048-SHA256-2022-CA1
