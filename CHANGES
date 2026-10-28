@@ -10,6 +10,7 @@ Changes from 1.146 to 1.147
 (2 November 2026)
 
 * Add new CERN Root CA 3 and Grid CA 2 ICA (CERN)
+* Updated DFN-GridGermany-Root with new SHA-2 family self-signature (DE)
 * Removed discontinued DigiCert roots and ICAs from TAGPMA:
   DigiCertGridRootCA-Root, DigiCertGridTrustCAG2-Classic,
   DigiCertGridCA-1G2-Classic-2015, DigiCertAssuredIDRootCA-Root,
