@@ -5,6 +5,13 @@ refer to the README.txt file for additional information on installing the
 Distribution and to be informed about important information on distribution 
 lay-out.
 
+Changes from 1.147 to 1.148
+---------------------------
+(13 November 2026)
+
+* Added InCommon (DC=org,DC=incommon) RPDNC namespace also to emigtfc5r1 (US)
+  [this is part one of a two-step transitioning process for CertiNext/InCommon]
+
 Changes from 1.146 to 1.147
 ---------------------------
 (2 November 2026)
